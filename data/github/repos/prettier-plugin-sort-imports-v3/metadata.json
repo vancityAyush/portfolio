@@ -1,0 +1,27 @@
+{
+  "name": "prettier-plugin-sort-imports-v3",
+  "full_name": "vancityAyush/prettier-plugin-sort-imports-v3",
+  "description": "Prettier plugin that sorts import statements by length or alphabetically",
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2024-06-10T16:43:30Z",
+  "updated_at": "2024-06-10T17:04:25Z",
+  "url": "https://github.com/vancityAyush/prettier-plugin-sort-imports-v3",
+  "features": [
+    "Sort imports by line length or alphabetically",
+    "Configurable sorting order (ascending/descending)",
+    "Strip newlines between import blocks",
+    "Import type ordering (NPM packages, local imports, type imports)",
+    "Support for multiple package.json files",
+    "Ignore sections with special comments",
+    "TypeScript support for type imports"
+  ],
+  "tech_stack": {
+    "languages": ["TypeScript", "JavaScript"],
+    "tools": ["Prettier", "Node.js", "npm"],
+    "frameworks": ["Prettier Plugin API"],
+    "compatibility": ["Prettier 2", "Prettier 3"]
+  },
+  "architecture": "Prettier plugin with configurable sorting algorithms and import categorization"
+}

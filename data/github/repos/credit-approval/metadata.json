@@ -1,0 +1,27 @@
+{
+  "name": "credit-approval",
+  "full_name": "vancityAyush/credit-approval",
+  "description": "Loan management backend API built with Node.js, Express, and Prisma ORM with MySQL database",
+  "language": "JavaScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-11-14T07:46:42Z",
+  "updated_at": "2023-11-14T07:50:02Z",
+  "url": "https://github.com/vancityAyush/credit-approval",
+  "features": [
+    "RESTful API for loan management",
+    "Docker containerization for easy deployment",
+    "Automated database migrations from Excel files",
+    "MySQL database with Prisma ORM",
+    "API documentation with Postman collection",
+    "Environment-based configuration"
+  ],
+  "tech_stack": {
+    "languages": ["JavaScript", "Node.js"],
+    "frameworks": ["Express.js"],
+    "database": ["MySQL", "Prisma ORM"],
+    "tools": ["Docker", "Docker Compose", "Git"],
+    "testing": ["Postman"]
+  },
+  "architecture": "RESTful API with Express backend, Prisma ORM for database access, containerized with Docker"
+}

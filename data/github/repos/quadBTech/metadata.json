@@ -1,0 +1,21 @@
+{
+  "name": "quadBTech",
+  "full_name": "vancityAyush/quadBTech",
+  "description": "Flutter mobile application",
+  "language": "Dart",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-11-26T13:31:28Z",
+  "updated_at": "2023-11-26T13:31:38Z",
+  "url": "https://github.com/vancityAyush/quadBTech",
+  "features": [
+    "Cross-platform mobile development",
+    "Flutter framework implementation"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "frameworks": ["Flutter"],
+    "platforms": ["iOS", "Android"]
+  },
+  "architecture": "Flutter mobile application"
+}

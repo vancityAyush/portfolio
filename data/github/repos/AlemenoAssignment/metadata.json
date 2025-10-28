@@ -1,0 +1,24 @@
+{
+  "name": "AlemenoAssignment",
+  "full_name": "vancityAyush/AlemenoAssignment",
+  "description": "Flutter application for Alemeno assignment with code generation setup",
+  "language": "Dart",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-07-02T07:44:42Z",
+  "updated_at": "2023-07-02T07:53:03Z",
+  "url": "https://github.com/vancityAyush/AlemenoAssignment",
+  "features": [
+    "Code generation with build_runner",
+    "Flutter Gen for asset management",
+    "Dynamic package naming",
+    "Automated code generation workflow"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "frameworks": ["Flutter"],
+    "tools": ["build_runner", "flutter_gen", "change_app_package_name"],
+    "platforms": ["iOS", "Android"]
+  },
+  "architecture": "Flutter app with code generation tools and build automation"
+}

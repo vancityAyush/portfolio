@@ -1,0 +1,17 @@
+{
+  "_note": "Education data - Manual entry required",
+  "last_updated": "2025-10-29T00:00:00Z",
+  "status": "pending_manual_entry",
+  "education": [
+    {
+      "school": "",
+      "degree": "",
+      "field_of_study": "",
+      "start_date": "",
+      "end_date": "",
+      "grade": "",
+      "activities": "",
+      "description": ""
+    }
+  ]
+}

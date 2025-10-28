@@ -1,0 +1,23 @@
+{
+  "name": "ayna_assignment",
+  "full_name": "vancityAyush/ayna_assignment",
+  "description": "Flutter chat application built for Ayna assignment",
+  "language": "Dart",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2024-06-28T07:23:50Z",
+  "updated_at": "2024-06-28T07:28:27Z",
+  "url": "https://github.com/vancityAyush/ayna_assignment",
+  "features": [
+    "Real-time chat functionality",
+    "Flutter cross-platform mobile app",
+    "Material Design UI"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "frameworks": ["Flutter"],
+    "platforms": ["iOS", "Android"],
+    "tools": ["Dart SDK", "Flutter SDK"]
+  },
+  "architecture": "Flutter mobile application with widget-based architecture"
+}

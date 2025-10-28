@@ -1,0 +1,21 @@
+{
+  "name": "sde_007",
+  "full_name": "vancityAyush/sde_007",
+  "description": "Flutter mobile application project",
+  "language": "Dart",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-03-29T15:25:09Z",
+  "updated_at": "2023-03-29T15:27:45Z",
+  "url": "https://github.com/vancityAyush/sde_007",
+  "features": [
+    "Flutter cross-platform development",
+    "Material Design components"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "frameworks": ["Flutter"],
+    "platforms": ["iOS", "Android"]
+  },
+  "architecture": "Flutter mobile application"
+}

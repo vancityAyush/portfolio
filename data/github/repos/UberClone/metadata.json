@@ -1,0 +1,26 @@
+{
+  "name": "UberClone",
+  "full_name": "vancityAyush/UberClone",
+  "description": "An Uber clone app built in Android Studio with Java, featuring Parse Server backend integration",
+  "language": "Java",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2021-01-09T23:23:26Z",
+  "updated_at": "2024-11-01T03:18:13Z",
+  "url": "https://github.com/vancityAyush/UberClone",
+  "features": [
+    "Ride-hailing functionality",
+    "Real-time location tracking",
+    "User and driver interfaces",
+    "Backend integration with Parse Server",
+    "Map integration for route display"
+  ],
+  "tech_stack": {
+    "languages": ["Java"],
+    "platforms": ["Android"],
+    "tools": ["Android Studio"],
+    "backend": ["Parse Server"],
+    "apis": ["Google Maps API"]
+  },
+  "architecture": "Android native app with Parse Server BaaS, MVC pattern with Activities and Fragments"
+}

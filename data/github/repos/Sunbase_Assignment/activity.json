@@ -1,0 +1,27 @@
+{
+  "recent_commits": 4,
+  "recent_prs": 0,
+  "recent_issues": 0,
+  "last_activity_date": "2023-11-18T11:04:41Z",
+  "latest_commits": [
+    {
+      "sha": "56c79af39afb1968aac64c712a71f6929b04efc5",
+      "message": "ok",
+      "date": "2023-11-18T11:04:41Z",
+      "author": "vancityAyush"
+    },
+    {
+      "sha": "54ffdb7c99a2d3a3c08ddaef7b6695ebd7a0e6c5",
+      "message": "done",
+      "date": "2023-11-18T11:02:05Z",
+      "author": "vancityAyush"
+    },
+    {
+      "sha": "11a9591a484f56979b2b5ac264cd71b305059957",
+      "message": "done",
+      "date": "2023-11-18T11:00:16Z",
+      "author": "vancityAyush"
+    }
+  ],
+  "contribution_summary": "Complete Spring Boot assignment project with API integration"
+}

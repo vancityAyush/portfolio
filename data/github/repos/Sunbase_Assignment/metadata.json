@@ -1,0 +1,27 @@
+{
+  "name": "Sunbase_Assignment",
+  "full_name": "vancityAyush/Sunbase_Assignment",
+  "description": "Spring Boot application with API integration, authentication, and full CRUD operations for customer management",
+  "language": "Java",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-11-18T10:59:49Z",
+  "updated_at": "2023-11-18T11:00:30Z",
+  "url": "https://github.com/vancityAyush/Sunbase_Assignment",
+  "features": [
+    "Interactive API interface with web pages",
+    "Secure authentication with token-based authorization",
+    "Complete CRUD operations for customer management",
+    "Data visualization with tables and forms",
+    "Server-side session management",
+    "API endpoint integration"
+  ],
+  "tech_stack": {
+    "languages": ["Java"],
+    "frameworks": ["Spring Boot"],
+    "backend": ["RESTful API", "Spring Security"],
+    "frontend": ["HTML", "Forms", "Tables"],
+    "authentication": ["Token-based Auth", "Session Management"]
+  },
+  "architecture": "MVC architecture with Spring Boot backend, RESTful API endpoints, and server-side rendering"
+}

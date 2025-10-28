@@ -1,0 +1,30 @@
+{
+  "name": "ayush_ostello_application-v1.0.1",
+  "full_name": "vancityAyush/ayush_ostello_application-v1.0.1",
+  "description": "Flutter application generated with DHiWise, featuring GetX state management and network integration",
+  "language": "Dart",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-11-18T23:00:47Z",
+  "updated_at": "2023-11-18T23:01:14Z",
+  "url": "https://github.com/vancityAyush/ayush_ostello_application-v1.0.1",
+  "features": [
+    "DHiWise-generated architecture",
+    "GetX state management",
+    "Network API integration",
+    "Localization support",
+    "Cached network images",
+    "Persistent storage with SharedPreferences",
+    "Connectivity monitoring",
+    "Figma-to-code conversion"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "frameworks": ["Flutter"],
+    "state_management": ["GetX"],
+    "packages": ["connectivity_plus", "shared_preferences", "cached_network_image"],
+    "tools": ["DHiWise"],
+    "platforms": ["iOS", "Android"]
+  },
+  "architecture": "MVC architecture with GetX, modular structure with separate data, presentation, and route layers"
+}

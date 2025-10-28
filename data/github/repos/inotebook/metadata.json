@@ -1,0 +1,25 @@
+{
+  "name": "inotebook",
+  "full_name": "vancityAyush/inotebook",
+  "description": "React-based notebook application created with Create React App",
+  "language": "JavaScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2024-02-18T19:44:23Z",
+  "updated_at": "2024-02-18T20:05:43Z",
+  "url": "https://github.com/vancityAyush/inotebook",
+  "features": [
+    "Interactive note-taking interface",
+    "Hot reload for development",
+    "Production-optimized build",
+    "Code splitting for performance",
+    "Progressive Web App capabilities"
+  ],
+  "tech_stack": {
+    "languages": ["JavaScript"],
+    "frameworks": ["React"],
+    "tools": ["Create React App", "Webpack", "Babel", "ESLint"],
+    "build_tools": ["npm"]
+  },
+  "architecture": "React SPA with component-based architecture and CRA build tooling"
+}
