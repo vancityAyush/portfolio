@@ -1,0 +1,81 @@
+{
+  "generated_timestamp": "2025-10-28T00:00:00Z",
+  "profile": {
+    "login": "vancityAyush",
+    "name": "Ayush Kumar",
+    "company": "@CreativeDT",
+    "location": "India",
+    "bio": "Software Developer",
+    "public_repos": 104,
+    "followers": 19,
+    "blog": "https://vancityayush.vercel.app/",
+    "twitter": "vancityAyush"
+  },
+  "generated_files": {
+    "resume_projects_tex": "data/github/generated/resume_projects.tex",
+    "resume_metrics_tex": "data/github/generated/resume_metrics.tex",
+    "summary_md": "data/github/generated/summary.md",
+    "index_json": "data/github/generated/index.json"
+  },
+  "repositories_processed": [
+    {
+      "name": "fsm",
+      "metadata": "data/github/repos/fsm/metadata.json",
+      "activity": "data/github/repos/fsm/activity.json"
+    },
+    {
+      "name": "gourmet.craft",
+      "metadata": "data/github/repos/gourmet.craft/metadata.json",
+      "activity": "data/github/repos/gourmet.craft/activity.json"
+    },
+    {
+      "name": "taskify",
+      "metadata": "data/github/repos/taskify/metadata.json",
+      "activity": "data/github/repos/taskify/activity.json"
+    },
+    {
+      "name": "tomorrow_weather",
+      "metadata": "data/github/repos/tomorrow_weather/metadata.json",
+      "activity": "data/github/repos/tomorrow_weather/activity.json"
+    },
+    {
+      "name": "string-calculator",
+      "metadata": "data/github/repos/string-calculator/metadata.json",
+      "activity": "data/github/repos/string-calculator/activity.json"
+    },
+    {
+      "name": "pingo_learn_r1",
+      "metadata": "data/github/repos/pingo_learn_r1/metadata.json",
+      "activity": "data/github/repos/pingo_learn_r1/activity.json"
+    },
+    {
+      "name": "portfolio",
+      "metadata": "data/github/repos/portfolio/metadata.json",
+      "activity": "data/github/repos/portfolio/activity.json"
+    },
+    {
+      "name": "vlogger",
+      "metadata": "data/github/repos/vlogger/metadata.json",
+      "activity": "data/github/repos/vlogger/activity.json"
+    },
+    {
+      "name": "carer-connect",
+      "metadata": "data/github/repos/carer-connect/metadata.json",
+      "activity": "data/github/repos/carer-connect/activity.json"
+    }
+  ],
+  "stats": {
+    "repos_processed": 9,
+    "total_stars": 5,
+    "total_forks": 0,
+    "top_languages": [
+      {"name": "Dart", "percent": 40},
+      {"name": "TypeScript", "percent": 25},
+      {"name": "Java", "percent": 15},
+      {"name": "JavaScript", "percent": 12},
+      {"name": "HTML/CSS", "percent": 8}
+    ],
+    "total_commits_year": 50,
+    "total_prs_year": 10
+  }
+}

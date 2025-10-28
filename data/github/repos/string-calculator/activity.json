@@ -1,0 +1,13 @@
+{
+  "recent_commits": 10,
+  "recent_prs": 0,
+  "recent_issues": 0,
+  "last_activity_date": "2025-07-23T20:06:41Z",
+  "latest_commits": [
+    {"message": "refactor: move NegativeNumberException to its own file for better organization", "date": "2025-07-23T20:06:41Z"},
+    {"message": "docs: update README to provide comprehensive project overview and usage instructions", "date": "2025-07-23T19:58:06Z"},
+    {"message": "refactor: simplify StringCalculator implementation", "date": "2025-07-23T19:53:07Z"},
+    {"message": "refactor: reorganized tests for clarity", "date": "2025-07-23T19:48:21Z"},
+    {"message": "feat: implement support for multiple custom delimiters and add corresponding tests", "date": "2025-07-23T19:38:13Z"}
+  ]
+}

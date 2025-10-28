@@ -1,0 +1,11 @@
+{
+  "name": "tomorrow_weather",
+  "full_name": "vancityAyush/tomorrow_weather",
+  "description": "Flutter weather application with real-time forecasting, responsive UI, and CI/CD pipeline integration",
+  "language": "Dart",
+  "stars": 5,
+  "forks": 0,
+  "created_at": "2024-03-10T00:00:00Z",
+  "updated_at": "2024-03-29T09:38:46Z",
+  "url": "https://github.com/vancityAyush/tomorrow_weather"
+}

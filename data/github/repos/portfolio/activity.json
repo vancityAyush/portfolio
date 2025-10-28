@@ -1,0 +1,13 @@
+{
+  "recent_commits": 10,
+  "recent_prs": 0,
+  "recent_issues": 0,
+  "last_activity_date": "2025-04-08T19:59:14Z",
+  "latest_commits": [
+    {"message": "v1", "date": "2025-04-08T19:59:14Z"},
+    {"message": "v1", "date": "2025-04-08T19:58:04Z"},
+    {"message": "v1", "date": "2025-04-08T19:50:51Z"},
+    {"message": "v1", "date": "2025-04-08T19:47:28Z"},
+    {"message": "Add new image asset 'me_2.png' and update existing image 'me.png'", "date": "2025-04-08T19:11:47Z"}
+  ]
+}

@@ -1,0 +1,170 @@
+
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Ayush Kumar} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{\underline{\href{mailto:vancityAyush@gmail.com}{{{\faEnvelope} vancityAyush@gmail.com}}}} $|$
+\textcolor[HTML]{371e77}{{\faMobile} +91\;9060842579}
+
+\textcolor[HTML]{371e77}{\underline{\href{https://github.com/vancityAyush}{{\raisebox{-0.05\height}{\faGithub} github.com/vancityAyush}}}} $|$
+\textcolor[HTML]{371e77}{\underline{\href{https://linkedin.com/in/eliasak11}{{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/eliasak11}}}}
+\end{tabularx}
+
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Languages:} Dart, Kotlin, TypeScript, JavaScript, SQL\\[3pt]
+\color[HTML]{1C033C}\textbf{Technologies \& Tools:} Flutter, Android, React, React Native, Node.js, NestJS, REST APIs, PostgreSQL, TypeORM, GitHub Actions, Gradle, Fastlane, AWS CDK, Firebase, Mapbox, BLE, ML Kit, Hive, Jest, Flutter Test, BLoC, MVVM, Clean Architecture, Microservices\\[3pt]
+
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Creative Synergies Group, Bengaluru}} \hfill \color[HTML]{371e77} Mar 2024 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineer (Full Stack)}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Architected an enterprise FSM mobile app in \textbf{Flutter} (\textbf{Clean Architecture}, \textbf{BLoC}), coordinating work orders and real-time technician workflows across Android and iOS with 95\%+ crash-free sessions
+        \item Implemented \textbf{NestJS} microservices with \textbf{TypeORM}/\textbf{PostgreSQL}, \textbf{JWT} auth, and role-based access (RBAC), scaling to 100+ field engineers and reducing API latency by ~30\%
+        \item Built a native Android document scanner in \textbf{Kotlin} using \textbf{ML Kit}, Room, and Compose, automating PDF capture for compliance documents
+        \item Established \textbf{CI/CD} with \textbf{GitHub Actions} and Gradle for multi-env (dev/stage/prod) pipelines; cut release time ~50\% for Android and iOS
+        \item Drove \textbf{TDD} with \textbf{Jest} and \textbf{Flutter Test}, achieving 80\%+ coverage across auth, work orders, documents, and inventory modules
+        \item Integrated GPS and location services (geofencing, validation, location-based actions) with image capture and signature workflows for verified completion
+        \item \textit{Stack:} Flutter (Dart), Kotlin, NestJS, TypeScript, PostgreSQL, TypeORM, GitHub Actions, Gradle, Hive
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{HealthFlex, Bangalore}} \hfill \color[HTML]{371e77} Mar 2024 - Aug 2024 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Founding Engineer (SDE)}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Delivered two cross-platform \textbf{React Native} apps with a 95\% crash-free rate, serving 1,000+ users across Android and iOS
+        \item Engineered a \textbf{BLE} module with \textbf{TDD} (55+ unit tests), streaming 20\,Hz per device via RxJS; improved stability and lowered latency by ~40\%
+        \item Modularized ML algorithms via native module integration, processing 2,000+ datapoints/sec in-app
+        \item Managed mobile releases with \textbf{Gradle} + \textbf{Fastlane} CI/CD, reducing release cycle time ~40\%; integrated \textbf{Firebase} (Analytics, Crashlytics, Performance)
+        \item \textit{Stack:} React Native, TypeScript, Kotlin, BLE, RxJS, Fastlane, Gradle, Firebase
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{EMotorad, Bangalore}} \hfill \color[HTML]{371e77} Sep 2023 - Nov 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{App Developer Intern}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Built an E-Bike rider assistant in \textbf{Flutter} (\textbf{MVVM}, \textbf{Clean Architecture}, \textbf{BLoC}); integrated REST APIs and robust navigation
+        \item Developed Bluetooth comms with Dart isolates/background services, improving connection stability 90\% and reducing latency 40\%
+        \item Implemented Mapbox routing and rerouting with caching, cutting map costs ~70\%
+        \item Achieved 80\%+ unit test coverage with \textbf{Flutter Test}; optimized Gradle to reduce build times ~25\%
+        \item \textit{Stack:} Flutter (Dart), Mapbox, BLE, Firebase, Gradle, Dio/Retrofit
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{PySphere LLP}} \hfill \color[HTML]{371e77} Nov 2021 - Sep 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Product Developer}} \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Built \textbf{Carer Connect}, a responsive web app in \textbf{React}/\textbf{Next.js}, cutting manual vendor ops by ~80\%
+        \item Drove engagement +35\% via deep links, push notifications, and Google Calendar integrations
+        \item Delivered a modern, responsive company website (Next.js, React, HTML/CSS, Figma), increasing web traffic ~45\%
+        \item Contributed to \textbf{SonoFlux} (multi-tenant platform) with custom domains, OAuth 2.0, and Stripe/Razorpay integration; improved payment success ~25\%
+        \item \textit{Stack:} React, Next.js, TypeScript, OAuth2, Stripe, Razorpay, Jest
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{A.M.C. Engineering College (VTU), Bengaluru} & \hfill \color[HTML]{371e77} 2020 - 2024 \\
+\color[HTML]{371e77} B.E. in Computer Science and Engineering & \hfill \color[HTML]{4B28A4} \textit{\textbf{CGPA: 7.96/10}} \\
+\multicolumn{2}{@{}X@{}}{Relevant Coursework: Data Structures \& Algorithms, Operating Systems, Database Management Systems, Computer Networks, Web Technologies, Mobile Application Development, AI/ML}
+\end{tabularx}\\[3pt]
+
+% Projects
+\section{Project Work}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{String Calculator (TDD):} Dart implementation built with \textbf{TDD}; 13+ unit tests covering delimiter parsing, negatives handling, and edge cases. \textcolor[HTML]{371e77}{\underline{\href{https://github.com/vancityAyush/string-calculator}{github.com/vancityAyush/string-calculator}}}
+        \item \textbf{Tomorrow Weather (Flutter):} Template showcasing \textbf{Clean Architecture} and SOLID principles with responsive UI and modular layers. \textcolor[HTML]{371e77}{\underline{\href{https://github.com/vancityAyush/tomorrow_weather}{github.com/vancityAyush/tomorrow\_weather}}}
+        \item \textbf{Gourmet.Craft (Next.js/TypeScript):} Modern web app deployed on \textbf{Vercel}; demonstrates component patterns and frontend architecture. \textcolor[HTML]{371e77}{\underline{\href{https://gourmet-craft.vercel.app}{gourmet-craft.vercel.app}}}
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+% Leadership and Volunteering
+\section{Awards and Certificates}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Google Associate Android Developer (Kotlin) — Google
+        \item AWS Certified Developer – Associate — Amazon Web Services (AWS)
+        \item Meta React Native Professional Certificate — Meta (Coursera)
+        \item OpenJS Node.js Application Developer (JSNAD) — OpenJS Foundation
+        \item EDB PostgreSQL Associate Certification — EnterpriseDB
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+\end{document}

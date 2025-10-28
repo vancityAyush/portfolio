@@ -1,0 +1,11 @@
+{
+  "name": "carer-connect",
+  "full_name": "vancityAyush/carer-connect",
+  "description": "Java-based care management platform with microservices architecture, Docker deployment, and PostgreSQL backend integration",
+  "language": "Java",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2025-02-05T00:00:00Z",
+  "updated_at": "2025-02-05T21:01:59Z",
+  "url": "https://github.com/vancityAyush/carer-connect"
+}

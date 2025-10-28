@@ -1,0 +1,11 @@
+{
+  "name": "taskify",
+  "full_name": "vancityAyush/taskify",
+  "description": "NestJS REST API for task management with comprehensive authentication, Docker deployment, task sharing, and 100% test coverage",
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2025-09-15T00:00:00Z",
+  "updated_at": "2025-09-05T18:19:53Z",
+  "url": "https://github.com/vancityAyush/taskify"
+}

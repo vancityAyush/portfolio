@@ -1,0 +1,11 @@
+{
+  "name": "fsm",
+  "full_name": "vancityAyush/fsm",
+  "description": "Field Service Management application with comprehensive work order management, dependency injection, and token refresh capabilities",
+  "language": "Dart",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2025-10-13T00:00:00Z",
+  "updated_at": "2025-10-27T12:38:19Z",
+  "url": "https://github.com/vancityAyush/fsm"
+}
