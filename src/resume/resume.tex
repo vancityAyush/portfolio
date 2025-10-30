@@ -1,283 +1,170 @@
-\documentclass[10pt, letterpaper]{article}
 
-% Packages:
-\usepackage[
-    ignoreheadfoot, % set margins without considering header and footer
-    top=1.2cm, % decreased margin
-    bottom=1.2cm, % decreased margin
-    left=1.2cm, % decreased margin
-    right=1.2cm, % decreased margin
-    footskip=1.0cm, % seperation between body and footer
-    % showframe % for debugging
-]{geometry} % for adjusting page geometry
-\usepackage{titlesec} % for customizing section titles
-\usepackage{tabularx} % for making tables with fixed width columns
-\usepackage{array} % tabularx requires this
-\usepackage[dvipsnames]{xcolor} % for coloring text
-\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
-\usepackage{enumitem} % for customizing lists
-\usepackage{fontawesome5} % for using icons (ensure this package is installed)
-\usepackage{amsmath} % for math
-\usepackage[none]{hyphenat}
-\usepackage[
-    pdftitle={Ayush Kumar's Resume}, % Updated PDF title
-    pdfauthor={Ayush Kumar}, % Updated PDF author
-    pdfcreator={LaTeX with RenderCV},
-    colorlinks=true,
-    urlcolor=primaryColor
-]{hyperref} % for links, metadata and bookmarks
-\usepackage[pscoord]{eso-pic} % for floating text on the page
-\usepackage{calc} % for calculating lengths
-\usepackage{bookmark} % for bookmarks
-\usepackage{lastpage} % for getting the total number of pages
-\usepackage{changepage} % for one column entries (adjustwidth environment)
-\usepackage{paracol} % for two and three column entries
-\usepackage{ifthen} % for conditional statements
-\usepackage{needspace} % for avoiding page brake right after the section title
-\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
-\usepackage{ragged2e} % For \RaggedRight
+\documentclass[a4paper,8pt]{article}
 
-% Ensure that generate pdf is machine readable/ATS parsable:
-\ifPDFTeX
-    \input{glyphtounicode}
-    \pdfgentounicode=1
-    \usepackage[T1]{fontenc}
-    \usepackage[utf8]{inputenc}
-    \usepackage{lmodern} % Use Latin Modern fonts
-\else % For XeLaTeX or LuaLaTeX
-    \usepackage{fontspec}
-    \defaultfontfeatures{Ligatures=TeX}
-    % \setmainfont{Charter} % Example: Use Charter font if available
-    \usepackage{unicode-math} % Load unicode-math if needed
-\fi
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
 
-\usepackage{charter} % Using Charter font as in the example
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
 
-% Some settings:
-\raggedright % Use ragged right alignment globally
-\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
-\pagestyle{empty} % no header or footer
-\setcounter{secnumdepth}{0} % no section numbering
-\setlength{\parindent}{0pt} % no indentation
-\setlength{\topskip}{0pt} % no top skip
-\setlength{\columnsep}{0.15cm} % set column seperation (relevant for paracol)
-\pagenumbering{gobble} % no page numbering
+%tabularx environment
+\usepackage{tabularx}
 
-% Section title formatting
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large\RaggedRight}{}{0pt}{}[\vspace{1pt}\titlerule]
+%for lists within experience section
+\usepackage{enumitem}
 
-\titlespacing{\section}{
-    % left space:
-    0pt % Adjusted left spacing
-}{
-    % top space:
-    0.3 cm
-}{
-    % bottom space:
-    0.2 cm
-} % section title spacing
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
 
-% Custom bullet points for itemize
-\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
 
-% Environment for highlights (bullet points)
-\newenvironment{highlights}{
-    \begin{itemize}[
-        topsep=0.10 cm,
-        parsep=0.10 cm,
-        partopsep=0pt,
-        itemsep=0.05cm, % Slightly reduced item separation
-        leftmargin=10pt, % Adjusted left margin
-        labelwidth=!, % Let LaTeX figure out the label width
-        labelsep=5pt % Separation between bullet and text
-    ]\justifying % Justify text within highlights for better readability if desired, use \RaggedRight otherwise
-}{
-    \end{itemize}
-}
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
 
-% Environment for single column entries
-\newenvironment{onecolentry}{
-    \begin{adjustwidth}{0cm}{0cm} % No indentation
-    \RaggedRight % Ensure content is ragged right
-}{
-    \end{adjustwidth}
-}
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
 
-% Header environment
-\newenvironment{header}{
-    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.2} % Slightly reduced linespread
-}{
-    \par\kern\topsep
-}
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 
-% Define a separator for contact info (using a simple pipe)
-\newcommand{\contactsep}{\kern 0.25 cm \textcolor{gray}{|} \kern 0.25 cm}
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
 
-% Use hyperref's \href command directly for simplicity and ATS compatibility
-% Removed the website link as it seems incomplete/placeholder ('v')
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
 \begin{document}
 
-    % Header Section with Contact Information
-    \begin{header}
-        \textbf{\fontsize{24pt}{28pt}\selectfont Ayush Kumar} % Name
+% non-numbered pages
+\pagestyle{empty} 
 
-        \vspace{0.2 cm} % Reduced space
 
-        \normalsize % Normal font size for contact info
-        % Using fontawesome icons - ensure the package is loaded and icons exist
-        \mbox{\href{mailto:vancityAyush@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}vancityAyush@gmail.com}} % Email
-        \contactsep
-        \mbox{\href{tel:+919060842579}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}+91 9060842579}} % Phone
-        \contactsep
-        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Bengaluru, India} % Location
-        \contactsep
-        \mbox{\href{http://vancityayush.vercel.app/}{\color{black}{\footnotesize\faGlobe}\hspace*{0.13cm}vancityayush.vercel.app}} % Portfolio
-        \contactsep
-        \mbox{\href{https://linkedin.com/in/eliasak11}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}eliasak11}} % LinkedIn
-        \contactsep
-        \mbox{\href{https://github.com/vancityAyush}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}vancityAyush}} % GitHub
-    \end{header}
-    \vspace{5pt - 0.2 cm} % Adjust vertical space after header
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Ayush Kumar} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{\underline{\href{mailto:vancityAyush@gmail.com}{{{\faEnvelope} vancityAyush@gmail.com}}}} $|$
+\textcolor[HTML]{371e77}{{\faMobile} +91\;9060842579}
 
-    % Summary Section - REVISED FOR JD ALIGNMENT
-    \section{Summary}
-    \begin{onecolentry}
-        Full Stack Software Engineer with 3+ years delivering enterprise-grade applications using \textbf{Flutter}, \textbf{Android} (\textbf{Kotlin}), and \textbf{NestJS}. Expert in \textbf{Clean Architecture}, \textbf{MVVM}/\textbf{BLOC} patterns, and \textbf{microservices} design. I build scalable \textbf{REST APIs}, optimize \textbf{CI/CD pipelines} (\textbf{GitHub Actions}, \textbf{Gradle}), and implement \textbf{TDD} with comprehensive testing. Proven track record of shipping crash-free mobile apps and robust backend systems at scale.
-    \end{onecolentry}
+\textcolor[HTML]{371e77}{\underline{\href{https://github.com/vancityAyush}{{\raisebox{-0.05\height}{\faGithub} github.com/vancityAyush}}}} $|$
+\textcolor[HTML]{371e77}{\underline{\href{https://linkedin.com/in/eliasak11}{{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/eliasak11}}}}
+\textcolor[HTML]{371e77}{\underline{\href{http://vancityayush.vercel.app}{{\raisebox{-0.05\height}{\faGlobe} vancityayush.vercel.app}}}}
+\end{tabularx}
 
-    % Experience Section - REVISED KEYWORDS AND FOCUS
-    \section{Experience}
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Technologies \& Tools:} Flutter, Android, React, React Native, Node.js, NestJS, REST APIs, PostgreSQL, TypeORM, GitHub Actions, Gradle, Fastlane, AWS CDK, Firebase, Mapbox, BLE, ML Kit, Hive, Jest, Flutter Test, BLoC, MVVM, Clean Architecture, Microservices\\[3pt]
 
-    % Experience Entry 1 - Creative Synergies Group (Current Role)
-    \begin{onecolentry}
-        \textbf{Software Engineer (Full Stack)}, Creative Synergies Group -- Bengaluru, India \hfill \textit{Mar 2024 – Present}
-        \vspace{0.10 cm}
-        \begin{highlights}
-            \item Architected and delivered enterprise \textbf{Field Service Management (FSM)} mobile application using \textbf{Flutter} and \textbf{Dart} with \textbf{Clean Architecture} and \textbf{BLOC} pattern, managing work orders, service requests, and real-time technician coordination across \textbf{Android} and iOS platforms with 95\%+ crash-free rate.
-            \item Engineered scalable backend \textbf{microservices} using \textbf{NestJS}, \textbf{TypeORM}, and \textbf{PostgreSQL}, implementing \textbf{REST APIs} with \textbf{JWT authentication}, role-based access control (\textbf{RBAC}), and state machine workflows for work order lifecycle management serving 100+ field service engineers.
-            \item Developed native \textbf{Android} document scanner using \textbf{Kotlin}, \textbf{ML Kit Document Scanner}, \textbf{Room Database}, and \textbf{Jetpack Compose}, enabling automated document capture with PDF generation for field technicians' compliance documentation.
-            \item Implemented comprehensive \textbf{CI/CD pipelines} using \textbf{GitHub Actions} with multi-environment configurations (dev, staging, production), \textbf{automated Flutter builds}, and \textbf{Gradle} optimizations, reducing deployment time by 50\% across \textbf{Android} and iOS platforms.
-            \item Built robust \textbf{integration and unit testing} framework achieving 80\%+ code coverage using \textbf{Jest}, \textbf{Flutter Test}, and custom test fixtures, implementing \textbf{TDD} practices with automated API testing for authentication, work orders, documents, and inventory modules.
-            \item Optimized mobile app performance through \textbf{state management} refinements, implementing \textbf{Hive CE} for local caching, \textbf{Alice HTTP inspector} for API debugging, and \textbf{responsive UI} with flutter\_screenutil, improving responsiveness by 40\% and reducing API calls by 30\%.
-            \item Integrated real-time \textbf{location services} and \textbf{GPS tracking} for field operations, implementing geofencing, coordinate validation, and location-based work order actions with \textbf{image capture} and customer \textbf{signature workflows} for completion verification.
-        \end{highlights}
-    \end{onecolentry}
-    \vspace{0.2 cm}
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Creative Synergies Group, Bengaluru}} \hfill \color[HTML]{371e77} May 2025 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineer (Full Stack)}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Architected an enterprise FSM mobile app in \textbf{Flutter} (\textbf{Clean Architecture}, \textbf{BLoC}), coordinating work orders and real-time technician workflows across Android and iOS with 95\%+ crash-free sessions
+        \item Implemented \textbf{NestJS} microservices with \textbf{TypeORM}/\textbf{PostgreSQL}, \textbf{JWT} auth, and role-based access (RBAC), scaling to 100+ field engineers and reducing API latency by ~30\%
+        \item Built a native Android document scanner in \textbf{Kotlin} using \textbf{ML Kit}, Room, and Compose, automating PDF capture for compliance documents
+        \item Established \textbf{CI/CD} with \textbf{GitHub Actions} and Gradle for multi-env (dev/stage/prod) pipelines; cut release time ~50\% for Android and iOS
+        \item Drove \textbf{TDD} with \textbf{Jest} and \textbf{Flutter Test}, achieving 80\%+ coverage across auth, work orders, documents, and inventory modules
+        \item Integrated GPS and location services (geofencing, validation, location-based actions) with image capture and signature workflows for verified completion
+        \item \textit{Stack:} Flutter (Dart), Kotlin, NestJS, TypeScript, PostgreSQL, TypeORM, GitHub Actions, Gradle, Hive
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
 
-    % Experience Entry 2 - HealthFlex (Keep strong results, add transferable skills emphasis)
-    \begin{onecolentry}
-        \textbf{Founding Engineer (SDE)}, HeathFlex -- Bangalore, India \hfill \textit{Mar 2024 – Aug 2024}
-        \vspace{0.10 cm}
-        \begin{highlights}
-            \item Led design and \textbf{cross-platform mobile architecture} for health-focused application, delivering two highly optimized \textbf{React Native} apps with a 95\% crash-free rate, serving 1000+ users across \textbf{Android} and iOS platforms. % Emphasize cross-platform and Android
-            \item Engineered a performant Bluetooth Low Energy (BLE) module using \textbf{TDD} principles with 55+ \textbf{unit test} cases, parsing values at 20Hz per device via RxJS streams, demonstrating strong \textbf{multi-threading} and real-time data processing capabilities. % Added multi-threading keyword
-            \item Implemented a modular codebase for Machine Learning algorithms within the \textbf{React Native} environment with \textbf{native module integration}, improving processing capacity for over 2,000 data points per second.
-            \item Optimized application state management, significantly reducing render time from 800ms to 40ms and increasing user engagement by 30\%. % Highlights performance optimization skill
-            \item Managed \textbf{Android} and iOS app release cycles (1000+ users), implementing \textbf{mobile CI/CD pipelines} with \textbf{Gradle}-based \textbf{build automation}, automated testing, and deployment via Fastlane, reducing release cycle time by 40\%.
-            \item Integrated \textbf{Firebase} suite (\textbf{Analytics}, \textbf{Crashlytics}, \textbf{Performance Monitoring}) for comprehensive app monitoring, crash reporting, and user behavior tracking, achieving 95\% crash-free rate through data-driven \textbf{performance optimization}.
-        \end{highlights}
-    \end{onecolentry}
-    \vspace{0.2 cm}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{HealthFlex, Bangalore}} \hfill \color[HTML]{371e77} Mar 2024 - May 2025 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Founding Engineer (SDE)}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Delivered two cross-platform \textbf{React Native} apps with a 95\% crash-free rate, serving 1,000+ users across Android and iOS
+        \item Engineered a \textbf{BLE} module with \textbf{TDD} (55+ unit tests), streaming 20\,Hz per device via RxJS; improved stability and lowered latency by ~40\%
+        \item Modularized ML algorithms via native module integration, processing 2,000+ datapoints/sec in-app
+        \item Managed mobile releases with \textbf{Gradle} + \textbf{Fastlane} CI/CD, reducing release cycle time ~40\%; integrated \textbf{Firebase} (Analytics, Crashlytics, Performance)
+        \item \textit{Stack:} React Native, TypeScript, Kotlin, BLE, RxJS, Fastlane, Gradle, Firebase
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
 
-    % Experience Entry 3 - EMotorad (Highlight architecture, testing concepts)
-    \begin{onecolentry}
-        \textbf{App Developer Intern}, EMotorad -- Bangalore, India \hfill \textit{Sep 2023 – Nov 2023}
-        \vspace{0.10 cm}
-        \begin{highlights}
-            \item Engineered a scalable E-Bike rider assistant \textbf{Flutter} app using \textbf{Dart} programming, following \textbf{Clean Architecture} and \textbf{MVVM pattern} with \textbf{SOLID} principles, integrating \textbf{BLOC} state management, \textbf{REST API} integration (Retrofit/Dio), and \textbf{Flutter} routing for seamless navigation. % Added Dart, MVVM, Flutter keywords
-            \item Developed robust Bluetooth communication with E-Bike and accessories using \textbf{Dart isolates} and background services for \textbf{multi-threading} and concurrent operations, improving connection stability by 90\% and reducing latency by 40\%.
-            \item Integrated Mapbox for journey planning, implementing features like destination search, routing, and real-time rerouting, achieving 70\% map cost reduction via efficient caching. % Highlight feature development/optimization
-                    \item Implemented \textbf{comprehensive unit testing} using \textbf{Flutter Test} framework with \textbf{TDD} approach, achieving 80\%+ test coverage across core business logic, ensuring code quality and reliability for production release.
-                    \item Integrated \textbf{Firebase} services (\textbf{Cloud Messaging}, \textbf{Analytics}) for push notifications and user engagement tracking, optimizing \textbf{build pipelines} with \textbf{Gradle} configurations to reduce build times by 25\%.
-        \end{highlights}
-    \end{onecolentry}
-    \vspace{0.2 cm}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{EMotorad, Bangalore}} \hfill \color[HTML]{371e77} Sep 2023 - Nov 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{App Developer Intern}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Built an E-Bike rider assistant in \textbf{Flutter} (\textbf{MVVM}, \textbf{Clean Architecture}, \textbf{BLoC}); integrated REST APIs and robust navigation
+        \item Developed Bluetooth comms with Dart isolates/background services, improving connection stability 90\% and reducing latency 40\%
+        \item Implemented Mapbox routing and rerouting with caching, cutting map costs ~70\%
+        \item Achieved 80\%+ unit test coverage with \textbf{Flutter Test}; optimized Gradle to reduce build times ~25\%
+        \item \textit{Stack:} Flutter (Dart), Mapbox, BLE, Firebase, Gradle, Dio/Retrofit
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
 
-    % Experience Entry 4 - PySphere (Emphasize React/Web and JD keywords)
-    \begin{onecolentry}
-        \textbf{Product Developer}, PySphere LLP \hfill \textit{Nov 2021 – Sep 2023}
-        \vspace{0.10 cm}
-        \begin{highlights}
-             \item Developed 'Carer Connect,' a \textbf{responsive web application} using \textbf{ReactJS} and \textbf{NextJs}, accelerating digital transformation and reducing vendor management manual processes by 80\%. % Added "responsive web application", emphasized React/NextJs
-            \item Enhanced user engagement by 35\% by developing features like User Deep Link, Push Notifications, and Google Calendar \textbf{integration}. % Highlighted integration
-            \item Designed and developed a modern, \textbf{responsive} company website using \textbf{NextJs}, \textbf{ReactJS}, \textbf{HTML}, \textbf{CSS}, and Figma, increasing web traffic by 45\% through improved UI/UX. % Added "responsive", "HTML", "CSS"
-            \item Contributed to the development of 'SonoFlux,' a multi-tenant \textbf{web platform} using \textbf{ReactJS}, featuring custom domains and OAuth 2.0. Integrated Stripe and Razorpay \textbf{web services}, increasing payment success rates by 25\%. % Added "web platform", "ReactJS", "web services"
-             \item Collaborated within an \textbf{Agile} team, participating in requirement analysis, \textbf{code reviews}, and utilizing \textbf{Jest} for \textbf{unit testing}. % Added Agile, code reviews, Jest, unit testing
-        \end{highlights}
-    \end{onecolentry}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{PySphere LLP}} \hfill \color[HTML]{371e77} Nov 2021 - Sep 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Research Fellow}} \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Built \textbf{Carer Connect}, a responsive web app in \textbf{React}/\textbf{Next.js}, cutting manual vendor ops by ~80\%
+        \item Drove engagement +35\% via deep links, push notifications, and Google Calendar integrations
+        \item Delivered a modern, responsive company website (Next.js, React, HTML/CSS, Figma), increasing web traffic ~45\%
+        \item Contributed to \textbf{SonoFlux} (multi-tenant platform) with custom domains, OAuth 2.0, and Stripe/Razorpay integration; improved payment success ~25\%
+        \item \textit{Stack:} Java, React, Next.js, TypeScript, OAuth2, Stripe, Razorpay, Jest
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
 
-    % Skills Section - Leaned down and aligned to GitHub repos
-    \section{Skills}
-        \begin{onecolentry}
-            \textbf{Mobile:} \textbf{Flutter (Dart)}, \textbf{Android (Kotlin)}, React Native
-    \end{onecolentry}
-    \vspace{0.1 cm}
-        \begin{onecolentry}
-            \textbf{Backend \& APIs:} Node.js/\textbf{NestJS}, \textbf{REST APIs}, PostgreSQL
-    \end{onecolentry}
-    \vspace{0.1 cm}
-        \begin{onecolentry}
-            \textbf{Web:} \textbf{React}, Next.js, \textbf{TypeScript}
-    \end{onecolentry}
-    \vspace{0.1 cm}
-        \begin{onecolentry}
-            \textbf{Testing:} \textbf{TDD}, Flutter Test (Dart), Jest (TS/JS)
-    \end{onecolentry}
-    \vspace{0.1 cm}
-        \begin{onecolentry}
-            \textbf{DevOps \& Build:} GitHub Actions, AWS CDK, Gradle, Fastlane
-    \end{onecolentry}
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{A.M.C. Engineering College (VTU), Bengaluru} & \hfill \color[HTML]{371e77} 2020 - 2024 \\
+\color[HTML]{371e77} B.E. in Computer Science and Engineering & \hfill \color[HTML]{4B28A4} \textit{\textbf{CGPA: 7.96/10}} \\
+\multicolumn{2}{@{}X@{}}{Relevant Coursework: Data Structures \& Algorithms, Operating Systems, Database Management Systems, Computer Networks, Web Technologies, Mobile Application Development, AI/ML}
+\end{tabularx}\\[3pt]
 
-        % ===== Education =====
-        \section{Education}
-                \begin{onecolentry}
-                	\textbf{B.E., Computer Science \& Engineering}, Visvesvaraya Technological University (VTU) — Belagavi, India; A.M.C. Engineering College — Bengaluru, India \hfill \textit{2020 -- 2024}
-                \vspace{0.05 cm}
-                \begin{highlights}
-                        \item CGPA: \textbf{7.96}/10 \quad \textcolor{gray}{|} \quad Medium of Instruction: English
-                        \item Relevant coursework: Data Structures \& Algorithms, Operating Systems, Database Management Systems, Computer Networks, Web Technologies, Mobile Application Development, AI/ML
-                \end{highlights}
-        \end{onecolentry}
+% Projects
+\section{Project Work}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{String Calculator (TDD):} Dart implementation built with \textbf{TDD}; 13+ unit tests covering delimiter parsing, negatives handling, and edge cases. \textcolor[HTML]{371e77}{\underline{\href{https://github.com/vancityAyush/string-calculator}{github.com/vancityAyush/string-calculator}}}
+        \item \textbf{Tomorrow Weather (Flutter):} Template showcasing \textbf{Clean Architecture} and SOLID principles with responsive UI and modular layers. \textcolor[HTML]{371e77}{\underline{\href{https://github.com/vancityAyush/tomorrow_weather}{github.com/vancityAyush/tomorrow\_weather}}}
+        \item \textbf{Gourmet.Craft (Next.js/TypeScript):} Modern web app deployed on \textbf{Vercel}; demonstrates component patterns and frontend architecture. \textcolor[HTML]{371e77}{\underline{\href{https://gourmet-craft.vercel.app}{gourmet-craft.vercel.app}}}
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
 
-        % ===== Certifications (Suggested; commented out until earned) =====
-        \section{Certifications}
-        \begin{onecolentry}
-            % Uncomment entries as you complete them. Keep 3–5 most relevant.
-            \begin{highlights}
-                \item Google Associate Android Developer (Kotlin) — Google
-                \item JetBrains Certified Kotlin Developer — JetBrains
-                \item AWS Certified Developer – Associate — Amazon Web Services (AWS)
-                \item OpenJS Node.js Application Developer (JSNAD) — OpenJS Foundation
-                \item Meta React Native Professional Certificate — Meta (Coursera)
-                \item ISTQB Foundation Level — ISTQB (for testing fundamentals)
-                \item EDB PostgreSQL Associate Certification — EnterpriseDB
-            \end{highlights}
-        \end{onecolentry}
-
-    % Selected Projects
-    \section{Selected Projects}
-        \begin{onecolentry}
-            	\textbf{String Calculator (TDD)} \hfill \href{https://github.com/vancityAyush/string-calculator}{github.com/vancityAyush/string-calculator}
-        \vspace{0.05cm}
-        \begin{highlights}
-            \item Dart implementation built strictly with \textbf{TDD}; 13+ unit tests covering delimiter parsing, negatives handling, and edge cases.
-        \end{highlights}
-    \end{onecolentry}
-    \vspace{0.1 cm}
-        \begin{onecolentry}
-            	\textbf{Tomorrow Weather (Flutter)} \hfill \href{https://github.com/vancityAyush/tomorrow_weather}{github.com/vancityAyush/tomorrow\_weather}
-        \vspace{0.05cm}
-        \begin{highlights}
-            \item Flutter app template showcasing \textbf{Clean Architecture} and \textbf{SOLID} principles; responsive UI and modular layers for testability.
-        \end{highlights}
-    \end{onecolentry}
-    \vspace{0.1 cm}
-        \begin{onecolentry}
-            	\textbf{Gourmet.Craft (Next.js/TypeScript)} \hfill \href{https://gourmet-craft.vercel.app}{gourmet-craft.vercel.app}
-        \vspace{0.05cm}
-        \begin{highlights}
-            \item Recent \textbf{Next.js} and \textbf{TypeScript} web app; deployed on \textbf{Vercel}. Showcases component patterns and modern frontend architecture.
-        \end{highlights}
-    \end{onecolentry}
-
+% Leadership and Volunteering
+\section{Awards and Certificates}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Google Associate Android Developer (Kotlin) — Google
+        \item AWS Certified Developer – Associate — Amazon Web Services (AWS)
+        \item Meta React Native Professional Certificate — Meta (Coursera)
+        \item OpenJS Node.js Application Developer (JSNAD) — OpenJS Foundation
+        \item EDB PostgreSQL Associate Certification — EnterpriseDB
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
 \end{document}
