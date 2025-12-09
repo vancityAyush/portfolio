@@ -1,0 +1,219 @@
+{
+    "last_updated": "2025-12-09",
+    "skills": {
+        "mobile_development": {
+            "primary": [
+                "Flutter",
+                "React Native",
+                "Android (Kotlin)",
+                "Dart"
+            ],
+            "frameworks": [
+                "BLoC",
+                "GetX",
+                "Provider",
+                "MVVM",
+                "Clean Architecture"
+            ],
+            "tools": [
+                "Gradle",
+                "Fastlane",
+                "ML Kit",
+                "Mapbox",
+                "Firebase"
+            ]
+        },
+        "frontend": {
+            "languages": [
+                "TypeScript",
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "frameworks": [
+                "React",
+                "Next.js",
+                "Redux"
+            ],
+            "tools": [
+                "Figma",
+                "Responsive Design",
+                "Accessibility"
+            ]
+        },
+        "backend": {
+            "languages": [
+                "TypeScript",
+                "JavaScript",
+                "Java",
+                "Python"
+            ],
+            "frameworks": [
+                "Node.js",
+                "NestJS",
+                "Express.js",
+                "Spring Boot"
+            ],
+            "patterns": [
+                "REST APIs",
+                "Microservices",
+                "Clean Architecture"
+            ]
+        },
+        "databases": {
+            "relational": [
+                "PostgreSQL",
+                "MySQL"
+            ],
+            "nosql": [
+                "MongoDB",
+                "Firebase Firestore"
+            ],
+            "orms": [
+                "TypeORM",
+                "Prisma ORM"
+            ]
+        },
+        "cloud_devops": {
+            "aws": [
+                "AWS CDK",
+                "ECS",
+                "S3",
+                "Lambda",
+                "EC2"
+            ],
+            "containers": [
+                "Docker",
+                "Docker Compose"
+            ],
+            "ci_cd": [
+                "GitHub Actions",
+                "Fastlane",
+                "Gradle"
+            ],
+            "other": [
+                "Firebase",
+                "Vercel"
+            ]
+        },
+        "testing": {
+            "frameworks": [
+                "Jest",
+                "Flutter Test"
+            ],
+            "practices": [
+                "TDD",
+                "Unit Testing",
+                "Integration Testing",
+                "E2E Testing"
+            ],
+            "metrics": [
+                "80%+ test coverage achieved"
+            ]
+        },
+        "hardware_integration": {
+            "protocols": [
+                "BLE (Bluetooth Low Energy)"
+            ],
+            "tools": [
+                "RxJS",
+                "Dart Isolates",
+                "Background Services"
+            ]
+        },
+        "payments_auth": {
+            "payments": [
+                "Stripe",
+                "Razorpay"
+            ],
+            "auth": [
+                "JWT",
+                "OAuth 2.0",
+                "RBAC"
+            ]
+        },
+        "other": {
+            "version_control": [
+                "Git",
+                "GitHub"
+            ],
+            "storage": [
+                "Hive",
+                "Room",
+                "SQLite"
+            ],
+            "apis": [
+                "REST",
+                "GraphQL (basic)"
+            ]
+        },
+        "fundamentals": {
+            "concepts": [
+                "Data Structures",
+                "Algorithms",
+                "System Design",
+                "OOP",
+                "SOLID Principles"
+            ],
+            "practices": [
+                "Agile/Scrum",
+                "Code Review",
+                "Documentation"
+            ]
+        }
+    },
+    "skills_flat": [
+        "Flutter",
+        "React Native",
+        "Android",
+        "Kotlin",
+        "Dart",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "NestJS",
+        "Express.js",
+        "Spring Boot",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "TypeORM",
+        "Prisma",
+        "Docker",
+        "GitHub Actions",
+        "AWS",
+        "Firebase",
+        "Vercel",
+        "Jest",
+        "Flutter Test",
+        "TDD",
+        "BLE",
+        "Mapbox",
+        "ML Kit",
+        "JWT",
+        "OAuth 2.0",
+        "Stripe",
+        "Razorpay",
+        "REST APIs",
+        "Microservices",
+        "Clean Architecture",
+        "BLoC",
+        "MVVM",
+        "C++",
+        "Python",
+        "Shell Scripting",
+        "Data Structures",
+        "Algorithms",
+        "System Design"
+    ],
+    "language_distribution": {
+        "Dart": 35,
+        "JavaScript": 26,
+        "TypeScript": 13,
+        "Java": 13,
+        "Shell": 4,
+        "HTML_CSS": 9
+    }
+}

@@ -1,0 +1,92 @@
+name: Build LaTeX Resumes
+
+on:
+  push:
+    paths:
+      - 'src/resume/**/*.tex'
+      - '.github/workflows/latex-build.yml'
+  pull_request:
+    paths:
+      - 'src/resume/**/*.tex'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup TeX Live
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: src/resume
+          root_file: "*.tex"
+          glob_root_file: true
+          latexmk_use_xelatex: true
+          latexmk_shell_escape: true
+          pre_compile: |
+            echo "Installing additional fonts..."
+          args: "-xelatex -interaction=nonstopmode -halt-on-error"
+          continue_on_error: true
+
+      - name: Compile with XeLaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: src/resume
+          root_file: main.tex
+          latexmk_use_xelatex: true
+
+      - name: Compile resume.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: src/resume
+          root_file: resume.tex
+          latexmk_use_xelatex: true
+        continue-on-error: true
+
+      - name: Compile clipboard-health-resume.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: src/resume
+          root_file: clipboard-health-resume.tex
+          latexmk_use_xelatex: true
+        continue-on-error: true
+
+      - name: Compile tailored-clipboard-health-resume.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: src/resume
+          root_file: tailored-clipboard-health-resume.tex
+          latexmk_use_xelatex: true
+        continue-on-error: true
+
+      - name: Compile tailored-clipboard-resume.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: src/resume
+          root_file: tailored-clipboard-resume.tex
+          latexmk_use_xelatex: true
+        continue-on-error: true
+
+      - name: List generated PDFs
+        run: |
+          echo "Generated PDF files:"
+          find src/resume -name "*.pdf" -type f
+
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdfs
+          path: src/resume/*.pdf
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Upload PDFs to Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: src/resume/*.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

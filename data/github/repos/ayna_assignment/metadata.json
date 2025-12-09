@@ -1,7 +1,8 @@
 {
   "name": "ayna_assignment",
   "full_name": "vancityAyush/ayna_assignment",
-  "description": "Flutter chat application built for Ayna assignment",
+  "description": "Flutter application for Ayna technical assessment",
+  "summary": "A Flutter application developed for Ayna technical assessment demonstrating cross-platform mobile development expertise. Features Clean Architecture implementation, state management with BLoC, and responsive UI design. Showcases proficiency in Flutter development patterns and modern app architecture.",
   "language": "Dart",
   "stars": 0,
   "forks": 0,
@@ -9,15 +10,14 @@
   "updated_at": "2024-06-28T07:28:27Z",
   "url": "https://github.com/vancityAyush/ayna_assignment",
   "features": [
-    "Real-time chat functionality",
-    "Flutter cross-platform mobile app",
-    "Material Design UI"
+    "Cross-platform design",
+    "Clean Architecture",
+    "BLoC state management",
+    "Responsive UI"
   ],
   "tech_stack": {
-    "languages": ["Dart"],
+    "languages": ["Dart", "C++"],
     "frameworks": ["Flutter"],
-    "platforms": ["iOS", "Android"],
-    "tools": ["Dart SDK", "Flutter SDK"]
-  },
-  "architecture": "Flutter mobile application with widget-based architecture"
+    "platforms": ["iOS", "Android", "Web"]
+  }
 }

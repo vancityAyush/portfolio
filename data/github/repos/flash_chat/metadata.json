@@ -1,0 +1,25 @@
+{
+  "name": "flash_chat",
+  "full_name": "vancityAyush/flash_chat",
+  "description": "A Chatting App on Flutter using Firebase",
+  "summary": "A real-time chat application built with Flutter and Firebase. Features user authentication, instant messaging with Firebase Realtime Database/Firestore, push notifications, and modern chat UI. Demonstrates proficiency in Flutter development and Firebase integration for real-time applications.",
+  "language": "Dart",
+  "stars": 1,
+  "forks": 1,
+  "created_at": "2022-01-26T10:46:10Z",
+  "updated_at": "2022-03-17T23:28:08Z",
+  "url": "https://github.com/vancityAyush/flash_chat",
+  "features": [
+    "Real-time messaging",
+    "Firebase authentication",
+    "Cloud Firestore integration",
+    "Push notifications",
+    "Modern chat UI"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "frameworks": ["Flutter"],
+    "backend": ["Firebase"],
+    "platforms": ["iOS", "Android"]
+  }
+}

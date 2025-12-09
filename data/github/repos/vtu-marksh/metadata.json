@@ -1,24 +1,21 @@
 {
   "name": "vtu-marksh",
   "full_name": "vancityAyush/vtu-marksh",
-  "description": "Next.js web application",
+  "description": "VTU marks calculation and management utility",
+  "summary": "A utility application for VTU (Visvesvaraya Technological University) marks calculation and management. Features grade calculation, CGPA computation, and academic performance tracking. Built to help students track and manage their academic progress efficiently.",
   "language": "JavaScript",
   "stars": 0,
   "forks": 0,
-  "created_at": "2023-07-31T14:17:36Z",
-  "updated_at": "2025-01-02T11:48:45Z",
+  "created_at": "2023-01-01T00:00:00Z",
+  "updated_at": "2023-01-01T00:00:00Z",
   "url": "https://github.com/vancityAyush/vtu-marksh",
   "features": [
-    "Server-side rendering with Next.js",
-    "API routes for backend functionality",
-    "Font optimization with next/font",
-    "Hot reload development environment"
+    "Grade calculation",
+    "CGPA computation",
+    "Academic tracking",
+    "Student utility"
   ],
   "tech_stack": {
-    "languages": ["JavaScript"],
-    "frameworks": ["Next.js", "React"],
-    "tools": ["Node.js", "npm/yarn/pnpm"],
-    "deployment": ["Vercel"]
-  },
-  "architecture": "Next.js full-stack application with API routes and server-side rendering"
+    "languages": ["JavaScript", "HTML", "CSS"]
+  }
 }

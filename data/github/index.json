@@ -1,5 +1,5 @@
 {
-  "generated_timestamp": "2025-10-29T00:00:00Z",
+  "generated_timestamp": "2025-12-09T00:00:00Z",
   "profile": {
     "login": "vancityAyush",
     "name": "Ayush Kumar",
@@ -7,7 +7,7 @@
     "location": "India",
     "bio": "Software Developer",
     "public_repos": 104,
-    "followers": 19,
+    "followers": 18,
     "blog": "https://vancityayush.vercel.app/",
     "twitter": "vancityAyush"
   },
@@ -135,8 +135,8 @@
     }
   ],
   "stats": {
-    "repos_processed": 23,
-    "total_stars": 6,
+    "repos_processed": 30,
+    "total_stars": 10,
     "total_forks": 0,
     "top_languages": [
       {"name": "Dart", "percent": 35},

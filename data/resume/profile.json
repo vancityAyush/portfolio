@@ -1,0 +1,37 @@
+{
+    "name": "Ayush Kumar",
+    "email": "vancityAyush@gmail.com",
+    "phone": "+91 9060842579",
+    "location": "Bengaluru, India",
+    "github": {
+        "username": "vancityAyush",
+        "url": "https://github.com/vancityAyush",
+        "public_repos": 104,
+        "followers": 18,
+        "stars_received": 10,
+        "commits_this_year": 80,
+        "prs_this_year": 12
+    },
+    "linkedin": {
+        "username": "eliasak11",
+        "url": "https://linkedin.com/in/eliasak11"
+    },
+    "portfolio": {
+        "url": "https://vancityayush.vercel.app"
+    },
+    "twitter": {
+        "username": "vancityAyush",
+        "url": "https://twitter.com/vancityAyush"
+    },
+    "bio": "Full Stack Software Developer | Mobile & Web",
+    "current_company": "Creative Synergies Group (@CreativeDT)",
+    "years_of_experience": "3+",
+    "primary_languages": [
+        "Dart",
+        "TypeScript",
+        "JavaScript",
+        "Java",
+        "Kotlin"
+    ],
+    "last_updated": "2025-12-09"
+}

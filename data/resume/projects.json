@@ -1,0 +1,699 @@
+{
+    "last_updated": "2025-12-09",
+    "projects": [
+        {
+            "name": "String Calculator (TDD)",
+            "year": "2025",
+            "description": "Dart implementation built with TDD; 13+ unit tests covering delimiter parsing, negatives handling, and edge cases",
+            "url": "https://github.com/vancityAyush/string-calculator",
+            "tech_stack": [
+                "Dart",
+                "TDD",
+                "Unit Testing"
+            ],
+            "keywords": [
+                "TDD",
+                "Test-Driven Development",
+                "Dart",
+                "Clean Code"
+            ],
+            "highlights": [
+                "13+ unit tests",
+                "Delimiter parsing",
+                "Edge case handling"
+            ]
+        },
+        {
+            "name": "Tomorrow Weather",
+            "year": "2025",
+            "description": "Flutter template showcasing Clean Architecture and SOLID principles with responsive UI and modular layers",
+            "url": "https://github.com/vancityAyush/tomorrow_weather",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Clean Architecture",
+                "SOLID"
+            ],
+            "keywords": [
+                "Flutter",
+                "Clean Architecture",
+                "SOLID",
+                "Responsive UI",
+                "Mobile"
+            ],
+            "highlights": [
+                "5 GitHub stars",
+                "Clean Architecture implementation",
+                "Modular design"
+            ]
+        },
+        {
+            "name": "Gourmet.Craft",
+            "year": "2025",
+            "description": "Modern Next.js e-commerce web app with Sanity CMS integration, deployed on Vercel; demonstrates component patterns and frontend architecture",
+            "url": "https://gourmet-craft.vercel.app",
+            "github_url": "https://github.com/vancityAyush/gourmet.craft",
+            "tech_stack": [
+                "Next.js",
+                "TypeScript",
+                "React",
+                "Sanity CMS",
+                "Vercel"
+            ],
+            "keywords": [
+                "Next.js",
+                "TypeScript",
+                "E-commerce",
+                "CMS",
+                "Vercel",
+                "SSR"
+            ],
+            "highlights": [
+                "Mobile-responsive UI",
+                "Sanity CMS integration",
+                "Production deployed"
+            ]
+        },
+        {
+            "name": "Taskify",
+            "year": "2025",
+            "description": "NestJS REST API for task management with comprehensive authentication, Docker deployment, task sharing, and 100% test coverage",
+            "url": "https://github.com/vancityAyush/taskify",
+            "tech_stack": [
+                "NestJS",
+                "TypeScript",
+                "PostgreSQL",
+                "Docker",
+                "Jest"
+            ],
+            "keywords": [
+                "NestJS",
+                "REST API",
+                "Authentication",
+                "Docker",
+                "TDD",
+                "100% coverage"
+            ],
+            "highlights": [
+                "100% test coverage",
+                "Docker deployment",
+                "JWT authentication",
+                "Task sharing"
+            ]
+        },
+        {
+            "name": "HealthFlex Mobile App",
+            "year": "2024-2025",
+            "description": "React Native healthcare app with 57 merged PRs (+45K lines). Led BLE 2.0 migration, Component Migration, and Algorithm Utils for exercise tracking",
+            "url": "https://github.com/vancityAyush/healthflex.app",
+            "company": "HealthFlex",
+            "merged_prs": 57,
+            "lines_added": 45000,
+            "tech_stack": [
+                "React Native",
+                "TypeScript",
+                "Expo SDK 52",
+                "BLE 2.0",
+                "RxJS",
+                "FlashList"
+            ],
+            "keywords": [
+                "Healthcare",
+                "Mobile",
+                "BLE",
+                "Exercise Engine",
+                "Expo",
+                "57 PRs"
+            ],
+            "highlights": [
+                "Led BLE 2.0 migration (+1164 lines) with complete sensor stack rewrite",
+                "Architected Component Migration (+14193 lines) refactoring entire app",
+                "Built Non-measurable Flow (+5400 lines) for complex exercise types",
+                "Developed Algorithm Utils (+878 lines) for rep counting and ROM",
+                "Implemented Event Emitter architecture for state management",
+                "Authored 57 merged PRs over 6-month contribution period"
+            ]
+        },
+        {
+            "name": "Stance Dashboard",
+            "year": "2025",
+            "description": "Full-stack healthcare dashboard with 23 merged PRs (+11.5K lines). Led team of 4 developers with Scrum, Jira, and Google Calendar integration",
+            "url": "https://github.com/vancityAyush/stance-dashboard",
+            "company": "HealthFlex",
+            "role": "Tech Lead",
+            "team_size": 4,
+            "merged_prs": 23,
+            "lines_added": 11500,
+            "tech_stack": [
+                "TypeScript",
+                "React",
+                "Next.js",
+                "GraphQL Shield",
+                "NestJS",
+                "Google Calendar API"
+            ],
+            "keywords": [
+                "Healthcare",
+                "Tech Lead",
+                "GraphQL Shield",
+                "Google Calendar",
+                "RBAC",
+                "23 PRs"
+            ],
+            "highlights": [
+                "Led team of 4 developers with Scrum, Jira tickets, and DB schema design",
+                "Built complete Auth system (+1738 lines) with JWT tokens",
+                "Implemented Events/Calendar (+1558 lines) with Google Calendar integration",
+                "Architected GraphQL Shield (+662 lines) for permissions",
+                "Created RBAC system (+789 lines) with role management",
+                "Authored 23 merged PRs building core dashboard features"
+            ]
+        },
+        {
+            "name": "Doctors App",
+            "year": "2024-2025",
+            "description": "React Native app for healthcare professionals with 11 merged PRs (+1.4K lines). Built sensor tagging, chat WebSocket, and screen migrations",
+            "url": "https://github.com/vancityAyush/doctors.app",
+            "company": "HealthFlex",
+            "merged_prs": 11,
+            "lines_added": 1406,
+            "tech_stack": [
+                "React Native",
+                "TypeScript",
+                "WebSocket",
+                "Storybook",
+                "Fastlane"
+            ],
+            "keywords": [
+                "Healthcare",
+                "Mobile",
+                "WebSocket",
+                "BLE Tagging",
+                "11 PRs"
+            ],
+            "highlights": [
+                "Built sensor tagging screen (+357 lines) for BLE pairing",
+                "Implemented real-time chat WebSocket (+322 lines)",
+                "Led patient history migration with data visualization",
+                "Migrated home, profile, and add patient screens",
+                "Authored 11 merged PRs with comprehensive migrations"
+            ]
+        },
+        {
+            "name": "HealthFlex API",
+            "year": "2025",
+            "description": "NestJS backend API with exercise parser integration, session DTOs, regimen management, pain alerts, and group-based access control (483 commits)",
+            "url": "https://github.com/vancityAyush/healthflex.api",
+            "company": "HealthFlex",
+            "tech_stack": [
+                "TypeScript",
+                "Node.js",
+                "NestJS",
+                "PostgreSQL",
+                "Git LFS"
+            ],
+            "keywords": [
+                "Healthcare",
+                "Backend",
+                "NestJS",
+                "Clean Architecture",
+                "DTOs"
+            ],
+            "highlights": [
+                "483 commits - exercise landmark upload with parser",
+                "Session DTOs and finish workflows with use case pattern",
+                "Regimen management APIs with metadata and delete operations",
+                "Patient pain alerts and group-based access control"
+            ]
+        },
+        {
+            "name": "FSM (Field Service Management)",
+            "year": "2025",
+            "description": "Enterprise Flutter app for field service management with work order management, adaptive UI, dependency injection, and token refresh capabilities",
+            "url": "https://github.com/vancityAyush/fsm",
+            "company": "Creative Synergies Group",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "BLoC",
+                "Clean Architecture",
+                "REST APIs"
+            ],
+            "keywords": [
+                "Flutter",
+                "Enterprise",
+                "Field Service",
+                "Work Orders",
+                "Clean Architecture"
+            ],
+            "highlights": [
+                "95%+ crash-free sessions",
+                "Real-time workflows",
+                "Cross-platform"
+            ]
+        },
+        {
+            "name": "Carer Connect",
+            "year": "2023",
+            "description": "Healthcare vendor management web application built with React/Next.js, reducing manual operations by ~80%",
+            "url": "https://github.com/vancityAyush/carer-connect",
+            "company": "PySphere LLP",
+            "tech_stack": [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "PostgreSQL"
+            ],
+            "keywords": [
+                "Healthcare",
+                "React",
+                "Next.js",
+                "Vendor Management",
+                "Web App"
+            ],
+            "highlights": [
+                "~80% manual ops reduction",
+                "+35% engagement",
+                "Healthcare domain"
+            ]
+        },
+        {
+            "name": "Credit Approval",
+            "year": "2023",
+            "description": "Loan management backend API built with Node.js, Express, and Prisma ORM with MySQL database and Docker containerization",
+            "url": "https://github.com/vancityAyush/credit-approval",
+            "tech_stack": [
+                "Node.js",
+                "Express.js",
+                "Prisma",
+                "MySQL",
+                "Docker"
+            ],
+            "keywords": [
+                "Node.js",
+                "REST API",
+                "Prisma ORM",
+                "Docker",
+                "Finance"
+            ],
+            "highlights": [
+                "Docker containerization",
+                "Automated migrations",
+                "API documentation"
+            ]
+        },
+        {
+            "name": "UberClone",
+            "year": "2022",
+            "description": "Full-featured Uber clone Android app with Parse Server backend, real-time location tracking, and Google Maps integration",
+            "url": "https://github.com/vancityAyush/UberClone",
+            "tech_stack": [
+                "Java",
+                "Android",
+                "Parse Server",
+                "Google Maps"
+            ],
+            "keywords": [
+                "Android",
+                "Java",
+                "Real-time",
+                "Location",
+                "Google Maps"
+            ],
+            "highlights": [
+                "Real-time location tracking",
+                "Driver-rider matching",
+                "Google Maps integration"
+            ]
+        },
+        {
+            "name": "iNotebook",
+            "year": "2024",
+            "description": "React-based notebook application with interactive note-taking interface and PWA capabilities",
+            "url": "https://github.com/vancityAyush/inotebook",
+            "tech_stack": [
+                "React",
+                "JavaScript",
+                "Create React App"
+            ],
+            "keywords": [
+                "React",
+                "SPA",
+                "PWA",
+                "Note-taking"
+            ],
+            "highlights": [
+                "Hot reload",
+                "PWA capabilities",
+                "Code splitting"
+            ]
+        },
+        {
+            "name": "ssh_script",
+            "year": "2025",
+            "description": "Cross-platform SSH key automation script for GitHub, GitLab, Bitbucket with smart clipboard integration (macOS, Linux, Windows, WSL)",
+            "url": "https://github.com/vancityAyush/ssh_script",
+            "tech_stack": [
+                "Shell",
+                "Bash",
+                "POSIX"
+            ],
+            "keywords": [
+                "DevOps",
+                "Automation",
+                "SSH",
+                "Git",
+                "Cross-platform",
+                "Shell Scripting"
+            ],
+            "highlights": [
+                "1 GitHub star",
+                "Cross-platform support",
+                "POSIX-compliant"
+            ]
+        },
+        {
+            "name": "Prettier Plugin Sort Imports v3",
+            "year": "2025",
+            "description": "Enhanced Prettier plugin for import sorting with custom sorting algorithms",
+            "url": "https://github.com/vancityAyush/prettier-plugin-sort-imports-v3",
+            "tech_stack": [
+                "TypeScript",
+                "Prettier",
+                "Node.js"
+            ],
+            "keywords": [
+                "Prettier",
+                "Developer Tools",
+                "TypeScript",
+                "Code Formatting"
+            ],
+            "highlights": [
+                "Developer tooling",
+                "Custom sorting algorithms",
+                "Open source contribution"
+            ]
+        },
+        {
+            "name": "Vlogger",
+            "year": "2025",
+            "description": "Video blogging platform application with multimedia content management and streaming capabilities",
+            "url": "https://github.com/vancityAyush/vlogger",
+            "tech_stack": [
+                "Flutter",
+                "Dart"
+            ],
+            "keywords": [
+                "Flutter",
+                "Video",
+                "Multimedia",
+                "Content Management",
+                "Mobile"
+            ],
+            "highlights": [
+                "Video content management",
+                "Multimedia playback",
+                "Content organization"
+            ]
+        },
+        {
+            "name": "Pingo Learn",
+            "year": "2024",
+            "description": "Flutter application with Fastlane CI/CD and Firebase integration for automated builds and deployments",
+            "url": "https://github.com/vancityAyush/pingo_learn_r1",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Fastlane",
+                "Firebase",
+                "Ruby"
+            ],
+            "keywords": [
+                "Flutter",
+                "CI/CD",
+                "Fastlane",
+                "Firebase",
+                "Mobile"
+            ],
+            "highlights": [
+                "Fastlane CI/CD integration",
+                "Firebase integration",
+                "Cross-platform support",
+                "Automated deployments"
+            ]
+        },
+        {
+            "name": "Colloseum",
+            "year": "2023",
+            "description": "Competitive programming and coding challenges repository with algorithmic problem-solving solutions",
+            "url": "https://github.com/vancityAyush/colloseum",
+            "tech_stack": [
+                "Java",
+                "C++",
+                "Python"
+            ],
+            "keywords": [
+                "Competitive Programming",
+                "Algorithms",
+                "Data Structures",
+                "Problem Solving"
+            ],
+            "highlights": [
+                "Algorithmic solutions",
+                "Data structure implementations",
+                "Competitive programming"
+            ]
+        },
+        {
+            "name": "Scanner Go",
+            "year": "2022",
+            "description": "Flutter-based document scanner app with 1Cr+ downloads on Play Store, featuring complex animations and optimized performance",
+            "url": "https://play.google.com/store/apps/details?id=com.cam.scanner.camscanner.documentscanner",
+            "company": "AppyHigh LLP",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "BLoC",
+                "Streams"
+            ],
+            "keywords": [
+                "Flutter",
+                "Scanner",
+                "Document",
+                "High-scale",
+                "Play Store"
+            ],
+            "highlights": [
+                "1Cr+ downloads",
+                "Complex animations",
+                "Native BLoC integration"
+            ]
+        },
+        {
+            "name": "Railway App",
+            "year": "2022",
+            "description": "Railway app for showing live train status, route information, and station search functionality",
+            "url": "https://play.google.com/store/apps/details?id=railway.app.train.status",
+            "company": "AppyHigh LLP",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "BLoC",
+                "REST APIs"
+            ],
+            "keywords": [
+                "Flutter",
+                "Railway",
+                "Train Status",
+                "Live Tracking"
+            ],
+            "highlights": [
+                "Live train status",
+                "Route information",
+                "Station search"
+            ]
+        },
+        {
+            "name": "Datotta",
+            "year": "2021",
+            "description": "E-commerce Android app for clothes with Shopify backend integration, published on Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.datotta",
+            "company": "Daphnis Labs",
+            "tech_stack": [
+                "Java",
+                "Android SDK",
+                "Shopify"
+            ],
+            "keywords": [
+                "Android",
+                "E-commerce",
+                "Shopify",
+                "Mobile App"
+            ],
+            "highlights": [
+                "Shopify backend integration",
+                "Published on Play Store",
+                "E-commerce functionality"
+            ]
+        },
+        {
+            "name": "ChatSansar",
+            "year": "2021",
+            "description": "Android-based IRC chatting application with real-time messaging capabilities",
+            "url": "https://github.com/vancityAyush/ChatSansar",
+            "company": "Daphnis Labs",
+            "tech_stack": [
+                "Java",
+                "Android SDK",
+                "IRC Protocol"
+            ],
+            "keywords": [
+                "Android",
+                "Chat",
+                "IRC",
+                "Real-time",
+                "Messaging"
+            ],
+            "highlights": [
+                "IRC protocol implementation",
+                "Real-time messaging",
+                "Android native"
+            ]
+        },
+        {
+            "name": "iPanelKlean",
+            "year": "2022",
+            "description": "IoT application to control iPanel devices, connected to AWS server through APIs and Sockets for real-time data display",
+            "url": "https://play.google.com/store/apps/details?id=com.inoviea.ipanelklean",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "AWS",
+                "WebSockets"
+            ],
+            "keywords": [
+                "IoT",
+                "Flutter",
+                "AWS",
+                "WebSockets",
+                "Real-time"
+            ],
+            "highlights": [
+                "IoT device control",
+                "AWS integration",
+                "Real-time data streaming"
+            ]
+        },
+        {
+            "name": "VTU Marksh",
+            "year": "2023",
+            "description": "Web application to scrape data from VTU Database and calculate CGPA/SGPA based on USN for VTU students",
+            "url": "https://github.com/vancityAyush/vtu-marksh",
+            "tech_stack": [
+                "Next.js",
+                "React",
+                "Web Scraping"
+            ],
+            "keywords": [
+                "Next.js",
+                "Web Scraping",
+                "Education",
+                "VTU",
+                "CGPA Calculator"
+            ],
+            "highlights": [
+                "VTU database integration",
+                "CGPA/SGPA calculation",
+                "University tool"
+            ]
+        },
+        {
+            "name": "MingWood China",
+            "year": "2022",
+            "description": "Company website designed and developed on Alibaba Cloud Portal",
+            "url": "https://mingwoodchina.com",
+            "tech_stack": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Alibaba Cloud"
+            ],
+            "keywords": [
+                "Web Development",
+                "Alibaba Cloud",
+                "Company Website"
+            ],
+            "highlights": [
+                "Alibaba Cloud deployment",
+                "Corporate website",
+                "Responsive design"
+            ]
+        },
+        {
+            "name": "User Interface OS",
+            "year": "2017",
+            "description": "Desktop application with a custom windowing system featuring 6 built-in applications: MExcel, MWord, Typing Speed, Calculator, Tic Tac Toe, and File Browser",
+            "url": "https://github.com/vancityAyush/UserInterfaceOS",
+            "tech_stack": [
+                "Java",
+                "Swing",
+                "Desktop Development"
+            ],
+            "keywords": [
+                "Desktop",
+                "Java",
+                "Windowing System",
+                "GUI"
+            ],
+            "highlights": [
+                "Custom windowing system",
+                "6 built-in applications",
+                "Early programming project"
+            ]
+        },
+        {
+            "name": "PyLudo",
+            "year": "2020",
+            "description": "LUDO game developed using Python's PyGame library with multiplayer support",
+            "url": "https://github.com/vancityAyush/PyLudo",
+            "tech_stack": [
+                "Python",
+                "PyGame"
+            ],
+            "keywords": [
+                "Python",
+                "PyGame",
+                "Game Development",
+                "LUDO"
+            ],
+            "highlights": [
+                "PyGame implementation",
+                "Multiplayer support",
+                "Game logic"
+            ]
+        },
+        {
+            "name": "Coddy",
+            "year": "2024",
+            "description": "VS Code extension using TypeScript and Hugging Face API to provide real-time AI code suggestions with complex async state management",
+            "url": "https://github.com/vancityAyush/Coddy",
+            "tech_stack": [
+                "TypeScript",
+                "VS Code Extension API",
+                "Hugging Face"
+            ],
+            "keywords": [
+                "VS Code",
+                "AI",
+                "Code Suggestions",
+                "Developer Tools",
+                "TypeScript"
+            ],
+            "highlights": [
+                "AI-powered suggestions",
+                "Hugging Face integration",
+                "VS Code extension"
+            ]
+        }
+    ]
+}

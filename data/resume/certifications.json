@@ -1,0 +1,96 @@
+{
+    "last_updated": "2025-12-09",
+    "certifications": [
+        {
+            "name": "Google Associate Android Developer (Kotlin)",
+            "issuer": "Google",
+            "category": "Mobile Development",
+            "keywords": [
+                "Android",
+                "Kotlin",
+                "Mobile Development"
+            ]
+        },
+        {
+            "name": "AWS Certified Developer – Associate",
+            "issuer": "Amazon Web Services (AWS)",
+            "category": "Cloud",
+            "keywords": [
+                "AWS",
+                "Cloud",
+                "DevOps",
+                "Lambda",
+                "S3",
+                "ECS"
+            ]
+        },
+        {
+            "name": "Meta React Native Professional Certificate",
+            "issuer": "Meta (Coursera)",
+            "category": "Mobile Development",
+            "keywords": [
+                "React Native",
+                "Mobile",
+                "Cross-platform",
+                "JavaScript"
+            ]
+        },
+        {
+            "name": "OpenJS Node.js Application Developer (JSNAD)",
+            "issuer": "OpenJS Foundation",
+            "category": "Backend Development",
+            "keywords": [
+                "Node.js",
+                "JavaScript",
+                "Backend",
+                "Server-side"
+            ]
+        },
+        {
+            "name": "EDB PostgreSQL Associate Certification",
+            "issuer": "EnterpriseDB",
+            "category": "Database",
+            "keywords": [
+                "PostgreSQL",
+                "Database",
+                "SQL",
+                "Data Management"
+            ]
+        },
+        {
+            "name": "SOLID Principles",
+            "issuer": "Udemy",
+            "category": "Software Engineering",
+            "date": "Dec 2022",
+            "keywords": [
+                "SOLID",
+                "Design Patterns",
+                "Software Architecture",
+                "Clean Code"
+            ]
+        },
+        {
+            "name": "Flutter Development Course",
+            "issuer": "Udemy",
+            "category": "Mobile Development",
+            "date": "Sep 2021",
+            "keywords": [
+                "Flutter",
+                "Dart",
+                "Mobile Development",
+                "Cross-platform"
+            ]
+        },
+        {
+            "name": "The Complete Android Developers Course",
+            "issuer": "Udemy",
+            "category": "Mobile Development",
+            "date": "2020",
+            "keywords": [
+                "Android",
+                "Java",
+                "Mobile Development"
+            ]
+        }
+    ]
+}

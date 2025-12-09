@@ -1,0 +1,576 @@
+{
+    "last_updated": "2025-12-09",
+    "experiences": [
+        {
+            "company": "Creative Synergies Group",
+            "location": "Bengaluru",
+            "title": "Software Engineer (Full Stack)",
+            "employment_type": "Full-time",
+            "start_date": "May 2025",
+            "end_date": "Present",
+            "current": true,
+            "highlights": [
+                {
+                    "description": "Architected an enterprise FSM mobile app in Flutter (Clean Architecture, BLoC), coordinating work orders and real-time technician workflows across Android and iOS with 95%+ crash-free sessions",
+                    "keywords": [
+                        "Flutter",
+                        "Clean Architecture",
+                        "BLoC",
+                        "Android",
+                        "iOS",
+                        "Enterprise",
+                        "Mobile"
+                    ],
+                    "metrics": [
+                        "95%+ crash-free sessions"
+                    ]
+                },
+                {
+                    "description": "Implemented NestJS microservices with TypeORM/PostgreSQL, JWT auth, and role-based access (RBAC), scaling to 100+ field engineers and reducing API latency by ~30%",
+                    "keywords": [
+                        "NestJS",
+                        "TypeORM",
+                        "PostgreSQL",
+                        "JWT",
+                        "RBAC",
+                        "Microservices",
+                        "REST API"
+                    ],
+                    "metrics": [
+                        "100+ field engineers",
+                        "~30% latency reduction"
+                    ]
+                },
+                {
+                    "description": "Built a native Android document scanner in Kotlin using ML Kit, Room, and Compose, automating PDF capture for compliance documents",
+                    "keywords": [
+                        "Kotlin",
+                        "ML Kit",
+                        "Room",
+                        "Jetpack Compose",
+                        "Android Native",
+                        "PDF"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Established CI/CD with GitHub Actions and Gradle for multi-env (dev/stage/prod) pipelines; cut release time ~50% for Android and iOS",
+                    "keywords": [
+                        "CI/CD",
+                        "GitHub Actions",
+                        "Gradle",
+                        "DevOps",
+                        "Release Management"
+                    ],
+                    "metrics": [
+                        "~50% release time reduction"
+                    ]
+                },
+                {
+                    "description": "Drove TDD with Jest and Flutter Test, achieving 80%+ coverage across auth, work orders, documents, and inventory modules",
+                    "keywords": [
+                        "TDD",
+                        "Jest",
+                        "Flutter Test",
+                        "Unit Testing",
+                        "Integration Testing"
+                    ],
+                    "metrics": [
+                        "80%+ test coverage"
+                    ]
+                },
+                {
+                    "description": "Integrated GPS and location services (geofencing, validation, location-based actions) with image capture and signature workflows for verified completion",
+                    "keywords": [
+                        "GPS",
+                        "Geofencing",
+                        "Location Services",
+                        "Image Capture",
+                        "Signature"
+                    ]
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Kotlin",
+                "NestJS",
+                "TypeScript",
+                "PostgreSQL",
+                "TypeORM",
+                "GitHub Actions",
+                "Gradle",
+                "Hive",
+                "Jest",
+                "ML Kit"
+            ]
+        },
+        {
+            "company": "HealthFlex",
+            "location": "Bangalore",
+            "title": "Founding Engineer (SDE)",
+            "employment_type": "Full-time",
+            "start_date": "Mar 2024",
+            "end_date": "May 2025",
+            "current": false,
+            "industry": "Healthcare",
+            "highlights": [
+                {
+                    "description": "Delivered two cross-platform React Native apps with a 95% crash-free rate, serving 1,000+ users across Android and iOS",
+                    "keywords": [
+                        "React Native",
+                        "Cross-platform",
+                        "Mobile",
+                        "Android",
+                        "iOS",
+                        "Healthcare"
+                    ],
+                    "metrics": [
+                        "95% crash-free rate",
+                        "1,000+ users"
+                    ]
+                },
+                {
+                    "description": "Engineered a BLE module with TDD (55+ unit tests), streaming 20Hz per device via RxJS; improved stability and lowered latency by ~40%",
+                    "keywords": [
+                        "BLE",
+                        "Bluetooth",
+                        "TDD",
+                        "RxJS",
+                        "IoT",
+                        "Hardware Integration"
+                    ],
+                    "metrics": [
+                        "55+ unit tests",
+                        "20Hz streaming",
+                        "~40% latency reduction"
+                    ]
+                },
+                {
+                    "description": "Modularized ML algorithms via native module integration, processing 2,000+ datapoints/sec in-app",
+                    "keywords": [
+                        "ML",
+                        "Machine Learning",
+                        "Native Modules",
+                        "Performance Optimization"
+                    ],
+                    "metrics": [
+                        "2,000+ datapoints/sec"
+                    ]
+                },
+                {
+                    "description": "Managed mobile releases with Gradle + Fastlane CI/CD, reducing release cycle time ~40%; integrated Firebase (Analytics, Crashlytics, Performance)",
+                    "keywords": [
+                        "Gradle",
+                        "Fastlane",
+                        "CI/CD",
+                        "Firebase",
+                        "Analytics",
+                        "Crashlytics",
+                        "Release Management"
+                    ],
+                    "metrics": [
+                        "~40% release cycle reduction"
+                    ]
+                },
+                {
+                    "description": "Led Expo SDK 52 migration with FlashList optimization, navigation refactoring, and audio feedback context pattern for exercise cues",
+                    "keywords": [
+                        "Expo SDK 52",
+                        "FlashList",
+                        "Migration",
+                        "Audio Context",
+                        "Performance"
+                    ],
+                    "metrics": [
+                        "423 commits",
+                        "Major refactoring",
+                        "FlashList migration"
+                    ]
+                },
+                {
+                    "description": "Built Stance Dashboard (347 commits) with VALD patient import via syncId matching, GraphQL API with dataloaders, and invoice PDF generation with Puppeteer pool optimization",
+                    "keywords": [
+                        "TypeScript",
+                        "React",
+                        "Next.js",
+                        "GraphQL",
+                        "VALD",
+                        "Puppeteer"
+                    ],
+                    "metrics": [
+                        "347 commits",
+                        "VALD syncId integration",
+                        "Puppeteer PDF rendering"
+                    ]
+                },
+                {
+                    "description": "Developed Doctors App (582 commits) with patient creation workflows, Storybook v8 component library, and multi-env GitHub Actions release pipelines",
+                    "keywords": [
+                        "React Native",
+                        "TypeScript",
+                        "Storybook",
+                        "GitHub Actions",
+                        "Fastlane"
+                    ],
+                    "metrics": [
+                        "582 commits",
+                        "Multi-env releases",
+                        "Storybook v8"
+                    ]
+                },
+                {
+                    "description": "Architected HealthFlex API (483 commits) with exercise landmark parser, session DTOs, regimen management, and group-based access control",
+                    "keywords": [
+                        "Node.js",
+                        "TypeScript",
+                        "NestJS",
+                        "PostgreSQL",
+                        "Clean Architecture"
+                    ],
+                    "metrics": [
+                        "483 commits",
+                        "Use case pattern",
+                        "Session DTOs"
+                    ]
+                }
+            ],
+            "tech_stack": [
+                "React Native",
+                "TypeScript",
+                "Kotlin",
+                "BLE",
+                "RxJS",
+                "Fastlane",
+                "Gradle",
+                "Firebase",
+                "Next.js",
+                "GraphQL",
+                "Node.js",
+                "PostgreSQL"
+            ]
+        },
+        {
+            "company": "EMotorad",
+            "location": "Bangalore",
+            "title": "App Developer Intern",
+            "employment_type": "Internship",
+            "start_date": "Sep 2023",
+            "end_date": "Nov 2023",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Built an E-Bike rider assistant in Flutter (MVVM, Clean Architecture, BLoC); integrated REST APIs and robust navigation",
+                    "keywords": [
+                        "Flutter",
+                        "MVVM",
+                        "Clean Architecture",
+                        "BLoC",
+                        "REST API",
+                        "Navigation"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Developed Bluetooth comms with Dart isolates/background services, improving connection stability 90% and reducing latency 40%",
+                    "keywords": [
+                        "Bluetooth",
+                        "BLE",
+                        "Dart Isolates",
+                        "Background Services",
+                        "Performance"
+                    ],
+                    "metrics": [
+                        "90% stability improvement",
+                        "40% latency reduction"
+                    ]
+                },
+                {
+                    "description": "Implemented Mapbox routing and rerouting with caching, cutting map costs ~70%",
+                    "keywords": [
+                        "Mapbox",
+                        "Navigation",
+                        "Routing",
+                        "Caching",
+                        "Cost Optimization"
+                    ],
+                    "metrics": [
+                        "~70% map cost reduction"
+                    ]
+                },
+                {
+                    "description": "Achieved 80%+ unit test coverage with Flutter Test; optimized Gradle to reduce build times ~25%",
+                    "keywords": [
+                        "Flutter Test",
+                        "Unit Testing",
+                        "Gradle",
+                        "Build Optimization"
+                    ],
+                    "metrics": [
+                        "80%+ test coverage",
+                        "~25% build time reduction"
+                    ]
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Mapbox",
+                "BLE",
+                "Firebase",
+                "Gradle",
+                "Dio",
+                "Retrofit"
+            ]
+        },
+        {
+            "company": "PySphere LLP",
+            "location": "Remote",
+            "title": "Research Fellow",
+            "employment_type": "Part-time / Contract",
+            "start_date": "Nov 2021",
+            "end_date": "Sep 2023",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Built Carer Connect, a responsive web app in React/Next.js, cutting manual vendor ops by ~80%",
+                    "keywords": [
+                        "React",
+                        "Next.js",
+                        "Web App",
+                        "Healthcare",
+                        "Vendor Management"
+                    ],
+                    "metrics": [
+                        "~80% manual ops reduction"
+                    ]
+                },
+                {
+                    "description": "Drove engagement +35% via deep links, push notifications, and Google Calendar integrations",
+                    "keywords": [
+                        "Deep Links",
+                        "Push Notifications",
+                        "Google Calendar",
+                        "User Engagement"
+                    ],
+                    "metrics": [
+                        "+35% engagement"
+                    ]
+                },
+                {
+                    "description": "Delivered a modern, responsive company website (Next.js, React, HTML/CSS, Figma), increasing web traffic ~45%",
+                    "keywords": [
+                        "Next.js",
+                        "React",
+                        "HTML",
+                        "CSS",
+                        "Figma",
+                        "Responsive Design"
+                    ],
+                    "metrics": [
+                        "~45% web traffic increase"
+                    ]
+                },
+                {
+                    "description": "Contributed to SonoFlux (multi-tenant platform) with custom domains, OAuth 2.0, and Stripe/Razorpay integration; improved payment success ~25%",
+                    "keywords": [
+                        "Multi-tenant",
+                        "OAuth 2.0",
+                        "Stripe",
+                        "Razorpay",
+                        "Payments",
+                        "SaaS"
+                    ],
+                    "metrics": [
+                        "~25% payment success improvement"
+                    ]
+                }
+            ],
+            "tech_stack": [
+                "Java",
+                "React",
+                "Next.js",
+                "TypeScript",
+                "OAuth2",
+                "Stripe",
+                "Razorpay",
+                "Jest"
+            ]
+        },
+        {
+            "company": "Infoware",
+            "location": "Remote",
+            "title": "Senior Flutter Developer Intern",
+            "employment_type": "Internship",
+            "start_date": "Feb 2023",
+            "end_date": "Jul 2023",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Developed cross-platform applications in Flutter with clean architecture, state management using Streams, and SOLID Principles",
+                    "keywords": [
+                        "Flutter",
+                        "Clean Architecture",
+                        "Streams",
+                        "SOLID",
+                        "State Management"
+                    ],
+                    "metrics": []
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Streams",
+                "Clean Architecture"
+            ]
+        },
+        {
+            "company": "AppyHigh LLP",
+            "location": "Remote",
+            "title": "Flutter Developer",
+            "employment_type": "Full-time",
+            "start_date": "Oct 2022",
+            "end_date": "Jan 2023",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Created complex animations using Flutter for enhanced user experience",
+                    "keywords": [
+                        "Flutter",
+                        "Animations",
+                        "UI/UX"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Contributed significantly to Scanner Go project with over 1Cr+ downloads on Playstore",
+                    "keywords": [
+                        "Flutter",
+                        "Scanner",
+                        "Mobile App",
+                        "High-scale"
+                    ],
+                    "metrics": [
+                        "1Cr+ downloads"
+                    ]
+                },
+                {
+                    "description": "Wrote a Dart script to streamline and update localization Dart files",
+                    "keywords": [
+                        "Dart",
+                        "Automation",
+                        "Localization"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Acquired proficiency in Native BLoC state management with Streams and SOLID Principles",
+                    "keywords": [
+                        "BLoC",
+                        "Streams",
+                        "SOLID",
+                        "State Management"
+                    ],
+                    "metrics": []
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "BLoC",
+                "Streams"
+            ]
+        },
+        {
+            "company": "Frantic Infotech",
+            "location": "Remote",
+            "title": "Flutter Developer",
+            "employment_type": "Part-time",
+            "start_date": "Mar 2022",
+            "end_date": "Oct 2022",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Worked on 5+ Android Apps as a part-time Flutter developer",
+                    "keywords": [
+                        "Flutter",
+                        "Android",
+                        "Mobile Apps"
+                    ],
+                    "metrics": [
+                        "5+ Android Apps"
+                    ]
+                },
+                {
+                    "description": "Developed 20+ features, fixed 50+ bugs, and integrated APIs on Flutter Apps",
+                    "keywords": [
+                        "Flutter",
+                        "Feature Development",
+                        "Bug Fixes",
+                        "API Integration"
+                    ],
+                    "metrics": [
+                        "20+ features",
+                        "50+ bugs fixed"
+                    ]
+                },
+                {
+                    "description": "Developed applications with efficiency of 10+ screens/day from Figma mocks",
+                    "keywords": [
+                        "Flutter",
+                        "UI Development",
+                        "Figma",
+                        "Productivity"
+                    ],
+                    "metrics": [
+                        "10+ screens/day"
+                    ]
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Figma",
+                "REST APIs"
+            ]
+        },
+        {
+            "company": "Daphnis Labs",
+            "location": "Remote",
+            "title": "Android Developer",
+            "employment_type": "Internship",
+            "start_date": "Aug 2021",
+            "end_date": "Jan 2022",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Collaborated in development of Datotta, an e-commerce app with Shopify Backend",
+                    "keywords": [
+                        "Android",
+                        "E-commerce",
+                        "Shopify",
+                        "Mobile App"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Played a key role in the development of ChatSansar, an Android-based IRC chatting app",
+                    "keywords": [
+                        "Android",
+                        "Chat",
+                        "IRC",
+                        "Real-time"
+                    ],
+                    "metrics": []
+                }
+            ],
+            "tech_stack": [
+                "Java",
+                "Android SDK",
+                "Shopify",
+                "Firebase"
+            ]
+        }
+    ]
+}

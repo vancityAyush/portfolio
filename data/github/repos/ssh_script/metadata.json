@@ -1,27 +1,24 @@
 {
   "name": "ssh_script",
   "full_name": "vancityAyush/ssh_script",
-  "description": "Cross-platform shell script to automate SSH key generation and configuration for GitHub, GitLab, and Bitbucket",
+  "description": "Cross-platform SSH key automation script for GitHub, GitLab, and Bitbucket",
+  "summary": "A POSIX-compliant shell script for automated SSH key generation and configuration across multiple Git platforms. Supports macOS, Linux, Windows (WSL), and Git Bash with smart clipboard integration. Features automatic SSH agent setup, config file management, and one-command authentication for GitHub, GitLab, and Bitbucket.",
   "language": "Shell",
   "stars": 1,
   "forks": 0,
-  "created_at": "2023-07-17T18:36:40Z",
-  "updated_at": "2025-09-03T05:00:35Z",
+  "created_at": "2025-08-12T15:58:23Z",
+  "updated_at": "2025-10-11T14:42:53Z",
   "url": "https://github.com/vancityAyush/ssh_script",
   "features": [
-    "Cross-platform compatibility (macOS, Linux, Windows, WSL)",
-    "Automated SSH key generation (Ed25519 for GitHub/Bitbucket, RSA-4096 for GitLab)",
-    "Smart clipboard integration across platforms",
-    "Automatic browser opening to SSH settings",
-    "SSH agent management and key testing",
-    "Input validation for email and key names",
-    "Comprehensive error handling"
+    "Cross-platform support",
+    "POSIX-compliant",
+    "Smart clipboard integration",
+    "SSH agent automation",
+    "Multi-platform Git support",
+    "Config file management"
   ],
   "tech_stack": {
-    "languages": ["Bash", "Shell Script"],
-    "tools": ["ssh-keygen", "ssh-agent", "Git"],
-    "platforms": ["macOS", "Linux", "Windows", "WSL"],
-    "key_algorithms": ["Ed25519", "RSA-4096"]
-  },
-  "architecture": "CLI automation script with platform detection and cross-platform command handling"
+    "languages": ["Shell", "Bash"],
+    "platforms": ["macOS", "Linux", "Windows", "WSL"]
+  }
 }

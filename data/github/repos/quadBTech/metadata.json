@@ -1,7 +1,8 @@
 {
   "name": "quadBTech",
   "full_name": "vancityAyush/quadBTech",
-  "description": "Flutter mobile application",
+  "description": "Flutter application for QuadB Tech assessment",
+  "summary": "A Flutter application developed for QuadB Tech technical assessment. Demonstrates proficiency in cross-platform mobile development with Flutter, implementing Clean Architecture patterns and modern state management. Features comprehensive UI components and API integration.",
   "language": "Dart",
   "stars": 0,
   "forks": 0,
@@ -9,13 +10,14 @@
   "updated_at": "2023-11-26T13:31:38Z",
   "url": "https://github.com/vancityAyush/quadBTech",
   "features": [
-    "Cross-platform mobile development",
-    "Flutter framework implementation"
+    "Cross-platform mobile app",
+    "Clean Architecture",
+    "API integration",
+    "Modern UI components"
   ],
   "tech_stack": {
-    "languages": ["Dart"],
+    "languages": ["Dart", "C++"],
     "frameworks": ["Flutter"],
     "platforms": ["iOS", "Android"]
-  },
-  "architecture": "Flutter mobile application"
+  }
 }

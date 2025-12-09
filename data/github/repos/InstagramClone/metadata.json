@@ -1,0 +1,25 @@
+{
+  "name": "InstagramClone",
+  "full_name": "vancityAyush/InstagramClone",
+  "description": "Instagram clone Android application with social features",
+  "summary": "A full-featured Instagram clone Android application demonstrating social media app development. Features user authentication, photo sharing, feed browsing, likes, comments, and user profiles. Built with Java and Firebase, showcasing complex Android development patterns and social networking functionality.",
+  "language": "Java",
+  "stars": 1,
+  "forks": 0,
+  "created_at": "2020-12-04T23:01:08Z",
+  "updated_at": "2021-10-04T06:16:30Z",
+  "url": "https://github.com/vancityAyush/InstagramClone",
+  "features": [
+    "User authentication",
+    "Photo sharing",
+    "Social feed",
+    "Likes and comments",
+    "User profiles",
+    "Firebase integration"
+  ],
+  "tech_stack": {
+    "languages": ["Java"],
+    "platforms": ["Android"],
+    "backend": ["Firebase"]
+  }
+}

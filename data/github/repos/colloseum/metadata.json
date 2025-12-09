@@ -1,24 +1,20 @@
 {
   "name": "colloseum",
   "full_name": "vancityAyush/colloseum",
-  "description": "Next.js web application with server-side rendering and API routes",
-  "language": "JavaScript",
+  "description": "Competitive programming and coding challenges repository",
+  "summary": "A repository containing solutions and implementations for competitive programming challenges. Features algorithmic problem-solving solutions, data structure implementations, and coding competition entries. Demonstrates proficiency in algorithms, data structures, and competitive programming methodologies.",
+  "language": "Java",
   "stars": 0,
   "forks": 0,
-  "created_at": "2023-06-25T18:25:28Z",
-  "updated_at": "2023-06-28T21:07:20Z",
+  "created_at": "2023-01-01T00:00:00Z",
+  "updated_at": "2023-01-01T00:00:00Z",
   "url": "https://github.com/vancityAyush/colloseum",
   "features": [
-    "Server-side rendering",
-    "API routes for backend logic",
-    "Hot module replacement",
-    "Optimized production builds"
+    "Algorithmic solutions",
+    "Data structure implementations",
+    "Competitive programming"
   ],
   "tech_stack": {
-    "languages": ["JavaScript"],
-    "frameworks": ["Next.js", "React"],
-    "tools": ["Node.js", "npm/yarn"],
-    "deployment": ["Vercel"]
-  },
-  "architecture": "Next.js full-stack application with pages-based routing"
+    "languages": ["Java", "C++", "Python"]
+  }
 }

@@ -1,11 +1,27 @@
 {
   "name": "fsm",
   "full_name": "vancityAyush/fsm",
-  "description": "Field Service Management application with comprehensive work order management, dependency injection, and token refresh capabilities",
+  "description": "Enterprise Field Service Management application with work order management and real-time technician workflows",
+  "summary": "An enterprise-grade Flutter application for field service management, built at Creative Synergies Group. Features comprehensive work order management, real-time technician coordination, adaptive UI, dependency injection with GetIt, and token refresh capabilities. Implements Clean Architecture with BLoC pattern for scalable, maintainable code.",
   "language": "Dart",
   "stars": 0,
   "forks": 0,
   "created_at": "2025-10-13T00:00:00Z",
   "updated_at": "2025-10-27T12:38:19Z",
-  "url": "https://github.com/vancityAyush/fsm"
+  "url": "https://github.com/vancityAyush/fsm",
+  "company": "Creative Synergies Group",
+  "features": [
+    "Work order management",
+    "Real-time technician workflows",
+    "Adaptive UI design",
+    "Dependency injection (GetIt)",
+    "Token refresh mechanism",
+    "95%+ crash-free sessions"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "frameworks": ["Flutter", "BLoC"],
+    "architecture": ["Clean Architecture"],
+    "platforms": ["iOS", "Android"]
+  }
 }

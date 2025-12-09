@@ -1,0 +1,100 @@
+{
+  "name": "doctors.app",
+  "full_name": "vancityAyush/doctors.app",
+  "original_repo": "healthflex-in/doctors.app",
+  "description": "Cross-platform mobile application for doctors with patient management, real-time chat, sensor tagging, and automated release pipelines",
+  "summary": "React Native mobile app for healthcare professionals built at HealthFlex with 11 merged PRs. Led sensor tagging screen migration (+357/-321 lines), real-time chat WebSocket implementation (+322/-134 lines), and patient history migration. Features patient creation, gender-specific workflows, and comprehensive CI/CD with Storybook v8.",
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "merged_prs": 11,
+  "total_additions": 1406,
+  "total_deletions": 1013,
+  "created_at": "2025-09-19T06:22:15Z",
+  "updated_at": "2025-09-19T06:23:59Z",
+  "url": "https://github.com/vancityAyush/doctors.app",
+  "company": "HealthFlex",
+  "contribution_period": "Sep 2024 - Jan 2025",
+  "features": [
+    "Patient creation with gender-specific workflows",
+    "Real-time chat with WebSocket integration",
+    "Sensor tagging screen for BLE device pairing",
+    "Patient history management",
+    "Cross-platform iOS/Android builds",
+    "OTA updates via Expo EAS",
+    "Storybook component library (v8.6.6)",
+    "Multi-environment configuration (dev/preview/prod)"
+  ],
+  "major_contributions": [
+    {
+      "type": "pr",
+      "pr_number": 482,
+      "feature": "Sensor Tagging Screen Migration",
+      "description": "Full screen migration for BLE sensor tagging workflow",
+      "additions": 357,
+      "deletions": 321,
+      "merged_at": "2025-01-27"
+    },
+    {
+      "type": "pr",
+      "pr_number": 365,
+      "feature": "Chat WebSocket",
+      "description": "Real-time chat implementation using WebSocket for doctor-patient communication",
+      "additions": 322,
+      "deletions": 134,
+      "merged_at": "2024-09-03"
+    },
+    {
+      "type": "commit",
+      "feature": "BLE Tagging Logic",
+      "description": "Implemented complete BLE device tagging workflow with API integration",
+      "commits": ["Ble Tagging Partial", "ble tagging logic", "ble api integration"],
+      "date_range": "May 2024"
+    },
+    {
+      "type": "commit",
+      "feature": "Filter & Sort Features",
+      "description": "Built patient filtering and sorting functionality for overview screens",
+      "commits": ["filter and sort by features added", "fix: sort feature"],
+      "date_range": "May 2024"
+    },
+    {
+      "type": "commit",
+      "feature": "ROM Overview Integration",
+      "description": "Integrated ROM (Range of Motion) API for patient overview visualization",
+      "commits": ["feat: api integration rom-overview"],
+      "date_range": "May 2024"
+    },
+    {
+      "type": "commit",
+      "feature": "Patient Overview UI",
+      "description": "Built patient overview screen with data visualization components",
+      "commits": ["patient-overview screen", "patient-overview ui"],
+      "date_range": "May 2024"
+    },
+    {
+      "type": "pr",
+      "pr_number": 477,
+      "feature": "Home/Profile Migration",
+      "description": "Migrated home, add patient and profile screens",
+      "additions": 157,
+      "deletions": 143,
+      "merged_at": "2025-01-23"
+    }
+  ],
+  "tech_stack": {
+    "languages": ["TypeScript", "JavaScript", "Shell"],
+    "frameworks": ["React Native", "Expo"],
+    "libraries": ["Axios", "Storybook", "WebSocket"],
+    "architecture": ["Modular", "Component Migration"],
+    "platforms": ["iOS", "Android"],
+    "ci_cd": ["GitHub Actions", "Fastlane", "EAS Build"]
+  },
+  "resume_highlights": [
+    "Built sensor tagging screen migration (+357 lines) for BLE device pairing workflow in doctor app",
+    "Implemented real-time chat WebSocket (+322 lines) enabling doctor-patient communication",
+    "Led patient history screen migration with data visualization and history tracking",
+    "Migrated home, profile, and add patient screens improving app architecture",
+    "Authored 11 merged PRs totaling 1.4K+ lines with comprehensive screen migrations"
+  ]
+}

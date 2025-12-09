@@ -1,0 +1,22 @@
+{
+  "name": "FileXP",
+  "full_name": "vancityAyush/FileXP",
+  "description": "File Explorer with Java File library",
+  "summary": "An Android file explorer application built with Java. Features file system navigation, file operations (copy, move, delete), and directory browsing. Demonstrates proficiency in Android file handling, system permissions, and native Android UI development.",
+  "language": "Java",
+  "stars": 1,
+  "forks": 0,
+  "created_at": "2021-06-11T23:05:06Z",
+  "updated_at": "2021-06-11T23:14:08Z",
+  "url": "https://github.com/vancityAyush/FileXP",
+  "features": [
+    "File system navigation",
+    "File operations",
+    "Directory browsing",
+    "Storage permissions handling"
+  ],
+  "tech_stack": {
+    "languages": ["Java"],
+    "platforms": ["Android"]
+  }
+}

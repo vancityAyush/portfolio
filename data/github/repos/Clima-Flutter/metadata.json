@@ -1,0 +1,23 @@
+{
+  "name": "Clima-Flutter",
+  "full_name": "vancityAyush/Clima-Flutter",
+  "description": "Weather app from the Complete Flutter Development Bootcamp",
+  "summary": "A weather application built with Flutter as part of the Complete Flutter Development Bootcamp. Features location-based weather data fetching, API integration, and clean UI design. Demonstrates proficiency in Flutter development, async programming, and third-party API consumption.",
+  "language": "Dart",
+  "stars": 1,
+  "forks": 0,
+  "created_at": "2022-01-16T11:25:09Z",
+  "updated_at": "2022-03-17T23:28:17Z",
+  "url": "https://github.com/vancityAyush/Clima-Flutter",
+  "features": [
+    "Location-based weather",
+    "Weather API integration",
+    "Clean UI design",
+    "Async data fetching"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "frameworks": ["Flutter"],
+    "platforms": ["iOS", "Android"]
+  }
+}
