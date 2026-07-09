@@ -4,7 +4,8 @@
     "verification_levels": {
         "external": "Confirmed against an external system (GitHub API/CLI, npm registry, app store listing). Safe to print.",
         "self_asserted": "Recorded by Ayush in his own notes. Plausible and usable, but he is the only source. Do not present as measured.",
-        "rejected": "Appeared in a source document but is provably wrong or misattributed. Never print. Retained here so it does not get reintroduced."
+        "rejected": "Appeared in a source document but is provably wrong or misattributed. Never print. Retained here so it does not get reintroduced.",
+        "specified": "Defined in a client product specification. Describes intended scope and domain complexity, NOT delivered work. Usable to say what Ayush is building and what problems it involves. Never phrase as a completed outcome and never attach an impact metric."
     },
     "evidence": {
         "gh.profile": {
@@ -16,67 +17,157 @@
             "source": "data/github/profile.json, data/github/index.json",
             "note": "data/github/summary.md says 19 followers. It is the sole outlier against three agreeing sources; treat as stale."
         },
+        "_hf_verification_2026_07_10": {
+            "method": "The original healthflex-in org repos are no longer accessible to Ayush (all 404 via gh api; he left May 2025), so PR data cannot be re-pulled from the GitHub API. However, private archive mirrors exist under vancityAyush/{healthflex.app,healthflex.api,doctors.app,stance-dashboard}, pushed 2025-09-19. These carry the FULL git history but ZERO pull requests (a mirror push does not transfer PRs). All figures below were recomputed from that git history on 2026-07-10.",
+            "identities": [
+                "eliasakeleven@gmail.com",
+                "ayush.kumar@healthflex.in",
+                "40995741+vancityAyush@users.noreply.github.com"
+            ],
+            "identity_proof": "Each email resolves to github_login 'vancityAyush' via GET /repos/vancityAyush/healthflex.app/commits/{sha}.author.login.",
+            "pr_reconstruction": "PRs were reconstructed from merge commits on the default branch. Two message formats occur: 'Merge pull request #N from <branch>' and, where the repo enabled 'default to PR title for merge commits', '<PR Title> (#N)'. Attribution does NOT use the merge-commit author (that is whoever clicked Merge). Instead, for each merge commit the commits unique to the merged branch (parent1..parent2) are examined. 'strict' = 100% of those commits are Ayush's. 'majority' = >=50%.",
+            "line_counting": "git log --no-merges --numstat on the default branch, filtered to Ayush's identities. 'hand_written' excludes lockfiles, /assets/, /dist/, /build/, Pods, .pbxproj, minified and binary assets. 'raw' includes everything. Prefer hand_written on a resume; raw is dominated by package-lock.json churn."
+        },
         "hf.authored_commits": {
             "level": "external",
-            "value": 473,
-            "window": "2024-04-12 to 2025-02-07",
+            "value": 731,
+            "value_excluding_merge_commits": 548,
+            "window": "2024-04-12 to 2025-05-09",
             "breakdown": {
                 "healthflex-app": 370,
+                "stance-dashboard": 258,
                 "doctors-app": 79,
                 "healthflex-api": 24
             },
-            "source": "Notion 'GH-Verified Impact Highlights' page, per-repo commits attributed to vancityAyush",
-            "note": "This is the ONLY defensible personal commit total for HealthFlex. See rejected.hf.commit_misattribution."
+            "breakdown_excluding_merges": {
+                "healthflex-app": 291,
+                "stance-dashboard": 179,
+                "doctors-app": 58,
+                "healthflex-api": 20
+            },
+            "source": "git rev-list --count on default branches of the vancityAyush archive mirrors, 2026-07-10. Each per-repo figure matches the GitHub contributors API exactly.",
+            "note": "Supersedes the previous value of 473, which summed only app+doctors+api and silently dropped stance-dashboard's 258 commits. 731 counts merge commits Ayush authored (he merged his own PRs); 548 is commits he actually wrote. Both are defensible - state which one you mean.",
+            "supersedes": "473 (2026-07-09)"
         },
         "hf.app.merged_prs": {
             "level": "external",
-            "value": 57,
-            "lines_added": 45000,
-            "lines_deleted": 28000,
-            "window": "Aug 2024 - Feb 2025",
-            "notable_prs": {
-                "#70 Component Migration": "+14193 / -4127",
-                "#252 Non-measurable Flow": "+5400 / -3055",
-                "#218 BLE 2.0": "+1164 / -383",
-                "#341 Algorithm Utils": "+878 / -0"
+            "value": 54,
+            "value_majority_authored": 71,
+            "default_branch": "dev",
+            "lines_hand_written": {
+                "added": 50446,
+                "deleted": 34521,
+                "net": 15925,
+                "source_files_touched": 655
             },
-            "source": "data/github/repos/healthflex.app/metadata.json"
+            "lines_raw": {
+                "added": 200105,
+                "deleted": 163337
+            },
+            "window": "2024-05-28 to 2025-02-07",
+            "notable_prs": {
+                "#70 Component Migration": "+14193 / -4127 across 154 files, merged 2024-08-08 - VERIFIED EXACT",
+                "#218 BLE 2.0": "+1164 / -383 across 18 files, merged 2024-10-28 - VERIFIED EXACT; adds src/contexts/new-ble/index.tsx (+711), permission-checker (+184), rewrites ble-scanning screen and ble_parser",
+                "#160 Algorithm build": "+4687 / -2080 across 149 files, merged 2024-09-06",
+                "#250 Non-measurable flow": "+91 / -13 across 2 files, merged 2024-11-14"
+            },
+            "source": "Reconstructed from git merge history, 2026-07-10. See _hf_verification_2026_07_10.",
+            "supersedes": "57 PRs, +45000/-28000 (2026-07-09)"
         },
         "hf.stance.merged_prs": {
             "level": "external",
-            "value": 23,
-            "lines_added": 11500,
-            "lines_deleted": 5700,
-            "window": "Feb 2025 - May 2025",
-            "role": "Tech Lead",
-            "team_size": 4,
-            "notable_prs": {
-                "#12 Auth System": "+1738 / -810",
-                "#101 Events + Google Calendar": "+1558 / -1070",
-                "#39 User Permissions & RBAC": "+789 / -304",
-                "#45 GraphQL Shield": "+662 / -474"
+            "value": 18,
+            "value_majority_authored": 24,
+            "default_branch": "dev",
+            "lines_hand_written": {
+                "added": 22495,
+                "deleted": 40036,
+                "net": -17541,
+                "source_files_touched": 472
             },
-            "source": "data/github/repos/stance-dashboard/metadata.json"
+            "lines_raw": {
+                "added": 45686,
+                "deleted": 44582
+            },
+            "window": "2025-02-14 to 2025-05-09",
+            "role": "Tech Lead",
+            "team_size_claimed": 4,
+            "team_size_observed": 6,
+            "notable_prs": {
+                "#12 Auth System": "+1738 / -810 across 48 files, merged 2025-02-21 - VERIFIED EXACT",
+                "#101 Events + Google Calendar": "+1558 / -1070 across 66 files, merged 2025-04-10 - VERIFIED EXACT",
+                "#39 User Permissions & RBAC": "+789 / -304 across 12 files, merged 2025-03-04 - VERIFIED EXACT",
+                "#45 GraphQL Shield": "+662 / -474 across 22 files, merged 2025-03-06 - VERIFIED EXACT"
+            },
+            "ci_ownership": "Ayush is the #2 author of .github/workflows (9 commits): deploy workflow, bun + pm2 install, codegen step, fork-sync workflow.",
+            "note": "Ayush's hand-written line count here is NET NEGATIVE (-17,541): he deleted far more than he added. This is refactor and consolidation work, and it is a genuinely good story - but never headline it as 'lines added'. Team size: 6 distinct human committers touched the repo Feb-May 2025 (Nandini, Ayush, Niraj, Shruti, Shiraz, Prateek), not 4. Ayush was the #2 committer by volume behind Nandini.",
+            "supersedes": "23 PRs, +11500/-5700, team_size 4 (2026-07-09)"
         },
         "hf.doctors.merged_prs": {
             "level": "external",
-            "value": 11,
-            "lines_added": 1406,
-            "lines_deleted": 1013,
-            "notable_prs": {
-                "#482 Sensor Tagging Migration": "+357 / -321",
-                "#365 Chat WebSocket": "+322 / -134",
-                "#477 Home/Profile Migration": "+157 / -143"
+            "value": 24,
+            "value_majority_authored": 30,
+            "default_branch": "main",
+            "lines_hand_written": {
+                "added": 7595,
+                "deleted": 4695,
+                "net": 2900,
+                "source_files_touched": 174
             },
-            "source": "data/github/repos/doctors.app/metadata.json"
+            "lines_raw": {
+                "added": 8694,
+                "deleted": 5561
+            },
+            "window": "2024-04-12 to 2025-01-29",
+            "notable_prs": {
+                "#482 Sensor Tagging Migration": "+357 / -321 across 5 files, merged 2025-01-27 - VERIFIED EXACT",
+                "#365 Chat WebSocket": "+322 / -134 across 14 files, merged 2024-09-03 - VERIFIED EXACT",
+                "#477 Home/Profile Migration": "+157 / -143 across 7 files, merged 2025-01-23 - VERIFIED EXACT"
+            },
+            "source": "Reconstructed from git merge history, 2026-07-10.",
+            "note": "The old figures (11 PRs, +1406/-1013) undercounted by more than 2x. Real hand-written contribution is +7,595/-4,695 across 174 files.",
+            "supersedes": "11 PRs, +1406/-1013 (2026-07-09)"
+        },
+        "hf.api.merged_prs": {
+            "level": "external",
+            "value": 5,
+            "value_majority_authored": 6,
+            "default_branch": "main",
+            "lines_hand_written": {
+                "added": 932,
+                "deleted": 432,
+                "net": 500,
+                "source_files_touched": 32
+            },
+            "window": "2024-05-22 to 2024-09-24",
+            "notable_prs": {
+                "#122 ROM overview": "11 commits, all Ayush",
+                "#195 /me API caching": "2 commits",
+                "#200 Mongo finalization": "1 commit",
+                "#135 Dashboard": "2 commits"
+            },
+            "note": "New entry. The API was Ayush's smallest surface by far: 24 commits, 6 PRs, ~900 hand-written lines added, and he stopped contributing in Sep 2024. Keep any API bullet modest and contribution-flavored - do not write 'architected'.",
+            "source": "Reconstructed from git merge history, 2026-07-10."
         },
         "hf.merged_prs_total": {
             "level": "external",
-            "value": 91,
-            "lines_added": 57906,
-            "lines_deleted": 34713,
-            "derivation": "hf.app.merged_prs (57) + hf.stance.merged_prs (23) + hf.doctors.merged_prs (11)",
-            "note": "Strongest aggregate in the dataset. Prefer this over any commit count when a single headline number is needed."
+            "value": 101,
+            "value_majority_authored": 131,
+            "lines_hand_written_added": 81468,
+            "lines_hand_written_deleted": 79684,
+            "lines_raw_added": 255417,
+            "lines_raw_deleted": 213912,
+            "derivation": "strict (100% of branch commits authored by Ayush): app 54 + doctors 24 + stance 18 + api 5 = 101. majority (>=50%): 71 + 30 + 24 + 6 = 131.",
+            "note": "Strongest aggregate in the dataset. 101 is the conservative floor and is what should appear on a resume; 131 is the upper bound. The old value of 91 was BELOW the true floor - it excluded the API repo entirely and undercounted doctors.app by more than half. Because Ayush no longer has access to the healthflex-in org, a third party cannot re-verify these via the GitHub API; they are reproducible from the archive mirrors' git history.",
+            "supersedes": "91 PRs, +57906/-34713 (2026-07-09)"
+        },
+        "hf.ci_ownership": {
+            "level": "external",
+            "healthflex_app": "Ayush authored 5 of 31 workflow commits (created main.yml, renamed to build.yml, Oct 2024). Niraj authored 26.",
+            "doctors_app": "Zero workflow commits by Ayush.",
+            "stance_dashboard": "Ayush authored 9 workflow commits - second-most in the repo. Deploy pipeline, bun/pm2 provisioning, GraphQL codegen step, fork-sync.",
+            "toolchain_correction": "The mobile repos use EAS Build (eas-build-dev/preview/prod.yml, eas-update.yml) plus GitHub Actions. FASTLANE WAS NEVER PRESENT - zero files matching 'fastlane' exist anywhere in the tree or in the entire history of healthflex.app or doctors.app.",
+            "source": "git log on .github/workflows, 2026-07-10."
         },
         "csg.contributions": {
             "level": "external",
@@ -91,6 +182,73 @@
             ],
             "source": "Notion 'CSG Contributions Snapshot', generated with GitHub CLI on 2026-02-21",
             "note": "Private repos. Numbers are real but unverifiable by a third party without access."
+        },
+        "kabuni.mobile_scope": {
+            "level": "specified",
+            "product": "Kabuni Cricket App - native iOS and Android",
+            "mvp_target": "Section 03a is titled 'KABUNI CRICKET APP MVP (JUNE 2026)'. The Notion project page says MVP target Mar 2027. These disagree; treat the launch date as unsettled.",
+            "source": "Product Bible.txt (Kabuni product specification, sections 03a/03c/05, Feature Rules 01-16)",
+            "authorship": "Written by Kabuni and Draw & Code, not by Ayush. It states requirements, not accomplishments.",
+            "ayush_role_claim": {
+                "claim": "Lead architect across three surfaces - web (Next.js), the K10 cricket mobile app, and the Kabuni hardware camera",
+                "level": "self_asserted",
+                "source": "Notion Prep Notes"
+            },
+            "mobile_only_scope": [
+                "Native iOS/Android apps carry Device Management; the website explicitly does not - firmware version and update, serial number, battery life, MAC address",
+                "All MVP session management runs through the app on a 1-to-1 relationship; explicitly NOT a web feature",
+                "Camera pairing and control: scan for camera, ownership model of one camera to one account (non-transferable once set up), transient-user connection, one active camera at a time",
+                "Batting-session capture: camera clips media and routes it to the user's account"
+            ],
+            "mobile_domain_complexity": [
+                "Biometric facial-recognition login through the camera, triggered by a 'KABUNI LOGIN' voice command, matching against a cloud-held face matrix and auto-logging-out the previous batter",
+                "Three-tier offline degradation: cloud login over 5G/WiFi, else mobile-app override with manual batter selection from the parent/child roster, else local storage on the camera for later manual transfer",
+                "India legally prohibits tracking users via biometric data, forcing possible geo-locking of the first device release",
+                "Parent/child account hierarchy (Institution owns and assigns seats to Individuals) with onboarding and off-boarding workflows; an Individual may belong to many Institutions",
+                "Media library with session-level grouping of stitched clips, a one-time-use analyze action, and recall/download/delete",
+                "Video upload with a quality gate that scores footage and rejects it below threshold",
+                "AI coaching feedback rendered as the user's selected Super Coach via HeyGen/ElevenLabs",
+                "GDPR audit trail with aged-data removal, right-to-be-forgotten, and data-request handling",
+                "Reward mechanics: 1 point per recorded shot, 2 per completed session, 0.5 per video upload",
+                "Navigation constraint of no more than 3 hops to complete a task and always one hop back to home, for a 12-16 year-old demographic"
+            ],
+            "web_first_not_mobile": [
+                "Net booking is built for web first and for iOS/Android afterwards - do not claim it as mobile work"
+            ],
+            "corroborates": "Feature Rules 14 names 'Duncan' as the dashboards and reporting destination for Kabuni data. That is the same duncan.help system Ayush security-assessed - see duncan.security.",
+            "note": "Nothing here is shipped. Use it to describe the problem space Ayush is working in and the architecture decisions it forces, never as delivered features."
+        },
+        "duncan.security": {
+            "level": "external",
+            "engagement": "Authorized black-box security assessment and penetration test",
+            "target": "https://duncan.help/",
+            "dates": "2026-04-29 (assessment), 2026-04-30 (pentest)",
+            "architecture": "Two-tier: Lovable frontend SPA + Supabase (PostgREST, Auth, Edge Functions, Storage)",
+            "relationship_to_kabuni": "Product Bible Feature Rules 14 identifies Duncan as the reporting and dashboard tool that Kabuni app data feeds into. The security review therefore covers Kabuni's own BI surface.",
+            "assessment_findings": {
+                "critical": 3,
+                "medium_low": 5
+            },
+            "pentest_findings": {
+                "high": 3,
+                "medium": 3,
+                "low": 2,
+                "info": 2,
+                "total": 10
+            },
+            "headline_findings": [
+                "Live HubSpot/Notion/GitHub production API credentials readable by any anonymous client via the company_integrations table; column named encrypted_api_key held plain base64",
+                "norman-chat GPT-5 Edge Function fully unauthenticated - drainable OpenAI billing and prompt-injection data extraction",
+                "PostgREST schema enumeration exposing 25+ table names including gmail_tokens, xero_tokens, nda_submissions, ceo_briefings"
+            ],
+            "deliverables": [
+                "Security Assessment Report",
+                "Penetration Test Report with CVSSv3-style severity ratings",
+                "Remediation Runbook",
+                "Prioritized remediation plan"
+            ],
+            "source": "Notion Notes & Resources DB, three duncan.help reports; linked to Projects/Duncan under the CSG area",
+            "note": "Explicitly scoped as an AUTHORIZED review. Client engagement under CSG. The reports quote the client's leaked live credentials as evidence - never reproduce those values."
         },
         "xpssh.release": {
             "level": "external",

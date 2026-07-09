@@ -275,6 +275,45 @@
                                 "X.509"
                             ],
                             "metrics": []
+                        },
+                        {
+                            "description": "Architecting the native iOS/Android Kabuni Cricket App, which owns camera device management, net-session control, and biometric facial-recognition login - all specified as mobile-only, with the website deliberately excluded",
+                            "keywords": [
+                                "iOS",
+                                "Android",
+                                "Mobile Architecture",
+                                "Device Management",
+                                "Biometric Authentication",
+                                "Facial Recognition"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.mobile_scope",
+                            "caution": "Scope, not delivery. Drawn from the client product specification; Ayush's lead-architect claim on the mobile surface is self-asserted."
+                        },
+                        {
+                            "description": "Designing a three-tier offline degradation path for net sessions: cloud biometric login over 5G/WiFi, falling back to in-app manual batter override from the parent/child roster, falling back to on-camera local storage for later transfer",
+                            "keywords": [
+                                "Offline-first",
+                                "Graceful Degradation",
+                                "Mobile",
+                                "Sync",
+                                "Edge"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.mobile_scope",
+                            "caution": "Scope, not delivery."
+                        },
+                        {
+                            "description": "Navigating a legal constraint where India prohibits tracking users via biometric data, forcing possible geo-locking of the first camera release while a many-to-many user/camera model requires cloud-held biometrics",
+                            "keywords": [
+                                "Biometric Privacy",
+                                "DPDP",
+                                "Geo-fencing",
+                                "Regulatory Constraint"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.mobile_scope",
+                            "caution": "Scope, not delivery."
                         }
                     ],
                     "tech_stack": [

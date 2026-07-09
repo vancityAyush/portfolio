@@ -265,7 +265,33 @@
                 "Migrated authorization from pure RBAC to hybrid RBAC+ABAC within six weeks",
                 "Azure IoT Hub with X.509 device identity for the Kabuni hardware camera"
             ],
-            "caution": "MVP target Mar 2027. Not shipped. Do not attach impact metrics or write as a delivered outcome.",
+            "mobile_app": {
+                "name": "Kabuni Cricket App (K10)",
+                "platforms": [
+                    "Native iOS",
+                    "Native Android"
+                ],
+                "status": "in_development",
+                "evidence": "kabuni.mobile_scope",
+                "scope_owned_by_mobile": [
+                    "Device management for the Kabuni camera - firmware version and update, serial number, battery life, MAC address. Explicitly excluded from the website",
+                    "All MVP net-session management, on a 1-to-1 coach-to-batter relationship. Explicitly not a web feature",
+                    "Camera pairing: ownership model of one camera per account, non-transferable once configured; transient-user connections; one active camera at a time",
+                    "Biometric facial-recognition login through the camera via a 'KABUNI LOGIN' voice command, matched against a cloud-held face matrix",
+                    "Three-tier offline degradation - cloud login over 5G/WiFi, else in-app manual batter override from the parent/child roster, else local storage on the camera for later transfer",
+                    "Media library: session grouping of stitched clips, one-time-use analyze action, recall/download/delete",
+                    "Rewards layer and parental activity notifications"
+                ],
+                "hard_problems": [
+                    "India prohibits tracking users via biometric data, which may force geo-locking of the first device release",
+                    "Many-to-many user/camera relationship forces biometric data into the cloud, making the login path network-dependent by design",
+                    "Parent/child account hierarchy where an Individual may belong to many Institutions, each with onboarding and off-boarding workflows",
+                    "GDPR audit trail with aged-data removal, right-to-be-forgotten, and data-request handling, for a 12-16 year-old user base"
+                ],
+                "not_mobile_work": "Net booking is specified as web-first, mobile-second. Do not claim it as mobile delivery.",
+                "caution": "Every item above is drawn from Kabuni's product specification (Product Bible.txt), which states requirements, not accomplishments. Ayush's claim to lead the mobile surface is self-asserted in his Notion notes. Describe this as scope he owns and problems he is solving, never as features he shipped."
+            },
+            "caution": "Not shipped. Do not attach impact metrics or write as a delivered outcome. MVP date is unsettled - the Product Bible heads its MVP section 'JUNE 2026' while the Notion project page targets Mar 2027.",
             "progress": "59/74 tasks complete"
         },
         {
@@ -370,7 +396,9 @@
                 "~70% map cost reduction via Mapbox routing and caching",
                 "Localization, theming, flavors, and adaptive screens"
             ],
-            "evidence": "emotorad.self_reported"
+            "evidence": "emotorad.self_reported",
+            "naming_note": "A rename to 'Dynem' was raised on 2026-07-09. Deliberately NOT adopted: the Play listing at com.emotorad.amigonxt still renders as 'Amiigo NXT' by developer 'EMotorad' (verified HTTP 200, 2026-07-09), no com.emotorad.dynem / com.dynem.app / in.dynem.app package exists, and 'Dynem' appears in no other source. dynem.in does resolve, so something by that name is real - but Ayush confirmed on 2026-07-09 to keep the Play Store naming. Do not introduce 'Dynem' without a store listing or an equivalent artifact.",
+            "url_verified": "2026-07-09 - both store links returned HTTP 200. Links are held here, not in metrics.json, by convention."
         },
         {
             "name": "Carer Connect",
@@ -705,6 +733,65 @@
                 "Edge case handling"
             ],
             "language_conflict": "GitHub metadata says Dart. `data/resume (1).tex` describes it as Java. Confirm before printing a language."
+        },
+        {
+            "name": "duncan.help Security Assessment",
+            "year": "2026",
+            "status": "delivered",
+            "resume_value": "high",
+            "description": "Authorized black-box security assessment and penetration test of duncan.help (Lovable SPA + Supabase). Found 3 critical issues including live production API credentials readable by any anonymous client, and delivered a CVSS-rated pentest report with a prioritized remediation runbook",
+            "url": "https://duncan.help/",
+            "company": "Creative Synergies Group",
+            "role": "Security Reviewer",
+            "tech_stack": [
+                "Supabase",
+                "PostgREST",
+                "Edge Functions",
+                "Chrome DevTools",
+                "Burp-style HTTP analysis"
+            ],
+            "keywords": [
+                "Security Assessment",
+                "Penetration Testing",
+                "AppSec",
+                "CVSS",
+                "Supabase",
+                "RLS",
+                "Prompt Injection",
+                "Threat Modeling",
+                "Remediation"
+            ],
+            "highlights": [
+                "Discovered live HubSpot, Notion, and GitHub production API credentials readable by any anonymous client via an unprotected Supabase table whose 'encrypted_api_key' column held plain base64",
+                "Identified a fully unauthenticated GPT-5 Edge Function exposed to billing drain and prompt-injection data extraction",
+                "Demonstrated PostgREST schema enumeration leaking 25+ table names including gmail_tokens, xero_tokens, and nda_submissions",
+                "Rated 10 pentest findings with CVSSv3-style scoring across RLS write-policy gaps, unrestricted signup, missing login rate limits, and absent CSP/X-Frame-Options headers",
+                "Authored a Remediation Runbook and prioritized remediation plan alongside the assessment"
+            ],
+            "evidence": "duncan.security",
+            "caution": "Engagement was explicitly authorized black-box testing. Describe it that way. Never reproduce the client's leaked credential values, which the reports quote verbatim as evidence.",
+            "note": "Entirely absent from data/resume/ before 2026-07-09. Security review is a differentiating capability that appeared nowhere in skills.json or experience.json."
+        },
+        {
+            "name": "LoPaisa",
+            "year": "2026",
+            "status": "in_progress",
+            "resume_value": "medium",
+            "description": "Digital lending application built as a client freelance engagement for Gshtish Tech Solutions Pvt Ltd",
+            "company": "Gshtish Tech Solutions Private Limited",
+            "engagement": "Freelance / Client",
+            "start_date": "Feb 2026",
+            "end_date": "Mar 2026",
+            "tech_stack": [],
+            "keywords": [
+                "Fintech",
+                "Digital Lending",
+                "Freelance"
+            ],
+            "highlights": [],
+            "caution": "In progress, and the source page records almost nothing beyond a timeline and a requirements spreadsheet (Digital_Lending_App.xlsx). Tech stack and outcomes are unknown - ask Ayush before writing any bullet. Do not invent a stack.",
+            "security_note": "The Notion page for this project contains the client's webmail address and a plaintext password. Never copy that page's contents into this repo; the credential should be rotated.",
+            "source": "Notion Second Brain/Projects/LoPaisa"
         },
         {
             "name": "second.brain",
