@@ -390,6 +390,274 @@
             "resolves_rejected_claim": "This branch is almost certainly the origin of the discredited '#341 Algorithm Utils (+878 / -0)' entry. The real artifact is algo-utils.ts at 841 lines, added as a pure addition (+2,155/-0 for the whole module) - but on an UNMERGED branch, and never as PR #341. The old note was directionally aware of real work and attached it to a PR number that does not exist.",
             "source": "git log/show/ls-tree on origin/refractor/dev, 2026-07-10.",
             "note": "Usable on a resume ONLY as design/architecture work, phrased as a refactor or prototype. It is real, substantial, and entirely Ayush's - 2,155 lines of clean pattern-driven TypeScript in one commit. But it never reached users, and dev abandoned the direction. Pair it with hf.exercise_algo_shipped, which DID ship, so the exercise story leads with delivered work."
+        },
+        "_kabuni_verification_2026_07_10": {
+            "method": "Computed from the kabuni-services git repository (Azure DevOps) on 2026-07-10. All figures are measured against origin/dev, NOT origin/main. main holds only 2 commits ('Added README.md' and a single merged PR) and is a stub; dev is the real integration branch at 890 commits. Any tool that defaults to the repo's default branch (origin/HEAD -> main) will report zero contributions for everyone and must not be used here.",
+            "identities": [
+                "Ayush <ayush@kabuni.com>",
+                "vancityAyush <ayush@kabuni.com>",
+                "Ayush Kumar <ayush@kabuni.com>",
+                "ayush <ayush@kabuni.com>"
+            ],
+            "identity_proof": "All four author-name variants share the single email ayush@kabuni.com and were matched on that email, not on name. One commit authored as 'Ayush <damini@kabuni.com>' exists and is deliberately EXCLUDED from every figure below: the email is Damini Prakash's, so ownership is ambiguous.",
+            "line_counting": "git log origin/dev --no-merges --numstat, filtered to the identities above. 'hand_written' excludes lockfiles (bun.lock, uv.lock, package-lock.json, pnpm-lock.yaml), generated protobuf stubs (*_pb2.py, *_pb2.pyi, *_pb2_grpc.py), committed tool output (DevSecOpsAutomation/reports/**, junit.xml, coverage.xml, full_test_output.txt, *normal-mode.txt), binaries (pdf/png/svg/ico/woff2), and data/**. 'raw' includes everything. Prefer hand_written; prefer code_only for anything phrased as 'wrote'.",
+            "all_refs_contamination": "CRITICAL: never compute Kabuni figures with 'git log --all'. An abandoned branch vendors the entire polarsource/polar open-source repo under opensrc/repos/github.com/polarsource/polar/ and a fork of it under apps/kapuni-api/, and also commits a 101,391-line SonarQube HTML/JSON report under DevSecOpsAutomation/reports/. Naive 'git log --all --numstat' credits Ayush with 1,398,591 added lines. Neither vendored path is reachable from origin/dev (0 commits touch them there). The honest figure is 210,454 added, a 6.6x correction.",
+            "file_creation_attribution": "'Who created file X' was computed with --full-history --diff-filter=A --reverse. WITHOUT --full-history git's path simplification silently misattributes creation to commit dfbd61d8 ('KPL_API_INTEGRATION_V0.1' by Gowthama K S), a single non-merge commit touching 868 files with 93,031 insertions - a squashed import of a long-lived feature branch. Under simplified history that commit appears to 'create' razorpay_client.py, stripe_client.py, entra_extension_auth.py and notification.proto. Under --full-history all four resolve to Ayush, 4-7 days earlier. This trap inverts the authorship of the payment gateway and the Entra auth extension. Always pass --full-history in this repo.",
+            "ai_assistance": "154 of 890 commits on origin/dev (17.3%) carry a 'Co-authored-by: Claude', 'Generated with Claude' or '[codex]' trailer. It is a team-wide norm, not specific to Ayush: Gowthama 84, Bhanuprakash 23, Mahesh 20, Sakshi 8, Ayush 6, Sagar 5, Srivani 4, Damini 4. Trailer absence does NOT prove a commit was hand-typed - most contributors never added the trailer. Do not read the line counts as 'lines typed by hand', and do not use this repo to claim or disclaim AI assistance either way."
+        },
+        "kabuni.services": {
+            "level": "external",
+            "repo": "kabuni-services (Azure DevOps, private)",
+            "branch_measured": "origin/dev",
+            "window": "2026-03-17 to 2026-06-11",
+            "relationship": "This is the DELIVERED backend/platform work for the Kabuni client engagement under CSG. It is the counterpart to kabuni.mobile_scope, which is specification only. Cite this key for anything shipped; cite kabuni.mobile_scope for anything about the cricket app or camera, which is not built.",
+            "commits": {
+                "ayush_non_merge_on_dev": 384,
+                "all_non_merge_on_dev": 770,
+                "share_of_non_merge_commits": "49.9%",
+                "ayush_merge_commits_on_dev": 68,
+                "all_merge_commits_on_dev": 120,
+                "ayush_non_merge_all_refs": 439,
+                "note": "439 counts 55 commits that live only on unmerged side branches. 384 is the defensible figure - it is work that reached the integration branch. Ayush is the single largest contributor; the next is Gowthama K S at 108 non-merge commits."
+            },
+            "contributor_ranking_non_merge_on_dev": {
+                "ayush": 384,
+                "gowthama": 108,
+                "mahesh": 77,
+                "damini": 65,
+                "bhanuprakash": 44,
+                "sagar": 37,
+                "sakshi": 31,
+                "srivani": 19,
+                "amala": 5
+            },
+            "files_created": {
+                "surviving_files_first_added_by_ayush": 950,
+                "surviving_files_matched": 1578,
+                "share_of_surviving_files": "60.2%",
+                "paths_ever_added_by_ayush": 1427,
+                "paths_ever_added_total": 2272,
+                "method": "--full-history --diff-filter=A --reverse; see _kabuni_verification_2026_07_10.file_creation_attribution",
+                "note": "1,578 of 1,693 tracked files matched a non-merge add commit; the remaining 115 entered via merge commits or renames and are unattributed rather than assigned to anyone."
+            },
+            "lines": {
+                "hand_written_added": 210454,
+                "hand_written_removed": 104686,
+                "hand_written_net": 105768,
+                "code_only_added": 166574,
+                "code_only_removed": 84141,
+                "code_only_net": 82433,
+                "code_only_extensions": [
+                    ".py",
+                    ".ts",
+                    ".tsx",
+                    ".sh",
+                    ".yaml",
+                    ".yml",
+                    ".proto",
+                    ".sql"
+                ],
+                "raw_added": 395243,
+                "raw_removed": 168605,
+                "team_hand_written_added": 492045,
+                "note": "Use code_only (+166,574) for any bullet phrased as 'wrote' or 'built'. hand_written still includes markdown design docs, JSON fixtures and env templates. raw is dominated by lockfiles and committed SonarQube reports - never print it."
+            },
+            "codebase_scale_at_head": {
+                "tracked_files": 1693,
+                "source_loc": 175186,
+                "python_loc": 113813,
+                "typescript_tsx_loc": 49992,
+                "yaml_loc": 7494,
+                "apps": 8,
+                "composition": "6 Python/FastAPI microservices (identity, payment, order, kpl, notification, master-data), 1 nginx api-gateway, 1 Next.js 16 / React 19 web app. Shared workspace packages: kabuni-auth-py, kabuni-observability-py, kabuni-service-core, proto, ui, logger. Bun workspace + Turborepo.",
+                "source_loc_definition": "wc -l over tracked .py/.ts/.tsx/.js/.mjs/.sh/.sql/.proto/.yaml/.yml, excluding data/**"
+            },
+            "architecture_verified_in_tree": [
+                "Hexagonal / clean layering enforced per service: domain, application, infrastructure, presentation",
+                "178 FastAPI route handlers (identity 65, master-data 49, payment 27, kpl 22, order 8, notification 7)",
+                "3 gRPC service contracts (NotificationService, OrderService, PaymentService) with 4 servicer implementations",
+                "13 Alembic migrations",
+                "Transactional Outbox in kpl-service, order-service and payment-service (see ownership_correction)",
+                "Azure Service Bus messaging, Redis caching, PostgreSQL via async SQLAlchemy",
+                "Microsoft Entra External ID (CIAM) with a custom OnAttributeCollectionSubmit auth extension",
+                "Razorpay and Stripe payment gateways behind a gateway_factory abstraction",
+                "MSG91 and Azure Communication Services notification providers",
+                "OpenTelemetry via the shared kabuni-observability package; Grafana / App Insights dashboards"
+            ],
+            "components_created_by_ayush": {
+                "verified_with": "--full-history --diff-filter=A",
+                "services_scaffolded": [
+                    "apps/identity-service",
+                    "apps/notification-service",
+                    "apps/payment-service",
+                    "apps/api-gateway",
+                    "apps/web",
+                    "packages/kabuni-service-core",
+                    "scripts/"
+                ],
+                "notable_files": [
+                    "payment-service razorpay_client.py + stripe_client.py (2026-05-21)",
+                    "identity-service entra_extension_auth.py, Entra extension JWT validator (2026-05-18)",
+                    "packages/proto notification.v1 gRPC contract (2026-05-19)",
+                    "identity-service rbac_service.py (2026-04-06)",
+                    "identity-service circuit_breaker.py (2026-04-03)",
+                    "notification-service RedisOtpStore with atomic Lua verify (2026-05-20)"
+                ],
+                "not_created_by_ayush": "The Transactional Outbox implementation (kpl 2026-05-21, order 2026-05-22, payment) and notification-service queue/service_bus.py were created by Gowthama K S. Ayush authored 11 of 20 commits touching outbox files - a real contribution, but not origination. See rejected.kabuni.code_contradicted."
+            },
+            "ownership_share_of_non_merge_commits_on_dev": {
+                "scripts": "36/41 (88%)",
+                "apps/api-gateway": "18/23 (78%)",
+                "apps/notification-service": "64/87 (74%)",
+                "apps/payment-service": "64/88 (73%)",
+                "packages": "57/81 (70%)",
+                "charts": "35/54 (65%)",
+                "apps/identity-service": "104/187 (56%)",
+                ".azure (CI/CD)": "88/157 (56%)",
+                "apps/kpl-service": "60/121 (50%)",
+                "apps/web": "138/286 (48%)",
+                "apps/order-service": "41/89 (46%)",
+                "apps/master-data-service": "38/86 (44%)"
+            },
+            "ci_cd_ownership": {
+                "platform": "Azure DevOps Pipelines. There are ZERO .github/workflows files in this repo.",
+                "ayush_share": "88 of 157 non-merge commits under .azure/ (56%) - the largest single share. The directory was first created by Bhanuprakash NR on 2026-04-06.",
+                "pipeline_stages": "Analyze (Turborepo affected-package detection) -> CI (lint, type-check, test) -> Security -> Detect (deployment gate) -> Build -> CD",
+                "security_gates": [
+                    "TruffleHog - verified secret scanning",
+                    "Checkov - IaC and Dockerfile, fails on HIGH/CRITICAL",
+                    "Bandit - Python SAST",
+                    "Snyk - SCA across all 6 Python services and the Next.js web app",
+                    "SonarCloud - static analysis"
+                ],
+                "cd": "Helm deploys to AKS across three namespaces (apps-dev, apps-test, apps-uat) from one shared 'service' chart plus per-environment values, with HPA templates and manual approval gates before Testing and UAT.",
+                "releases": "116 git tags, per-app semver with environment suffixes (e.g. web/1.0.180-test)."
+            },
+            "testing": {
+                "test_files_at_head": 297,
+                "test_loc_at_head": 57840,
+                "per_service_test_files": {
+                    "identity-service": 73,
+                    "kpl-service": 56,
+                    "payment-service": 34,
+                    "notification-service": 31,
+                    "master-data-service": 29,
+                    "order-service": 24
+                },
+                "enforced_coverage_gates": {
+                    "identity-service": "75%",
+                    "order-service": "75%",
+                    "kpl-service": "75%",
+                    "master-data-service": "75%",
+                    "notification-service": "60%",
+                    "payment-service": "0% (gate disabled)",
+                    "packages/ui": "80% line",
+                    "packages/logger": "80% line"
+                },
+                "tdd_evidence": "Ayush authored 9 'red:' and 12 'green:' commits on dev - genuine red/green TDD cycles, concentrated in notification-service and the identity hexagonal scaffold. This is repo-verifiable and is the opposite of the HealthFlex TDD claim in rejected.hf.code_contradicted, which had zero test commits behind it.",
+                "caution": "297 test files is a whole-team figure. Do not attribute the test suite to Ayush; attribute the red/green commits, which are his."
+            },
+            "cadence": {
+                "active_days_on_dev": 40,
+                "active_weeks_on_dev": 11,
+                "calendar_span": "~12 weeks (2026-03-17 to 2026-06-11)",
+                "caution": "384 commits over 40 active days is ~9.6 commits/active-day. That is high and reflects small conventional commits plus TDD red/green pairs, not 9.6 features per day. Do not present commit rate as a productivity metric."
+            },
+            "unverified_in_this_repo": {
+                "note": "These appear in experience.json's Kabuni Platform entry but have ZERO occurrences in kabuni-services. Absence here is not proof they are false - Kabuni may have separate repos Ayush cannot be measured on from this tree. Confirm against the owning repo before printing any of them.",
+                "items": [
+                    "Azure IoT Hub with X.509 device identity - 0 matches for iothub/iot_hub/x509 anywhere in the tree",
+                    "Flutter mobile flows - 0 pubspec.yaml and 0 .dart files",
+                    "Azure App Configuration - 0 matches (Azure Key Vault IS present and heavily used)",
+                    "JWT with 15-minute access and 30-day refresh tokens - no such constant exists; the only 15 is SESSION_LOCKOUT_MINUTES in identity-service config.py. Tokens are Entra-issued, so lifetimes are likely portal-configured rather than in code."
+                ]
+            },
+            "missing_from_tech_stack": "experience.json's Kabuni tech_stack omits Stripe (stripe_client.py exists and Ayush created it), Azure Kubernetes Service, Helm, Turborepo, Bun, OpenTelemetry, MSG91 and Azure Communication Services.",
+            "service_ownership": {
+                "method": "Per-service figures on origin/dev. 'commits' = non-merge commits touching apps/<service>/. 'files_created' = surviving tracked files under the service whose first add commit (--full-history --diff-filter=A) is Ayush's. Every one of these services had multiple contributors; co-owners are named. Ayush is the top committer in all four, but commit count and file authorship diverge sharply in order-service - read both numbers before writing a bullet.",
+                "identity-service": {
+                    "role": "Creator and lead; co-owned",
+                    "commits": "104 of 187 (56%) - top contributor",
+                    "files_created": "98 of 164 surviving files (60%); 46 of 77 under src/ (60%)",
+                    "co_owners": "Sagar 23 commits, Damini 20, Gowthama 13, Mahesh 12",
+                    "ayush_lines_code_only": "+26,308 / -9,874",
+                    "owned_subsystems": [
+                        "Microsoft Entra External ID (CIAM) integration end to end",
+                        "Custom Entra OnAttributeCollectionSubmit auth extension: entra_extension_auth.py, the extension JWT validator + FastAPI dependency, Pydantic request/response schemas, and the POST /api/v1/entra/extensions/attribute-collection-submit route (2026-05-18 to 05-19)",
+                        "EntraAttributeCollectionService decision logic",
+                        "Guardian-led signup flow for Indian minors, including guardian-email and date-of-birth validation",
+                        "Guardian approval service and the approve/reject email link flow",
+                        "rbac_service.py - hierarchical RBAC with role inheritance, cycle detection (_assert_no_cycle), and transitive permission resolution across the role graph",
+                        "circuit_breaker.py",
+                        "Security hardening: required PYTEST_CURRENT_TEST or explicit opt-in before the Entra extension JWT bypass could engage"
+                    ],
+                    "caution": "Do NOT say RBAC+ABAC. The model is hierarchical RBAC. See rejected.kabuni.code_contradicted."
+                },
+                "payment-service": {
+                    "role": "Creator and near-sole author",
+                    "commits": "64 of 88 (73%) - top contributor",
+                    "files_created": "157 of 160 surviving files (98%); 102 of 104 under src/ (98%)",
+                    "co_owners": "Mahesh 9 commits, Gowthama 8, Srivani 3, Damini 3 - all after Ayush scaffolded it",
+                    "ayush_lines_code_only": "+18,870 / -2,483",
+                    "owned_subsystems": [
+                        "Scaffolded the whole service on 2026-05-21 (hexagonal: domain / application / infrastructure / presentation)",
+                        "razorpay_client.py and stripe_client.py, both created by Ayush, behind a gateway_factory abstraction and a gateway.py port",
+                        "razorpay_signature.py webhook signature verification",
+                        "webhook_processor.py (created 2026-05-21) and webhook_service.py; later refactored to reduce cyclomatic complexity",
+                        "reconciliation.py (created 2026-05-27); duplicate-event handling and robust reconciliation",
+                        "Dead-lettering of webhook events after WEBHOOK_MAX_RETRIES attempts",
+                        "idempotency.py service",
+                        "Invoice creation and download; Razorpay Invoices for KPL registration; receipt invoices with prefill and multi-registration",
+                        "gateway_config + gateway_config_audit_log models",
+                        "Test suite, telemetry, and a local Azure Service Bus emulator for integration testing"
+                    ],
+                    "note": "The strongest single-service ownership claim Ayush has in this repo. 98% of surviving files. Coverage gate is set to fail_under=0 here, so do not claim a coverage number for payment-service."
+                },
+                "notification-service": {
+                    "role": "Creator and principal author",
+                    "commits": "64 of 87 (74%) - top contributor",
+                    "files_created": "117 of 134 surviving files (87%); 66 of 74 under src/ (89%)",
+                    "co_owners": "Mahesh 10 commits, Gowthama 6, Sakshi 3, Amala 2",
+                    "ayush_lines_code_only": "+9,551 / -1,774",
+                    "built_with_tdd": "This service carries Ayush's 9 'red:' and 12 'green:' commits - the scaffold, entities, repositories and services were built in genuine red/green cycles across 2026-05-19 and 05-20.",
+                    "owned_subsystems": [
+                        "Scaffolded the service and the notification.v1 gRPC contract in packages/proto (2026-05-19)",
+                        "Domain entities: NotificationTemplate, OtpRecord; templates + deliveries tables",
+                        "RedisOtpStore with atomic Lua verify - single round-trip compare-and-delete to make OTP verification race-free",
+                        "OtpService, TemplateService, DeliveryService for templated sends",
+                        "TemplateRepository, DeliveryRepository, ORM models",
+                        "MockMsg91Client + provider factory; MSG91 and Azure Communication Services provider interface",
+                        "Azure Service Bus integration for delivery tasks",
+                        "gRPC servicer with status mapping, wired into the FastAPI lifespan",
+                        "HTTP admin, health and dev-otp routes",
+                        "Guardian-consent templates seeded",
+                        "provider_template_id and email_domains table; dynamic provider routing",
+                        "Integrated the notification-service gRPC client into the identity parental-consent flow (2026-06-04)"
+                    ],
+                    "note": "Enforced coverage gate is 60% (pyproject fail_under). Gowthama created infrastructure/queue/service_bus.py; Ayush created the rest of the queue-adjacent stack."
+                },
+                "order-service": {
+                    "role": "Contributor, NOT creator - be precise here",
+                    "commits": "41 of 89 (46%) - top committer by count",
+                    "files_created": "23 of 134 surviving files (17%); 19 of 74 under src/ (26%)",
+                    "created_by": "Gowthama K S (2026-05-22), who also authored the Transactional Outbox and the KPL order-tracking APIs",
+                    "co_owners": "Gowthama 32 commits, Mahesh 10, Damini 4, Sakshi 1",
+                    "ayush_lines_code_only": "+2,776 / -1,405",
+                    "what_ayush_actually_did": [
+                        "Robust payment reconciliation between order-service and payment-service (2026-06-11)",
+                        "Fixed an admin role-name mismatch that locked admins out of the payment admin APIs",
+                        "Corrected initiated_by_service to emit 'orders' rather than 'order-service' in outbound events",
+                        "Added customer contact columns to orders",
+                        "Registration-number handling in kpl_order_service, with mapping tests",
+                        "Cross-cutting config work: Key Vault prioritised over env, per-service schema naming (servicename_env), UAT env, Key Vault guard fixes",
+                        "Alembic enum/tooling fixes, pyright via uv, S1192/S8409/S8410 SonarCloud sweeps",
+                        "Contributed 11 of 20 commits touching outbox files across kpl/order/payment"
+                    ],
+                    "caution": "The 46% commit share overstates ownership. Ayush created only 17% of the surviving files; much of his commit count here is repo-wide config, lint and release work that happened to touch order-service. Write this as 'contributed to' or name the specific things above. Never write 'built the order service'."
+                },
+                "how_to_phrase": "Payment and notification are safe to claim as 'built' or 'owned' (98% and 87% of files). Identity is 'created and led, co-owned with three engineers' (60%). Order-service is 'contributed reconciliation, auth fixes and cross-cutting config to' - Gowthama built it. Claiming all four equally is the one thing that would make this section falsifiable by anyone with repo access."
+            },
+            "source": "git analysis of kabuni-services @ origin/dev, 2026-07-10. Private repo; figures are reproducible by anyone with clone access using the commands in _kabuni_verification_2026_07_10."
         }
     },
     "rejected": {
@@ -470,6 +738,19 @@
             "correct": "Say 'EAS Build' and 'GitHub Actions' for HealthFlex. Fastlane has been left in skills.json because code search does not index private repos and Ayush may have used it at EMotorad or CSG (both inaccessible) - but he should confirm he can speak to it in an interview before keeping it, since nothing on record backs it.",
             "found_in": "experience.json, projects.json (Doctors App, pingo_learn_r1), skills.json, src/resume/resume.tex, data/.old/*.tex",
             "severity": "medium - a plausible tool, but currently backed by nothing except other copies of the resume"
+        },
+        "kabuni.code_contradicted": {
+            "bad_claims": [
+                "Migrated the authorization model from pure RBAC to hybrid RBAC+ABAC within six weeks after contextual child-data policies outgrew role-only checks",
+                "JWT with 15-minute access and 30-day refresh tokens",
+                "Implemented event-driven inter-service communication via the Transactional Outbox pattern over Azure Service Bus",
+                "tech_stack: GitHub Actions"
+            ],
+            "reason": "Audited against the kabuni-services tree on 2026-07-10. (1) ABAC: there are ZERO occurrences of 'abac', 'attribute-based', 'policy_engine', 'casbin' or any policy engine across apps/, packages/, charts/ and docs/. The authorization model is identifiable and it is hierarchical RBAC, not hybrid RBAC+ABAC: RbacService exposes set_role_parent / remove_role_parent / get_role_parent_ids / _assert_no_cycle, and auth_deps._collect_role_permissions walks role ancestors recursively to union permissions. That is NIST RBAC1 (role inheritance). No predicate anywhere evaluates a resource or subject attribute at decision time. The 'within six weeks' migration narrative has no commit trail either. (2) JWT lifetimes: no ACCESS_TOKEN_EXPIRE / REFRESH_TOKEN_EXPIRE constant exists in any service. The only '15' is SESSION_LOCKOUT_MINUTES in identity-service/src/core/config.py, which is a lockout window, not a token lifetime - this looks like the origin of the number. (3) Outbox: the pattern is real (kpl-service, order-service, payment-service) but was created by Gowthama K S (kpl 2026-05-21, order 2026-05-22). Ayush authored 11 of 20 commits touching outbox files, so he contributed substantially but did not implement it. 'Implemented' claims origination he does not have. (4) GitHub Actions: zero files under .github/workflows. The entire pipeline is Azure DevOps Pipelines under .azure/pipelines/, which Ayush is in fact the largest single contributor to (88/157 commits) - the claim is both wrong and weaker than the truth.",
+            "correct": "(1) Say 'designed hierarchical RBAC with role inheritance and cycle detection, resolving permissions transitively across the role graph' - that is what the code does and it is still a strong claim. Drop ABAC unless it exists in another repo, in which case cite that repo. (2) Drop the token lifetimes, or verify them in the Entra tenant configuration and cite that, not the code. (3) Reword to 'contributed to the Transactional Outbox implementation across kpl, order and payment services (11 of 20 commits)', or move the bullet to something Ayush did originate - the Razorpay/Stripe gateway layer, the Entra auth extension, or the notification.v1 gRPC contract, all verified as his. (4) Replace GitHub Actions with Azure DevOps Pipelines and claim the CI/CD ownership: 88 of 157 commits, a 6-stage pipeline with TruffleHog/Checkov/Bandit/Snyk/SonarCloud gates and Helm-to-AKS delivery across three environments.",
+            "found_in": "data/resume/experience.json (Creative Synergies Group -> Kabuni Platform highlights and tech_stack)",
+            "severity": "Medium-high. Unlike the HealthFlex claims these sit in a PRIVATE repo, so a reader cannot disprove them from outside. But they are wrong, an interviewer with repo access disproves the ABAC claim in one grep, and the true story (hierarchical RBAC, gateway layer, Entra extension, Azure DevOps CI/CD ownership) is already strong enough that the embellishment buys nothing.",
+            "partially_rehabilitated": "The Outbox bullet survives as a contribution rather than an implementation. The Azure Service Bus, Redis and event-driven halves of that bullet are all verified present."
         }
     }
 }

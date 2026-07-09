@@ -206,7 +206,8 @@
                     "mvp_target": "Mar 2027",
                     "url": "https://www.kabuni.com/",
                     "summary": "Youth-focused platform spanning web, a cricket mobile app, and camera hardware. Child-safety compliance is the defining constraint (DPDP, GDPR, COPPA).",
-                    "caution": "Not shipped. Do not write any Kabuni bullet as a delivered outcome or attach an impact metric to it.",
+                    "evidence": "kabuni.services",
+                    "caution": "The PRODUCT has not launched: no users, no traffic, no impact metrics. Never attach an outcome metric to a Kabuni bullet. But the backend platform is built and deployed - the kabuni-services repo is real, measurable work sitting on AKS across dev/test/uat with 116 release tags. Split the two: cite kabuni.services for anything delivered (services, CI/CD, gateways, auth), and kabuni.mobile_scope for the cricket app and camera, which are specification only. Four bullets below are contradicted by the repo - see rejected.kabuni.code_contradicted before printing any of them.",
                     "highlights": [
                         {
                             "description": "Building backend services for the Kabuni platform in Python/FastAPI with gRPC and PostgreSQL, covering payments, identity, master data, notifications, and platform workflows",
@@ -217,18 +218,67 @@
                                 "PostgreSQL",
                                 "Microservices"
                             ],
-                            "metrics": []
+                            "metrics": [],
+                            "evidence": "kabuni.services"
                         },
                         {
-                            "description": "Built the Kabuni Payment Service with Razorpay flows, RESTful webhooks, transaction-state tracking, and reconciliation-ready models for subscriptions and Kabuni Premier League registration journeys",
+                            "description": "Built and owned the Kabuni Payment Service, authoring 98% of its files: Razorpay and Stripe gateways behind a factory abstraction, HMAC webhook signature verification, an idempotency layer, webhook dead-lettering after max retries, invoice generation, and reconciliation with duplicate-event handling",
                             "keywords": [
                                 "Razorpay",
+                                "Stripe",
                                 "Payments",
                                 "Webhooks",
+                                "Idempotency",
                                 "Reconciliation",
-                                "Subscriptions"
+                                "Dead-letter Queue",
+                                "FastAPI"
                             ],
-                            "metrics": []
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Verified: Ayush scaffolded payment-service and created razorpay_client.py, stripe_client.py and the webhook processor. Stripe is also live and is missing from the tech_stack narrative."
+                        },
+                        {
+                            "description": "Built the Kabuni Notification Service end to end with TDD, authoring 87% of its files: a notification.v1 gRPC contract, templated delivery over MSG91 and Azure Communication Services behind a provider interface, Azure Service Bus delivery workers, and a Redis OTP store using an atomic Lua compare-and-delete to make verification race-free",
+                            "keywords": [
+                                "gRPC",
+                                "Redis",
+                                "Lua",
+                                "Azure Service Bus",
+                                "MSG91",
+                                "Azure Communication Services",
+                                "TDD",
+                                "Notifications"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Verified: 64/87 commits, 117/134 surviving files, and Ayush's 9 red / 12 green TDD commits land here. Co-owned with Mahesh, Gowthama, Sakshi, Amala. Coverage gate is 60%."
+                        },
+                        {
+                            "description": "Wired the notification service into the guardian-consent journey over gRPC with dynamic provider routing, so parental-consent OTPs and approval emails for minor accounts flow through one delivery path",
+                            "keywords": [
+                                "gRPC",
+                                "Parental Consent",
+                                "OTP",
+                                "DPDP",
+                                "Guardian Consent",
+                                "Service Integration"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Verified across identity-service and notification-service commits (2026-06-04)."
+                        },
+                        {
+                            "description": "Contributed payment/order reconciliation, an admin RBAC role-name fix that had locked administrators out of the payment admin APIs, and cross-cutting configuration work (Key Vault precedence over env, per-service schema naming, UAT environments) to the order service",
+                            "keywords": [
+                                "Reconciliation",
+                                "RBAC",
+                                "Azure Key Vault",
+                                "Configuration",
+                                "Microservices"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Ayush is the top committer in order-service (41/89) but created only 17% of its files - Gowthama K S built it and authored the Outbox. Phrase as contribution, never as ownership. See kabuni.services.service_ownership.order-service."
                         },
                         {
                             "description": "Implemented event-driven inter-service communication via the Transactional Outbox pattern over Azure Service Bus, with Redis-backed caching on PostgreSQL access paths",
@@ -239,20 +289,27 @@
                                 "Redis",
                                 "Caching"
                             ],
-                            "metrics": []
+                            "metrics": [],
+                            "caution": "PARTIALLY CONTRADICTED. The Outbox exists but was created by Gowthama K S; Ayush authored 11 of 20 outbox commits. Say 'contributed to', not 'Implemented'. Azure Service Bus + Redis halves are verified.",
+                            "evidence": "rejected.kabuni.code_contradicted",
+                            "status": "NEEDS REWRITE - do not print as-is. Downgrade 'Implemented' to 'contributed to'; Ayush did not originate the Outbox."
                         },
                         {
-                            "description": "Designed identity and auth for multi-role family accounts (guardian-child relationships, purpose-specific consent journeys, withdrawal/deletion flows) integrating Microsoft Entra External ID (CIAM)",
+                            "description": "Created and led the Kabuni Identity Service (60% of its files), integrating Microsoft Entra External ID (CIAM) via a custom OnAttributeCollectionSubmit auth extension - extension JWT validator, decision service and callback route - to drive a guardian-led signup flow for Indian minors with purpose-specific consent, approval and withdrawal journeys",
                             "keywords": [
                                 "Identity",
                                 "CIAM",
-                                "Microsoft Entra",
+                                "Microsoft Entra External ID",
                                 "Guardian Consent",
                                 "DPDP",
                                 "GDPR",
-                                "COPPA"
+                                "COPPA",
+                                "JWT",
+                                "FastAPI"
                             ],
-                            "metrics": []
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Verified: 104/187 commits, 98/164 surviving files. Co-owned with Sagar, Damini, Gowthama, Mahesh. Ayush created entra_extension_auth.py, the extension JWT validator, EntraAttributeCollectionService and the attribute-collection-submit route (2026-05-18/19)."
                         },
                         {
                             "description": "Migrated the authorization model from pure RBAC to hybrid RBAC+ABAC within six weeks after contextual child-data policies outgrew role-only checks; JWT with 15-minute access and 30-day refresh tokens",
@@ -263,7 +320,11 @@
                                 "JWT",
                                 "Architecture Migration"
                             ],
-                            "metrics": []
+                            "metrics": [],
+                            "caution": "CONTRADICTED. Zero occurrences of ABAC/attribute-based/policy-engine in the repo. The model is hierarchical RBAC (role inheritance + cycle detection). The 15-minute/30-day token lifetimes do not exist in code either. Rewrite per rejected.kabuni.code_contradicted.correct before use.",
+                            "evidence": "rejected.kabuni.code_contradicted",
+                            "status": "NEEDS REWRITE - do not print as-is. The ABAC and token-lifetime claims are contradicted by the repo.",
+                            "replacement": "Designed hierarchical RBAC for the identity service: role inheritance with cycle detection and permissions resolved transitively across the role graph (rbac_service.py, auth_deps._collect_role_permissions). Created by Ayush 2026-04-06. Use this bullet instead - it is what the code does, and it is verifiable."
                         },
                         {
                             "description": "Delivered frontend surfaces in Next.js/TypeScript and Flutter mobile flows; Azure IoT Hub with X.509 device identity for the Kabuni hardware camera",
@@ -274,7 +335,9 @@
                                 "Azure IoT Hub",
                                 "X.509"
                             ],
-                            "metrics": []
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "UNVERIFIED. Zero matches for iothub/x509/.dart/pubspec.yaml in kabuni-services. May live in another repo; confirm there before printing. See kabuni.services.unverified_in_this_repo."
                         },
                         {
                             "description": "Architecting the native iOS/Android Kabuni Cricket App, which owns camera device management, net-session control, and biometric facial-recognition login - all specified as mobile-only, with the website deliberately excluded",
@@ -323,18 +386,25 @@
                         "PostgreSQL",
                         "Redis",
                         "Azure Service Bus",
-                        "Azure App Configuration",
+                        "Azure App Configuration (unverified in kabuni-services)",
                         "Azure Key Vault",
-                        "Azure IoT Hub",
+                        "Azure IoT Hub (unverified in kabuni-services)",
                         "Microsoft Entra External ID",
                         "Razorpay",
                         "Next.js",
                         "TypeScript",
                         "React",
-                        "Flutter",
+                        "Flutter (unverified in kabuni-services)",
                         "Docker",
-                        "GitHub Actions",
-                        "Azure DevOps"
+                        "Azure DevOps Pipelines",
+                        "Stripe",
+                        "Azure Kubernetes Service",
+                        "Helm",
+                        "Turborepo",
+                        "Bun",
+                        "OpenTelemetry",
+                        "MSG91",
+                        "Azure Communication Services"
                     ]
                 }
             ],
