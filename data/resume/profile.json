@@ -49,13 +49,13 @@
         "Kotlin"
     ],
     "headline_metric": {
-        "value": "91 merged PRs, +57.9K lines across three production healthcare products",
+        "value": "101 merged PRs and 731 commits across four production healthcare products",
         "evidence": "hf.merged_prs_total",
-        "note": "Best-evidenced single number in the dataset. Prefer it over any commit count or repo count."
+        "note": "Verified 2026-07-10 by recomputing from git history. 101 is the strict floor (100% of the merged branch's commits are Ayush's); 131 is the majority-authored upper bound. Supersedes '91 merged PRs, +57.9K lines across three products', which excluded the platform API entirely and undercounted doctors.app by more than half. Do NOT pair this with a 'lines added' figure: the four-repo net is near zero because stance-dashboard was a large consolidation effort (-17.5K net). Prefer PR and product counts."
     },
     "removed_fields": {
         "commits_this_year": "Was 80. Unsupported: activity.json 'recent_commits' is a capped API window (ceiling 10), not a total. See metrics.json rejected.gh.recent_commits_as_totals.",
         "prs_this_year": "Was 12. The sum of recent_prs across all 23 repos with activity data is 2. Same reason."
     },
-    "last_updated": "2026-07-09"
+    "last_updated": "2026-07-10"
 }

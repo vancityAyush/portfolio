@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-07-09",
+    "last_updated": "2026-07-10",
     "note": "Every project is captured here, including low-value tutorial follow-alongs and interview take-homes. Filter with `resume_value` rather than deleting: `high` = lead with these, `medium` = use when the JD matches, `low` = never auto-include (bootcamp clones, take-home assignments, early coursework). Quantified claims cite metrics.json by evidence key.",
     "projects": [
         {
@@ -83,7 +83,7 @@
             "year": "2024-2025",
             "status": "shipped",
             "resume_value": "high",
-            "description": "React Native patient app for AI-powered rehab. 57 merged PRs (+45K lines). Led BLE 2.0 migration, the full Component Migration, and the algorithm utilities for rep counting and range-of-motion",
+            "description": "React Native patient app for AI-powered rehab. Created and owned the exercise algorithm layer (rep counting, range-of-motion, correctness and stability scoring) and led the BLE 2.0 sensor-stack migration.",
             "url": "https://www.healthflex.in/",
             "github_url": "https://github.com/vancityAyush/healthflex.app",
             "play_store": "https://play.google.com/store/apps/developer?id=HealthFlex&hl=en_IN",
@@ -105,7 +105,10 @@
                 "BLE",
                 "Exercise Engine",
                 "Expo",
-                "57 PRs"
+                "57 PRs",
+                "Algorithms",
+                "Sensors",
+                "Strategy Pattern"
             ],
             "highlights": [
                 "Led BLE 2.0 migration (+1,164 lines) with complete sensor stack rewrite",
@@ -118,14 +121,15 @@
             "evidence": [
                 "hf.app.merged_prs",
                 "hf.authored_commits"
-            ]
+            ],
+            "branches_note": "The refractor/dev branch holds an unmerged, Ayush-authored rewrite of the exercise engine (2,155 lines: Strategy/Builder/State/Observer). Real architecture work, never shipped - see metrics.json hf.exercise_module_refactor before citing it."
         },
         {
             "name": "Stance Dashboard",
             "year": "2025",
             "status": "shipped",
             "resume_value": "high",
-            "description": "Full-stack healthcare dashboard. Tech Lead for a team of 4; personally authored 23 merged PRs (+11.5K lines)",
+            "description": "Full-stack healthcare dashboard. Tech Lead for a 6-engineer team; personally authored 18 merged PRs spanning the auth system, GraphQL Shield authorization, RBAC permissions, and Google Calendar event sync",
             "github_url": "https://github.com/vancityAyush/stance-dashboard",
             "company": "HealthFlex",
             "role": "Tech Lead",
@@ -157,22 +161,22 @@
                 "Built VALD patient import via syncId matching and invoice PDF generation with a Puppeteer pool"
             ],
             "evidence": "hf.stance.merged_prs",
-            "date_conflict": "The project page says Jan-May 2025; the Notion Projects CSV says Mar 2024-May 2025. metrics.json uses Feb-May 2025 per the repo metadata."
+            "date_conflict": "The project page says Jan-May 2025; the Notion Projects CSV says Mar 2024-May 2025. metrics.json uses Feb-May 2025 per the repo metadata.",
+            "note": "Corrected 2026-07-10: 23 -> 18 merged PRs (strict attribution), team of 4 -> 6 distinct committers. The '+11.5K lines' figure was removed - Ayush's net hand-written contribution here is -17,541 lines (consolidation/refactor work). See metrics.json hf.stance.merged_prs."
         },
         {
             "name": "Doctors App",
             "year": "2024-2025",
             "status": "shipped",
             "resume_value": "high",
-            "description": "React Native app for clinicians. 11 merged PRs (+1.4K lines) covering sensor tagging, real-time chat, and screen migrations",
+            "description": "React Native app for clinicians. 24 merged PRs (+7.6K / -4.7K lines across 174 files) covering sensor tagging, real-time chat over WebSocket, and screen migrations",
             "github_url": "https://github.com/vancityAyush/doctors.app",
             "company": "HealthFlex",
             "tech_stack": [
                 "React Native",
                 "TypeScript",
                 "WebSocket",
-                "Storybook v8",
-                "Fastlane"
+                "GitHub Actions"
             ],
             "keywords": [
                 "Healthcare",
@@ -188,7 +192,8 @@
                 "Migrated home, profile, and add-patient screens",
                 "Built a Storybook v8 component library and multi-env GitHub Actions release pipelines"
             ],
-            "evidence": "hf.doctors.merged_prs"
+            "evidence": "hf.doctors.merged_prs",
+            "note": "Corrected 2026-07-10: 11 -> 24 merged PRs; the old count undercounted by more than half. Storybook v8 and Fastlane removed from tech_stack - Storybook was configured by a colleague and is absent from the current package.json, and Fastlane has never existed in this repo."
         },
         {
             "name": "HealthFlex API",
@@ -1030,27 +1035,24 @@
             "year": "2024",
             "status": "shipped",
             "resume_value": "medium",
-            "description": "Flutter learning app with Fastlane CI/CD and Firebase for automated builds and deployments",
+            "description": "Flutter learning app with Firebase for builds and deployments",
             "github_url": "https://github.com/vancityAyush/pingo_learn_r1",
             "tech_stack": [
                 "Flutter",
                 "Dart",
-                "Fastlane",
-                "Firebase",
-                "Ruby"
+                "Firebase"
             ],
             "keywords": [
                 "Flutter",
                 "CI/CD",
-                "Fastlane",
                 "Firebase",
                 "Mobile"
             ],
             "highlights": [
-                "Fastlane CI/CD integration",
                 "Firebase integration",
                 "Automated deployments"
-            ]
+            ],
+            "note": "Fastlane removed 2026-07-10: the repo's main branch contains zero Fastlane/Fastfile/Appfile paths. See metrics.json rejected.fastlane_unsubstantiated."
         },
         {
             "name": "Datotta",

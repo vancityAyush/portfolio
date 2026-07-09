@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-07-09",
+    "last_updated": "2026-07-10",
     "note": "Quantified claims cite metrics.json by evidence key rather than restating numbers. Where a bullet carries a number inline, metrics.json is authoritative if the two ever disagree.",
     "experiences": [
         {
@@ -378,11 +378,15 @@
             "evidence": [
                 "hf.merged_prs_total",
                 "hf.authored_commits",
+                "hf.exercise_algo_shipped",
+                "hf.exercise_module_refactor",
+                "hf.ble_work",
+                "hf.ci_ownership",
                 "hf.self_reported"
             ],
             "highlights": [
                 {
-                    "description": "Authored 91 merged PRs (+57.9K / -34.7K lines) across three products - the patient app, the clinician app, and the platform API - as one of the first engineers on the team",
+                    "description": "Authored 101 merged PRs and 731 commits across four products - the patient app, the clinician app, the Stance clinical dashboard, and the platform API - as one of the first engineers on the team",
                     "keywords": [
                         "React Native",
                         "TypeScript",
@@ -390,10 +394,12 @@
                         "Founding Engineer"
                     ],
                     "metrics": [
-                        "91 merged PRs",
-                        "57.9K lines added"
+                        "101 merged PRs",
+                        "731 commits",
+                        "4 products"
                     ],
-                    "evidence": "hf.merged_prs_total"
+                    "evidence": "hf.merged_prs_total",
+                    "note": "101 is the strict floor (every commit on the merged branch is Ayush's). Upper bound is 131. Prefer PR count over the +81.5K hand-written lines added, because the aggregate net across repos is near zero - stance-dashboard was a large deletion/refactor effort."
                 },
                 {
                     "description": "Delivered two cross-platform React Native apps for patients, coaches, and internal operations teams with a 95% crash-free rate, serving 1,000+ users across Android and iOS",
@@ -412,24 +418,70 @@
                     "evidence": "hf.self_reported"
                 },
                 {
-                    "description": "Engineered a BLE module with TDD (55+ unit tests), streaming 20Hz per device via RxJS; led the BLE 2.0 migration (+1,164 lines) rewriting the full sensor stack",
+                    "description": "Led the BLE 2.0 migration (PR #218, +1,164 / -383 across 18 files), rewriting the sensor connection stack: a new BLE context layer (+711 lines), a runtime permission-checker component, and a rebuilt device-scanning screen and BLE packet parser",
                     "keywords": [
                         "BLE",
                         "Bluetooth",
-                        "TDD",
-                        "RxJS",
                         "IoT",
-                        "Hardware Integration"
+                        "Hardware Integration",
+                        "React Native",
+                        "Migration"
                     ],
                     "metrics": [
-                        "55+ unit tests",
-                        "20Hz streaming"
+                        "+1,164 lines across 18 files"
                     ],
                     "evidence": [
-                        "hf.self_reported",
+                        "hf.ble_work",
                         "hf.app.merged_prs"
                     ],
-                    "caution": "Verify the 20Hz figure before printing - Ayush's own notes flag exact Hz/latency numbers as needing confirmation."
+                    "note": "Rewritten 2026-07-10. The previous version claimed 'TDD (55+ unit tests)', '20Hz per device' and 'via RxJS'. All three are contradicted by the repo: Ayush authored zero test-file commits in any HealthFlex repo; 20Hz is one of ten selectable rates in a file written after he left; RxJS is used in the codebase but authored by a colleague. See rejected.hf.code_contradicted."
+                },
+                {
+                    "description": "Migrated the start-position sensor module off an observer/strategy pattern to an event-emitter architecture, deleting ~190 lines of indirection",
+                    "keywords": [
+                        "Refactoring",
+                        "Event-Driven",
+                        "Architecture",
+                        "Sensors"
+                    ],
+                    "metrics": [],
+                    "evidence": "hf.ble_work"
+                },
+                {
+                    "description": "Created and owned the exercise algorithm layer powering rep counting, range-of-motion, correctness scoring, and stability tracking in the patient app - authoring 63% of its commits and growing it to ~850 lines; it shipped to production and remained in the app for over a year",
+                    "keywords": [
+                        "Algorithms",
+                        "Signal Processing",
+                        "Rep Counting",
+                        "Range of Motion",
+                        "Sensors",
+                        "TypeScript"
+                    ],
+                    "metrics": [
+                        "63% of commits (32 of 51)",
+                        "+6.2K / -3.6K lines across the exercise surface"
+                    ],
+                    "evidence": "hf.exercise_algo_shipped",
+                    "note": "Strongest ownership claim at HealthFlex: Ayush created src/store/algo-utils.ts on 2024-07-21 and the earliest sensor-scanning entry point on 2024-06-06. Safe to say 'built and owned'."
+                },
+                {
+                    "description": "Prototyped a pattern-driven rewrite of the exercise engine (2,155 lines, 29 files) on a refactor branch: five interchangeable scoring strategies (global ROM, axis ROM, correctness, stability score, direction feedback) behind a shared interface, a fluent rep Builder, a rep-lifecycle State machine, and an event-emitter/observer layer decoupling sensor ingest from rep evaluation",
+                    "keywords": [
+                        "Strategy Pattern",
+                        "Builder Pattern",
+                        "State Machine",
+                        "Observer Pattern",
+                        "Event-Driven",
+                        "Software Architecture",
+                        "TypeScript",
+                        "Refactoring"
+                    ],
+                    "metrics": [
+                        "2,155 lines across 29 files",
+                        "5 scoring strategies"
+                    ],
+                    "evidence": "hf.exercise_module_refactor",
+                    "caution": "PROTOTYPE - never merged to dev. Phrase as design/refactor work ('prototyped', 'designed'), never as shipped or as a delivered user outcome. If asked, the honest story is that the team took a different direction. Do NOT attach an impact metric."
                 },
                 {
                     "description": "Modularized ML algorithms via native module integration, processing 2,000+ datapoints/sec in-app for rep counting and range-of-motion",
@@ -442,37 +494,33 @@
                     "metrics": [
                         "2,000+ datapoints/sec"
                     ],
-                    "evidence": "hf.self_reported"
+                    "evidence": "hf.self_reported",
+                    "caution": "Self-asserted throughput figure. The exercise/algo code is verifiably Ayush's (see hf.exercise_algo_shipped), but the 2,000/sec number is not verifiable from git. Prefer the ownership bullet above if only one algorithm bullet fits."
                 },
                 {
-                    "description": "Led Expo SDK 52 migration with FlashList optimization, cutting list render time from 800ms to ~40ms; optimized memory for smooth operation on low-end Android devices",
-                    "keywords": [
-                        "Expo SDK 52",
-                        "FlashList",
-                        "Migration",
-                        "Performance",
-                        "Memory Optimization"
-                    ],
-                    "metrics": [
-                        "800ms to 40ms render time"
-                    ],
-                    "evidence": "hf.self_reported"
+                    "description": "REMOVED 2026-07-10 - do not reinstate. Previously: 'Led Expo SDK 52 migration with FlashList optimization, cutting list render time from 800ms to ~40ms'. Git blame shows the FlashList migration was authored by Abhishek Jaiswal (2024-11-27) and the Expo SDK bumps by Niraj Kishore. Neither is Ayush's work.",
+                    "keywords": [],
+                    "metrics": [],
+                    "evidence": "rejected.hf.code_contradicted",
+                    "status": "retracted"
                 },
                 {
-                    "description": "Architected the Component Migration (+14,193 lines) refactoring the entire patient app, and built the Non-measurable Flow (+5,400 lines) for complex exercise types",
+                    "description": "Architected the Component Migration (PR #70, +14,193 / -4,127 across 154 files), refactoring the entire patient app's component layer; drove the exercise-algorithm build-out landing in PR #160 (+4,687 / -2,080 across 149 files)",
                     "keywords": [
                         "React Native",
                         "Refactoring",
-                        "Architecture"
+                        "Architecture",
+                        "Algorithms"
                     ],
                     "metrics": [
-                        "+14,193 lines",
-                        "+5,400 lines"
+                        "+14,193 lines / 154 files",
+                        "+4,687 lines / 149 files"
                     ],
-                    "evidence": "hf.app.merged_prs"
+                    "evidence": "hf.app.merged_prs",
+                    "note": "PR #70's diffstat verified exact. The old '+5,400 lines Non-measurable Flow (#252)' was dropped: PR #252 does not exist, and the real non-measurable PR (#250) is +91/-13. Replaced with the algorithm build-out, which is real."
                 },
                 {
-                    "description": "Served as Tech Lead on Stance Dashboard, directing a team of 4 through Scrum ceremonies, Jira planning, DB schema design, and PR review; personally authored 23 merged PRs (+11.5K lines)",
+                    "description": "Served as Tech Lead on Stance Dashboard, directing a 6-engineer team through Scrum ceremonies, Jira planning, DB schema design, and PR review; personally authored 18 merged PRs including the auth system (+1,738), GraphQL Shield authorization (+662), RBAC permissions (+789), and Google Calendar event sync (+1,558)",
                     "keywords": [
                         "Tech Lead",
                         "Team Leadership",
@@ -480,31 +528,47 @@
                         "Jira",
                         "TypeScript",
                         "Next.js",
-                        "GraphQL"
+                        "GraphQL",
+                        "RBAC"
                     ],
                     "metrics": [
-                        "Team of 4",
-                        "23 merged PRs"
+                        "Team of 6",
+                        "18 merged PRs"
                     ],
-                    "evidence": "hf.stance.merged_prs"
+                    "evidence": "hf.stance.merged_prs",
+                    "note": "All four named PR diffstats verified exact against git. Team size corrected from 4 to 6 distinct human committers (Feb-May 2025). Ayush was the #2 committer by volume. Do NOT add a 'lines added' figure here: his net hand-written contribution is -17,541, because the work was largely consolidation."
                 },
                 {
-                    "description": "Built the clinician-facing Doctors App (11 merged PRs) with sensor tagging, real-time chat over WebSocket, a Storybook v8 component library, and multi-env GitHub Actions release pipelines",
+                    "description": "Owned the Stance deployment pipeline: GitHub Actions deploy workflow with bun and pm2 provisioning and a GraphQL codegen step (second-most workflow commits in the repo)",
+                    "keywords": [
+                        "CI/CD",
+                        "GitHub Actions",
+                        "bun",
+                        "pm2",
+                        "GraphQL Codegen",
+                        "DevOps"
+                    ],
+                    "metrics": [],
+                    "evidence": "hf.ci_ownership"
+                },
+                {
+                    "description": "Built clinician-facing features in the Doctors App across 24 merged PRs (+7.6K / -4.7K lines over 174 files), including real-time chat over WebSocket (+322), the sensor-tagging migration (+357), and home/profile screen migrations",
                     "keywords": [
                         "React Native",
                         "TypeScript",
-                        "Storybook",
                         "WebSocket",
-                        "GitHub Actions",
-                        "Fastlane"
+                        "Real-time",
+                        "Healthcare"
                     ],
                     "metrics": [
-                        "11 merged PRs"
+                        "24 merged PRs",
+                        "+7.6K lines / 174 files"
                     ],
-                    "evidence": "hf.doctors.merged_prs"
+                    "evidence": "hf.doctors.merged_prs",
+                    "note": "Upgraded from '11 merged PRs' - the old figure undercounted by more than half. Storybook and Fastlane were dropped from this bullet: Storybook was configured by nirajgeorgian and is no longer a dependency, and Fastlane has never existed in this repo. Ayush authored zero workflow commits here, so the 'release pipelines' claim was also removed."
                 },
                 {
-                    "description": "Contributed to the platform API (Node.js, GraphQL with dataloaders, NestJS-style clean architecture): exercise landmark parser, session DTOs, regimen management, pain alerts, and group-based access control",
+                    "description": "Contributed to the platform API (Node.js, GraphQL with dataloaders, NestJS-style clean architecture) across 6 merged PRs: ROM overview endpoints, /me API response caching, session DTOs, and dashboard queries",
                     "keywords": [
                         "Node.js",
                         "TypeScript",
@@ -513,23 +577,26 @@
                         "PostgreSQL",
                         "Clean Architecture"
                     ],
-                    "metrics": [],
-                    "evidence": "hf.authored_commits"
+                    "metrics": [
+                        "6 merged PRs"
+                    ],
+                    "evidence": "hf.api.merged_prs",
+                    "note": "Keep this bullet modest. 24 commits and ~900 hand-written lines added over May-Sep 2024 is a real contribution but not authorship of the API. Never write 'architected' here - the exercise landmark parser, regimen management, pain alerts and group access control were not verified as Ayush's and have been removed from this bullet."
                 },
                 {
-                    "description": "Managed mobile releases with Gradle + Fastlane CI/CD, reducing release cycle time ~40%; integrated Firebase (Analytics, Crashlytics, Performance) and Sentry",
+                    "description": "Set up the patient app's initial GitHub Actions CI workflow; shipped releases through EAS Build (dev/preview/prod channels) with Firebase (Analytics, Crashlytics, Performance) and Sentry instrumentation",
                     "keywords": [
-                        "Gradle",
-                        "Fastlane",
                         "CI/CD",
+                        "GitHub Actions",
+                        "EAS Build",
+                        "Expo",
                         "Firebase",
                         "Sentry",
                         "Release Management"
                     ],
-                    "metrics": [
-                        "~40% release cycle reduction"
-                    ],
-                    "evidence": "hf.self_reported"
+                    "metrics": [],
+                    "evidence": "hf.ci_ownership",
+                    "note": "Rewritten 2026-07-10. Fastlane was never present in any HealthFlex repo - the toolchain is EAS Build + GitHub Actions. The '~40% release cycle reduction' figure was dropped as unverifiable and tied to a tool that was never used. Ayush's real CI footprint on healthflex.app is 5 workflow commits (created main.yml, renamed to build.yml, Oct 2024)."
                 }
             ],
             "tech_stack": [
@@ -541,8 +608,6 @@
                 "Kotlin",
                 "BLE",
                 "react-native-ble-plx",
-                "RxJS",
-                "Fastlane",
                 "Gradle",
                 "EAS",
                 "Firebase",
@@ -556,15 +621,17 @@
                 "MongoDB",
                 "AWS",
                 "Jest",
-                "Storybook",
                 "Puppeteer",
                 "Husky",
-                "ESLint"
+                "ESLint",
+                "EAS Build",
+                "WebSocket"
             ],
             "alternate_titles_seen": [
                 "Founding Engineer (Mobile Lead)",
                 "Software Developer Engineer"
-            ]
+            ],
+            "tech_stack_note": "Fastlane and Storybook removed 2026-07-10: Fastlane never existed in any HealthFlex repo (EAS Build was used); Storybook was configured by a colleague and is no longer a dependency. RxJS removed: present in the codebase for BLE stream processing but authored by nirajgeorgian, not Ayush."
         },
         {
             "company": "EMotorad",
