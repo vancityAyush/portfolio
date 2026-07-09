@@ -1,5 +1,6 @@
 {
-    "last_updated": "2025-12-09",
+    "last_updated": "2026-07-09",
+    "note": "Quantified claims cite metrics.json by evidence key rather than restating numbers. Where a bullet carries a number inline, metrics.json is authoritative if the two ever disagree.",
     "experiences": [
         {
             "company": "Creative Synergies Group",
@@ -9,104 +10,323 @@
             "start_date": "May 2025",
             "end_date": "Present",
             "current": true,
-            "highlights": [
+            "evidence": [
+                "csg.contributions",
+                "csg.self_reported"
+            ],
+            "company_context": "Engineering services firm, founded 2011, HQ Okemos MI, offices Bengaluru/Pune/Tokyo. Serves 40+ Fortune 500 companies.",
+            "projects": [
                 {
-                    "description": "Architected an enterprise FSM mobile app in Flutter (Clean Architecture, BLoC), coordinating work orders and real-time technician workflows across Android and iOS with 95%+ crash-free sessions",
-                    "keywords": [
+                    "name": "FSM (Field Service Management)",
+                    "start_date": "May 2025",
+                    "end_date": "Jul 2025",
+                    "summary": "Enterprise field-service platform: Flutter mobile app plus NestJS backend.",
+                    "highlights": [
+                        {
+                            "description": "Architected an enterprise FSM mobile app in Flutter (Clean Architecture, BLoC), coordinating work orders and real-time technician workflows across Android and iOS with 95%+ crash-free sessions",
+                            "keywords": [
+                                "Flutter",
+                                "Clean Architecture",
+                                "BLoC",
+                                "Android",
+                                "iOS",
+                                "Enterprise",
+                                "Mobile"
+                            ],
+                            "metrics": [
+                                "95%+ crash-free sessions"
+                            ],
+                            "evidence": "csg.self_reported"
+                        },
+                        {
+                            "description": "Implemented NestJS microservices with TypeORM/PostgreSQL, JWT auth, and role-based access (RBAC), scaling to 100+ field engineers and reducing API latency by ~30%",
+                            "keywords": [
+                                "NestJS",
+                                "TypeORM",
+                                "PostgreSQL",
+                                "JWT",
+                                "RBAC",
+                                "Microservices",
+                                "REST API"
+                            ],
+                            "metrics": [
+                                "100+ field engineers",
+                                "~30% latency reduction"
+                            ],
+                            "evidence": "csg.self_reported"
+                        },
+                        {
+                            "description": "Built a native Android document scanner in Kotlin using ML Kit, Room, and Compose, automating PDF capture for compliance documents with 99.9% data integrity during offline operations",
+                            "keywords": [
+                                "Kotlin",
+                                "ML Kit",
+                                "Room",
+                                "Jetpack Compose",
+                                "Android Native",
+                                "PDF",
+                                "Offline-first"
+                            ],
+                            "metrics": [
+                                "99.9% data integrity offline"
+                            ]
+                        },
+                        {
+                            "description": "Established CI/CD with GitHub Actions and Gradle for multi-env (dev/stage/prod) pipelines; cut release time ~50% for Android and iOS",
+                            "keywords": [
+                                "CI/CD",
+                                "GitHub Actions",
+                                "Gradle",
+                                "DevOps",
+                                "Release Management"
+                            ],
+                            "metrics": [
+                                "~50% release time reduction"
+                            ],
+                            "evidence": "csg.self_reported"
+                        },
+                        {
+                            "description": "Drove TDD with Jest and Flutter Test, achieving 80%+ coverage across auth, work orders, documents, and inventory modules",
+                            "keywords": [
+                                "TDD",
+                                "Jest",
+                                "Flutter Test",
+                                "Unit Testing",
+                                "Integration Testing"
+                            ],
+                            "metrics": [
+                                "80%+ test coverage"
+                            ],
+                            "evidence": "csg.self_reported"
+                        },
+                        {
+                            "description": "Integrated GPS and location services (geofencing, validation, location-based actions) with image capture and signature workflows for verified completion",
+                            "keywords": [
+                                "GPS",
+                                "Geofencing",
+                                "Location Services",
+                                "Image Capture",
+                                "Signature"
+                            ]
+                        }
+                    ],
+                    "tech_stack": [
                         "Flutter",
-                        "Clean Architecture",
+                        "Dart",
                         "BLoC",
-                        "Android",
-                        "iOS",
-                        "Enterprise",
-                        "Mobile"
-                    ],
-                    "metrics": [
-                        "95%+ crash-free sessions"
-                    ]
-                },
-                {
-                    "description": "Implemented NestJS microservices with TypeORM/PostgreSQL, JWT auth, and role-based access (RBAC), scaling to 100+ field engineers and reducing API latency by ~30%",
-                    "keywords": [
-                        "NestJS",
-                        "TypeORM",
-                        "PostgreSQL",
-                        "JWT",
-                        "RBAC",
-                        "Microservices",
-                        "REST API"
-                    ],
-                    "metrics": [
-                        "100+ field engineers",
-                        "~30% latency reduction"
-                    ]
-                },
-                {
-                    "description": "Built a native Android document scanner in Kotlin using ML Kit, Room, and Compose, automating PDF capture for compliance documents",
-                    "keywords": [
                         "Kotlin",
                         "ML Kit",
                         "Room",
                         "Jetpack Compose",
-                        "Android Native",
-                        "PDF"
-                    ],
-                    "metrics": []
-                },
-                {
-                    "description": "Established CI/CD with GitHub Actions and Gradle for multi-env (dev/stage/prod) pipelines; cut release time ~50% for Android and iOS",
-                    "keywords": [
-                        "CI/CD",
+                        "NestJS",
+                        "TypeScript",
+                        "PostgreSQL",
+                        "TypeORM",
                         "GitHub Actions",
                         "Gradle",
-                        "DevOps",
-                        "Release Management"
-                    ],
-                    "metrics": [
-                        "~50% release time reduction"
-                    ]
-                },
-                {
-                    "description": "Drove TDD with Jest and Flutter Test, achieving 80%+ coverage across auth, work orders, documents, and inventory modules",
-                    "keywords": [
-                        "TDD",
+                        "Hive",
                         "Jest",
-                        "Flutter Test",
-                        "Unit Testing",
-                        "Integration Testing"
+                        "Google Maps SDK"
                     ],
-                    "metrics": [
-                        "80%+ test coverage"
+                    "repos": [
+                        "CreativeDT/fsm-app",
+                        "CreativeDT/fsm-backend-2"
                     ]
                 },
                 {
-                    "description": "Integrated GPS and location services (geofencing, validation, location-based actions) with image capture and signature workflows for verified completion",
-                    "keywords": [
-                        "GPS",
-                        "Geofencing",
-                        "Location Services",
-                        "Image Capture",
-                        "Signature"
+                    "name": "PS Predict",
+                    "client": "Platform Science",
+                    "start_date": "Jul 2025",
+                    "end_date": "Jan 2026",
+                    "status": "Completed",
+                    "summary": "Fleet-telemetry prediction platform for Platform Science, delivered through CSG.",
+                    "highlights": [
+                        {
+                            "description": "Built foundation packages (@ps-predict/common, @ps-predict/types) establishing shared contracts across the prediction platform's services",
+                            "keywords": [
+                                "TypeScript",
+                                "Monorepo",
+                                "API Design",
+                                "Shared Contracts"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Implemented a Platform Science OAuth/API client with rate limiting, retry policies, and correlation IDs for cross-service request tracing",
+                            "keywords": [
+                                "OAuth",
+                                "Rate Limiting",
+                                "Retries",
+                                "Observability",
+                                "Correlation IDs"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Instrumented the prediction engine with Prometheus metrics, structured logging, and alerting; secured endpoints with JWT/RBAC guards",
+                            "keywords": [
+                                "Prometheus",
+                                "Structured Logging",
+                                "Alerting",
+                                "JWT",
+                                "RBAC"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Extended McLeod backend APIs and engine telemetry; delivered the ps-predict Android app and a shared testing package",
+                            "keywords": [
+                                "McLeod",
+                                "Telemetry",
+                                "Android",
+                                "Testing"
+                            ],
+                            "metrics": []
+                        }
+                    ],
+                    "tech_stack": [
+                        "Python",
+                        "TypeScript",
+                        "gRPC",
+                        "PostgreSQL",
+                        "Prometheus",
+                        "JWT",
+                        "Android"
+                    ],
+                    "repos": [
+                        "CreativeDT/ps-predict"
+                    ],
+                    "evidence": "csg.contributions"
+                },
+                {
+                    "name": "Kabuni Platform",
+                    "client": "Kabuni",
+                    "start_date": "Jan 2026",
+                    "end_date": "Present",
+                    "status": "In progress",
+                    "mvp_target": "Mar 2027",
+                    "url": "https://www.kabuni.com/",
+                    "summary": "Youth-focused platform spanning web, a cricket mobile app, and camera hardware. Child-safety compliance is the defining constraint (DPDP, GDPR, COPPA).",
+                    "caution": "Not shipped. Do not write any Kabuni bullet as a delivered outcome or attach an impact metric to it.",
+                    "highlights": [
+                        {
+                            "description": "Building backend services for the Kabuni platform in Python/FastAPI with gRPC and PostgreSQL, covering payments, identity, master data, notifications, and platform workflows",
+                            "keywords": [
+                                "Python",
+                                "FastAPI",
+                                "gRPC",
+                                "PostgreSQL",
+                                "Microservices"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Built the Kabuni Payment Service with Razorpay flows, RESTful webhooks, transaction-state tracking, and reconciliation-ready models for subscriptions and Kabuni Premier League registration journeys",
+                            "keywords": [
+                                "Razorpay",
+                                "Payments",
+                                "Webhooks",
+                                "Reconciliation",
+                                "Subscriptions"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Implemented event-driven inter-service communication via the Transactional Outbox pattern over Azure Service Bus, with Redis-backed caching on PostgreSQL access paths",
+                            "keywords": [
+                                "Transactional Outbox",
+                                "Azure Service Bus",
+                                "Event-Driven",
+                                "Redis",
+                                "Caching"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Designed identity and auth for multi-role family accounts (guardian-child relationships, purpose-specific consent journeys, withdrawal/deletion flows) integrating Microsoft Entra External ID (CIAM)",
+                            "keywords": [
+                                "Identity",
+                                "CIAM",
+                                "Microsoft Entra",
+                                "Guardian Consent",
+                                "DPDP",
+                                "GDPR",
+                                "COPPA"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Migrated the authorization model from pure RBAC to hybrid RBAC+ABAC within six weeks after contextual child-data policies outgrew role-only checks; JWT with 15-minute access and 30-day refresh tokens",
+                            "keywords": [
+                                "RBAC",
+                                "ABAC",
+                                "Authorization",
+                                "JWT",
+                                "Architecture Migration"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Delivered frontend surfaces in Next.js/TypeScript and Flutter mobile flows; Azure IoT Hub with X.509 device identity for the Kabuni hardware camera",
+                            "keywords": [
+                                "Next.js",
+                                "TypeScript",
+                                "Flutter",
+                                "Azure IoT Hub",
+                                "X.509"
+                            ],
+                            "metrics": []
+                        }
+                    ],
+                    "tech_stack": [
+                        "Python",
+                        "FastAPI",
+                        "gRPC",
+                        "PostgreSQL",
+                        "Redis",
+                        "Azure Service Bus",
+                        "Azure App Configuration",
+                        "Azure Key Vault",
+                        "Azure IoT Hub",
+                        "Microsoft Entra External ID",
+                        "Razorpay",
+                        "Next.js",
+                        "TypeScript",
+                        "React",
+                        "Flutter",
+                        "Docker",
+                        "GitHub Actions",
+                        "Azure DevOps"
                     ]
                 }
             ],
             "tech_stack": [
+                "Python",
+                "FastAPI",
+                "gRPC",
                 "Flutter",
                 "Dart",
                 "Kotlin",
                 "NestJS",
                 "TypeScript",
+                "Next.js",
                 "PostgreSQL",
+                "Redis",
                 "TypeORM",
+                "Azure Service Bus",
+                "Azure Key Vault",
+                "Microsoft Entra CIAM",
+                "Razorpay",
+                "Docker",
                 "GitHub Actions",
+                "Azure DevOps",
                 "Gradle",
-                "Hive",
                 "Jest",
                 "ML Kit"
             ]
         },
         {
             "company": "HealthFlex",
+            "legal_entity": "DeftRonin Technologies",
             "location": "Bangalore",
             "title": "Founding Engineer (SDE)",
             "employment_type": "Full-time",
@@ -114,9 +334,30 @@
             "end_date": "May 2025",
             "current": false,
             "industry": "Healthcare",
+            "product": "AI Powered Rehab",
+            "url": "https://www.healthflex.in/",
+            "evidence": [
+                "hf.merged_prs_total",
+                "hf.authored_commits",
+                "hf.self_reported"
+            ],
             "highlights": [
                 {
-                    "description": "Delivered two cross-platform React Native apps with a 95% crash-free rate, serving 1,000+ users across Android and iOS",
+                    "description": "Authored 91 merged PRs (+57.9K / -34.7K lines) across three products - the patient app, the clinician app, and the platform API - as one of the first engineers on the team",
+                    "keywords": [
+                        "React Native",
+                        "TypeScript",
+                        "Node.js",
+                        "Founding Engineer"
+                    ],
+                    "metrics": [
+                        "91 merged PRs",
+                        "57.9K lines added"
+                    ],
+                    "evidence": "hf.merged_prs_total"
+                },
+                {
+                    "description": "Delivered two cross-platform React Native apps for patients, coaches, and internal operations teams with a 95% crash-free rate, serving 1,000+ users across Android and iOS",
                     "keywords": [
                         "React Native",
                         "Cross-platform",
@@ -128,10 +369,11 @@
                     "metrics": [
                         "95% crash-free rate",
                         "1,000+ users"
-                    ]
+                    ],
+                    "evidence": "hf.self_reported"
                 },
                 {
-                    "description": "Engineered a BLE module with TDD (55+ unit tests), streaming 20Hz per device via RxJS; improved stability and lowered latency by ~40%",
+                    "description": "Engineered a BLE module with TDD (55+ unit tests), streaming 20Hz per device via RxJS; led the BLE 2.0 migration (+1,164 lines) rewriting the full sensor stack",
                     "keywords": [
                         "BLE",
                         "Bluetooth",
@@ -142,12 +384,16 @@
                     ],
                     "metrics": [
                         "55+ unit tests",
-                        "20Hz streaming",
-                        "~40% latency reduction"
-                    ]
+                        "20Hz streaming"
+                    ],
+                    "evidence": [
+                        "hf.self_reported",
+                        "hf.app.merged_prs"
+                    ],
+                    "caution": "Verify the 20Hz figure before printing - Ayush's own notes flag exact Hz/latency numbers as needing confirmation."
                 },
                 {
-                    "description": "Modularized ML algorithms via native module integration, processing 2,000+ datapoints/sec in-app",
+                    "description": "Modularized ML algorithms via native module integration, processing 2,000+ datapoints/sec in-app for rep counting and range-of-motion",
                     "keywords": [
                         "ML",
                         "Machine Learning",
@@ -156,98 +402,129 @@
                     ],
                     "metrics": [
                         "2,000+ datapoints/sec"
-                    ]
+                    ],
+                    "evidence": "hf.self_reported"
                 },
                 {
-                    "description": "Managed mobile releases with Gradle + Fastlane CI/CD, reducing release cycle time ~40%; integrated Firebase (Analytics, Crashlytics, Performance)",
+                    "description": "Led Expo SDK 52 migration with FlashList optimization, cutting list render time from 800ms to ~40ms; optimized memory for smooth operation on low-end Android devices",
+                    "keywords": [
+                        "Expo SDK 52",
+                        "FlashList",
+                        "Migration",
+                        "Performance",
+                        "Memory Optimization"
+                    ],
+                    "metrics": [
+                        "800ms to 40ms render time"
+                    ],
+                    "evidence": "hf.self_reported"
+                },
+                {
+                    "description": "Architected the Component Migration (+14,193 lines) refactoring the entire patient app, and built the Non-measurable Flow (+5,400 lines) for complex exercise types",
+                    "keywords": [
+                        "React Native",
+                        "Refactoring",
+                        "Architecture"
+                    ],
+                    "metrics": [
+                        "+14,193 lines",
+                        "+5,400 lines"
+                    ],
+                    "evidence": "hf.app.merged_prs"
+                },
+                {
+                    "description": "Served as Tech Lead on Stance Dashboard, directing a team of 4 through Scrum ceremonies, Jira planning, DB schema design, and PR review; personally authored 23 merged PRs (+11.5K lines)",
+                    "keywords": [
+                        "Tech Lead",
+                        "Team Leadership",
+                        "Scrum",
+                        "Jira",
+                        "TypeScript",
+                        "Next.js",
+                        "GraphQL"
+                    ],
+                    "metrics": [
+                        "Team of 4",
+                        "23 merged PRs"
+                    ],
+                    "evidence": "hf.stance.merged_prs"
+                },
+                {
+                    "description": "Built the clinician-facing Doctors App (11 merged PRs) with sensor tagging, real-time chat over WebSocket, a Storybook v8 component library, and multi-env GitHub Actions release pipelines",
+                    "keywords": [
+                        "React Native",
+                        "TypeScript",
+                        "Storybook",
+                        "WebSocket",
+                        "GitHub Actions",
+                        "Fastlane"
+                    ],
+                    "metrics": [
+                        "11 merged PRs"
+                    ],
+                    "evidence": "hf.doctors.merged_prs"
+                },
+                {
+                    "description": "Contributed to the platform API (Node.js, GraphQL with dataloaders, NestJS-style clean architecture): exercise landmark parser, session DTOs, regimen management, pain alerts, and group-based access control",
+                    "keywords": [
+                        "Node.js",
+                        "TypeScript",
+                        "GraphQL",
+                        "NestJS",
+                        "PostgreSQL",
+                        "Clean Architecture"
+                    ],
+                    "metrics": [],
+                    "evidence": "hf.authored_commits"
+                },
+                {
+                    "description": "Managed mobile releases with Gradle + Fastlane CI/CD, reducing release cycle time ~40%; integrated Firebase (Analytics, Crashlytics, Performance) and Sentry",
                     "keywords": [
                         "Gradle",
                         "Fastlane",
                         "CI/CD",
                         "Firebase",
-                        "Analytics",
-                        "Crashlytics",
+                        "Sentry",
                         "Release Management"
                     ],
                     "metrics": [
                         "~40% release cycle reduction"
-                    ]
-                },
-                {
-                    "description": "Led Expo SDK 52 migration with FlashList optimization, navigation refactoring, and audio feedback context pattern for exercise cues",
-                    "keywords": [
-                        "Expo SDK 52",
-                        "FlashList",
-                        "Migration",
-                        "Audio Context",
-                        "Performance"
                     ],
-                    "metrics": [
-                        "423 commits",
-                        "Major refactoring",
-                        "FlashList migration"
-                    ]
-                },
-                {
-                    "description": "Built Stance Dashboard (347 commits) with VALD patient import via syncId matching, GraphQL API with dataloaders, and invoice PDF generation with Puppeteer pool optimization",
-                    "keywords": [
-                        "TypeScript",
-                        "React",
-                        "Next.js",
-                        "GraphQL",
-                        "VALD",
-                        "Puppeteer"
-                    ],
-                    "metrics": [
-                        "347 commits",
-                        "VALD syncId integration",
-                        "Puppeteer PDF rendering"
-                    ]
-                },
-                {
-                    "description": "Developed Doctors App (582 commits) with patient creation workflows, Storybook v8 component library, and multi-env GitHub Actions release pipelines",
-                    "keywords": [
-                        "React Native",
-                        "TypeScript",
-                        "Storybook",
-                        "GitHub Actions",
-                        "Fastlane"
-                    ],
-                    "metrics": [
-                        "582 commits",
-                        "Multi-env releases",
-                        "Storybook v8"
-                    ]
-                },
-                {
-                    "description": "Architected HealthFlex API (483 commits) with exercise landmark parser, session DTOs, regimen management, and group-based access control",
-                    "keywords": [
-                        "Node.js",
-                        "TypeScript",
-                        "NestJS",
-                        "PostgreSQL",
-                        "Clean Architecture"
-                    ],
-                    "metrics": [
-                        "483 commits",
-                        "Use case pattern",
-                        "Session DTOs"
-                    ]
+                    "evidence": "hf.self_reported"
                 }
             ],
             "tech_stack": [
                 "React Native",
+                "Expo",
                 "TypeScript",
+                "Zustand",
+                "React Query",
                 "Kotlin",
                 "BLE",
+                "react-native-ble-plx",
                 "RxJS",
                 "Fastlane",
                 "Gradle",
+                "EAS",
                 "Firebase",
+                "Sentry",
                 "Next.js",
                 "GraphQL",
+                "GraphQL Shield",
                 "Node.js",
-                "PostgreSQL"
+                "Serverless Framework",
+                "PostgreSQL",
+                "MongoDB",
+                "AWS",
+                "Jest",
+                "Storybook",
+                "Puppeteer",
+                "Husky",
+                "ESLint"
+            ],
+            "alternate_titles_seen": [
+                "Founding Engineer (Mobile Lead)",
+                "Software Developer Engineer"
             ]
         },
         {
@@ -258,21 +535,25 @@
             "start_date": "Sep 2023",
             "end_date": "Nov 2023",
             "current": false,
+            "team_size": 5,
+            "evidence": [
+                "emotorad.self_reported"
+            ],
             "highlights": [
                 {
-                    "description": "Built an E-Bike rider assistant in Flutter (MVVM, Clean Architecture, BLoC); integrated REST APIs and robust navigation",
+                    "description": "Built the Amiigo NXT e-bike rider assistant in Flutter (MVVM, Clean Architecture, BLoC for screens, GetX for components); shipped to both the Play Store and App Store",
                     "keywords": [
                         "Flutter",
                         "MVVM",
                         "Clean Architecture",
                         "BLoC",
-                        "REST API",
-                        "Navigation"
+                        "GetX",
+                        "REST API"
                     ],
                     "metrics": []
                 },
                 {
-                    "description": "Developed Bluetooth comms with Dart isolates/background services, improving connection stability 90% and reducing latency 40%",
+                    "description": "Developed Bluetooth comms with Dart isolates and background services, adding pairing support, autoconnection, and automatic recovery from failed connections; improved connection stability 90% and reduced latency 40%",
                     "keywords": [
                         "Bluetooth",
                         "BLE",
@@ -283,20 +564,34 @@
                     "metrics": [
                         "90% stability improvement",
                         "40% latency reduction"
-                    ]
+                    ],
+                    "evidence": "emotorad.self_reported"
                 },
                 {
-                    "description": "Implemented Mapbox routing and rerouting with caching, cutting map costs ~70%",
+                    "description": "Implemented Mapbox routing and rerouting with caching, live location tracking, offline maps, and Google Maps autocomplete; cut map costs ~70%",
                     "keywords": [
                         "Mapbox",
                         "Navigation",
                         "Routing",
+                        "Offline Maps",
+                        "Google Maps",
                         "Caching",
                         "Cost Optimization"
                     ],
                     "metrics": [
                         "~70% map cost reduction"
-                    ]
+                    ],
+                    "evidence": "emotorad.self_reported"
+                },
+                {
+                    "description": "Added support for localization, theming, flavors, and adaptive screens across the app",
+                    "keywords": [
+                        "Localization",
+                        "Theming",
+                        "Flavors",
+                        "Adaptive UI"
+                    ],
+                    "metrics": []
                 },
                 {
                     "description": "Achieved 80%+ unit test coverage with Flutter Test; optimized Gradle to reduce build times ~25%",
@@ -309,7 +604,8 @@
                     "metrics": [
                         "80%+ test coverage",
                         "~25% build time reduction"
-                    ]
+                    ],
+                    "evidence": "emotorad.self_reported"
                 }
             ],
             "tech_stack": [
@@ -317,10 +613,15 @@
                 "Dart",
                 "Mapbox",
                 "BLE",
+                "GetX",
                 "Firebase",
                 "Gradle",
                 "Dio",
                 "Retrofit"
+            ],
+            "alternate_titles_seen": [
+                "Software Engineer Intern",
+                "Android/Mobile Engineer Intern"
             ]
         },
         {
@@ -331,70 +632,144 @@
             "start_date": "Nov 2021",
             "end_date": "Sep 2023",
             "current": false,
+            "evidence": [
+                "pysphere.self_reported"
+            ],
+            "note": "Part-time and concurrent with several other engagements. Keep the part-time framing explicit on any resume so the overlap does not read as padding.",
             "highlights": [
                 {
-                    "description": "Built Carer Connect, a responsive web app in React/Next.js, cutting manual vendor ops by ~80%",
+                    "description": "Led a team of 8 to build the RCFD product from ideation through delivery",
                     "keywords": [
-                        "React",
-                        "Next.js",
-                        "Web App",
+                        "Team Leadership",
+                        "Product Development",
+                        "Ideation"
+                    ],
+                    "metrics": [
+                        "Team of 8"
+                    ],
+                    "evidence": "pysphere.self_reported"
+                },
+                {
+                    "description": "Built Carer Connect for Carer Connect Ltd - a Spring Boot backend with a Flutter mobile app and AngularJS web client on PostgreSQL, cutting manual vendor ops by ~80%",
+                    "keywords": [
+                        "Spring Boot",
+                        "Flutter",
+                        "AngularJS",
+                        "PostgreSQL",
+                        "Google Cloud",
                         "Healthcare",
                         "Vendor Management"
                     ],
                     "metrics": [
                         "~80% manual ops reduction"
-                    ]
+                    ],
+                    "evidence": "pysphere.self_reported"
                 },
                 {
-                    "description": "Drove engagement +35% via deep links, push notifications, and Google Calendar integrations",
+                    "description": "Created an encrypted QR code for Carer Connect, scannable exclusively via the companion app",
+                    "keywords": [
+                        "Encryption",
+                        "QR Code",
+                        "Mobile Security"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Drove engagement +35% via deep links, push notifications, and Google Calendar integrations; served 1M+ notification requests across SMS, email, and in-app channels",
                     "keywords": [
                         "Deep Links",
                         "Push Notifications",
                         "Google Calendar",
+                        "Notifications",
                         "User Engagement"
                     ],
                     "metrics": [
-                        "+35% engagement"
-                    ]
+                        "+35% engagement",
+                        "1M+ notification requests"
+                    ],
+                    "evidence": "pysphere.self_reported"
                 },
                 {
-                    "description": "Delivered a modern, responsive company website (Next.js, React, HTML/CSS, Figma), increasing web traffic ~45%",
+                    "description": "Architected the Dekhbuy project to streamline an offline business process, owning delivery of the desktop application to the client",
+                    "keywords": [
+                        "Desktop",
+                        "Client Delivery",
+                        "Process Automation"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Designed and delivered PySphere's web presence end to end - logo, brochure, wireframes, high-level design, and the responsive site (Next.js, React, Tailwind, Figma) - increasing web traffic ~45%",
                     "keywords": [
                         "Next.js",
                         "React",
-                        "HTML",
-                        "CSS",
+                        "Tailwind CSS",
                         "Figma",
+                        "Branding",
+                        "Wireframing",
                         "Responsive Design"
                     ],
                     "metrics": [
                         "~45% web traffic increase"
-                    ]
+                    ],
+                    "evidence": "pysphere.self_reported"
                 },
                 {
-                    "description": "Contributed to SonoFlux (multi-tenant platform) with custom domains, OAuth 2.0, and Stripe/Razorpay integration; improved payment success ~25%",
+                    "description": "Contributed to SonoFlux (multi-tenant platform) with custom domains, OAuth 2.0, and Stripe/JusPay/Razorpay integration; improved payment success ~25%",
                     "keywords": [
                         "Multi-tenant",
                         "OAuth 2.0",
                         "Stripe",
+                        "JusPay",
                         "Razorpay",
                         "Payments",
                         "SaaS"
                     ],
                     "metrics": [
                         "~25% payment success improvement"
-                    ]
+                    ],
+                    "evidence": "pysphere.self_reported"
+                },
+                {
+                    "description": "Built compliance-oriented user lifecycle features including audit-friendly records, data cleanup flows, and user deletion workflows",
+                    "keywords": [
+                        "Compliance",
+                        "Audit",
+                        "Data Lifecycle",
+                        "GDPR"
+                    ],
+                    "metrics": []
                 }
             ],
             "tech_stack": [
-                "Java",
+                "Java 11+",
+                "Spring Boot",
+                "Hibernate",
+                "Flutter",
+                "AngularJS",
                 "React",
                 "Next.js",
                 "TypeScript",
+                "Tailwind CSS",
+                "PostgreSQL",
+                "AWS Lambda",
+                "AWS SQS",
+                "AWS S3",
+                "AWS EC2",
+                "DynamoDB",
+                "Google Cloud",
+                "Jenkins",
                 "OAuth2",
                 "Stripe",
+                "JusPay",
                 "Razorpay",
                 "Jest"
+            ],
+            "alternate_titles_seen": [
+                "Senior Developer Intern",
+                "Software Engineer",
+                "Software Engineer Intern",
+                "Fullstack Developer"
             ]
         },
         {
@@ -407,7 +782,7 @@
             "current": false,
             "highlights": [
                 {
-                    "description": "Developed cross-platform applications in Flutter with clean architecture, state management using Streams, and SOLID Principles",
+                    "description": "Developed cross-platform applications in Flutter with clean architecture, state management using Streams, and SOLID principles",
                     "keywords": [
                         "Flutter",
                         "Clean Architecture",
@@ -416,13 +791,35 @@
                         "State Management"
                     ],
                     "metrics": []
+                },
+                {
+                    "description": "Built a reusable Flutter KYC plugin with an encrypted REST API layer and backend-controlled navigation",
+                    "keywords": [
+                        "Flutter",
+                        "Plugin Development",
+                        "KYC",
+                        "Encryption",
+                        "REST API"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Diagnosed and fixed 50+ bugs across the Flutter codebase",
+                    "keywords": [
+                        "Debugging",
+                        "Maintenance"
+                    ],
+                    "metrics": [
+                        "50+ bugs fixed"
+                    ]
                 }
             ],
             "tech_stack": [
                 "Flutter",
                 "Dart",
                 "Streams",
-                "Clean Architecture"
+                "Clean Architecture",
+                "REST APIs"
             ]
         },
         {
@@ -435,16 +832,7 @@
             "current": false,
             "highlights": [
                 {
-                    "description": "Created complex animations using Flutter for enhanced user experience",
-                    "keywords": [
-                        "Flutter",
-                        "Animations",
-                        "UI/UX"
-                    ],
-                    "metrics": []
-                },
-                {
-                    "description": "Contributed significantly to Scanner Go project with over 1Cr+ downloads on Playstore",
+                    "description": "Contributed as a Flutter developer to Scanner Go, a document scanner with 10M+ Play Store installs",
                     "keywords": [
                         "Flutter",
                         "Scanner",
@@ -452,8 +840,29 @@
                         "High-scale"
                     ],
                     "metrics": [
-                        "1Cr+ downloads"
-                    ]
+                        "10M+ Play Store installs (app-level)"
+                    ],
+                    "evidence": "scannergo.installs",
+                    "caution": "App-level install count over a ~4-month contribution, not a personal outcome. Never phrase as 'built an app with 10M downloads'."
+                },
+                {
+                    "description": "Shipped Railway App (live train status) and Imagine AI (AI art generator) to the Play Store",
+                    "keywords": [
+                        "Flutter",
+                        "Play Store",
+                        "AI",
+                        "Live Tracking"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Created complex animations in Flutter for enhanced user experience",
+                    "keywords": [
+                        "Flutter",
+                        "Animations",
+                        "UI/UX"
+                    ],
+                    "metrics": []
                 },
                 {
                     "description": "Wrote a Dart script to streamline and update localization Dart files",
@@ -465,7 +874,7 @@
                     "metrics": []
                 },
                 {
-                    "description": "Acquired proficiency in Native BLoC state management with Streams and SOLID Principles",
+                    "description": "Acquired proficiency in native BLoC state management with Streams and SOLID principles",
                     "keywords": [
                         "BLoC",
                         "Streams",
@@ -492,18 +901,19 @@
             "current": false,
             "highlights": [
                 {
-                    "description": "Worked on 5+ Android Apps as a part-time Flutter developer",
+                    "description": "Worked on 5+ Android apps as a part-time Flutter developer, several of which are live on the Play Store - including Crop Secure",
                     "keywords": [
                         "Flutter",
                         "Android",
-                        "Mobile Apps"
+                        "Mobile Apps",
+                        "Play Store"
                     ],
                     "metrics": [
                         "5+ Android Apps"
                     ]
                 },
                 {
-                    "description": "Developed 20+ features, fixed 50+ bugs, and integrated APIs on Flutter Apps",
+                    "description": "Developed 20+ features, fixed 50+ bugs, and integrated APIs across Flutter apps",
                     "keywords": [
                         "Flutter",
                         "Feature Development",
@@ -525,7 +935,8 @@
                     ],
                     "metrics": [
                         "10+ screens/day"
-                    ]
+                    ],
+                    "caution": "Reads as padding on a resume. Prefer the 20+ features / 50+ bugs bullet."
                 }
             ],
             "tech_stack": [
@@ -545,7 +956,7 @@
             "current": false,
             "highlights": [
                 {
-                    "description": "Collaborated in development of Datotta, an e-commerce app with Shopify Backend",
+                    "description": "Collaborated in development of Datotta, an e-commerce app with a Shopify backend",
                     "keywords": [
                         "Android",
                         "E-commerce",
@@ -563,6 +974,17 @@
                         "Real-time"
                     ],
                     "metrics": []
+                },
+                {
+                    "description": "Managed two interns, delivering assigned scope on schedule",
+                    "keywords": [
+                        "Mentorship",
+                        "Team Leadership"
+                    ],
+                    "metrics": [
+                        "2 interns managed"
+                    ],
+                    "note": "Earliest people-management data point in the record."
                 }
             ],
             "tech_stack": [
@@ -570,6 +992,35 @@
                 "Android SDK",
                 "Shopify",
                 "Firebase"
+            ]
+        },
+        {
+            "company": "Inoviea",
+            "location": "Remote",
+            "title": "IoT Developer",
+            "employment_type": "Freelance",
+            "start_date": "2022",
+            "end_date": "2022",
+            "current": false,
+            "dates_uncertain": true,
+            "highlights": [
+                {
+                    "description": "Built iPanelKlean, a Flutter app controlling iPanel IoT devices over REST APIs and WebSockets against an AWS backend, with real-time telemetry display",
+                    "keywords": [
+                        "Flutter",
+                        "IoT",
+                        "AWS",
+                        "WebSockets",
+                        "Real-time"
+                    ],
+                    "metrics": []
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "AWS",
+                "WebSockets"
             ]
         }
     ]

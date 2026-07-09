@@ -1,121 +1,103 @@
 {
-    "last_updated": "2025-12-09",
+    "last_updated": "2026-07-09",
+    "note": "Every project is captured here, including low-value tutorial follow-alongs and interview take-homes. Filter with `resume_value` rather than deleting: `high` = lead with these, `medium` = use when the JD matches, `low` = never auto-include (bootcamp clones, take-home assignments, early coursework). Quantified claims cite metrics.json by evidence key.",
     "projects": [
         {
-            "name": "String Calculator (TDD)",
-            "year": "2025",
-            "description": "Dart implementation built with TDD; 13+ unit tests covering delimiter parsing, negatives handling, and edge cases",
-            "url": "https://github.com/vancityAyush/string-calculator",
+            "name": "xpssh - SSH Key Manager CLI",
+            "year": "2026",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "Published npm CLI for managing SSH keys across multiple git providers and accounts. Fenced-block editing of ~/.ssh/config with byte-exact round-trip, and a `doctor --fix` command that reconciles config drift",
+            "url": "https://www.npmjs.com/package/xpssh-cli",
+            "github_url": "https://github.com/vancityAyush/xpssh",
             "tech_stack": [
-                "Dart",
-                "TDD",
-                "Unit Testing"
+                "TypeScript",
+                "Bun",
+                "ink",
+                "React 19",
+                "zod",
+                "GitHub Actions"
             ],
             "keywords": [
-                "TDD",
-                "Test-Driven Development",
-                "Dart",
-                "Clean Code"
+                "CLI",
+                "Developer Tools",
+                "TypeScript",
+                "Bun",
+                "Open Source",
+                "npm",
+                "TUI",
+                "DevOps"
             ],
             "highlights": [
-                "13+ unit tests",
-                "Delimiter parsing",
-                "Edge case handling"
-            ]
+                "Published to npm as xpssh-cli v0.1.0 under MIT license",
+                "90+ tests with bun test; CI runs typecheck, tests, build, and a Node-dist smoke test",
+                "Supports GitHub, GitLab, Bitbucket, and Azure DevOps with a multi-account profile model",
+                "Byte-exact round-trip editing of ~/.ssh/config via fenced blocks",
+                "doctor --fix reconciles drift between declared profiles and on-disk config"
+            ],
+            "evidence": "xpssh.release",
+            "supersedes": "ssh_script"
         },
         {
-            "name": "Tomorrow Weather",
-            "year": "2025",
-            "description": "Flutter template showcasing Clean Architecture and SOLID principles with responsive UI and modular layers",
-            "url": "https://github.com/vancityAyush/tomorrow_weather",
-            "tech_stack": [
-                "Flutter",
-                "Dart",
-                "Clean Architecture",
-                "SOLID"
-            ],
-            "keywords": [
-                "Flutter",
-                "Clean Architecture",
-                "SOLID",
-                "Responsive UI",
-                "Mobile"
-            ],
-            "highlights": [
-                "5 GitHub stars",
-                "Clean Architecture implementation",
-                "Modular design"
-            ]
-        },
-        {
-            "name": "Gourmet.Craft",
-            "year": "2025",
-            "description": "Modern Next.js e-commerce web app with Sanity CMS integration, deployed on Vercel; demonstrates component patterns and frontend architecture",
-            "url": "https://gourmet-craft.vercel.app",
-            "github_url": "https://github.com/vancityAyush/gourmet.craft",
+            "name": "Iris - AI Resume Tailoring Platform",
+            "year": "2026",
+            "status": "in_progress",
+            "resume_value": "medium",
+            "description": "RAG-based platform that tailors resumes to job descriptions, scores them against ATS heuristics, tracks applications, and ingests job sources through background agent workflows",
+            "github_url": "https://github.com/vancityAyush/Iris",
+            "visibility": "private",
             "tech_stack": [
                 "Next.js",
-                "TypeScript",
                 "React",
-                "Sanity CMS",
-                "Vercel"
-            ],
-            "keywords": [
-                "Next.js",
-                "TypeScript",
-                "E-commerce",
-                "CMS",
-                "Vercel",
-                "SSR"
-            ],
-            "highlights": [
-                "Mobile-responsive UI",
-                "Sanity CMS integration",
-                "Production deployed"
-            ]
-        },
-        {
-            "name": "Taskify",
-            "year": "2025",
-            "description": "NestJS REST API for task management with comprehensive authentication, Docker deployment, task sharing, and 100% test coverage",
-            "url": "https://github.com/vancityAyush/taskify",
-            "tech_stack": [
                 "NestJS",
-                "TypeScript",
                 "PostgreSQL",
-                "Docker",
-                "Jest"
+                "pgvector",
+                "Redis",
+                "BullMQ",
+                "Turborepo",
+                "LangGraph"
             ],
             "keywords": [
-                "NestJS",
-                "REST API",
-                "Authentication",
-                "Docker",
-                "TDD",
-                "100% coverage"
+                "AI",
+                "RAG",
+                "Vector Search",
+                "pgvector",
+                "Background Jobs",
+                "Monorepo",
+                "ATS"
             ],
             "highlights": [
-                "100% test coverage",
-                "Docker deployment",
-                "JWT authentication",
-                "Task sharing"
+                "Hexagonal module architecture with HLD/LLD design docs",
+                "RAG-based generation with ATS scoring and job tracking",
+                "Background agent workflows over Redis/BullMQ",
+                "Tectonic-based PDF compilation"
+            ],
+            "caution": "NOT shippable. Its own design doc states: backend 80% functional, frontend mid-build, no real auth (dev UUID hardcoded), 0/4 tasks done. The '1k DAU x 30 compiles/day' figure in the spec is a capacity estimate for a system with no users - never cite it as traffic.",
+            "sources": [
+                "data/resume (1).tex:159-162",
+                "Notion Projects/Iris"
             ]
         },
         {
             "name": "HealthFlex Mobile App",
             "year": "2024-2025",
-            "description": "React Native healthcare app with 57 merged PRs (+45K lines). Led BLE 2.0 migration, Component Migration, and Algorithm Utils for exercise tracking",
-            "url": "https://github.com/vancityAyush/healthflex.app",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "React Native patient app for AI-powered rehab. 57 merged PRs (+45K lines). Led BLE 2.0 migration, the full Component Migration, and the algorithm utilities for rep counting and range-of-motion",
+            "url": "https://www.healthflex.in/",
+            "github_url": "https://github.com/vancityAyush/healthflex.app",
+            "play_store": "https://play.google.com/store/apps/developer?id=HealthFlex&hl=en_IN",
             "company": "HealthFlex",
-            "merged_prs": 57,
-            "lines_added": 45000,
             "tech_stack": [
                 "React Native",
                 "TypeScript",
                 "Expo SDK 52",
                 "BLE 2.0",
+                "react-native-ble-plx",
                 "RxJS",
-                "FlashList"
+                "FlashList",
+                "Zustand",
+                "React Query"
             ],
             "keywords": [
                 "Healthcare",
@@ -126,31 +108,37 @@
                 "57 PRs"
             ],
             "highlights": [
-                "Led BLE 2.0 migration (+1164 lines) with complete sensor stack rewrite",
-                "Architected Component Migration (+14193 lines) refactoring entire app",
-                "Built Non-measurable Flow (+5400 lines) for complex exercise types",
+                "Led BLE 2.0 migration (+1,164 lines) with complete sensor stack rewrite",
+                "Architected Component Migration (+14,193 lines) refactoring the entire app",
+                "Built Non-measurable Flow (+5,400 lines) for complex exercise types",
                 "Developed Algorithm Utils (+878 lines) for rep counting and ROM",
                 "Implemented Event Emitter architecture for state management",
-                "Authored 57 merged PRs over 6-month contribution period"
+                "Authored 57 merged PRs over a 6-month contribution period"
+            ],
+            "evidence": [
+                "hf.app.merged_prs",
+                "hf.authored_commits"
             ]
         },
         {
             "name": "Stance Dashboard",
             "year": "2025",
-            "description": "Full-stack healthcare dashboard with 23 merged PRs (+11.5K lines). Led team of 4 developers with Scrum, Jira, and Google Calendar integration",
-            "url": "https://github.com/vancityAyush/stance-dashboard",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "Full-stack healthcare dashboard. Tech Lead for a team of 4; personally authored 23 merged PRs (+11.5K lines)",
+            "github_url": "https://github.com/vancityAyush/stance-dashboard",
             "company": "HealthFlex",
             "role": "Tech Lead",
             "team_size": 4,
-            "merged_prs": 23,
-            "lines_added": 11500,
             "tech_stack": [
                 "TypeScript",
                 "React",
                 "Next.js",
-                "GraphQL Shield",
                 "NestJS",
-                "Google Calendar API"
+                "GraphQL",
+                "GraphQL Shield",
+                "Google Calendar API",
+                "Puppeteer"
             ],
             "keywords": [
                 "Healthcare",
@@ -161,27 +149,29 @@
                 "23 PRs"
             ],
             "highlights": [
-                "Led team of 4 developers with Scrum, Jira tickets, and DB schema design",
-                "Built complete Auth system (+1738 lines) with JWT tokens",
-                "Implemented Events/Calendar (+1558 lines) with Google Calendar integration",
-                "Architected GraphQL Shield (+662 lines) for permissions",
+                "Led team of 4 through Scrum, Jira planning, DB schema design, and PR review",
+                "Built complete Auth system (+1,738 lines) with JWT tokens",
+                "Implemented Events/Calendar (+1,558 lines) with Google Calendar integration",
                 "Created RBAC system (+789 lines) with role management",
-                "Authored 23 merged PRs building core dashboard features"
-            ]
+                "Architected GraphQL Shield (+662 lines) for permissions",
+                "Built VALD patient import via syncId matching and invoice PDF generation with a Puppeteer pool"
+            ],
+            "evidence": "hf.stance.merged_prs",
+            "date_conflict": "The project page says Jan-May 2025; the Notion Projects CSV says Mar 2024-May 2025. metrics.json uses Feb-May 2025 per the repo metadata."
         },
         {
             "name": "Doctors App",
             "year": "2024-2025",
-            "description": "React Native app for healthcare professionals with 11 merged PRs (+1.4K lines). Built sensor tagging, chat WebSocket, and screen migrations",
-            "url": "https://github.com/vancityAyush/doctors.app",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "React Native app for clinicians. 11 merged PRs (+1.4K lines) covering sensor tagging, real-time chat, and screen migrations",
+            "github_url": "https://github.com/vancityAyush/doctors.app",
             "company": "HealthFlex",
-            "merged_prs": 11,
-            "lines_added": 1406,
             "tech_stack": [
                 "React Native",
                 "TypeScript",
                 "WebSocket",
-                "Storybook",
+                "Storybook v8",
                 "Fastlane"
             ],
             "keywords": [
@@ -193,281 +183,293 @@
             ],
             "highlights": [
                 "Built sensor tagging screen (+357 lines) for BLE pairing",
-                "Implemented real-time chat WebSocket (+322 lines)",
+                "Implemented real-time chat over WebSocket (+322 lines)",
                 "Led patient history migration with data visualization",
-                "Migrated home, profile, and add patient screens",
-                "Authored 11 merged PRs with comprehensive migrations"
-            ]
+                "Migrated home, profile, and add-patient screens",
+                "Built a Storybook v8 component library and multi-env GitHub Actions release pipelines"
+            ],
+            "evidence": "hf.doctors.merged_prs"
         },
         {
             "name": "HealthFlex API",
-            "year": "2025",
-            "description": "NestJS backend API with exercise parser integration, session DTOs, regimen management, pain alerts, and group-based access control (483 commits)",
-            "url": "https://github.com/vancityAyush/healthflex.api",
+            "year": "2024-2025",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "Platform API for the HealthFlex rehab suite: exercise landmark parser, session DTOs, regimen management, pain alerts, and group-based access control",
+            "github_url": "https://github.com/vancityAyush/healthflex.api",
             "company": "HealthFlex",
             "tech_stack": [
                 "TypeScript",
                 "Node.js",
                 "NestJS",
+                "GraphQL",
                 "PostgreSQL",
+                "Serverless Framework",
                 "Git LFS"
             ],
             "keywords": [
                 "Healthcare",
                 "Backend",
                 "NestJS",
+                "GraphQL",
                 "Clean Architecture",
                 "DTOs"
             ],
             "highlights": [
-                "483 commits - exercise landmark upload with parser",
-                "Session DTOs and finish workflows with use case pattern",
+                "Exercise landmark upload with parser integration",
+                "Session DTOs and finish workflows using the use-case pattern",
                 "Regimen management APIs with metadata and delete operations",
-                "Patient pain alerts and group-based access control"
-            ]
+                "Patient pain alerts and group-based access control",
+                "GraphQL API with dataloaders and caching on ROM overview queries"
+            ],
+            "evidence": "hf.authored_commits",
+            "corrected": "Previously described as '483 commits'. That figure is the contributor-table total for GitHub user 'nirajgeorgianflex', not Ayush. His verified authored count on this repo is 24. See metrics.json rejected.hf.commit_misattribution."
+        },
+        {
+            "name": "Kabuni Platform",
+            "year": "2026",
+            "status": "in_progress",
+            "resume_value": "high",
+            "description": "Youth platform spanning web, a cricket mobile app, and camera hardware. Payments, identity for multi-role family accounts, and guardian-consent flows under DPDP/GDPR/COPPA",
+            "url": "https://www.kabuni.com/",
+            "company": "Creative Synergies Group",
+            "client": "Kabuni",
+            "tech_stack": [
+                "Python",
+                "FastAPI",
+                "gRPC",
+                "PostgreSQL",
+                "Redis",
+                "Azure Service Bus",
+                "Azure IoT Hub",
+                "Microsoft Entra External ID",
+                "Razorpay",
+                "Next.js",
+                "Flutter"
+            ],
+            "keywords": [
+                "Python",
+                "FastAPI",
+                "Payments",
+                "Identity",
+                "CIAM",
+                "RBAC",
+                "ABAC",
+                "Compliance",
+                "Event-Driven"
+            ],
+            "highlights": [
+                "Payment service with Razorpay flows, webhooks, and reconciliation-ready transaction models",
+                "Event-driven comms via the Transactional Outbox pattern over Azure Service Bus",
+                "Guardian-led under-18 signup with purpose-specific consent and withdrawal/deletion flows",
+                "Migrated authorization from pure RBAC to hybrid RBAC+ABAC within six weeks",
+                "Azure IoT Hub with X.509 device identity for the Kabuni hardware camera"
+            ],
+            "caution": "MVP target Mar 2027. Not shipped. Do not attach impact metrics or write as a delivered outcome.",
+            "progress": "59/74 tasks complete"
+        },
+        {
+            "name": "PS Predict",
+            "year": "2025-2026",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "Fleet-telemetry prediction platform for Platform Science, delivered through CSG. Foundation packages, an OAuth API client with rate limiting and retries, and full observability instrumentation",
+            "company": "Creative Synergies Group",
+            "client": "Platform Science",
+            "tech_stack": [
+                "Python",
+                "TypeScript",
+                "gRPC",
+                "PostgreSQL",
+                "Prometheus",
+                "JWT"
+            ],
+            "keywords": [
+                "Telemetry",
+                "Prediction Engine",
+                "Observability",
+                "Prometheus",
+                "Rate Limiting",
+                "gRPC"
+            ],
+            "highlights": [
+                "Built @ps-predict/common and @ps-predict/types foundation packages",
+                "Platform Science OAuth/API client with rate limiting, retries, and correlation IDs",
+                "Prometheus metrics, structured logging, and alerting across the prediction engine",
+                "JWT/RBAC guards, McLeod backend APIs, engine telemetry extension, and an Android app"
+            ],
+            "evidence": "csg.contributions",
+            "note": "Private repo (CreativeDT/ps-predict). Completed at 95%, Jul 2025 - Jan 2026."
         },
         {
             "name": "FSM (Field Service Management)",
             "year": "2025",
-            "description": "Enterprise Flutter app for field service management with work order management, adaptive UI, dependency injection, and token refresh capabilities",
-            "url": "https://github.com/vancityAyush/fsm",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "Enterprise Flutter app for field service management with work order management, adaptive UI, offline-first document capture, and a NestJS microservice backend",
+            "github_url": "https://github.com/vancityAyush/fsm",
             "company": "Creative Synergies Group",
             "tech_stack": [
                 "Flutter",
                 "Dart",
                 "BLoC",
                 "Clean Architecture",
-                "REST APIs"
+                "Kotlin",
+                "ML Kit",
+                "NestJS",
+                "TypeORM",
+                "PostgreSQL"
             ],
             "keywords": [
                 "Flutter",
                 "Enterprise",
                 "Field Service",
                 "Work Orders",
-                "Clean Architecture"
+                "Clean Architecture",
+                "Offline-first"
             ],
             "highlights": [
-                "95%+ crash-free sessions",
-                "Real-time workflows",
-                "Cross-platform"
-            ]
+                "95%+ crash-free sessions across Android and iOS",
+                "Native Kotlin document scanner (ML Kit, Room, Compose) with 99.9% offline data integrity",
+                "NestJS microservices serving 100+ field engineers, ~30% API latency reduction",
+                "GPS geofencing with image capture and signature workflows for verified completion"
+            ],
+            "evidence": "csg.self_reported"
         },
         {
-            "name": "Carer Connect",
+            "name": "Amiigo NXT",
             "year": "2023",
-            "description": "Healthcare vendor management web application built with React/Next.js, reducing manual operations by ~80%",
-            "url": "https://github.com/vancityAyush/carer-connect",
-            "company": "PySphere LLP",
-            "tech_stack": [
-                "React",
-                "Next.js",
-                "TypeScript",
-                "PostgreSQL"
-            ],
-            "keywords": [
-                "Healthcare",
-                "React",
-                "Next.js",
-                "Vendor Management",
-                "Web App"
-            ],
-            "highlights": [
-                "~80% manual ops reduction",
-                "+35% engagement",
-                "Healthcare domain"
-            ]
-        },
-        {
-            "name": "Credit Approval",
-            "year": "2023",
-            "description": "Loan management backend API built with Node.js, Express, and Prisma ORM with MySQL database and Docker containerization",
-            "url": "https://github.com/vancityAyush/credit-approval",
-            "tech_stack": [
-                "Node.js",
-                "Express.js",
-                "Prisma",
-                "MySQL",
-                "Docker"
-            ],
-            "keywords": [
-                "Node.js",
-                "REST API",
-                "Prisma ORM",
-                "Docker",
-                "Finance"
-            ],
-            "highlights": [
-                "Docker containerization",
-                "Automated migrations",
-                "API documentation"
-            ]
-        },
-        {
-            "name": "UberClone",
-            "year": "2022",
-            "description": "Full-featured Uber clone Android app with Parse Server backend, real-time location tracking, and Google Maps integration",
-            "url": "https://github.com/vancityAyush/UberClone",
-            "tech_stack": [
-                "Java",
-                "Android",
-                "Parse Server",
-                "Google Maps"
-            ],
-            "keywords": [
-                "Android",
-                "Java",
-                "Real-time",
-                "Location",
-                "Google Maps"
-            ],
-            "highlights": [
-                "Real-time location tracking",
-                "Driver-rider matching",
-                "Google Maps integration"
-            ]
-        },
-        {
-            "name": "iNotebook",
-            "year": "2024",
-            "description": "React-based notebook application with interactive note-taking interface and PWA capabilities",
-            "url": "https://github.com/vancityAyush/inotebook",
-            "tech_stack": [
-                "React",
-                "JavaScript",
-                "Create React App"
-            ],
-            "keywords": [
-                "React",
-                "SPA",
-                "PWA",
-                "Note-taking"
-            ],
-            "highlights": [
-                "Hot reload",
-                "PWA capabilities",
-                "Code splitting"
-            ]
-        },
-        {
-            "name": "ssh_script",
-            "year": "2025",
-            "description": "Cross-platform SSH key automation script for GitHub, GitLab, Bitbucket with smart clipboard integration (macOS, Linux, Windows, WSL)",
-            "url": "https://github.com/vancityAyush/ssh_script",
-            "tech_stack": [
-                "Shell",
-                "Bash",
-                "POSIX"
-            ],
-            "keywords": [
-                "DevOps",
-                "Automation",
-                "SSH",
-                "Git",
-                "Cross-platform",
-                "Shell Scripting"
-            ],
-            "highlights": [
-                "1 GitHub star",
-                "Cross-platform support",
-                "POSIX-compliant"
-            ]
-        },
-        {
-            "name": "Prettier Plugin Sort Imports v3",
-            "year": "2025",
-            "description": "Enhanced Prettier plugin for import sorting with custom sorting algorithms",
-            "url": "https://github.com/vancityAyush/prettier-plugin-sort-imports-v3",
-            "tech_stack": [
-                "TypeScript",
-                "Prettier",
-                "Node.js"
-            ],
-            "keywords": [
-                "Prettier",
-                "Developer Tools",
-                "TypeScript",
-                "Code Formatting"
-            ],
-            "highlights": [
-                "Developer tooling",
-                "Custom sorting algorithms",
-                "Open source contribution"
-            ]
-        },
-        {
-            "name": "Vlogger",
-            "year": "2025",
-            "description": "Video blogging platform application with multimedia content management and streaming capabilities",
-            "url": "https://github.com/vancityAyush/vlogger",
-            "tech_stack": [
-                "Flutter",
-                "Dart"
-            ],
-            "keywords": [
-                "Flutter",
-                "Video",
-                "Multimedia",
-                "Content Management",
-                "Mobile"
-            ],
-            "highlights": [
-                "Video content management",
-                "Multimedia playback",
-                "Content organization"
-            ]
-        },
-        {
-            "name": "Pingo Learn",
-            "year": "2024",
-            "description": "Flutter application with Fastlane CI/CD and Firebase integration for automated builds and deployments",
-            "url": "https://github.com/vancityAyush/pingo_learn_r1",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "E-bike rider assistant for EMotorad. BLE connectivity with background services and autoconnection, Mapbox turn-by-turn navigation with offline maps, live location tracking",
+            "url": "https://play.google.com/store/apps/details?id=com.emotorad.amigonxt",
+            "app_store": "https://apps.apple.com/in/app/amiigo-nxt/id6737222680",
+            "company": "EMotorad",
             "tech_stack": [
                 "Flutter",
                 "Dart",
-                "Fastlane",
-                "Firebase",
-                "Ruby"
+                "BLoC",
+                "GetX",
+                "Mapbox",
+                "BLE",
+                "Dart Isolates"
             ],
             "keywords": [
                 "Flutter",
-                "CI/CD",
-                "Fastlane",
-                "Firebase",
+                "IoT",
+                "BLE",
+                "Navigation",
+                "Mapbox",
+                "E-Bike",
+                "Play Store",
+                "App Store"
+            ],
+            "highlights": [
+                "Live on both Google Play and the iOS App Store",
+                "90% BLE connection-stability improvement, 40% latency reduction",
+                "~70% map cost reduction via Mapbox routing and caching",
+                "Localization, theming, flavors, and adaptive screens"
+            ],
+            "evidence": "emotorad.self_reported"
+        },
+        {
+            "name": "Carer Connect",
+            "year": "2021-2023",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "Healthcare vendor management platform for Carer Connect Ltd: Spring Boot backend, Flutter mobile app, and AngularJS web client. Cut manual vendor ops by ~80%",
+            "url": "https://carerconnect.co.uk/",
+            "play_store": "https://play.google.com/store/apps/details?id=com.carerconnect.CarerConnect",
+            "github_url": "https://github.com/vancityAyush/carer-connect",
+            "company": "PySphere LLP",
+            "client": "Carer Connect Ltd",
+            "tech_stack": [
+                "Spring Boot",
+                "Java",
+                "Flutter",
+                "AngularJS",
+                "PostgreSQL",
+                "Google Cloud"
+            ],
+            "keywords": [
+                "Healthcare",
+                "Spring Boot",
+                "Flutter",
+                "AngularJS",
+                "Vendor Management",
+                "Encryption"
+            ],
+            "highlights": [
+                "~80% manual vendor ops reduction",
+                "+35% engagement via deep links, push notifications, and Google Calendar",
+                "Encrypted QR code scannable exclusively via the companion app"
+            ],
+            "evidence": "pysphere.self_reported",
+            "corrected": "Previously listed as React/Next.js/TypeScript. Ayush confirmed on 2026-07-09 that the real stack was Spring Boot + Flutter + AngularJS + PostgreSQL, matching works/carer-connect.html and the FlowCV resume."
+        },
+        {
+            "name": "PySphere Webface",
+            "year": "2022-2023",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "PySphere's company website and brand identity, designed and built end to end - logo, brochure, wireframes, high-level design, and the responsive site. Increased web traffic ~45%",
+            "url": "https://pysphere.in/",
+            "company": "PySphere LLP",
+            "tech_stack": [
+                "Next.js",
+                "React",
+                "Tailwind CSS",
+                "HTML",
+                "CSS",
+                "Figma"
+            ],
+            "keywords": [
+                "Next.js",
+                "React",
+                "Tailwind CSS",
+                "Branding",
+                "Wireframing",
+                "Responsive Design"
+            ],
+            "highlights": [
+                "~45% web traffic increase",
+                "Full brand identity: logo, brochure, wireframes",
+                "Responsive corporate site"
+            ],
+            "evidence": "pysphere.self_reported",
+            "source": "works/pysphere.html"
+        },
+        {
+            "name": "Crop Secure",
+            "year": "2022",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Flutter agriculture app published to the Play Store, built during the Frantic Infotech engagement",
+            "url": "https://play.google.com/store/apps/details?id=com.cropsecure.app&hl=en",
+            "company": "Frantic Infotech",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "REST APIs"
+            ],
+            "keywords": [
+                "Flutter",
+                "Agriculture",
+                "Play Store",
                 "Mobile"
             ],
             "highlights": [
-                "Fastlane CI/CD integration",
-                "Firebase integration",
-                "Cross-platform support",
-                "Automated deployments"
-            ]
-        },
-        {
-            "name": "Colloseum",
-            "year": "2023",
-            "description": "Competitive programming and coding challenges repository with algorithmic problem-solving solutions",
-            "url": "https://github.com/vancityAyush/colloseum",
-            "tech_stack": [
-                "Java",
-                "C++",
-                "Python"
+                "Live on Google Play",
+                "Concrete deliverable for the otherwise generic '5+ Android apps' Frantic bullet"
             ],
-            "keywords": [
-                "Competitive Programming",
-                "Algorithms",
-                "Data Structures",
-                "Problem Solving"
-            ],
-            "highlights": [
-                "Algorithmic solutions",
-                "Data structure implementations",
-                "Competitive programming"
-            ]
+            "source": "works/crop-secure.html, work.html"
         },
         {
             "name": "Scanner Go",
             "year": "2022",
-            "description": "Flutter-based document scanner app with 1Cr+ downloads on Play Store, featuring complex animations and optimized performance",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Flutter document scanner with 10M+ Play Store installs. Contributed complex animations and native BLoC state management over a ~4-month engagement",
             "url": "https://play.google.com/store/apps/details?id=com.cam.scanner.camscanner.documentscanner",
             "company": "AppyHigh LLP",
             "tech_stack": [
@@ -484,15 +486,19 @@
                 "Play Store"
             ],
             "highlights": [
-                "1Cr+ downloads",
+                "Contributed to an app with 10M+ Play Store installs",
                 "Complex animations",
                 "Native BLoC integration"
-            ]
+            ],
+            "evidence": "scannergo.installs",
+            "caution": "The install count is app-level, not a personal outcome. Write 'contributed to Scanner Go (10M+ installs)', never 'built an app with 10M downloads'. Verify the live install count before printing."
         },
         {
             "name": "Railway App",
             "year": "2022",
-            "description": "Railway app for showing live train status, route information, and station search functionality",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Live train status, route information, and station search",
             "url": "https://play.google.com/store/apps/details?id=railway.app.train.status",
             "company": "AppyHigh LLP",
             "tech_stack": [
@@ -514,57 +520,36 @@
             ]
         },
         {
-            "name": "Datotta",
-            "year": "2021",
-            "description": "E-commerce Android app for clothes with Shopify backend integration, published on Play Store",
-            "url": "https://play.google.com/store/apps/details?id=com.datotta",
-            "company": "Daphnis Labs",
+            "name": "Imagine AI",
+            "year": "2022",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "AI art generator published to the Play Store during the AppyHigh engagement",
+            "url": "https://play.google.com/store/apps/details?id=ai.photo.painting.art.generator",
+            "company": "AppyHigh LLP",
             "tech_stack": [
-                "Java",
-                "Android SDK",
-                "Shopify"
+                "Flutter",
+                "Dart"
             ],
             "keywords": [
-                "Android",
-                "E-commerce",
-                "Shopify",
-                "Mobile App"
+                "Flutter",
+                "AI",
+                "Image Generation",
+                "Play Store"
             ],
             "highlights": [
-                "Shopify backend integration",
-                "Published on Play Store",
-                "E-commerce functionality"
-            ]
-        },
-        {
-            "name": "ChatSansar",
-            "year": "2021",
-            "description": "Android-based IRC chatting application with real-time messaging capabilities",
-            "url": "https://github.com/vancityAyush/ChatSansar",
-            "company": "Daphnis Labs",
-            "tech_stack": [
-                "Java",
-                "Android SDK",
-                "IRC Protocol"
+                "Live on Google Play"
             ],
-            "keywords": [
-                "Android",
-                "Chat",
-                "IRC",
-                "Real-time",
-                "Messaging"
-            ],
-            "highlights": [
-                "IRC protocol implementation",
-                "Real-time messaging",
-                "Android native"
-            ]
+            "source": "data/.old/AyushKumar_InternshalaResume.pdf"
         },
         {
             "name": "iPanelKlean",
             "year": "2022",
-            "description": "IoT application to control iPanel devices, connected to AWS server through APIs and Sockets for real-time data display",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "IoT application controlling iPanel devices over REST and WebSockets against an AWS backend, with real-time telemetry display",
             "url": "https://play.google.com/store/apps/details?id=com.inoviea.ipanelklean",
+            "company": "Inoviea",
             "tech_stack": [
                 "Flutter",
                 "Dart",
@@ -585,98 +570,229 @@
             ]
         },
         {
-            "name": "VTU Marksh",
-            "year": "2023",
-            "description": "Web application to scrape data from VTU Database and calculate CGPA/SGPA based on USN for VTU students",
-            "url": "https://github.com/vancityAyush/vtu-marksh",
+            "name": "Taskify",
+            "year": "2025",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "NestJS REST API for task management with authentication, task sharing, Docker deployment, and 100% test coverage",
+            "github_url": "https://github.com/vancityAyush/taskify",
+            "tech_stack": [
+                "NestJS",
+                "TypeScript",
+                "PostgreSQL",
+                "Docker",
+                "Jest"
+            ],
+            "keywords": [
+                "NestJS",
+                "REST API",
+                "Authentication",
+                "Docker",
+                "TDD",
+                "100% coverage"
+            ],
+            "highlights": [
+                "100% test coverage",
+                "Docker deployment",
+                "JWT authentication",
+                "Task sharing"
+            ],
+            "evidence": "taskify.coverage"
+        },
+        {
+            "name": "Gourmet.Craft",
+            "year": "2025",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "Next.js 14 App Router e-commerce web app with Sanity CMS, deployed on Vercel",
+            "url": "https://gourmet-craft.vercel.app",
+            "production_url": "https://www.gourmetcraftfoods.com/",
+            "github_url": "https://github.com/vancityAyush/gourmet.craft",
+            "tech_stack": [
+                "Next.js",
+                "TypeScript",
+                "React",
+                "Sanity CMS",
+                "Vercel"
+            ],
+            "keywords": [
+                "Next.js",
+                "TypeScript",
+                "E-commerce",
+                "CMS",
+                "Vercel",
+                "SSR"
+            ],
+            "highlights": [
+                "Mobile-responsive UI with unified component patterns",
+                "Sanity CMS integration",
+                "Production deployed on Vercel"
+            ],
+            "note": "The freelance engagement behind gourmetcraftfoods.com is on hold per the Notion Projects DB; the Vercel demo is live."
+        },
+        {
+            "name": "Empire Home",
+            "year": "2025",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Freelance marketing site built and deployed on Vercel, Nov-Dec 2025",
+            "url": "https://www.empirehome.in/",
             "tech_stack": [
                 "Next.js",
                 "React",
-                "Web Scraping"
+                "Vercel"
             ],
             "keywords": [
                 "Next.js",
-                "Web Scraping",
-                "Education",
-                "VTU",
-                "CGPA Calculator"
+                "Freelance",
+                "Vercel",
+                "Web Development"
             ],
             "highlights": [
-                "VTU database integration",
-                "CGPA/SGPA calculation",
-                "University tool"
-            ]
+                "Delivered and deployed to production"
+            ],
+            "security_note": "The Notion page for this project contained a plaintext GitHub PAT, an account password, and Vercel recovery codes. Flagged 2026-07-09; credentials must be rotated. Never copy that page's contents into this repo."
         },
         {
-            "name": "MingWood China",
-            "year": "2022",
-            "description": "Company website designed and developed on Alibaba Cloud Portal",
-            "url": "https://mingwoodchina.com",
+            "name": "Tomorrow Weather",
+            "year": "2024-2025",
+            "status": "shipped",
+            "resume_value": "high",
+            "description": "Flutter template demonstrating Clean Architecture and SOLID principles with responsive UI and modular layers. Most-starred repo",
+            "github_url": "https://github.com/vancityAyush/tomorrow_weather",
             "tech_stack": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Alibaba Cloud"
+                "Flutter",
+                "Dart",
+                "Clean Architecture",
+                "SOLID"
             ],
             "keywords": [
-                "Web Development",
-                "Alibaba Cloud",
-                "Company Website"
+                "Flutter",
+                "Clean Architecture",
+                "SOLID",
+                "Responsive UI",
+                "Mobile"
             ],
             "highlights": [
-                "Alibaba Cloud deployment",
-                "Corporate website",
-                "Responsive design"
-            ]
+                "5 GitHub stars - the most-starred repo in the portfolio",
+                "Clean Architecture implementation",
+                "Modular design"
+            ],
+            "evidence": "tomorrow_weather.stars",
+            "corrected": "Previously also credited with '10+ commits' in data/github/summary.md. That number is a capped API window read as a floor. Omitted."
         },
         {
-            "name": "User Interface OS",
-            "year": "2017",
-            "description": "Desktop application with a custom windowing system featuring 6 built-in applications: MExcel, MWord, Typing Speed, Calculator, Tic Tac Toe, and File Browser",
-            "url": "https://github.com/vancityAyush/UserInterfaceOS",
+            "name": "String Calculator (TDD)",
+            "year": "2025",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "TDD kata implementation; 13+ unit tests covering delimiter parsing, negatives handling, and edge cases",
+            "github_url": "https://github.com/vancityAyush/string-calculator",
             "tech_stack": [
-                "Java",
-                "Swing",
-                "Desktop Development"
+                "Dart",
+                "TDD",
+                "Unit Testing"
             ],
             "keywords": [
-                "Desktop",
-                "Java",
-                "Windowing System",
-                "GUI"
+                "TDD",
+                "Test-Driven Development",
+                "Dart",
+                "Clean Code"
             ],
             "highlights": [
-                "Custom windowing system",
-                "6 built-in applications",
-                "Early programming project"
-            ]
+                "13+ unit tests",
+                "Multi-delimiter parsing",
+                "Edge case handling"
+            ],
+            "language_conflict": "GitHub metadata says Dart. `data/resume (1).tex` describes it as Java. Confirm before printing a language."
         },
         {
-            "name": "PyLudo",
-            "year": "2020",
-            "description": "LUDO game developed using Python's PyGame library with multiplayer support",
-            "url": "https://github.com/vancityAyush/PyLudo",
+            "name": "second.brain",
+            "year": "2026",
+            "status": "active",
+            "resume_value": "high",
+            "description": "Personal infrastructure monorepo: Nx workspace on Bun, a Terraform-provisioned DigitalOcean dev VM preloaded with AI coding agents, and Ansible-driven configuration management. 258 authored commits and 25 merged PRs in under three weeks",
+            "url": "https://brain.vancity.in",
+            "github_url": "https://github.com/vancityAyush/second.brain",
+            "visibility": "private",
+            "additional_urls": [
+                {
+                    "url": "https://proxy.vancity.in",
+                    "what": "OmniRoute AI gateway"
+                }
+            ],
+            "deployment": "Self-hosted on a Terraform-provisioned DigitalOcean droplet behind Caddy auto-TLS. Both hosts verified returning HTTP 200 on 2026-07-09.",
             "tech_stack": [
-                "Python",
-                "PyGame"
+                "Terraform",
+                "HCP Terraform Stacks",
+                "Ansible",
+                "DigitalOcean",
+                "Nx",
+                "Bun",
+                "TypeScript",
+                "Caddy",
+                "GitHub Actions",
+                "systemd",
+                "Ubuntu 24.04"
             ],
             "keywords": [
-                "Python",
-                "PyGame",
-                "Game Development",
-                "LUDO"
+                "Infrastructure as Code",
+                "Terraform",
+                "HCL",
+                "Ansible",
+                "DevOps",
+                "CI/CD",
+                "Self-hosting",
+                "Monorepo",
+                "Auto-TLS"
             ],
             "highlights": [
-                "PyGame implementation",
-                "Multiplayer support",
-                "Game logic"
-            ]
+                "Authored 258 of 267 commits and 25 merged PRs since 2026-06-23; Terraform (HCL) is 29% of the codebase",
+                "Provisioned a DigitalOcean dev VM as an HCP Terraform Stack: VPC, Cloud Firewall, Ubuntu 24.04 host, Reserved IP, and DNS",
+                "Replaced nginx + certbot with Caddy auto-TLS; runs Odysseus as a systemd service behind it",
+                "Built a CI/CD pipeline with composite actions, deploy chaining, health checks, and deployment status reporting",
+                "Recovered a bricked dev VM from a cloud-init ASCII bug and shipped a break-glass admin-login runbook",
+                "Ansible provisioner for users, services, Caddy, a self-hosted GitHub runner, and dev tooling",
+                "Vendored personal configs as a git submodule with symlink setup/sync/update scripts",
+                "Ships a Claude Code skill (.claude/skills/second-brain/) for the Notion knowledge base"
+            ],
+            "evidence": "secondbrain.repo",
+            "note": "The deployment at brain.vancity.in is publicly reachable, but the source repo is private - link the live host, not GitHub. The GitHub description still says 'AWS dev VM infra' while the README and Terraform both target DigitalOcean; the description is stale from before the AWS-to-DO migration.",
+            "corrected": "The earlier entry here was built from Notion design docs and said '6/11 tasks, in progress, weak resume material'. The repo says otherwise: 25 merged PRs, an HCP Stack conversion that actually landed (PR #18), and active pushes as of 2026-07-09. The Notion note that HCP Stacks was 'attempted and abandoned' is contradicted by the merged PR and the current README."
+        },
+        {
+            "name": "ssh_script",
+            "year": "2025",
+            "status": "superseded",
+            "resume_value": "low",
+            "description": "Cross-platform SSH key automation shell script for GitHub, GitLab, and Bitbucket with smart clipboard integration",
+            "github_url": "https://github.com/vancityAyush/ssh_script",
+            "tech_stack": [
+                "Shell",
+                "Bash",
+                "POSIX"
+            ],
+            "keywords": [
+                "DevOps",
+                "Automation",
+                "SSH",
+                "Git",
+                "Cross-platform"
+            ],
+            "highlights": [
+                "1 GitHub star, 2 PRs, 1 issue - the only repo with external PR/issue activity",
+                "POSIX-compliant, cross-platform (macOS, Linux, Windows, WSL)"
+            ],
+            "superseded_by": "xpssh - SSH Key Manager CLI",
+            "note": "Prefer xpssh on a resume; it is the published, tested successor. Keep this only if a JD emphasizes shell scripting."
         },
         {
             "name": "Coddy",
             "year": "2024",
-            "description": "VS Code extension using TypeScript and Hugging Face API to provide real-time AI code suggestions with complex async state management",
-            "url": "https://github.com/vancityAyush/Coddy",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "VS Code extension using the Hugging Face API for real-time AI code suggestions, with complex async state management",
+            "github_url": "https://github.com/vancityAyush/Coddy",
             "tech_stack": [
                 "TypeScript",
                 "VS Code Extension API",
@@ -694,6 +810,460 @@
                 "Hugging Face integration",
                 "VS Code extension"
             ]
+        },
+        {
+            "name": "Portfolio",
+            "year": "2025",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Personal portfolio site, deployed on Vercel",
+            "url": "https://vancityayush.vercel.app",
+            "github_url": "https://github.com/vancityAyush/portfolio",
+            "tech_stack": [
+                "TypeScript",
+                "Vercel"
+            ],
+            "keywords": [
+                "Portfolio",
+                "TypeScript",
+                "Vercel"
+            ],
+            "highlights": [
+                "Production deployed",
+                "Most recently updated repo in the portfolio"
+            ]
+        },
+        {
+            "name": "Credit Approval",
+            "year": "2023",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Loan management backend API with Node.js, Express, and Prisma ORM on MySQL, containerized with Docker",
+            "github_url": "https://github.com/vancityAyush/credit-approval",
+            "tech_stack": [
+                "Node.js",
+                "Express.js",
+                "Prisma",
+                "MySQL",
+                "Docker"
+            ],
+            "keywords": [
+                "Node.js",
+                "REST API",
+                "Prisma ORM",
+                "Docker",
+                "Finance"
+            ],
+            "highlights": [
+                "Docker containerization",
+                "Automated migrations",
+                "API documentation"
+            ]
+        },
+        {
+            "name": "Prettier Plugin Sort Imports v3",
+            "year": "2024",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Enhanced Prettier plugin for import sorting with custom sorting algorithms",
+            "github_url": "https://github.com/vancityAyush/prettier-plugin-sort-imports-v3",
+            "tech_stack": [
+                "TypeScript",
+                "Prettier",
+                "Node.js"
+            ],
+            "keywords": [
+                "Prettier",
+                "Developer Tools",
+                "TypeScript",
+                "Code Formatting"
+            ],
+            "highlights": [
+                "Developer tooling",
+                "Custom sorting algorithms",
+                "Open source contribution"
+            ]
+        },
+        {
+            "name": "VTU Marksh",
+            "year": "2023",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Web app that scrapes the VTU results database and computes CGPA/SGPA from a student USN",
+            "github_url": "https://github.com/vancityAyush/vtu-marksh",
+            "tech_stack": [
+                "Next.js",
+                "React",
+                "Web Scraping"
+            ],
+            "keywords": [
+                "Next.js",
+                "Web Scraping",
+                "Education",
+                "CGPA Calculator"
+            ],
+            "highlights": [
+                "VTU database integration",
+                "CGPA/SGPA calculation",
+                "University tool"
+            ]
+        },
+        {
+            "name": "MingWood China",
+            "year": "2022",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Corporate website for MingWood Biotech, designed and delivered as a freelance engagement in 20 days on the Alibaba Cloud portal",
+            "url": "https://www.mingwoodchina.com/",
+            "company": "MingWood Biotech",
+            "engagement": "Freelance",
+            "duration": "20 days",
+            "tech_stack": [
+                "HTML",
+                "CSS",
+                "Vanilla JavaScript",
+                "Adobe Suite",
+                "Alibaba Cloud"
+            ],
+            "keywords": [
+                "Web Development",
+                "Alibaba Cloud",
+                "Freelance",
+                "Corporate Website"
+            ],
+            "highlights": [
+                "Delivered end to end in 20 days",
+                "Alibaba Cloud deployment",
+                "Responsive design"
+            ],
+            "source": "works/mingwood.html, work.html"
+        },
+        {
+            "name": "Pingo Learn",
+            "year": "2024",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Flutter learning app with Fastlane CI/CD and Firebase for automated builds and deployments",
+            "github_url": "https://github.com/vancityAyush/pingo_learn_r1",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Fastlane",
+                "Firebase",
+                "Ruby"
+            ],
+            "keywords": [
+                "Flutter",
+                "CI/CD",
+                "Fastlane",
+                "Firebase",
+                "Mobile"
+            ],
+            "highlights": [
+                "Fastlane CI/CD integration",
+                "Firebase integration",
+                "Automated deployments"
+            ]
+        },
+        {
+            "name": "Datotta",
+            "year": "2021",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "E-commerce Android app for clothing with a Shopify backend, published on the Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.datotta",
+            "company": "Daphnis Labs",
+            "tech_stack": [
+                "Java",
+                "Android SDK",
+                "Shopify"
+            ],
+            "keywords": [
+                "Android",
+                "E-commerce",
+                "Shopify"
+            ],
+            "highlights": [
+                "Shopify backend integration",
+                "Published on Play Store"
+            ]
+        },
+        {
+            "name": "ChatSansar",
+            "year": "2021",
+            "status": "shipped",
+            "resume_value": "medium",
+            "description": "Android IRC chat application with real-time messaging",
+            "github_url": "https://github.com/vancityAyush/ChatSansar",
+            "company": "Daphnis Labs",
+            "tech_stack": [
+                "Java",
+                "Android SDK",
+                "IRC Protocol"
+            ],
+            "keywords": [
+                "Android",
+                "Chat",
+                "IRC",
+                "Real-time"
+            ],
+            "highlights": [
+                "IRC protocol implementation",
+                "Real-time messaging"
+            ]
+        },
+        {
+            "name": "Vlogger",
+            "year": "2025",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "Video blogging platform with multimedia content management and streaming",
+            "github_url": "https://github.com/vancityAyush/vlogger",
+            "tech_stack": [
+                "Flutter",
+                "Dart"
+            ],
+            "keywords": [
+                "Flutter",
+                "Video",
+                "Multimedia",
+                "Mobile"
+            ],
+            "highlights": [
+                "Video content management",
+                "Multimedia playback"
+            ]
+        },
+        {
+            "name": "iNotebook",
+            "year": "2024",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "React note-taking app with PWA capabilities",
+            "github_url": "https://github.com/vancityAyush/inotebook",
+            "tech_stack": [
+                "React",
+                "JavaScript"
+            ],
+            "keywords": [
+                "React",
+                "SPA",
+                "PWA",
+                "Note-taking"
+            ],
+            "highlights": [
+                "PWA capabilities",
+                "Code splitting"
+            ]
+        },
+        {
+            "name": "Colloseum",
+            "year": "2023",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "Competitive programming solutions repository",
+            "github_url": "https://github.com/vancityAyush/colloseum",
+            "tech_stack": [
+                "Java",
+                "C++",
+                "Python"
+            ],
+            "keywords": [
+                "Competitive Programming",
+                "Algorithms",
+                "Data Structures"
+            ],
+            "highlights": [
+                "Algorithmic solutions",
+                "Data structure implementations"
+            ],
+            "metadata_conflict": "GitHub metadata lists language Java but its contribution_summary describes a 'Next.js application with API routes'. One of the two is wrong."
+        },
+        {
+            "name": "UberClone",
+            "year": "2022",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "Uber clone Android app with Parse Server backend, real-time location tracking, and Google Maps",
+            "github_url": "https://github.com/vancityAyush/UberClone",
+            "tech_stack": [
+                "Java",
+                "Android",
+                "Parse Server",
+                "Google Maps"
+            ],
+            "keywords": [
+                "Android",
+                "Java",
+                "Real-time",
+                "Google Maps"
+            ],
+            "highlights": [
+                "Real-time location tracking",
+                "Driver-rider matching"
+            ],
+            "note": "Learning clone. Superseded by professional work."
+        },
+        {
+            "name": "Flash Chat",
+            "year": "2022",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "Flutter + Firebase chat app. The only repo in the portfolio that anyone has forked",
+            "github_url": "https://github.com/vancityAyush/flash_chat",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Firebase"
+            ],
+            "keywords": [
+                "Flutter",
+                "Firebase",
+                "Chat"
+            ],
+            "highlights": [
+                "1 star, 1 fork - the only forked repo in the portfolio"
+            ],
+            "note": "Angela Yu Flutter bootcamp follow-along. The fork is a mild signal; the code is not original work."
+        },
+        {
+            "name": "TODOEY",
+            "year": "2022",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "Flutter todo app using the Provider pattern",
+            "github_url": "https://github.com/vancityAyush/todey",
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Provider"
+            ],
+            "keywords": [
+                "Flutter",
+                "State Management"
+            ],
+            "highlights": [],
+            "note": "Angela Yu Flutter bootcamp follow-along."
+        },
+        {
+            "name": "FileXP",
+            "year": "2021",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "Android file explorer with image/video thumbnails and in-app file opening",
+            "github_url": "https://github.com/vancityAyush/FileXP",
+            "tech_stack": [
+                "Java",
+                "Android SDK"
+            ],
+            "keywords": [
+                "Android",
+                "Java",
+                "File System"
+            ],
+            "highlights": [
+                "1 GitHub star"
+            ]
+        },
+        {
+            "name": "Abacus",
+            "year": "2021",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "Animated BODMAS calculator for Android",
+            "github_url": "https://github.com/vancityAyush/Abacus",
+            "tech_stack": [
+                "Java",
+                "Android SDK"
+            ],
+            "keywords": [
+                "Android",
+                "Java",
+                "Animations"
+            ],
+            "highlights": [],
+            "source": "data/.old/AyushKumar_InternshalaResume.pdf"
+        },
+        {
+            "name": "Flutter WhatsApp Clone",
+            "year": "2021",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "WhatsApp UI clone in Flutter",
+            "github_url": "https://github.com/vancityAyush/FlutterWhatsAppClone",
+            "tech_stack": [
+                "Flutter",
+                "Dart"
+            ],
+            "keywords": [
+                "Flutter",
+                "UI"
+            ],
+            "highlights": [],
+            "source": "data/.old/AyushKumar_InternshalaResume.pdf"
+        },
+        {
+            "name": "User Interface OS",
+            "year": "2017",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "Java Swing desktop app with a custom windowing system and six built-in applications (MExcel, MWord, Typing Speed, Calculator, Tic Tac Toe, File Browser)",
+            "github_url": "https://github.com/vancityAyush/UserInterfaceOS",
+            "tech_stack": [
+                "Java",
+                "Swing"
+            ],
+            "keywords": [
+                "Desktop",
+                "Java",
+                "GUI"
+            ],
+            "highlights": [
+                "Custom windowing system",
+                "6 built-in applications"
+            ],
+            "note": "Pre-university project. Interesting as a story, not as a credential."
+        },
+        {
+            "name": "PyLudo",
+            "year": "2020",
+            "status": "shipped",
+            "resume_value": "low",
+            "description": "LUDO game in Python with PyGame and multiplayer support",
+            "github_url": "https://github.com/vancityAyush/PyLudo",
+            "tech_stack": [
+                "Python",
+                "PyGame"
+            ],
+            "keywords": [
+                "Python",
+                "PyGame",
+                "Game Development"
+            ],
+            "highlights": [
+                "Multiplayer support"
+            ]
         }
-    ]
+    ],
+    "excluded": {
+        "reason": "Interview take-home assignments. Listing them advertises the interviews they came from. Captured here so nobody re-adds them by mistake.",
+        "repos": [
+            "AlemenoAssignment",
+            "Sunbase_Assignment",
+            "ayna_assignment",
+            "quadBTech",
+            "ayush_ostello_application-v1.0.1",
+            "sde_007"
+        ],
+        "also_excluded": {
+            "reason": "Bootcamp follow-alongs with no original work and near-zero signal.",
+            "repos": [
+                "Clima-Flutter",
+                "bitcoin-ticker-flutter",
+                "text_utils",
+                "InstagramClone",
+                "FireBasePushNotification"
+            ]
+        }
+    }
 }

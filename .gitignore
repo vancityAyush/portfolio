@@ -3,6 +3,10 @@
 .env.local
 .mcp.json
 
+# Notion export: raw personal knowledge base. Contains plaintext credentials
+# (GitHub PATs, Vercel recovery codes). Mine it locally; never commit it.
+data/second.brain (Notion)/
+
 # IDE and editor files
 .vscode/
 .idea/

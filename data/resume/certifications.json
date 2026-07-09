@@ -1,10 +1,94 @@
 {
-    "last_updated": "2025-12-09",
+    "last_updated": "2026-07-09",
+    "note": "Split into `certifications` (held, with an artifact or a course record) and `planned` (intended, no credential found). Ayush confirmed on 2026-07-09 that the five industry certifications were aspirational. Nothing in `planned` may appear on a resume until it moves up with a credential_id.",
     "certifications": [
+        {
+            "name": "Execution Excellence & Team Collaboration",
+            "issuer": "Creative Synergies Group (L&D Sustainment Session)",
+            "category": "Professional Development",
+            "date": "Mar 2026",
+            "credential_id": null,
+            "verify_url": null,
+            "verified": true,
+            "artifact": "Certificate image in Notion export (Notes & Resources DB)",
+            "type": "Internal training",
+            "resume_value": "low",
+            "note": "Internal company training, not an industry certification. Deliverable was a 5-7 min presentation on key learnings, evaluated by reporting managers.",
+            "keywords": [
+                "Team Collaboration",
+                "Execution",
+                "Professional Development"
+            ]
+        },
+        {
+            "name": "SOLID Principles",
+            "issuer": "Udemy",
+            "category": "Software Engineering",
+            "date": "Dec 2022",
+            "credential_id": null,
+            "verify_url": null,
+            "verified": false,
+            "type": "Course",
+            "keywords": [
+                "SOLID",
+                "Design Patterns",
+                "Software Architecture",
+                "Clean Code"
+            ]
+        },
+        {
+            "name": "Web Application Development",
+            "issuer": "Udemy",
+            "category": "Web Development",
+            "date": "Dec 2022",
+            "credential_id": null,
+            "verify_url": null,
+            "verified": false,
+            "type": "Course",
+            "source": "data/.old/AyushKumar_InternshalaResume.pdf (Trainings section)",
+            "keywords": [
+                "Web Development",
+                "Full Stack"
+            ]
+        },
+        {
+            "name": "Flutter Development Course",
+            "issuer": "Udemy",
+            "category": "Mobile Development",
+            "date": "Sep 2021",
+            "credential_id": null,
+            "verify_url": null,
+            "verified": false,
+            "type": "Course",
+            "keywords": [
+                "Flutter",
+                "Dart",
+                "Mobile Development",
+                "Cross-platform"
+            ]
+        },
+        {
+            "name": "The Complete Android Developers Course",
+            "issuer": "Udemy",
+            "category": "Mobile Development",
+            "date": "2020",
+            "credential_id": null,
+            "verify_url": null,
+            "verified": false,
+            "type": "Course",
+            "keywords": [
+                "Android",
+                "Java",
+                "Mobile Development"
+            ]
+        }
+    ],
+    "planned": [
         {
             "name": "Google Associate Android Developer (Kotlin)",
             "issuer": "Google",
             "category": "Mobile Development",
+            "status": "not_earned",
             "keywords": [
                 "Android",
                 "Kotlin",
@@ -12,9 +96,10 @@
             ]
         },
         {
-            "name": "AWS Certified Developer – Associate",
+            "name": "AWS Certified Developer - Associate",
             "issuer": "Amazon Web Services (AWS)",
             "category": "Cloud",
+            "status": "not_earned",
             "keywords": [
                 "AWS",
                 "Cloud",
@@ -28,6 +113,7 @@
             "name": "Meta React Native Professional Certificate",
             "issuer": "Meta (Coursera)",
             "category": "Mobile Development",
+            "status": "not_earned",
             "keywords": [
                 "React Native",
                 "Mobile",
@@ -39,6 +125,7 @@
             "name": "OpenJS Node.js Application Developer (JSNAD)",
             "issuer": "OpenJS Foundation",
             "category": "Backend Development",
+            "status": "not_earned",
             "keywords": [
                 "Node.js",
                 "JavaScript",
@@ -50,46 +137,12 @@
             "name": "EDB PostgreSQL Associate Certification",
             "issuer": "EnterpriseDB",
             "category": "Database",
+            "status": "not_earned",
             "keywords": [
                 "PostgreSQL",
                 "Database",
                 "SQL",
                 "Data Management"
-            ]
-        },
-        {
-            "name": "SOLID Principles",
-            "issuer": "Udemy",
-            "category": "Software Engineering",
-            "date": "Dec 2022",
-            "keywords": [
-                "SOLID",
-                "Design Patterns",
-                "Software Architecture",
-                "Clean Code"
-            ]
-        },
-        {
-            "name": "Flutter Development Course",
-            "issuer": "Udemy",
-            "category": "Mobile Development",
-            "date": "Sep 2021",
-            "keywords": [
-                "Flutter",
-                "Dart",
-                "Mobile Development",
-                "Cross-platform"
-            ]
-        },
-        {
-            "name": "The Complete Android Developers Course",
-            "issuer": "Udemy",
-            "category": "Mobile Development",
-            "date": "2020",
-            "keywords": [
-                "Android",
-                "Java",
-                "Mobile Development"
             ]
         }
     ]

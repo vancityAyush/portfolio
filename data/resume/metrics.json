@@ -1,0 +1,244 @@
+{
+    "last_updated": "2026-07-09",
+    "purpose": "Single source of truth for every quantified claim used on a resume. experience.json and projects.json carry the prose; they cite entries here by evidence key instead of restating numbers. If a number appears in two places, this file wins.",
+    "verification_levels": {
+        "external": "Confirmed against an external system (GitHub API/CLI, npm registry, app store listing). Safe to print.",
+        "self_asserted": "Recorded by Ayush in his own notes. Plausible and usable, but he is the only source. Do not present as measured.",
+        "rejected": "Appeared in a source document but is provably wrong or misattributed. Never print. Retained here so it does not get reintroduced."
+    },
+    "evidence": {
+        "gh.profile": {
+            "level": "external",
+            "public_repos": 104,
+            "followers": 18,
+            "stars_received": 10,
+            "account_created": "2018-07-09",
+            "source": "data/github/profile.json, data/github/index.json",
+            "note": "data/github/summary.md says 19 followers. It is the sole outlier against three agreeing sources; treat as stale."
+        },
+        "hf.authored_commits": {
+            "level": "external",
+            "value": 473,
+            "window": "2024-04-12 to 2025-02-07",
+            "breakdown": {
+                "healthflex-app": 370,
+                "doctors-app": 79,
+                "healthflex-api": 24
+            },
+            "source": "Notion 'GH-Verified Impact Highlights' page, per-repo commits attributed to vancityAyush",
+            "note": "This is the ONLY defensible personal commit total for HealthFlex. See rejected.hf.commit_misattribution."
+        },
+        "hf.app.merged_prs": {
+            "level": "external",
+            "value": 57,
+            "lines_added": 45000,
+            "lines_deleted": 28000,
+            "window": "Aug 2024 - Feb 2025",
+            "notable_prs": {
+                "#70 Component Migration": "+14193 / -4127",
+                "#252 Non-measurable Flow": "+5400 / -3055",
+                "#218 BLE 2.0": "+1164 / -383",
+                "#341 Algorithm Utils": "+878 / -0"
+            },
+            "source": "data/github/repos/healthflex.app/metadata.json"
+        },
+        "hf.stance.merged_prs": {
+            "level": "external",
+            "value": 23,
+            "lines_added": 11500,
+            "lines_deleted": 5700,
+            "window": "Feb 2025 - May 2025",
+            "role": "Tech Lead",
+            "team_size": 4,
+            "notable_prs": {
+                "#12 Auth System": "+1738 / -810",
+                "#101 Events + Google Calendar": "+1558 / -1070",
+                "#39 User Permissions & RBAC": "+789 / -304",
+                "#45 GraphQL Shield": "+662 / -474"
+            },
+            "source": "data/github/repos/stance-dashboard/metadata.json"
+        },
+        "hf.doctors.merged_prs": {
+            "level": "external",
+            "value": 11,
+            "lines_added": 1406,
+            "lines_deleted": 1013,
+            "notable_prs": {
+                "#482 Sensor Tagging Migration": "+357 / -321",
+                "#365 Chat WebSocket": "+322 / -134",
+                "#477 Home/Profile Migration": "+157 / -143"
+            },
+            "source": "data/github/repos/doctors.app/metadata.json"
+        },
+        "hf.merged_prs_total": {
+            "level": "external",
+            "value": 91,
+            "lines_added": 57906,
+            "lines_deleted": 34713,
+            "derivation": "hf.app.merged_prs (57) + hf.stance.merged_prs (23) + hf.doctors.merged_prs (11)",
+            "note": "Strongest aggregate in the dataset. Prefer this over any commit count when a single headline number is needed."
+        },
+        "csg.contributions": {
+            "level": "external",
+            "merged_prs": 5,
+            "closed_prs": 1,
+            "issues": 62,
+            "window": "2025-02-21 to 2026-02-21",
+            "repos": [
+                "CreativeDT/ps-predict",
+                "CreativeDT/fsm-backend-2",
+                "CreativeDT/fsm-app"
+            ],
+            "source": "Notion 'CSG Contributions Snapshot', generated with GitHub CLI on 2026-02-21",
+            "note": "Private repos. Numbers are real but unverifiable by a third party without access."
+        },
+        "xpssh.release": {
+            "level": "external",
+            "version": "0.1.0",
+            "npm_package": "xpssh-cli",
+            "tests": "90+",
+            "license": "MIT",
+            "source": "https://www.npmjs.com/package/xpssh-cli"
+        },
+        "secondbrain.repo": {
+            "level": "external",
+            "authored_commits": 258,
+            "total_commits": 267,
+            "merged_prs": 25,
+            "closed_prs": 2,
+            "stars": 1,
+            "forks": 0,
+            "created": "2026-06-23",
+            "last_pushed": "2026-07-09",
+            "visibility": "private",
+            "contributors": {
+                "vancityAyush": 261,
+                "Copilot": 3,
+                "Claude": 1
+            },
+            "language_bytes": {
+                "JavaScript": 37740,
+                "HCL": 20817,
+                "TypeScript": 11764,
+                "Shell": 109
+            },
+            "source": "GitHub API via gh CLI, queried 2026-07-09",
+            "note": "HCL is 29% of the codebase - this is real Terraform, not a toy. 258 of 267 commits authored by Ayush; the rest are Copilot/Claude agent commits. Private repo, so a recruiter cannot open it: cite the work, not a link."
+        },
+        "taskify.coverage": {
+            "level": "external",
+            "value": "100% test coverage",
+            "source": "data/github/repos/taskify/metadata.json"
+        },
+        "tomorrow_weather.stars": {
+            "level": "external",
+            "value": 5,
+            "note": "Most-starred repo; 5 of 13 total stars across all mirrored repos.",
+            "source": "data/github/repos/tomorrow_weather/metadata.json"
+        },
+        "hf.self_reported": {
+            "level": "self_asserted",
+            "claims": [
+                "95% crash-free across 1,000+ users",
+                "BLE module TDD with 55+ unit tests",
+                "20 Hz BLE streaming per device",
+                "~40% latency reduction",
+                "2,000+ ML datapoints/sec via native module",
+                "~40% release-cycle reduction with Fastlane CI/CD",
+                "FlatList to FlashList cut render 800ms to 40ms"
+            ],
+            "source": "Notion Areas/HealthFlex.md",
+            "note": "Ayush's own interview-prep notes warn: 'Confirm before quoting: verify any exact latency/Hz number.' Verify the Hz and latency figures before printing."
+        },
+        "csg.self_reported": {
+            "level": "self_asserted",
+            "claims": [
+                "95%+ crash-free FSM sessions",
+                "~30% API latency reduction",
+                "~50% release-time cut via GitHub Actions + Gradle",
+                "80%+ test coverage across auth/work orders/documents/inventory",
+                "100+ field engineers served"
+            ],
+            "source": "Notion Areas/CSG.md"
+        },
+        "emotorad.self_reported": {
+            "level": "self_asserted",
+            "claims": [
+                "90% BLE connection-stability improvement",
+                "40% latency reduction",
+                "~70% map cost cut via Mapbox routing + caching",
+                "80%+ unit test coverage",
+                "~25% Gradle build-time reduction"
+            ],
+            "team_size": 5,
+            "source": "Notion Areas/EMotorad.md"
+        },
+        "pysphere.self_reported": {
+            "level": "self_asserted",
+            "claims": [
+                "Led team of 8 on RCFD product from ideation",
+                "~80% manual vendor ops cut",
+                "+35% engagement via deep links / push / Google Calendar",
+                "~45% web traffic increase",
+                "~25% payment success improvement (SonoFlux)",
+                "1M+ notification requests across SMS/Email/In-App"
+            ],
+            "source": "Notion Areas/PySphere.md, Prep Notes"
+        },
+        "scannergo.installs": {
+            "level": "self_asserted",
+            "value": "10M+ Play Store installs",
+            "source": "Play Store listing (app-level, not personal)",
+            "phrasing_rule": "Write 'contributed to Scanner Go (10M+ Play Store installs)' as a Flutter developer over ~4 months. NEVER write 'built an app with 10M downloads'. Ayush's own notes flag this figure: 'Confirm before quoting: verify the exact download/scale figure' and 'Don't say: inflated user numbers you can't defend.'"
+        }
+    },
+    "rejected": {
+        "hf.commit_misattribution": {
+            "bad_claims": [
+                "Built Stance Dashboard (347 commits)",
+                "Developed Doctors App (582 commits)",
+                "Architected HealthFlex API (483 commits)",
+                "Led Expo SDK 52 migration (423 commits)",
+                "1,800+ total commits"
+            ],
+            "reason": "582 is the contributor-table total for GitHub user 'nirajgeorgian'; 483 is 'nirajgeorgianflex'. These are other people's commit counts, lifted from a repo contributor table and written up as Ayush's own work. The 1,800+ aggregate compounds the error.",
+            "correct": "Use hf.authored_commits (473 total: 370 / 79 / 24) or, better, hf.merged_prs_total (91 merged PRs).",
+            "found_in": "data/resume/experience.json (HealthFlex highlights), data/resume/projects.json (HealthFlex API), Notion Areas/HealthFlex.md"
+        },
+        "gh.recent_commits_as_totals": {
+            "bad_claims": [
+                "tomorrow_weather: 10+ commits",
+                "string-calculator: 10+ clean commits",
+                "80 commits this year",
+                "12 PRs this year"
+            ],
+            "reason": "activity.json 'recent_commits' is a capped API window, not a total. It takes only the values {0,1,2,3,4,5,10} across 23 repos and eight repos sit at exactly 10. Reading the ceiling as a floor ('10+') inverts its meaning. Summing it produces a meaningless number.",
+            "correct": "No year-level commit or PR total is supported by the data on disk. Omit, or use hf.merged_prs_total."
+        },
+        "gh.summary_md": {
+            "bad_claims": [
+                "19 followers",
+                "Dart 40% / JavaScript 12% / TypeScript 25% / Java 15%",
+                "Total Repositories Processed: 15"
+            ],
+            "reason": "data/github/summary.md disagrees with index.json, github/profile.json and resume/skills.json, which all agree with each other. It is a stale generated artifact.",
+            "correct": "18 followers; language split 35/26/13/13/9/4 (Dart/JS/TS/Java/HTML-CSS/Shell)."
+        },
+        "cross_wired_people": {
+            "bad_claims": [
+                "60% to 92% crash-free at Koshex",
+                "Rungta College",
+                "1 million requests system design",
+                "Increase MRR by 15% this quarter"
+            ],
+            "reason": "None of these are Ayush's. The first two belong to Anshuman Patel (a Snabbit interviewer whose notes are in the Notion export). The third is an interviewer's system-design prompt. The fourth is Notion's stock OKR template sample data.",
+            "correct": "Discard entirely."
+        },
+        "education.cgpa_template_contamination": {
+            "bad_claims": [],
+            "reason": "education.json says CGPA 7.96/10, which is byte-identical to the value in data/.old/main.tex - Ashish Pratap Singh's resume, used as the LaTeX template. Both FlowCV resumes say 7.98/10.",
+            "status": "Ayush reviewed this on 2026-07-09 and kept 7.96. Retained as a note, not a correction.",
+            "correct": "7.96/10 per Ayush's confirmation."
+        }
+    }
+}

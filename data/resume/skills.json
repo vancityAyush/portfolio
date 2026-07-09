@@ -1,5 +1,6 @@
 {
-    "last_updated": "2025-12-09",
+    "last_updated": "2026-07-09",
+    "note": "Expanded 2026-07-09 with the Python/FastAPI/Azure stack from the current CSG role, the Spring Boot/AWS stack from PySphere, and infrastructure skills from the second.brain project - all of which were absent despite appearing throughout the source data.",
     "skills": {
         "mobile_development": {
             "primary": [
@@ -13,14 +14,22 @@
                 "GetX",
                 "Provider",
                 "MVVM",
-                "Clean Architecture"
+                "Clean Architecture",
+                "Expo",
+                "Zustand",
+                "React Query"
             ],
             "tools": [
                 "Gradle",
                 "Fastlane",
+                "EAS",
                 "ML Kit",
                 "Mapbox",
-                "Firebase"
+                "Firebase",
+                "Jetpack Compose",
+                "Room",
+                "Storybook",
+                "FlashList"
             ]
         },
         "frontend": {
@@ -33,31 +42,45 @@
             "frameworks": [
                 "React",
                 "Next.js",
-                "Redux"
+                "Redux",
+                "AngularJS",
+                "Tailwind CSS"
             ],
             "tools": [
                 "Figma",
                 "Responsive Design",
-                "Accessibility"
+                "Accessibility",
+                "Turborepo",
+                "Nx"
             ]
         },
         "backend": {
             "languages": [
                 "TypeScript",
                 "JavaScript",
-                "Java",
-                "Python"
+                "Python",
+                "Java 11+",
+                "Kotlin"
             ],
             "frameworks": [
                 "Node.js",
                 "NestJS",
                 "Express.js",
-                "Spring Boot"
+                "FastAPI",
+                "Spring Boot",
+                "Hibernate",
+                "Serverless Framework"
             ],
             "patterns": [
                 "REST APIs",
+                "GraphQL",
+                "gRPC",
                 "Microservices",
-                "Clean Architecture"
+                "Clean Architecture",
+                "Use Case Pattern",
+                "Transactional Outbox",
+                "Event-Driven Architecture",
+                "DTOs"
             ]
         },
         "databases": {
@@ -67,20 +90,49 @@
             ],
             "nosql": [
                 "MongoDB",
-                "Firebase Firestore"
+                "DynamoDB",
+                "Firebase Firestore",
+                "Redis"
+            ],
+            "vector": [
+                "pgvector"
             ],
             "orms": [
                 "TypeORM",
-                "Prisma ORM"
+                "Prisma ORM",
+                "Hibernate"
             ]
         },
         "cloud_devops": {
             "aws": [
-                "AWS CDK",
-                "ECS",
-                "S3",
                 "Lambda",
-                "EC2"
+                "SQS",
+                "S3",
+                "EC2",
+                "ECS",
+                "DynamoDB",
+                "EKS",
+                "AWS CDK"
+            ],
+            "azure": [
+                "Azure Service Bus",
+                "Azure App Configuration",
+                "Azure Key Vault",
+                "Azure IoT Hub",
+                "Microsoft Entra External ID (CIAM)",
+                "Azure DevOps"
+            ],
+            "other_cloud": [
+                "Google Cloud",
+                "DigitalOcean",
+                "Alibaba Cloud",
+                "Vercel"
+            ],
+            "iac": [
+                "Terraform",
+                "HCP Terraform Stacks",
+                "Ansible",
+                "cloud-init"
             ],
             "containers": [
                 "Docker",
@@ -88,18 +140,28 @@
             ],
             "ci_cd": [
                 "GitHub Actions",
+                "Jenkins",
                 "Fastlane",
                 "Gradle"
             ],
+            "observability": [
+                "Prometheus",
+                "Sentry",
+                "Structured Logging",
+                "Correlation IDs",
+                "Firebase Crashlytics"
+            ],
             "other": [
                 "Firebase",
-                "Vercel"
+                "Caddy",
+                "systemd"
             ]
         },
         "testing": {
             "frameworks": [
                 "Jest",
-                "Flutter Test"
+                "Flutter Test",
+                "bun test"
             ],
             "practices": [
                 "TDD",
@@ -108,43 +170,73 @@
                 "E2E Testing"
             ],
             "metrics": [
-                "80%+ test coverage achieved"
+                "100% coverage on Taskify",
+                "80%+ coverage across FSM and EMotorad work"
             ]
         },
         "hardware_integration": {
             "protocols": [
-                "BLE (Bluetooth Low Energy)"
+                "BLE (Bluetooth Low Energy)",
+                "X.509 device identity",
+                "WebSockets"
             ],
             "tools": [
+                "react-native-ble-plx",
                 "RxJS",
                 "Dart Isolates",
-                "Background Services"
+                "Background Services",
+                "Azure IoT Hub"
             ]
         },
         "payments_auth": {
             "payments": [
                 "Stripe",
-                "Razorpay"
+                "Razorpay",
+                "JusPay"
             ],
             "auth": [
                 "JWT",
                 "OAuth 2.0",
-                "RBAC"
+                "RBAC",
+                "ABAC",
+                "GraphQL Shield",
+                "Microsoft Entra CIAM"
+            ],
+            "compliance": [
+                "GDPR",
+                "DPDP",
+                "COPPA",
+                "Audit Trails",
+                "Data Deletion Workflows"
+            ]
+        },
+        "ai_ml": {
+            "tools": [
+                "LangGraph",
+                "Hugging Face API",
+                "RAG",
+                "Vector Search"
             ]
         },
         "other": {
             "version_control": [
                 "Git",
-                "GitHub"
+                "GitHub",
+                "Git LFS"
             ],
             "storage": [
                 "Hive",
                 "Room",
                 "SQLite"
             ],
-            "apis": [
-                "REST",
-                "GraphQL (basic)"
+            "runtimes": [
+                "Node.js",
+                "Bun"
+            ],
+            "queues": [
+                "BullMQ",
+                "Azure Service Bus",
+                "AWS SQS"
             ]
         },
         "fundamentals": {
@@ -153,12 +245,18 @@
                 "Algorithms",
                 "System Design",
                 "OOP",
-                "SOLID Principles"
+                "SOLID Principles",
+                "Production Debugging",
+                "High-Volume Systems",
+                "Payments Domain"
             ],
             "practices": [
                 "Agile/Scrum",
                 "Code Review",
-                "Documentation"
+                "Documentation",
+                "Jira",
+                "Technical Leadership",
+                "Mentorship"
             ]
         }
     },
@@ -172,48 +270,87 @@
         "Next.js",
         "TypeScript",
         "JavaScript",
+        "AngularJS",
+        "Tailwind CSS",
+        "Python",
+        "FastAPI",
         "Node.js",
         "NestJS",
         "Express.js",
+        "Java",
         "Spring Boot",
+        "Hibernate",
+        "gRPC",
+        "GraphQL",
         "PostgreSQL",
         "MySQL",
         "MongoDB",
+        "Redis",
+        "DynamoDB",
+        "pgvector",
         "TypeORM",
         "Prisma",
         "Docker",
+        "Terraform",
+        "Ansible",
         "GitHub Actions",
+        "Jenkins",
+        "Azure DevOps",
         "AWS",
+        "Azure",
+        "Google Cloud",
+        "DigitalOcean",
         "Firebase",
         "Vercel",
+        "Prometheus",
+        "Sentry",
         "Jest",
         "Flutter Test",
         "TDD",
         "BLE",
+        "RxJS",
         "Mapbox",
         "ML Kit",
+        "Jetpack Compose",
+        "Expo",
+        "Zustand",
+        "React Query",
+        "Storybook",
         "JWT",
         "OAuth 2.0",
+        "RBAC",
+        "ABAC",
+        "Microsoft Entra CIAM",
         "Stripe",
         "Razorpay",
+        "JusPay",
         "REST APIs",
         "Microservices",
+        "Event-Driven Architecture",
+        "Transactional Outbox",
         "Clean Architecture",
         "BLoC",
         "MVVM",
+        "Bun",
+        "Nx",
+        "Turborepo",
+        "BullMQ",
         "C++",
-        "Python",
         "Shell Scripting",
         "Data Structures",
         "Algorithms",
-        "System Design"
+        "System Design",
+        "GDPR",
+        "DPDP",
+        "COPPA"
     ],
     "language_distribution": {
         "Dart": 35,
         "JavaScript": 26,
         "TypeScript": 13,
         "Java": 13,
+        "HTML_CSS": 9,
         "Shell": 4,
-        "HTML_CSS": 9
+        "note": "Agreed by data/github/index.json, data/github/profile.json and this file. data/github/summary.md claims 40/12/25/15 and omits Shell - it is stale, see metrics.json rejected.gh.summary_md. Neither split reflects Python, which is now the primary language of the current role."
     }
 }

@@ -1,0 +1,180 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Ayush Kumar} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{{{{\faEnvelope} eliasakeleven@gmail.com}} $|$}
+\textcolor[HTML]{371e77}{{{\faMobile} +91\;9060842578}}
+
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faGithub} github.com/vancityAyush}} $|$}
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/eliasak11}} $|$}
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faGlobe} vancity.in}}}
+\end{tabularx}
+
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Languages \& Frameworks:} \textbf{Java 11+}, \textbf{Spring Boot}, \textbf{TypeScript}, \textbf{React.js}, \textbf{React Native}, \textbf{Node.js}, JavaScript, Python, FastAPI, Flutter, GraphQL\\[3pt]
+\color[HTML]{1C033C}\textbf{Cloud, Database \& Tools:} \textbf{AWS} (\textbf{DynamoDB}, \textbf{EKS}, \textbf{SQS}, \textbf{Lambda}, EC2, S3), \textbf{Jenkins}, GitHub Actions, Azure DevOps, Docker, PostgreSQL, MongoDB, Redis, Firebase, Grunt, Fastlane\\[3pt]
+\color[HTML]{1C033C}\textbf{Core Competencies:} \textbf{REST API Design}, Microservices, High-Volume Systems, Payments Domain, Production Debugging, Caching, CI/CD, Code Quality, Peer Reviews, Agile Collaboration\\[3pt]
+
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Creative Synergies Group, Bengaluru}} \hfill \color[HTML]{371e77} May 2025 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineer (Full Stack) --- Kabuni Platform}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Designed, implemented, and integrated backend services for the \textbf{Kabuni} platform using \textbf{Python}, \textbf{FastAPI}, \textbf{gRPC}, \textbf{PostgreSQL}, and microservices architecture, supporting payments, identity, master data, notifications, and platform workflows.
+        \item Built the \textbf{Kabuni Payment Service}, integrating \textbf{Razorpay} payment flows, RESTful webhooks, transaction-state tracking, and reconciliation-ready models for subscriptions and Kabuni Premier League registration journeys.
+        \item Implemented reliable event-driven communication using the \textbf{Transactional Outbox Pattern} and \textbf{Azure Service Bus}, improving consistency between payment updates, user journeys, and downstream notification processes.
+        \item Designed relational schemas in \textbf{PostgreSQL} and caching-backed access patterns using \textbf{Redis}, improving service maintainability and reducing repeated database lookups across frequently accessed workflows.
+        \item Contributed to identity and authentication architecture for multi-role family accounts, including guardian-child relationships, consent journeys, role-based access control, token-based authentication, and \textbf{Microsoft Entra CIAM} integration planning.
+        \item Developed frontend features using \textbf{Next.js}, \textbf{TypeScript}, and modular React architecture, integrating backend APIs through reusable service layers and clean component patterns.
+        \item Worked on Flutter-based mobile application flows with focus on clean architecture, state management, lifecycle handling, API integration, and production readiness for Android/iOS experiences.
+        \item Supported live services by debugging production issues, improving API behaviour, strengthening logging, and adding technical improvements to existing backend and frontend modules with minimal guidance.
+        \item Collaborated with QA, product managers, engineering managers, peer teams, and external stakeholders to convert ambiguous requirements into functional and technical implementation plans.
+        \item Improved engineering quality across the monorepo by contributing to linting, formatting, Docker-based local development, CI/CD workflows, test practices, API documentation, and peer review processes.
+        \item \textit{Tech Stack:} Python, FastAPI, gRPC, PostgreSQL, Redis, Azure Service Bus, Azure App Configuration, Azure Key Vault, Microsoft Entra CIAM, Razorpay, Next.js, TypeScript, React.js, Flutter, Docker, GitHub Actions, Azure DevOps.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{{HealthFlex, Bangalore}} \hfill \color[HTML]{371e77} Mar 2024 - May 2025 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Founding Engineer (SDE)}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Owned end-to-end engineering delivery for a health-tech platform, building and shipping cross-platform \textbf{React Native} applications for patients, coaches, and internal operations teams.
+        \item Designed and developed backend APIs using \textbf{Node.js}, \textbf{GraphQL}, and modular service patterns, supporting mobile application workflows, user data synchronization, and operational dashboards.
+        \item Built real-time health-device integrations using \textbf{Bluetooth Low Energy (BLE)} and \textbf{RxJS} streams, enabling reliable biometric data handling across Android and iOS devices.
+        \item Optimized application performance by improving state management, reducing unnecessary React renders, and refactoring heavy UI flows, reducing interaction latency from 800ms to nearly 40ms in critical screens.
+        \item Automated build and release workflows using \textbf{Fastlane}, Firebase tooling, and multi-environment configurations, reducing manual release effort and improving deployment reliability.
+        \item Collaborated closely with founders, product, design, and clinical stakeholders to define scope, debug production issues, plan releases, and ship features under fast-changing startup requirements.
+        \item \textit{Tech Stack:} React Native, Node.js, TypeScript, GraphQL, BLE, RxJS, MongoDB, Firebase, AWS, Fastlane, Grunt.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{PySphere LLP, Virtual} \hfill \color[HTML]{371e77} Nov 2021 - Mar 2024 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineer}} \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Developed backend services and business workflows using \textbf{Java 11+}, \textbf{Spring Boot}, \textbf{REST APIs}, \textbf{PostgreSQL}, and \textbf{Hibernate}, contributing to scalable application modules across multiple client projects.
+        \item Designed and implemented payment-related workflows with third-party gateways including \textbf{Stripe}, \textbf{JusPay}, and \textbf{Razorpay}, handling payment initiation, status updates, callback processing, and transaction-state management.
+        \item Built REST API integrations for customer-facing and internal systems, focusing on clean request/response contracts, validation, error handling, and maintainable service-layer design.
+        \item Refactored legacy backend modules into cleaner Spring Boot service layers, reducing duplicated logic, improving readability, and making future feature development easier for engineering teams.
+        \item Worked with \textbf{AWS services} including Lambda, SQS, S3, EC2, and DynamoDB exposure for application workflows, asynchronous processing, storage, and cloud-hosted service integration.
+        \item Maintained code quality through \textbf{Jenkins}-based CI workflows, Git-based collaboration, code reviews, debugging support, and incremental technical improvements in existing live services.
+        \item Created compliance-oriented user lifecycle features using PostgreSQL and Hibernate ORM, including audit-friendly records, data cleanup flows, and user deletion workflows.
+        \item \textit{Tech Stack:} Java 11+, Spring Boot, REST APIs, PostgreSQL, Hibernate, AWS Lambda, SQS, S3, DynamoDB, Jenkins, Razorpay, Stripe, JusPay, Git.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{EMotorad, Bangalore} \hfill \color[HTML]{371e77} Sep 2023 - Nov 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{App Developer Intern}} \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Built Flutter application features for an E-Bike rider assistant, implementing clean UI flows, REST API integrations, and modular app structure using clean architecture principles.
+        \item Worked on mobile reliability improvements involving \textbf{BLE} connectivity, background communication flows, Firebase integration, and lifecycle-aware state management.
+        \item Collaborated with senior engineers on debugging, code reviews, and production-readiness improvements for Android/iOS application features.
+        \item \textit{Tech Stack:} Flutter, Dart, BLE, BLoC, REST APIs, Firebase, Clean Architecture.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{A.M.C. Engineering College (VTU), Bengaluru} & \hfill \color[HTML]{371e77} 2020 - 2024 \\
+\color[HTML]{371e77} B.E. in Computer Science and Engineering & \hfill \color[HTML]{4B28A4} \textit{\textbf{CGPA: 7.96/10}} \\
+\multicolumn{2}{@{}X@{}}{Relevant Coursework: Data Structures \& Algorithms, Operating Systems, Database Management Systems, Computer Networks, Web Technologies, Mobile Application Development, AI/ML}
+\end{tabularx}\\[3pt]
+
+% Projects
+\section{Project Work}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{xpssh --- SSH Key Manager CLI:} Published \textbf{TypeScript/Bun} CLI on npm as \textbf{xpssh-cli} for automating SSH key setup across GitHub, GitLab, Bitbucket, and Azure DevOps; built multi-account profiles, provider API key upload, SSH config management, connection testing, and doctor/fix workflows. github.com/vancityAyush/xpssh
+        \item \textbf{Iris --- AI Resume Tailoring Platform:} Designed a full-stack AI career platform using \textbf{Next.js}, \textbf{React}, \textbf{NestJS}, \textbf{PostgreSQL}, \textbf{pgvector}, \textbf{Redis/BullMQ}, and \textbf{Turborepo}; planned RAG-based resume generation, ATS scoring, job tracking, source ingestion, and background agent workflows.
+        \item \textbf{String Calculator --- Java/TDD:} Implemented a calculator using Test-Driven Development with unit tests for delimiter parsing, validation rules, negative number handling, edge cases, and maintainable code-quality practices.
+        \item \textbf{Gourmet.Craft --- React.js/TypeScript:} Built a modern web application deployed on Vercel, demonstrating reusable component design, state management, API integration patterns, and frontend architecture. gourmet-craft.vercel.app
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+% Leadership and Volunteering
+\section{Awards and Certificates}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item AWS Certified Developer -- Associate -- Amazon Web Services
+        \item Meta React Native Professional Certificate -- Meta / Coursera
+        \item OpenJS Node.js Application Developer -- OpenJS Foundation
+        \item Google Associate Android Developer -- Google
+        \item EDB PostgreSQL Associate Certification -- EnterpriseDB
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+\end{document}

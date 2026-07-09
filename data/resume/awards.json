@@ -1,0 +1,61 @@
+{
+    "last_updated": "2026-07-09",
+    "note": "New file. None of these appeared in data/resume/ before; recovered from data/.old/AyushKumar_InternshalaResume.pdf and the Notion export. No certificate or announcement artifact exists for any of them - `verified: false` throughout.",
+    "awards": [
+        {
+            "name": "Quarterly Award",
+            "issuer": "PySphere LLP",
+            "period": "Q1 2022",
+            "category": "Workplace Recognition",
+            "verified": false,
+            "sources": [
+                "data/.old/AyushKumar_InternshalaResume.pdf",
+                "Notion Areas/PySphere.md"
+            ]
+        },
+        {
+            "name": "Quarterly Award",
+            "issuer": "PySphere LLP",
+            "period": "Q2 2022",
+            "category": "Workplace Recognition",
+            "verified": false,
+            "sources": [
+                "data/.old/AyushKumar_InternshalaResume.pdf",
+                "Notion Areas/PySphere.md"
+            ]
+        },
+        {
+            "name": "Quarterly Award",
+            "issuer": "PySphere LLP",
+            "period": "Q1 2023",
+            "category": "Workplace Recognition",
+            "verified": false,
+            "sources": [
+                "Notion Areas/PySphere.md"
+            ],
+            "note": "Only the Notion Area page lists this third award; the Internshala resume names just Q1 and Q2 2022."
+        },
+        {
+            "name": "First Place, Code Of Duty",
+            "issuer": "Coding competition",
+            "period": null,
+            "category": "Competition",
+            "verified": false,
+            "sources": [
+                "data/.old/AyushKumar_InternshalaResume.pdf"
+            ],
+            "note": "Date and organizing body unknown. Likely a college-level event during 2020-2024."
+        },
+        {
+            "name": "3rd Prize, IT Exhibition",
+            "issuer": "IT Exhibition",
+            "period": null,
+            "category": "Competition",
+            "verified": false,
+            "sources": [
+                "data/.old/AyushKumar_InternshalaResume.pdf"
+            ],
+            "note": "Date and organizing body unknown. Likely a college-level event during 2020-2024."
+        }
+    ]
+}
