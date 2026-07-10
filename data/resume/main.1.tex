@@ -1,0 +1,194 @@
+
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip}
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Ayush Kumar} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{{{{\faMapMarker} Bengaluru, India}} $|$}
+\textcolor[HTML]{371e77}{{{{\faEnvelope} vancityAyush@gmail.com}} $|$}
+\textcolor[HTML]{371e77}{{{\faMobile} +91 9060842579}}
+
+\textcolor[HTML]{371e77}{\underline{\href{https://github.com/vancityAyush}{\raisebox{-0.05\height}{\faGithub} github.com/vancityAyush}} $|$}
+\textcolor[HTML]{371e77}{\underline{\href{https://linkedin.com/in/eliasak11}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/eliasak11}} $|$}
+\textcolor[HTML]{371e77}{\underline{\href{https://vancity.in}{\raisebox{-0.05\height}{\faGlobe} vancity.in}}}
+\end{tabularx}
+
+\section{Summary}
+\color[HTML]{1C033C}Senior Software Developer with 4+ years shipping products end to end across mobile, web, and backend, with multiple apps live on the Play Store and App Store. Owns systems from architecture and system design through release and operations, spanning cloud microservices, customer identity (OAuth 2.0/OIDC SSO), and payment infrastructure across healthcare, sports-tech, e-commerce, and mobility products. Builds with AI as a first-class tool: RAG pipelines, agent workflows, self-hosted AI gateway infrastructure, and a daily workflow built around Claude Code, Codex, and GitHub Copilot.\\[3pt]
+
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Languages:} TypeScript, Python, Dart, Kotlin, Java, JavaScript, SQL\\[3pt]
+\color[HTML]{1C033C}\textbf{Mobile App Development:} Flutter, React Native, Android (Jetpack Compose, ML Kit, Room), Expo, EAS Build, BLoC, BLE (Bluetooth Low Energy), Firebase, Mapbox\\[3pt]
+\color[HTML]{1C033C}\textbf{Backend \& APIs:} Node.js, NestJS, FastAPI, Spring Boot, GraphQL, gRPC, REST APIs, Microservices, Event-Driven Architecture, Clean Architecture, WebSockets\\[3pt]
+\color[HTML]{1C033C}\textbf{AI Engineering:} RAG pipelines, Vector Search (pgvector), LangGraph, Hugging Face API, background agent workflows (Redis, BullMQ), self-hosted AI gateway operations\\[3pt]
+\color[HTML]{1C033C}\textbf{AI-Assisted Development:} Claude Code, OpenCode, Antigravity, Codex, GitHub Copilot\\[3pt]
+\color[HTML]{1C033C}\textbf{Cloud \& DevOps:} Azure (AKS, Service Bus, Key Vault, Entra External ID, DevOps Pipelines), AWS (Lambda, S3, SQS, EC2), Docker, Terraform, Ansible, GitHub Actions, Prometheus, Sentry, DigitalOcean, Vercel\\[3pt]
+\color[HTML]{1C033C}\textbf{Identity \& Payments:} OAuth 2.0, OIDC, SSO, JWT, RBAC, Microsoft Entra External ID (IdP/CIAM), GraphQL Shield, Stripe, Razorpay, webhook verification \& payment reconciliation\\[3pt]
+\color[HTML]{1C033C}\textbf{Databases \& Practices:} PostgreSQL, Redis, MongoDB, MySQL, DynamoDB, pgvector, TypeORM, Prisma, System Design, TDD (Jest, Flutter Test), Agile/Scrum\\[3pt]
+
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Creative Synergies Group, Bengaluru}} \hfill \color[HTML]{371e77} May 2025 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Senior Software Developer}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Core engineer on \href{https://www.kabuni.com/}{Kabuni}, a youth sports platform spanning web, mobile, and camera hardware: built six Python/FastAPI gRPC microservices (identity, payments, orders, notifications, master data), an API gateway, and the Kabuni web app (Next.js 16, React 19, Turborepo on Bun), deployed to Azure Kubernetes Service across dev/test/uat environments.
+        \item Built and own the payment service end to end: Razorpay and Stripe gateways behind a factory abstraction, HMAC-verified webhooks with an idempotency layer and dead-lettering after max retries, invoice generation, and duplicate-safe payment reconciliation.
+        \item Built customer identity and SSO on Microsoft Entra External ID (CIAM) as the platform IdP: OAuth 2.0/OIDC sign-in flows plus a custom attribute-collection auth extension (extension JWT validator, decision service, and callback route) that drives guardian-led signup for minors with purpose-specific consent and withdrawal journeys under DPDP, GDPR, and COPPA; designed hierarchical RBAC with role inheritance and cycle detection.
+        \item Delivered the notification service with TDD: a versioned gRPC contract, templated delivery over MSG91 and Azure Communication Services behind a provider interface, Azure Service Bus delivery workers, and a Redis OTP store made race-free with an atomic Lua compare-and-delete; wired it into the guardian-consent journey with dynamic provider routing.
+        \item Contributed to event-driven inter-service messaging via the Transactional Outbox pattern over Azure Service Bus, with Redis caching on hot PostgreSQL access paths and Azure Key Vault-first configuration across services.
+        \item Architecting the Kabuni K10 cricket mobile app for native iOS and Android: camera device management, net-session control, biometric facial-recognition login, and a three-tier offline degradation path from cloud biometric login to in-app manual override to on-camera local storage.
+        \item Python, FastAPI, gRPC, PostgreSQL, Redis, Azure Service Bus, Azure Kubernetes Service, Microsoft Entra CIAM, Stripe, Razorpay, Next.js, TypeScript, React, Docker, Azure DevOps
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{{\href{https://www.healthflex.in/}{HealthFlex}, Bengaluru}} \hfill \color[HTML]{371e77} Mar 2024 - May 2025 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Founding Engineer (SDE)}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Joined an AI-powered rehab startup as one of its first engineers, building across four production products: the patient app, the clinician app, the Stance clinical dashboard, and the platform API (Node.js, GraphQL with dataloaders, clean architecture).
+        \item Delivered two cross-platform React Native apps (\href{https://play.google.com/store/apps/developer?id=HealthFlex}{live on the Play Store}) serving 1,000+ patients, coaches, and operations staff on Android and iOS at a 95\% crash-free rate.
+        \item Created and owned the exercise algorithm layer powering rep counting, range-of-motion, correctness scoring, and stability tracking from wearable sensor data; it ran in the production patient app for over a year processing live sensor streams.
+        \item Led the BLE 2.0 sensor-stack migration, rewriting the wearable sensor connection stack: a new BLE context layer, runtime permission checking, and rebuilt device scanning and packet parsing, alongside an event-emitter refactor of the start-position sensor module.
+        \item Served as Tech Lead on the Stance clinical dashboard, directing a 6-engineer team through Scrum ceremonies, Jira planning, and DB schema design; personally built the JWT auth system, the GraphQL Shield authorization layer, RBAC permissions, and Google Calendar event sync.
+        \item Built clinician-facing features in the doctors app, including real-time chat over WebSocket and BLE sensor tagging; set up the patient app's GitHub Actions CI and shipped releases through EAS Build channels with Firebase and Sentry instrumentation.
+        \item React Native, Expo, TypeScript, Zustand, React Query, BLE, Next.js, GraphQL, Node.js, PostgreSQL, AWS, GitHub Actions, Firebase, Sentry
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{EMotorad, Bengaluru} \hfill \color[HTML]{371e77} Sep 2023 - Nov 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{App Developer Intern}} \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Built Amiigo NXT, EMotorad's e-bike rider assistant, in Flutter (MVVM, Clean Architecture, BLoC) and shipped it to \href{https://play.google.com/store/apps/details?id=com.emotorad.amigonxt}{Google Play} and the \href{https://apps.apple.com/in/app/amiigo-nxt/id6737222680}{App Store}.
+        \item Engineered BLE communication with Dart isolates and background services, adding pairing, autoconnection, and automatic recovery from failed connections; improved connection stability 90\% and reduced latency 40\%.
+        \item Implemented Mapbox routing and rerouting with offline maps and live location tracking, cutting map costs by roughly 70\%; reached 80\%+ unit-test coverage with Flutter Test and reduced Gradle build times by 25\%.
+        \item Flutter, Dart, BLoC, GetX, Mapbox, BLE, Firebase, Gradle
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{PySphere LLP, Remote} \hfill \color[HTML]{371e77} Nov 2021 - Sep 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineer (Part-time)}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Built \href{https://carerconnect.co.uk/}{Carer Connect}, a healthcare vendor-management platform: Spring Boot backend, Flutter mobile app, and AngularJS web client on PostgreSQL, cutting manual vendor operations by roughly 80\%; created an encrypted QR code scannable exclusively via the companion app.
+        \item Drove user engagement up 35\% through deep links, push notifications, and Google Calendar integration, serving 1M+ notification requests across SMS, email, and in-app channels.
+        \item Contributed to SonoFlux, a multi-tenant SaaS platform, adding custom domains, OAuth 2.0 login, and Stripe/JusPay/Razorpay payment integration that improved payment success by roughly 25\%; built compliance-oriented user lifecycle features including audit-friendly records and user deletion workflows.
+        \item Led a team of 8 building the RCFD product from ideation through delivery; designed and shipped PySphere's brand and responsive website end to end (Next.js, React, Tailwind CSS), lifting web traffic roughly 45\%.
+        \item Java, Spring Boot, Hibernate, Flutter, AngularJS, Next.js, React, PostgreSQL, AWS, Google Cloud, OAuth 2.0, Stripe, Razorpay
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{AppyHigh LLP, Remote} \hfill \color[HTML]{371e77} Oct 2022 - Jan 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Flutter Developer}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Contributed to \href{https://play.google.com/store/apps/details?id=com.cam.scanner.camscanner.documentscanner}{Scanner Go}, a Flutter document scanner with 10M+ Play Store installs, building complex animation systems and native BLoC state management with Streams.
+        \item Shipped \href{https://play.google.com/store/apps/details?id=railway.app.train.status}{Railway App} (live train status, route information, and station search) and Imagine AI (AI art generator) to the Play Store.
+        \item Wrote a Dart script that automated updating localization files across the app suite.
+        \item Flutter, Dart, BLoC, Streams
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+% Projects
+\section{Projects}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{second.brain - Personal AI Infrastructure (2026):} Personal knowledge-and-agent platform at \href{https://brain.vancity.in}{brain.vancity.in} where AI coding agents work against a Notion-backed second brain organized on the PARA method, connected through MCP integration (Notion and custom data sources) so agents can read and act on projects, areas, and notes. Provisioned the full infrastructure as code -- Terraform for the DigitalOcean VM, VPC, firewall, and DNS, Ansible for configuration, Caddy for automatic TLS -- with CI/CD from composite GitHub Actions, deploy chaining, and health checks. Includes a self-hosted AI proxy server at \href{https://proxy.vancity.in}{proxy.vancity.in} that routes all agent traffic with provider fallback, token compression, and automatic API-key provisioning, consolidating three separate proxy services into one gateway. Terraform, Ansible, DigitalOcean, Bun, TypeScript, Caddy, MCP, Notion API.
+        \item \textbf{xpssh - SSH Key Manager CLI (2026):} Developer tool that removes the friction of juggling SSH identities across multiple git providers and accounts: one interactive terminal UI to generate, assign, and audit keys per profile, so switching between work and personal GitHub, GitLab, Bitbucket, or Azure DevOps accounts just works. Designed a profile model that safely owns its section of the user's SSH config without disturbing hand-written entries, plus self-diagnosis that detects and repairs configuration drift; published to \href{https://www.npmjs.com/package/xpssh-cli}{npm} with source on \href{https://github.com/vancityAyush/xpssh}{GitHub}. TypeScript, Bun, ink, React 19, zod, GitHub Actions.
+        \item \textbf{Iris - AI Resume Tailoring Platform (2026):} RAG platform that tailors resumes to job descriptions, scores them against ATS heuristics, and tracks applications: pgvector similarity search, LangGraph agent workflows, background ingestion over Redis/BullMQ, and Tectonic-based PDF compilation, structured as a hexagonal-architecture monorepo. Next.js, NestJS, PostgreSQL, Turborepo.
+        \item \textbf{Datotta (2021):} Built \href{https://play.google.com/store/apps/details?id=com.datotta}{Datotta}, a Play Store-published e-commerce Android app for a clothing brand, integrating a Shopify backend. Java, Android SDK.
+        \item \textbf{ChatSansar - Nepali IRC Chat Client (2021):} Developed \href{https://play.google.com/store/apps/details?id=com.chatsansar.android}{ChatSansar}, a Play Store-published Android chat client for the Nepali chat community with real-time messaging over the IRC protocol. Java, Android SDK.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{A.M.C. Engineering College (VTU), Bengaluru} & \hfill \color[HTML]{371e77} 2020 - 2024 \\
+\color[HTML]{371e77} B.E. in Computer Science and Engineering & \hfill \color[HTML]{4B28A4} \textit{\textbf{CGPA: 7.96/10}} \\
+\multicolumn{2}{@{}X@{}}{Relevant Coursework: Data Structures \& Algorithms, Operating Systems, Database Management Systems, Computer Networks, Distributed Systems, Mobile Application Development, AI/ML, Object Oriented Programming, Software Engineering}
+\end{tabularx}\\[3pt]
+
+% Leadership and Volunteering
+\section{Awards}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{Quarterly Award (3x), PySphere LLP:} recognized in Q1 2022, Q2 2022, and Q1 2023 for engineering delivery across client products.
+        \item \textbf{First Place, Code of Duty} coding competition.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+\end{document}
