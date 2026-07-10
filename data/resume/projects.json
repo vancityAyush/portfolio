@@ -87,6 +87,8 @@
             "url": "https://www.healthflex.in/",
             "github_url": "https://github.com/vancityAyush/healthflex.app",
             "play_store": "https://play.google.com/store/apps/developer?id=HealthFlex&hl=en_IN",
+            "app_store": "https://apps.apple.com/in/developer/deftronin-technologies-private-limited/id1734219179",
+            "app_store_note": "Developer page for DeftRonin Technologies (HealthFlex's legal entity) covering the patient and doctors apps. Found via iTunes Search API and verified 2026-07-10.",
             "company": "HealthFlex",
             "tech_stack": [
                 "React Native",
@@ -1082,24 +1084,30 @@
             "year": "2021",
             "status": "shipped",
             "resume_value": "medium",
-            "description": "Android IRC chat application with real-time messaging",
+            "description": "IRC chat application for the Nepali chat community with real-time messaging. Built natively for Android, then migrated to native iOS",
+            "url": "https://play.google.com/store/apps/details?id=com.chatsansar.android",
+            "url_verified": "2026-07-10 - Play Store listing returned HTTP 200. URL provided by Ayush during resume tailoring.",
             "github_url": "https://github.com/vancityAyush/ChatSansar",
             "company": "Daphnis Labs",
             "tech_stack": [
                 "Java",
                 "Android SDK",
+                "iOS (native)",
                 "IRC Protocol"
             ],
             "keywords": [
                 "Android",
+                "iOS",
                 "Chat",
                 "IRC",
                 "Real-time"
             ],
             "highlights": [
                 "IRC protocol implementation",
-                "Real-time messaging"
-            ]
+                "Real-time messaging",
+                "Migrated from native Android to native iOS, porting the IRC protocol integration and real-time messaging"
+            ],
+            "note": "iOS migration confirmed by Ayush on 2026-07-10. Self-reported: no iOS repo or App Store artifact located; the linked Play listing covers Android only."
         },
         {
             "name": "Vlogger",

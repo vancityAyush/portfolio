@@ -1152,6 +1152,18 @@
                     "metrics": []
                 },
                 {
+                    "description": "Migrated ChatSansar from native Android to native iOS, porting the IRC protocol integration and real-time messaging",
+                    "keywords": [
+                        "iOS",
+                        "Android",
+                        "IRC",
+                        "Migration",
+                        "Real-time"
+                    ],
+                    "metrics": [],
+                    "note": "Self-reported: confirmed by Ayush on 2026-07-10 during resume tailoring. No iOS repo or App Store artifact verified."
+                },
+                {
                     "description": "Managed two interns, delivering assigned scope on schedule",
                     "keywords": [
                         "Mentorship",
@@ -1166,6 +1178,7 @@
             "tech_stack": [
                 "Java",
                 "Android SDK",
+                "iOS (native)",
                 "Shopify",
                 "Firebase"
             ]
