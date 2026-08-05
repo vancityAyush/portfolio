@@ -1,0 +1,20 @@
+{
+  "name": "colloseum",
+  "full_name": "vancityAyush/colloseum",
+  "description": "Competitive programming and coding challenges repository",
+  "summary": "A repository containing solutions and implementations for competitive programming challenges. Features algorithmic problem-solving solutions, data structure implementations, and coding competition entries. Demonstrates proficiency in algorithms, data structures, and competitive programming methodologies.",
+  "language": "Java",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-01-01T00:00:00Z",
+  "updated_at": "2023-01-01T00:00:00Z",
+  "url": "https://github.com/vancityAyush/colloseum",
+  "features": [
+    "Algorithmic solutions",
+    "Data structure implementations",
+    "Competitive programming"
+  ],
+  "tech_stack": {
+    "languages": ["Java", "C++", "Python"]
+  }
+}

@@ -1,0 +1,1216 @@
+{
+    "last_updated": "2026-07-10",
+    "note": "Quantified claims cite metrics.json by evidence key rather than restating numbers. Where a bullet carries a number inline, metrics.json is authoritative if the two ever disagree.",
+    "experiences": [
+        {
+            "company": "Creative Synergies Group",
+            "location": "Bengaluru",
+            "title": "Software Engineer (Full Stack)",
+            "employment_type": "Full-time",
+            "start_date": "May 2025",
+            "end_date": "Present",
+            "current": true,
+            "evidence": [
+                "csg.contributions",
+                "csg.self_reported"
+            ],
+            "company_context": "Engineering services firm, founded 2011, HQ Okemos MI, offices Bengaluru/Pune/Tokyo. Serves 40+ Fortune 500 companies.",
+            "projects": [
+                {
+                    "name": "FSM (Field Service Management)",
+                    "start_date": "May 2025",
+                    "end_date": "Jul 2025",
+                    "summary": "Enterprise field-service platform: Flutter mobile app plus NestJS backend.",
+                    "highlights": [
+                        {
+                            "description": "Architected an enterprise FSM mobile app in Flutter (Clean Architecture, BLoC), coordinating work orders and real-time technician workflows across Android and iOS with 95%+ crash-free sessions",
+                            "keywords": [
+                                "Flutter",
+                                "Clean Architecture",
+                                "BLoC",
+                                "Android",
+                                "iOS",
+                                "Enterprise",
+                                "Mobile"
+                            ],
+                            "metrics": [
+                                "95%+ crash-free sessions"
+                            ],
+                            "evidence": "csg.self_reported"
+                        },
+                        {
+                            "description": "Implemented NestJS microservices with TypeORM/PostgreSQL, JWT auth, and role-based access (RBAC), scaling to 100+ field engineers and reducing API latency by ~30%",
+                            "keywords": [
+                                "NestJS",
+                                "TypeORM",
+                                "PostgreSQL",
+                                "JWT",
+                                "RBAC",
+                                "Microservices",
+                                "REST API"
+                            ],
+                            "metrics": [
+                                "100+ field engineers",
+                                "~30% latency reduction"
+                            ],
+                            "evidence": "csg.self_reported"
+                        },
+                        {
+                            "description": "Built a native Android document scanner in Kotlin using ML Kit, Room, and Compose, automating PDF capture for compliance documents with 99.9% data integrity during offline operations",
+                            "keywords": [
+                                "Kotlin",
+                                "ML Kit",
+                                "Room",
+                                "Jetpack Compose",
+                                "Android Native",
+                                "PDF",
+                                "Offline-first"
+                            ],
+                            "metrics": [
+                                "99.9% data integrity offline"
+                            ]
+                        },
+                        {
+                            "description": "Established CI/CD with GitHub Actions and Gradle for multi-env (dev/stage/prod) pipelines; cut release time ~50% for Android and iOS",
+                            "keywords": [
+                                "CI/CD",
+                                "GitHub Actions",
+                                "Gradle",
+                                "DevOps",
+                                "Release Management"
+                            ],
+                            "metrics": [
+                                "~50% release time reduction"
+                            ],
+                            "evidence": "csg.self_reported"
+                        },
+                        {
+                            "description": "Drove TDD with Jest and Flutter Test, achieving 80%+ coverage across auth, work orders, documents, and inventory modules",
+                            "keywords": [
+                                "TDD",
+                                "Jest",
+                                "Flutter Test",
+                                "Unit Testing",
+                                "Integration Testing"
+                            ],
+                            "metrics": [
+                                "80%+ test coverage"
+                            ],
+                            "evidence": "csg.self_reported"
+                        },
+                        {
+                            "description": "Integrated GPS and location services (geofencing, validation, location-based actions) with image capture and signature workflows for verified completion",
+                            "keywords": [
+                                "GPS",
+                                "Geofencing",
+                                "Location Services",
+                                "Image Capture",
+                                "Signature"
+                            ]
+                        }
+                    ],
+                    "tech_stack": [
+                        "Flutter",
+                        "Dart",
+                        "BLoC",
+                        "Kotlin",
+                        "ML Kit",
+                        "Room",
+                        "Jetpack Compose",
+                        "NestJS",
+                        "TypeScript",
+                        "PostgreSQL",
+                        "TypeORM",
+                        "GitHub Actions",
+                        "Gradle",
+                        "Hive",
+                        "Jest",
+                        "Google Maps SDK"
+                    ],
+                    "repos": [
+                        "CreativeDT/fsm-app",
+                        "CreativeDT/fsm-backend-2"
+                    ]
+                },
+                {
+                    "name": "PS Predict",
+                    "client": "Platform Science",
+                    "start_date": "Jul 2025",
+                    "end_date": "Jan 2026",
+                    "status": "Completed",
+                    "summary": "Fleet-telemetry prediction platform for Platform Science, delivered through CSG.",
+                    "highlights": [
+                        {
+                            "description": "Built foundation packages (@ps-predict/common, @ps-predict/types) establishing shared contracts across the prediction platform's services",
+                            "keywords": [
+                                "TypeScript",
+                                "Monorepo",
+                                "API Design",
+                                "Shared Contracts"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Implemented a Platform Science OAuth/API client with rate limiting, retry policies, and correlation IDs for cross-service request tracing",
+                            "keywords": [
+                                "OAuth",
+                                "Rate Limiting",
+                                "Retries",
+                                "Observability",
+                                "Correlation IDs"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Instrumented the prediction engine with Prometheus metrics, structured logging, and alerting; secured endpoints with JWT/RBAC guards",
+                            "keywords": [
+                                "Prometheus",
+                                "Structured Logging",
+                                "Alerting",
+                                "JWT",
+                                "RBAC"
+                            ],
+                            "metrics": []
+                        },
+                        {
+                            "description": "Extended McLeod backend APIs and engine telemetry; delivered the ps-predict Android app and a shared testing package",
+                            "keywords": [
+                                "McLeod",
+                                "Telemetry",
+                                "Android",
+                                "Testing"
+                            ],
+                            "metrics": []
+                        }
+                    ],
+                    "tech_stack": [
+                        "Python",
+                        "TypeScript",
+                        "gRPC",
+                        "PostgreSQL",
+                        "Prometheus",
+                        "JWT",
+                        "Android"
+                    ],
+                    "repos": [
+                        "CreativeDT/ps-predict"
+                    ],
+                    "evidence": "csg.contributions"
+                },
+                {
+                    "name": "Kabuni Platform",
+                    "client": "Kabuni",
+                    "start_date": "Jan 2026",
+                    "end_date": "Present",
+                    "status": "In progress",
+                    "mvp_target": "Mar 2027",
+                    "url": "https://www.kabuni.com/",
+                    "summary": "Youth-focused platform spanning web, a cricket mobile app, and camera hardware. Child-safety compliance is the defining constraint (DPDP, GDPR, COPPA).",
+                    "evidence": "kabuni.services",
+                    "caution": "The PRODUCT has not launched: no users, no traffic, no impact metrics. Never attach an outcome metric to a Kabuni bullet. But the backend platform is built and deployed - the kabuni-services repo is real, measurable work sitting on AKS across dev/test/uat with 116 release tags. Split the two: cite kabuni.services for anything delivered (services, CI/CD, gateways, auth), and kabuni.mobile_scope for the cricket app and camera, which are specification only. Four bullets below are contradicted by the repo - see rejected.kabuni.code_contradicted before printing any of them.",
+                    "highlights": [
+                        {
+                            "description": "Building backend services for the Kabuni platform in Python/FastAPI with gRPC and PostgreSQL, covering payments, identity, master data, notifications, and platform workflows",
+                            "keywords": [
+                                "Python",
+                                "FastAPI",
+                                "gRPC",
+                                "PostgreSQL",
+                                "Microservices"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services"
+                        },
+                        {
+                            "description": "Built and owned the Kabuni Payment Service, authoring 98% of its files: Razorpay and Stripe gateways behind a factory abstraction, HMAC webhook signature verification, an idempotency layer, webhook dead-lettering after max retries, invoice generation, and reconciliation with duplicate-event handling",
+                            "keywords": [
+                                "Razorpay",
+                                "Stripe",
+                                "Payments",
+                                "Webhooks",
+                                "Idempotency",
+                                "Reconciliation",
+                                "Dead-letter Queue",
+                                "FastAPI"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Verified: Ayush scaffolded payment-service and created razorpay_client.py, stripe_client.py and the webhook processor. Stripe is also live and is missing from the tech_stack narrative."
+                        },
+                        {
+                            "description": "Built the Kabuni Notification Service end to end with TDD, authoring 87% of its files: a notification.v1 gRPC contract, templated delivery over MSG91 and Azure Communication Services behind a provider interface, Azure Service Bus delivery workers, and a Redis OTP store using an atomic Lua compare-and-delete to make verification race-free",
+                            "keywords": [
+                                "gRPC",
+                                "Redis",
+                                "Lua",
+                                "Azure Service Bus",
+                                "MSG91",
+                                "Azure Communication Services",
+                                "TDD",
+                                "Notifications"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Verified: 64/87 commits, 117/134 surviving files, and Ayush's 9 red / 12 green TDD commits land here. Co-owned with Mahesh, Gowthama, Sakshi, Amala. Coverage gate is 60%."
+                        },
+                        {
+                            "description": "Wired the notification service into the guardian-consent journey over gRPC with dynamic provider routing, so parental-consent OTPs and approval emails for minor accounts flow through one delivery path",
+                            "keywords": [
+                                "gRPC",
+                                "Parental Consent",
+                                "OTP",
+                                "DPDP",
+                                "Guardian Consent",
+                                "Service Integration"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Verified across identity-service and notification-service commits (2026-06-04)."
+                        },
+                        {
+                            "description": "Contributed payment/order reconciliation, an admin RBAC role-name fix that had locked administrators out of the payment admin APIs, and cross-cutting configuration work (Key Vault precedence over env, per-service schema naming, UAT environments) to the order service",
+                            "keywords": [
+                                "Reconciliation",
+                                "RBAC",
+                                "Azure Key Vault",
+                                "Configuration",
+                                "Microservices"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Ayush is the top committer in order-service (41/89) but created only 17% of its files - Gowthama K S built it and authored the Outbox. Phrase as contribution, never as ownership. See kabuni.services.service_ownership.order-service."
+                        },
+                        {
+                            "description": "Implemented event-driven inter-service communication via the Transactional Outbox pattern over Azure Service Bus, with Redis-backed caching on PostgreSQL access paths",
+                            "keywords": [
+                                "Transactional Outbox",
+                                "Azure Service Bus",
+                                "Event-Driven",
+                                "Redis",
+                                "Caching"
+                            ],
+                            "metrics": [],
+                            "caution": "PARTIALLY CONTRADICTED. The Outbox exists but was created by Gowthama K S; Ayush authored 11 of 20 outbox commits. Say 'contributed to', not 'Implemented'. Azure Service Bus + Redis halves are verified.",
+                            "evidence": "rejected.kabuni.code_contradicted",
+                            "status": "NEEDS REWRITE - do not print as-is. Downgrade 'Implemented' to 'contributed to'; Ayush did not originate the Outbox."
+                        },
+                        {
+                            "description": "Created and led the Kabuni Identity Service (60% of its files), integrating Microsoft Entra External ID (CIAM) via a custom OnAttributeCollectionSubmit auth extension - extension JWT validator, decision service and callback route - to drive a guardian-led signup flow for Indian minors with purpose-specific consent, approval and withdrawal journeys",
+                            "keywords": [
+                                "Identity",
+                                "CIAM",
+                                "Microsoft Entra External ID",
+                                "Guardian Consent",
+                                "DPDP",
+                                "GDPR",
+                                "COPPA",
+                                "JWT",
+                                "FastAPI"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "Verified: 104/187 commits, 98/164 surviving files. Co-owned with Sagar, Damini, Gowthama, Mahesh. Ayush created entra_extension_auth.py, the extension JWT validator, EntraAttributeCollectionService and the attribute-collection-submit route (2026-05-18/19)."
+                        },
+                        {
+                            "description": "Migrated the authorization model from pure RBAC to hybrid RBAC+ABAC within six weeks after contextual child-data policies outgrew role-only checks; JWT with 15-minute access and 30-day refresh tokens",
+                            "keywords": [
+                                "RBAC",
+                                "ABAC",
+                                "Authorization",
+                                "JWT",
+                                "Architecture Migration"
+                            ],
+                            "metrics": [],
+                            "caution": "CONTRADICTED. Zero occurrences of ABAC/attribute-based/policy-engine in the repo. The model is hierarchical RBAC (role inheritance + cycle detection). The 15-minute/30-day token lifetimes do not exist in code either. Rewrite per rejected.kabuni.code_contradicted.correct before use.",
+                            "evidence": "rejected.kabuni.code_contradicted",
+                            "status": "NEEDS REWRITE - do not print as-is. The ABAC and token-lifetime claims are contradicted by the repo.",
+                            "replacement": "Designed hierarchical RBAC for the identity service: role inheritance with cycle detection and permissions resolved transitively across the role graph (rbac_service.py, auth_deps._collect_role_permissions). Created by Ayush 2026-04-06. Use this bullet instead - it is what the code does, and it is verifiable."
+                        },
+                        {
+                            "description": "Delivered frontend surfaces in Next.js/TypeScript and Flutter mobile flows; Azure IoT Hub with X.509 device identity for the Kabuni hardware camera",
+                            "keywords": [
+                                "Next.js",
+                                "TypeScript",
+                                "Flutter",
+                                "Azure IoT Hub",
+                                "X.509"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.services",
+                            "caution": "UNVERIFIED. Zero matches for iothub/x509/.dart/pubspec.yaml in kabuni-services. May live in another repo; confirm there before printing. See kabuni.services.unverified_in_this_repo."
+                        },
+                        {
+                            "description": "Architecting the native iOS/Android Kabuni Cricket App, which owns camera device management, net-session control, and biometric facial-recognition login - all specified as mobile-only, with the website deliberately excluded",
+                            "keywords": [
+                                "iOS",
+                                "Android",
+                                "Mobile Architecture",
+                                "Device Management",
+                                "Biometric Authentication",
+                                "Facial Recognition"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.mobile_scope",
+                            "caution": "Scope, not delivery. Drawn from the client product specification; Ayush's lead-architect claim on the mobile surface is self-asserted."
+                        },
+                        {
+                            "description": "Designing a three-tier offline degradation path for net sessions: cloud biometric login over 5G/WiFi, falling back to in-app manual batter override from the parent/child roster, falling back to on-camera local storage for later transfer",
+                            "keywords": [
+                                "Offline-first",
+                                "Graceful Degradation",
+                                "Mobile",
+                                "Sync",
+                                "Edge"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.mobile_scope",
+                            "caution": "Scope, not delivery."
+                        },
+                        {
+                            "description": "Navigating a legal constraint where India prohibits tracking users via biometric data, forcing possible geo-locking of the first camera release while a many-to-many user/camera model requires cloud-held biometrics",
+                            "keywords": [
+                                "Biometric Privacy",
+                                "DPDP",
+                                "Geo-fencing",
+                                "Regulatory Constraint"
+                            ],
+                            "metrics": [],
+                            "evidence": "kabuni.mobile_scope",
+                            "caution": "Scope, not delivery."
+                        }
+                    ],
+                    "tech_stack": [
+                        "Python",
+                        "FastAPI",
+                        "gRPC",
+                        "PostgreSQL",
+                        "Redis",
+                        "Azure Service Bus",
+                        "Azure App Configuration (unverified in kabuni-services)",
+                        "Azure Key Vault",
+                        "Azure IoT Hub (unverified in kabuni-services)",
+                        "Microsoft Entra External ID",
+                        "Razorpay",
+                        "Next.js",
+                        "TypeScript",
+                        "React",
+                        "Flutter (unverified in kabuni-services)",
+                        "Docker",
+                        "Azure DevOps Pipelines",
+                        "Stripe",
+                        "Azure Kubernetes Service",
+                        "Helm",
+                        "Turborepo",
+                        "Bun",
+                        "OpenTelemetry",
+                        "MSG91",
+                        "Azure Communication Services"
+                    ]
+                }
+            ],
+            "tech_stack": [
+                "Python",
+                "FastAPI",
+                "gRPC",
+                "Flutter",
+                "Dart",
+                "Kotlin",
+                "NestJS",
+                "TypeScript",
+                "Next.js",
+                "PostgreSQL",
+                "Redis",
+                "TypeORM",
+                "Azure Service Bus",
+                "Azure Key Vault",
+                "Microsoft Entra CIAM",
+                "Razorpay",
+                "Docker",
+                "GitHub Actions",
+                "Azure DevOps",
+                "Gradle",
+                "Jest",
+                "ML Kit"
+            ]
+        },
+        {
+            "company": "HealthFlex",
+            "legal_entity": "DeftRonin Technologies",
+            "location": "Bangalore",
+            "title": "Founding Engineer (SDE)",
+            "employment_type": "Full-time",
+            "start_date": "Mar 2024",
+            "end_date": "May 2025",
+            "current": false,
+            "industry": "Healthcare",
+            "product": "AI Powered Rehab",
+            "url": "https://www.healthflex.in/",
+            "evidence": [
+                "hf.merged_prs_total",
+                "hf.authored_commits",
+                "hf.exercise_algo_shipped",
+                "hf.exercise_module_refactor",
+                "hf.ble_work",
+                "hf.ci_ownership",
+                "hf.self_reported"
+            ],
+            "highlights": [
+                {
+                    "description": "Authored 101 merged PRs and 731 commits across four products - the patient app, the clinician app, the Stance clinical dashboard, and the platform API - as one of the first engineers on the team",
+                    "keywords": [
+                        "React Native",
+                        "TypeScript",
+                        "Node.js",
+                        "Founding Engineer"
+                    ],
+                    "metrics": [
+                        "101 merged PRs",
+                        "731 commits",
+                        "4 products"
+                    ],
+                    "evidence": "hf.merged_prs_total",
+                    "note": "101 is the strict floor (every commit on the merged branch is Ayush's). Upper bound is 131. Prefer PR count over the +81.5K hand-written lines added, because the aggregate net across repos is near zero - stance-dashboard was a large deletion/refactor effort."
+                },
+                {
+                    "description": "Delivered two cross-platform React Native apps for patients, coaches, and internal operations teams with a 95% crash-free rate, serving 1,000+ users across Android and iOS",
+                    "keywords": [
+                        "React Native",
+                        "Cross-platform",
+                        "Mobile",
+                        "Android",
+                        "iOS",
+                        "Healthcare"
+                    ],
+                    "metrics": [
+                        "95% crash-free rate",
+                        "1,000+ users"
+                    ],
+                    "evidence": "hf.self_reported"
+                },
+                {
+                    "description": "Led the BLE 2.0 migration (PR #218, +1,164 / -383 across 18 files), rewriting the sensor connection stack: a new BLE context layer (+711 lines), a runtime permission-checker component, and a rebuilt device-scanning screen and BLE packet parser",
+                    "keywords": [
+                        "BLE",
+                        "Bluetooth",
+                        "IoT",
+                        "Hardware Integration",
+                        "React Native",
+                        "Migration"
+                    ],
+                    "metrics": [
+                        "+1,164 lines across 18 files"
+                    ],
+                    "evidence": [
+                        "hf.ble_work",
+                        "hf.app.merged_prs"
+                    ],
+                    "note": "Rewritten 2026-07-10. The previous version claimed 'TDD (55+ unit tests)', '20Hz per device' and 'via RxJS'. All three are contradicted by the repo: Ayush authored zero test-file commits in any HealthFlex repo; 20Hz is one of ten selectable rates in a file written after he left; RxJS is used in the codebase but authored by a colleague. See rejected.hf.code_contradicted."
+                },
+                {
+                    "description": "Migrated the start-position sensor module off an observer/strategy pattern to an event-emitter architecture, deleting ~190 lines of indirection",
+                    "keywords": [
+                        "Refactoring",
+                        "Event-Driven",
+                        "Architecture",
+                        "Sensors"
+                    ],
+                    "metrics": [],
+                    "evidence": "hf.ble_work"
+                },
+                {
+                    "description": "Created and owned the exercise algorithm layer powering rep counting, range-of-motion, correctness scoring, and stability tracking in the patient app - authoring 63% of its commits and growing it to ~850 lines; it shipped to production and remained in the app for over a year",
+                    "keywords": [
+                        "Algorithms",
+                        "Signal Processing",
+                        "Rep Counting",
+                        "Range of Motion",
+                        "Sensors",
+                        "TypeScript"
+                    ],
+                    "metrics": [
+                        "63% of commits (32 of 51)",
+                        "+6.2K / -3.6K lines across the exercise surface"
+                    ],
+                    "evidence": "hf.exercise_algo_shipped",
+                    "note": "Strongest ownership claim at HealthFlex: Ayush created src/store/algo-utils.ts on 2024-07-21 and the earliest sensor-scanning entry point on 2024-06-06. Safe to say 'built and owned'."
+                },
+                {
+                    "description": "Prototyped a pattern-driven rewrite of the exercise engine (2,155 lines, 29 files) on a refactor branch: five interchangeable scoring strategies (global ROM, axis ROM, correctness, stability score, direction feedback) behind a shared interface, a fluent rep Builder, a rep-lifecycle State machine, and an event-emitter/observer layer decoupling sensor ingest from rep evaluation",
+                    "keywords": [
+                        "Strategy Pattern",
+                        "Builder Pattern",
+                        "State Machine",
+                        "Observer Pattern",
+                        "Event-Driven",
+                        "Software Architecture",
+                        "TypeScript",
+                        "Refactoring"
+                    ],
+                    "metrics": [
+                        "2,155 lines across 29 files",
+                        "5 scoring strategies"
+                    ],
+                    "evidence": "hf.exercise_module_refactor",
+                    "caution": "PROTOTYPE - never merged to dev. Phrase as design/refactor work ('prototyped', 'designed'), never as shipped or as a delivered user outcome. If asked, the honest story is that the team took a different direction. Do NOT attach an impact metric."
+                },
+                {
+                    "description": "Modularized ML algorithms via native module integration, processing 2,000+ datapoints/sec in-app for rep counting and range-of-motion",
+                    "keywords": [
+                        "ML",
+                        "Machine Learning",
+                        "Native Modules",
+                        "Performance Optimization"
+                    ],
+                    "metrics": [
+                        "2,000+ datapoints/sec"
+                    ],
+                    "evidence": "hf.self_reported",
+                    "caution": "Self-asserted throughput figure. The exercise/algo code is verifiably Ayush's (see hf.exercise_algo_shipped), but the 2,000/sec number is not verifiable from git. Prefer the ownership bullet above if only one algorithm bullet fits."
+                },
+                {
+                    "description": "REMOVED 2026-07-10 - do not reinstate. Previously: 'Led Expo SDK 52 migration with FlashList optimization, cutting list render time from 800ms to ~40ms'. Git blame shows the FlashList migration was authored by Abhishek Jaiswal (2024-11-27) and the Expo SDK bumps by Niraj Kishore. Neither is Ayush's work.",
+                    "keywords": [],
+                    "metrics": [],
+                    "evidence": "rejected.hf.code_contradicted",
+                    "status": "retracted"
+                },
+                {
+                    "description": "Architected the Component Migration (PR #70, +14,193 / -4,127 across 154 files), refactoring the entire patient app's component layer; drove the exercise-algorithm build-out landing in PR #160 (+4,687 / -2,080 across 149 files)",
+                    "keywords": [
+                        "React Native",
+                        "Refactoring",
+                        "Architecture",
+                        "Algorithms"
+                    ],
+                    "metrics": [
+                        "+14,193 lines / 154 files",
+                        "+4,687 lines / 149 files"
+                    ],
+                    "evidence": "hf.app.merged_prs",
+                    "note": "PR #70's diffstat verified exact. The old '+5,400 lines Non-measurable Flow (#252)' was dropped: PR #252 does not exist, and the real non-measurable PR (#250) is +91/-13. Replaced with the algorithm build-out, which is real."
+                },
+                {
+                    "description": "Served as Tech Lead on Stance Dashboard, directing a 6-engineer team through Scrum ceremonies, Jira planning, DB schema design, and PR review; personally authored 18 merged PRs including the auth system (+1,738), GraphQL Shield authorization (+662), RBAC permissions (+789), and Google Calendar event sync (+1,558)",
+                    "keywords": [
+                        "Tech Lead",
+                        "Team Leadership",
+                        "Scrum",
+                        "Jira",
+                        "TypeScript",
+                        "Next.js",
+                        "GraphQL",
+                        "RBAC"
+                    ],
+                    "metrics": [
+                        "Team of 6",
+                        "18 merged PRs"
+                    ],
+                    "evidence": "hf.stance.merged_prs",
+                    "note": "All four named PR diffstats verified exact against git. Team size corrected from 4 to 6 distinct human committers (Feb-May 2025). Ayush was the #2 committer by volume. Do NOT add a 'lines added' figure here: his net hand-written contribution is -17,541, because the work was largely consolidation."
+                },
+                {
+                    "description": "Owned the Stance deployment pipeline: GitHub Actions deploy workflow with bun and pm2 provisioning and a GraphQL codegen step (second-most workflow commits in the repo)",
+                    "keywords": [
+                        "CI/CD",
+                        "GitHub Actions",
+                        "bun",
+                        "pm2",
+                        "GraphQL Codegen",
+                        "DevOps"
+                    ],
+                    "metrics": [],
+                    "evidence": "hf.ci_ownership"
+                },
+                {
+                    "description": "Built clinician-facing features in the Doctors App across 24 merged PRs (+7.6K / -4.7K lines over 174 files), including real-time chat over WebSocket (+322), the sensor-tagging migration (+357), and home/profile screen migrations",
+                    "keywords": [
+                        "React Native",
+                        "TypeScript",
+                        "WebSocket",
+                        "Real-time",
+                        "Healthcare"
+                    ],
+                    "metrics": [
+                        "24 merged PRs",
+                        "+7.6K lines / 174 files"
+                    ],
+                    "evidence": "hf.doctors.merged_prs",
+                    "note": "Upgraded from '11 merged PRs' - the old figure undercounted by more than half. Storybook and Fastlane were dropped from this bullet: Storybook was configured by nirajgeorgian and is no longer a dependency, and Fastlane has never existed in this repo. Ayush authored zero workflow commits here, so the 'release pipelines' claim was also removed."
+                },
+                {
+                    "description": "Contributed to the platform API (Node.js, GraphQL with dataloaders, NestJS-style clean architecture) across 6 merged PRs: ROM overview endpoints, /me API response caching, session DTOs, and dashboard queries",
+                    "keywords": [
+                        "Node.js",
+                        "TypeScript",
+                        "GraphQL",
+                        "NestJS",
+                        "PostgreSQL",
+                        "Clean Architecture"
+                    ],
+                    "metrics": [
+                        "6 merged PRs"
+                    ],
+                    "evidence": "hf.api.merged_prs",
+                    "note": "Keep this bullet modest. 24 commits and ~900 hand-written lines added over May-Sep 2024 is a real contribution but not authorship of the API. Never write 'architected' here - the exercise landmark parser, regimen management, pain alerts and group access control were not verified as Ayush's and have been removed from this bullet."
+                },
+                {
+                    "description": "Set up the patient app's initial GitHub Actions CI workflow; shipped releases through EAS Build (dev/preview/prod channels) with Firebase (Analytics, Crashlytics, Performance) and Sentry instrumentation",
+                    "keywords": [
+                        "CI/CD",
+                        "GitHub Actions",
+                        "EAS Build",
+                        "Expo",
+                        "Firebase",
+                        "Sentry",
+                        "Release Management"
+                    ],
+                    "metrics": [],
+                    "evidence": "hf.ci_ownership",
+                    "note": "Rewritten 2026-07-10. Fastlane was never present in any HealthFlex repo - the toolchain is EAS Build + GitHub Actions. The '~40% release cycle reduction' figure was dropped as unverifiable and tied to a tool that was never used. Ayush's real CI footprint on healthflex.app is 5 workflow commits (created main.yml, renamed to build.yml, Oct 2024)."
+                }
+            ],
+            "tech_stack": [
+                "React Native",
+                "Expo",
+                "TypeScript",
+                "Zustand",
+                "React Query",
+                "Kotlin",
+                "BLE",
+                "react-native-ble-plx",
+                "Gradle",
+                "EAS",
+                "Firebase",
+                "Sentry",
+                "Next.js",
+                "GraphQL",
+                "GraphQL Shield",
+                "Node.js",
+                "Serverless Framework",
+                "PostgreSQL",
+                "MongoDB",
+                "AWS",
+                "Jest",
+                "Puppeteer",
+                "Husky",
+                "ESLint",
+                "EAS Build",
+                "WebSocket"
+            ],
+            "alternate_titles_seen": [
+                "Founding Engineer (Mobile Lead)",
+                "Software Developer Engineer"
+            ],
+            "tech_stack_note": "Fastlane and Storybook removed 2026-07-10: Fastlane never existed in any HealthFlex repo (EAS Build was used); Storybook was configured by a colleague and is no longer a dependency. RxJS removed: present in the codebase for BLE stream processing but authored by nirajgeorgian, not Ayush."
+        },
+        {
+            "company": "EMotorad",
+            "location": "Bangalore",
+            "title": "App Developer Intern",
+            "employment_type": "Internship",
+            "start_date": "Sep 2023",
+            "end_date": "Nov 2023",
+            "current": false,
+            "team_size": 5,
+            "evidence": [
+                "emotorad.self_reported"
+            ],
+            "highlights": [
+                {
+                    "description": "Built the Amiigo NXT e-bike rider assistant in Flutter (MVVM, Clean Architecture, BLoC for screens, GetX for components); shipped to both the Play Store and App Store",
+                    "keywords": [
+                        "Flutter",
+                        "MVVM",
+                        "Clean Architecture",
+                        "BLoC",
+                        "GetX",
+                        "REST API"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Developed Bluetooth comms with Dart isolates and background services, adding pairing support, autoconnection, and automatic recovery from failed connections; improved connection stability 90% and reduced latency 40%",
+                    "keywords": [
+                        "Bluetooth",
+                        "BLE",
+                        "Dart Isolates",
+                        "Background Services",
+                        "Performance"
+                    ],
+                    "metrics": [
+                        "90% stability improvement",
+                        "40% latency reduction"
+                    ],
+                    "evidence": "emotorad.self_reported"
+                },
+                {
+                    "description": "Implemented Mapbox routing and rerouting with caching, live location tracking, offline maps, and Google Maps autocomplete; cut map costs ~70%",
+                    "keywords": [
+                        "Mapbox",
+                        "Navigation",
+                        "Routing",
+                        "Offline Maps",
+                        "Google Maps",
+                        "Caching",
+                        "Cost Optimization"
+                    ],
+                    "metrics": [
+                        "~70% map cost reduction"
+                    ],
+                    "evidence": "emotorad.self_reported"
+                },
+                {
+                    "description": "Added support for localization, theming, flavors, and adaptive screens across the app",
+                    "keywords": [
+                        "Localization",
+                        "Theming",
+                        "Flavors",
+                        "Adaptive UI"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Achieved 80%+ unit test coverage with Flutter Test; optimized Gradle to reduce build times ~25%",
+                    "keywords": [
+                        "Flutter Test",
+                        "Unit Testing",
+                        "Gradle",
+                        "Build Optimization"
+                    ],
+                    "metrics": [
+                        "80%+ test coverage",
+                        "~25% build time reduction"
+                    ],
+                    "evidence": "emotorad.self_reported"
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Mapbox",
+                "BLE",
+                "GetX",
+                "Firebase",
+                "Gradle",
+                "Dio",
+                "Retrofit"
+            ],
+            "alternate_titles_seen": [
+                "Software Engineer Intern",
+                "Android/Mobile Engineer Intern"
+            ]
+        },
+        {
+            "company": "PySphere LLP",
+            "location": "Remote",
+            "title": "Research Fellow",
+            "employment_type": "Part-time / Contract",
+            "start_date": "Nov 2021",
+            "end_date": "Sep 2023",
+            "current": false,
+            "evidence": [
+                "pysphere.self_reported"
+            ],
+            "note": "Part-time and concurrent with several other engagements. Keep the part-time framing explicit on any resume so the overlap does not read as padding.",
+            "highlights": [
+                {
+                    "description": "Led a team of 8 to build the RCFD product from ideation through delivery",
+                    "keywords": [
+                        "Team Leadership",
+                        "Product Development",
+                        "Ideation"
+                    ],
+                    "metrics": [
+                        "Team of 8"
+                    ],
+                    "evidence": "pysphere.self_reported"
+                },
+                {
+                    "description": "Built Carer Connect for Carer Connect Ltd - a Spring Boot backend with a Flutter mobile app and AngularJS web client on PostgreSQL, cutting manual vendor ops by ~80%",
+                    "keywords": [
+                        "Spring Boot",
+                        "Flutter",
+                        "AngularJS",
+                        "PostgreSQL",
+                        "Google Cloud",
+                        "Healthcare",
+                        "Vendor Management"
+                    ],
+                    "metrics": [
+                        "~80% manual ops reduction"
+                    ],
+                    "evidence": "pysphere.self_reported"
+                },
+                {
+                    "description": "Created an encrypted QR code for Carer Connect, scannable exclusively via the companion app",
+                    "keywords": [
+                        "Encryption",
+                        "QR Code",
+                        "Mobile Security"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Drove engagement +35% via deep links, push notifications, and Google Calendar integrations; served 1M+ notification requests across SMS, email, and in-app channels",
+                    "keywords": [
+                        "Deep Links",
+                        "Push Notifications",
+                        "Google Calendar",
+                        "Notifications",
+                        "User Engagement"
+                    ],
+                    "metrics": [
+                        "+35% engagement",
+                        "1M+ notification requests"
+                    ],
+                    "evidence": "pysphere.self_reported"
+                },
+                {
+                    "description": "Architected the Dekhbuy project to streamline an offline business process, owning delivery of the desktop application to the client",
+                    "keywords": [
+                        "Desktop",
+                        "Client Delivery",
+                        "Process Automation"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Designed and delivered PySphere's web presence end to end - logo, brochure, wireframes, high-level design, and the responsive site (Next.js, React, Tailwind, Figma) - increasing web traffic ~45%",
+                    "keywords": [
+                        "Next.js",
+                        "React",
+                        "Tailwind CSS",
+                        "Figma",
+                        "Branding",
+                        "Wireframing",
+                        "Responsive Design"
+                    ],
+                    "metrics": [
+                        "~45% web traffic increase"
+                    ],
+                    "evidence": "pysphere.self_reported"
+                },
+                {
+                    "description": "Contributed to SonoFlux (multi-tenant platform) with custom domains, OAuth 2.0, and Stripe/JusPay/Razorpay integration; improved payment success ~25%",
+                    "keywords": [
+                        "Multi-tenant",
+                        "OAuth 2.0",
+                        "Stripe",
+                        "JusPay",
+                        "Razorpay",
+                        "Payments",
+                        "SaaS"
+                    ],
+                    "metrics": [
+                        "~25% payment success improvement"
+                    ],
+                    "evidence": "pysphere.self_reported"
+                },
+                {
+                    "description": "Built compliance-oriented user lifecycle features including audit-friendly records, data cleanup flows, and user deletion workflows",
+                    "keywords": [
+                        "Compliance",
+                        "Audit",
+                        "Data Lifecycle",
+                        "GDPR"
+                    ],
+                    "metrics": []
+                }
+            ],
+            "tech_stack": [
+                "Java 11+",
+                "Spring Boot",
+                "Hibernate",
+                "Flutter",
+                "AngularJS",
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "PostgreSQL",
+                "AWS Lambda",
+                "AWS SQS",
+                "AWS S3",
+                "AWS EC2",
+                "DynamoDB",
+                "Google Cloud",
+                "Jenkins",
+                "OAuth2",
+                "Stripe",
+                "JusPay",
+                "Razorpay",
+                "Jest"
+            ],
+            "alternate_titles_seen": [
+                "Senior Developer Intern",
+                "Software Engineer",
+                "Software Engineer Intern",
+                "Fullstack Developer"
+            ]
+        },
+        {
+            "company": "Infoware",
+            "location": "Remote",
+            "title": "Senior Flutter Developer Intern",
+            "employment_type": "Internship",
+            "start_date": "Feb 2023",
+            "end_date": "Jul 2023",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Developed cross-platform applications in Flutter with clean architecture, state management using Streams, and SOLID principles",
+                    "keywords": [
+                        "Flutter",
+                        "Clean Architecture",
+                        "Streams",
+                        "SOLID",
+                        "State Management"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Built a reusable Flutter KYC plugin with an encrypted REST API layer and backend-controlled navigation",
+                    "keywords": [
+                        "Flutter",
+                        "Plugin Development",
+                        "KYC",
+                        "Encryption",
+                        "REST API"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Diagnosed and fixed 50+ bugs across the Flutter codebase",
+                    "keywords": [
+                        "Debugging",
+                        "Maintenance"
+                    ],
+                    "metrics": [
+                        "50+ bugs fixed"
+                    ]
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Streams",
+                "Clean Architecture",
+                "REST APIs"
+            ]
+        },
+        {
+            "company": "AppyHigh LLP",
+            "location": "Remote",
+            "title": "Flutter Developer",
+            "employment_type": "Full-time",
+            "start_date": "Oct 2022",
+            "end_date": "Jan 2023",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Contributed as a Flutter developer to Scanner Go, a document scanner with 10M+ Play Store installs",
+                    "keywords": [
+                        "Flutter",
+                        "Scanner",
+                        "Mobile App",
+                        "High-scale"
+                    ],
+                    "metrics": [
+                        "10M+ Play Store installs (app-level)"
+                    ],
+                    "evidence": "scannergo.installs",
+                    "caution": "App-level install count over a ~4-month contribution, not a personal outcome. Never phrase as 'built an app with 10M downloads'."
+                },
+                {
+                    "description": "Shipped Railway App (live train status) and Imagine AI (AI art generator) to the Play Store",
+                    "keywords": [
+                        "Flutter",
+                        "Play Store",
+                        "AI",
+                        "Live Tracking"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Created complex animations in Flutter for enhanced user experience",
+                    "keywords": [
+                        "Flutter",
+                        "Animations",
+                        "UI/UX"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Wrote a Dart script to streamline and update localization Dart files",
+                    "keywords": [
+                        "Dart",
+                        "Automation",
+                        "Localization"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Acquired proficiency in native BLoC state management with Streams and SOLID principles",
+                    "keywords": [
+                        "BLoC",
+                        "Streams",
+                        "SOLID",
+                        "State Management"
+                    ],
+                    "metrics": []
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "BLoC",
+                "Streams"
+            ]
+        },
+        {
+            "company": "Frantic Infotech",
+            "location": "Remote",
+            "title": "Flutter Developer",
+            "employment_type": "Part-time",
+            "start_date": "Mar 2022",
+            "end_date": "Oct 2022",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Worked on 5+ Android apps as a part-time Flutter developer, several of which are live on the Play Store - including Crop Secure",
+                    "keywords": [
+                        "Flutter",
+                        "Android",
+                        "Mobile Apps",
+                        "Play Store"
+                    ],
+                    "metrics": [
+                        "5+ Android Apps"
+                    ]
+                },
+                {
+                    "description": "Developed 20+ features, fixed 50+ bugs, and integrated APIs across Flutter apps",
+                    "keywords": [
+                        "Flutter",
+                        "Feature Development",
+                        "Bug Fixes",
+                        "API Integration"
+                    ],
+                    "metrics": [
+                        "20+ features",
+                        "50+ bugs fixed"
+                    ]
+                },
+                {
+                    "description": "Developed applications with efficiency of 10+ screens/day from Figma mocks",
+                    "keywords": [
+                        "Flutter",
+                        "UI Development",
+                        "Figma",
+                        "Productivity"
+                    ],
+                    "metrics": [
+                        "10+ screens/day"
+                    ],
+                    "caution": "Reads as padding on a resume. Prefer the 20+ features / 50+ bugs bullet."
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "Figma",
+                "REST APIs"
+            ]
+        },
+        {
+            "company": "Daphnis Labs",
+            "location": "Remote",
+            "title": "Android Developer",
+            "employment_type": "Internship",
+            "start_date": "Aug 2021",
+            "end_date": "Jan 2022",
+            "current": false,
+            "highlights": [
+                {
+                    "description": "Collaborated in development of Datotta, an e-commerce app with a Shopify backend",
+                    "keywords": [
+                        "Android",
+                        "E-commerce",
+                        "Shopify",
+                        "Mobile App"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Played a key role in the development of ChatSansar, an Android-based IRC chatting app",
+                    "keywords": [
+                        "Android",
+                        "Chat",
+                        "IRC",
+                        "Real-time"
+                    ],
+                    "metrics": []
+                },
+                {
+                    "description": "Migrated ChatSansar from native Android to native iOS, porting the IRC protocol integration and real-time messaging",
+                    "keywords": [
+                        "iOS",
+                        "Android",
+                        "IRC",
+                        "Migration",
+                        "Real-time"
+                    ],
+                    "metrics": [],
+                    "note": "Self-reported: confirmed by Ayush on 2026-07-10 during resume tailoring. No iOS repo or App Store artifact verified."
+                },
+                {
+                    "description": "Managed two interns, delivering assigned scope on schedule",
+                    "keywords": [
+                        "Mentorship",
+                        "Team Leadership"
+                    ],
+                    "metrics": [
+                        "2 interns managed"
+                    ],
+                    "note": "Earliest people-management data point in the record."
+                }
+            ],
+            "tech_stack": [
+                "Java",
+                "Android SDK",
+                "iOS (native)",
+                "Shopify",
+                "Firebase"
+            ]
+        },
+        {
+            "company": "Inoviea",
+            "location": "Remote",
+            "title": "IoT Developer",
+            "employment_type": "Freelance",
+            "start_date": "2022",
+            "end_date": "2022",
+            "current": false,
+            "dates_uncertain": true,
+            "highlights": [
+                {
+                    "description": "Built iPanelKlean, a Flutter app controlling iPanel IoT devices over REST APIs and WebSockets against an AWS backend, with real-time telemetry display",
+                    "keywords": [
+                        "Flutter",
+                        "IoT",
+                        "AWS",
+                        "WebSockets",
+                        "Real-time"
+                    ],
+                    "metrics": []
+                }
+            ],
+            "tech_stack": [
+                "Flutter",
+                "Dart",
+                "AWS",
+                "WebSockets"
+            ]
+        }
+    ]
+}

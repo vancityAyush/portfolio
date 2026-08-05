@@ -1,0 +1,152 @@
+{
+  "generated_timestamp": "2025-12-09T00:00:00Z",
+  "profile": {
+    "login": "vancityAyush",
+    "name": "Ayush Kumar",
+    "company": "@CreativeDT",
+    "location": "India",
+    "bio": "Software Developer",
+    "public_repos": 104,
+    "followers": 18,
+    "blog": "https://vancityayush.vercel.app/",
+    "twitter": "vancityAyush"
+  },
+  "generated_files": {
+    "resume_projects_tex": "data/github/generated/resume_projects.tex",
+    "resume_metrics_tex": "data/github/generated/resume_metrics.tex",
+    "summary_md": "data/github/summary.md",
+    "index_json": "data/github/index.json"
+  },
+  "repositories_processed": [
+    {
+      "name": "fsm",
+      "metadata": "data/github/repos/fsm/metadata.json",
+      "activity": "data/github/repos/fsm/activity.json"
+    },
+    {
+      "name": "gourmet.craft",
+      "metadata": "data/github/repos/gourmet.craft/metadata.json",
+      "activity": "data/github/repos/gourmet.craft/activity.json"
+    },
+    {
+      "name": "taskify",
+      "metadata": "data/github/repos/taskify/metadata.json",
+      "activity": "data/github/repos/taskify/activity.json"
+    },
+    {
+      "name": "tomorrow_weather",
+      "metadata": "data/github/repos/tomorrow_weather/metadata.json",
+      "activity": "data/github/repos/tomorrow_weather/activity.json"
+    },
+    {
+      "name": "string-calculator",
+      "metadata": "data/github/repos/string-calculator/metadata.json",
+      "activity": "data/github/repos/string-calculator/activity.json"
+    },
+    {
+      "name": "pingo_learn_r1",
+      "metadata": "data/github/repos/pingo_learn_r1/metadata.json",
+      "activity": "data/github/repos/pingo_learn_r1/activity.json"
+    },
+    {
+      "name": "portfolio",
+      "metadata": "data/github/repos/portfolio/metadata.json",
+      "activity": "data/github/repos/portfolio/activity.json"
+    },
+    {
+      "name": "vlogger",
+      "metadata": "data/github/repos/vlogger/metadata.json",
+      "activity": "data/github/repos/vlogger/activity.json"
+    },
+    {
+      "name": "carer-connect",
+      "metadata": "data/github/repos/carer-connect/metadata.json",
+      "activity": "data/github/repos/carer-connect/activity.json"
+    },
+    {
+      "name": "ssh_script",
+      "metadata": "data/github/repos/ssh_script/metadata.json",
+      "activity": "data/github/repos/ssh_script/activity.json"
+    },
+    {
+      "name": "vtu-marksh",
+      "metadata": "data/github/repos/vtu-marksh/metadata.json",
+      "activity": "data/github/repos/vtu-marksh/activity.json"
+    },
+    {
+      "name": "ayna_assignment",
+      "metadata": "data/github/repos/ayna_assignment/metadata.json",
+      "activity": "data/github/repos/ayna_assignment/activity.json"
+    },
+    {
+      "name": "prettier-plugin-sort-imports-v3",
+      "metadata": "data/github/repos/prettier-plugin-sort-imports-v3/metadata.json",
+      "activity": "data/github/repos/prettier-plugin-sort-imports-v3/activity.json"
+    },
+    {
+      "name": "inotebook",
+      "metadata": "data/github/repos/inotebook/metadata.json",
+      "activity": "data/github/repos/inotebook/activity.json"
+    },
+    {
+      "name": "text_utils",
+      "metadata": "data/github/repos/text_utils/metadata.json",
+      "activity": "data/github/repos/text_utils/activity.json"
+    },
+    {
+      "name": "quadBTech",
+      "metadata": "data/github/repos/quadBTech/metadata.json",
+      "activity": "data/github/repos/quadBTech/activity.json"
+    },
+    {
+      "name": "Sunbase_Assignment",
+      "metadata": "data/github/repos/Sunbase_Assignment/metadata.json",
+      "activity": "data/github/repos/Sunbase_Assignment/activity.json"
+    },
+    {
+      "name": "credit-approval",
+      "metadata": "data/github/repos/credit-approval/metadata.json",
+      "activity": "data/github/repos/credit-approval/activity.json"
+    },
+    {
+      "name": "colloseum",
+      "metadata": "data/github/repos/colloseum/metadata.json",
+      "activity": "data/github/repos/colloseum/activity.json"
+    },
+    {
+      "name": "sde_007",
+      "metadata": "data/github/repos/sde_007/metadata.json",
+      "activity": "data/github/repos/sde_007/activity.json"
+    },
+    {
+      "name": "AlemenoAssignment",
+      "metadata": "data/github/repos/AlemenoAssignment/metadata.json",
+      "activity": "data/github/repos/AlemenoAssignment/activity.json"
+    },
+    {
+      "name": "ayush_ostello_application-v1.0.1",
+      "metadata": "data/github/repos/ayush_ostello_application-v1.0.1/metadata.json",
+      "activity": "data/github/repos/ayush_ostello_application-v1.0.1/activity.json"
+    },
+    {
+      "name": "UberClone",
+      "metadata": "data/github/repos/UberClone/metadata.json",
+      "activity": "data/github/repos/UberClone/activity.json"
+    }
+  ],
+  "stats": {
+    "repos_processed": 30,
+    "total_stars": 10,
+    "total_forks": 0,
+    "top_languages": [
+      {"name": "Dart", "percent": 35},
+      {"name": "JavaScript", "percent": 26},
+      {"name": "TypeScript", "percent": 13},
+      {"name": "Java", "percent": 13},
+      {"name": "Shell", "percent": 4},
+      {"name": "HTML/CSS", "percent": 9}
+    ],
+    "total_commits_year": 80,
+    "total_prs_year": 12
+  }
+}

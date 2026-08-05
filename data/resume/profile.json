@@ -1,0 +1,61 @@
+{
+    "name": "Ayush Kumar",
+    "email": "vancityAyush@gmail.com",
+    "email_note": "Confirmed canonical on 2026-07-09. The portfolio site (about.html, work.html, contact.html) and data/linkedin/profile.json still show the retired eliasakeleven@gmail.com - those need updating.",
+    "phone": "+91 9060842579",
+    "phone_note": "about.html, work.html and every resume PDF in data/.old/ say +91 90608-42578 (last digit 8). Ayush reviewed this on 2026-07-09 and kept ...579, so the site is the source that needs correcting.",
+    "location": "Bengaluru, India",
+    "date_of_birth": "2000-09-11",
+    "github": {
+        "username": "vancityAyush",
+        "url": "https://github.com/vancityAyush",
+        "public_repos": 104,
+        "followers": 18,
+        "stars_received": 10,
+        "account_created": "2018-07-09",
+        "evidence": "gh.profile"
+    },
+    "npm": {
+        "packages": [
+            {
+                "name": "xpssh-cli",
+                "url": "https://www.npmjs.com/package/xpssh-cli",
+                "version": "0.1.0"
+            }
+        ]
+    },
+    "linkedin": {
+        "username": "eliasak11",
+        "url": "https://linkedin.com/in/eliasak11"
+    },
+    "portfolio": {
+        "url": "https://vancityayush.vercel.app"
+    },
+    "twitter": {
+        "username": "vancityAyush",
+        "url": "https://twitter.com/vancityAyush"
+    },
+    "bio": "Full Stack Software Developer | Mobile & Web",
+    "current_company": "Creative Synergies Group (@CreativeDT)",
+    "current_title": "Software Engineer (Full Stack)",
+    "years_of_experience": "4+",
+    "years_of_experience_basis": "First professional role began Aug 2021 (Daphnis Labs) - approximately 4.9 years as of 2026-07-09. The prior '3+' was stale.",
+    "primary_languages": [
+        "Dart",
+        "TypeScript",
+        "Python",
+        "JavaScript",
+        "Java",
+        "Kotlin"
+    ],
+    "headline_metric": {
+        "value": "101 merged PRs and 731 commits across four production healthcare products",
+        "evidence": "hf.merged_prs_total",
+        "note": "Verified 2026-07-10 by recomputing from git history. 101 is the strict floor (100% of the merged branch's commits are Ayush's); 131 is the majority-authored upper bound. Supersedes '91 merged PRs, +57.9K lines across three products', which excluded the platform API entirely and undercounted doctors.app by more than half. Do NOT pair this with a 'lines added' figure: the four-repo net is near zero because stance-dashboard was a large consolidation effort (-17.5K net). Prefer PR and product counts."
+    },
+    "removed_fields": {
+        "commits_this_year": "Was 80. Unsupported: activity.json 'recent_commits' is a capped API window (ceiling 10), not a total. See metrics.json rejected.gh.recent_commits_as_totals.",
+        "prs_this_year": "Was 12. The sum of recent_prs across all 23 repos with activity data is 2. Same reason."
+    },
+    "last_updated": "2026-07-10"
+}

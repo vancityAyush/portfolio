@@ -1,0 +1,13 @@
+{
+  "recent_commits": 10,
+  "recent_prs": 0,
+  "recent_issues": 0,
+  "last_activity_date": "2025-10-27T12:38:19Z",
+  "latest_commits": [
+    {"message": "feat(work-orders): update work order management with new bottom sheet implementations and dependency injection improvements", "date": "2025-10-27T12:38:19Z"},
+    {"message": "feat(work-orders): enhance work order management with adaptive actions and UI optimizations", "date": "2025-10-27T11:01:08Z"},
+    {"message": "refactor(dashboard): improve code readability by formatting and organizing method calls", "date": "2025-10-27T09:20:37Z"},
+    {"message": "feat(navigation): implement drawer toggle functionality and enhance navigation state management", "date": "2025-10-27T09:19:57Z"},
+    {"message": "feat(ui): refactor app bar and card components for consistent styling and improved usability", "date": "2025-10-27T06:57:35Z"}
+  ]
+}

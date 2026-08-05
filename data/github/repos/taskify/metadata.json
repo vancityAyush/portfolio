@@ -1,0 +1,25 @@
+{
+  "name": "taskify",
+  "full_name": "vancityAyush/taskify",
+  "description": "NestJS REST API for task management with authentication and Docker deployment",
+  "summary": "A comprehensive task management backend built with NestJS featuring JWT authentication, task CRUD operations, task sharing between users, and 100% test coverage. Includes Docker containerization, PostgreSQL database integration, and production-ready CI/CD setup.",
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2025-08-31T07:15:59Z",
+  "updated_at": "2025-09-27T04:10:29Z",
+  "url": "https://github.com/vancityAyush/taskify",
+  "features": [
+    "100% test coverage",
+    "JWT authentication",
+    "Task sharing functionality",
+    "Docker containerization",
+    "PostgreSQL with TypeORM"
+  ],
+  "tech_stack": {
+    "languages": ["TypeScript"],
+    "frameworks": ["NestJS"],
+    "database": ["PostgreSQL", "TypeORM"],
+    "tools": ["Docker", "Jest", "GitHub Actions"]
+  }
+}

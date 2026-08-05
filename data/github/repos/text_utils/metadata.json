@@ -1,0 +1,22 @@
+{
+  "name": "text_utils",
+  "full_name": "vancityAyush/text_utils",
+  "description": "Text manipulation utility web application",
+  "summary": "A JavaScript-based text manipulation utility providing various text transformation operations. Features word counting, case conversion, text cleaning, and other string manipulation tools. Built as a practical utility demonstrating vanilla JavaScript DOM manipulation and user interface design.",
+  "language": "JavaScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-12-29T07:29:08Z",
+  "updated_at": "2023-12-29T07:32:36Z",
+  "url": "https://github.com/vancityAyush/text_utils",
+  "features": [
+    "Word/character counting",
+    "Case conversion",
+    "Text cleaning utilities",
+    "Copy to clipboard",
+    "Real-time preview"
+  ],
+  "tech_stack": {
+    "languages": ["JavaScript", "HTML", "CSS"]
+  }
+}

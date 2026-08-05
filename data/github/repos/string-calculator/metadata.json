@@ -1,0 +1,23 @@
+{
+  "name": "string-calculator",
+  "full_name": "vancityAyush/string-calculator",
+  "description": "TDD-driven string calculator implementation in Dart with comprehensive test coverage",
+  "summary": "A Test-Driven Development showcase implementing a string calculator in Dart. Features 13+ unit tests covering delimiter parsing, negative number handling, and edge cases. Demonstrates TDD methodology and clean code practices for professional development workflows.",
+  "language": "Dart",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2025-08-31T07:17:11Z",
+  "updated_at": "2025-09-14T04:07:08Z",
+  "url": "https://github.com/vancityAyush/string-calculator",
+  "features": [
+    "Test-Driven Development",
+    "13+ unit tests",
+    "Custom delimiter parsing",
+    "Edge case handling",
+    "Clean code practices"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "testing": ["dart:test", "TDD"]
+  }
+}

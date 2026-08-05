@@ -1,0 +1,21 @@
+{
+  "name": "vtu-marksh",
+  "full_name": "vancityAyush/vtu-marksh",
+  "description": "VTU marks calculation and management utility",
+  "summary": "A utility application for VTU (Visvesvaraya Technological University) marks calculation and management. Features grade calculation, CGPA computation, and academic performance tracking. Built to help students track and manage their academic progress efficiently.",
+  "language": "JavaScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-01-01T00:00:00Z",
+  "updated_at": "2023-01-01T00:00:00Z",
+  "url": "https://github.com/vancityAyush/vtu-marksh",
+  "features": [
+    "Grade calculation",
+    "CGPA computation",
+    "Academic tracking",
+    "Student utility"
+  ],
+  "tech_stack": {
+    "languages": ["JavaScript", "HTML", "CSS"]
+  }
+}

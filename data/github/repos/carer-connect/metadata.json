@@ -1,0 +1,26 @@
+{
+  "name": "carer-connect",
+  "full_name": "vancityAyush/carer-connect",
+  "description": "Healthcare vendor management web application built with React and Next.js",
+  "summary": "A responsive healthcare vendor management web application developed at PySphere LLP. Built with React and Next.js, it streamlined manual vendor operations by ~80% and increased user engagement by +35%. Features deep linking, push notifications, and Google Calendar integrations for comprehensive workflow management.",
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-01-01T00:00:00Z",
+  "updated_at": "2023-09-01T00:00:00Z",
+  "url": "https://github.com/vancityAyush/carer-connect",
+  "company": "PySphere LLP",
+  "features": [
+    "Vendor management dashboard",
+    "~80% reduction in manual ops",
+    "+35% user engagement",
+    "Deep linking support",
+    "Push notifications",
+    "Google Calendar integration"
+  ],
+  "tech_stack": {
+    "languages": ["TypeScript"],
+    "frameworks": ["React", "Next.js"],
+    "database": ["PostgreSQL"]
+  }
+}

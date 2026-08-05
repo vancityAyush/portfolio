@@ -1,0 +1,113 @@
+{
+  "name": "stance-dashboard",
+  "full_name": "vancityAyush/stance-dashboard",
+  "original_repo": "healthflex-in/stance_dashboard",
+  "description": "Healthcare management dashboard with Google Calendar integration, authentication, GraphQL Shield permissions, file uploads, and VALD integration",
+  "summary": "Full-stack healthcare dashboard built at HealthFlex. Led team of 4 developers handling Scrums, Jira tickets, task allocation, and database schema design. Authored 23 merged PRs including Auth system (+1738 lines), Events/Calendar with Google Calendar integration (+1558 lines), GraphQL Shield permissions (+662 lines), and file upload system (+845 lines).",
+  "role": "Tech Lead",
+  "team_size": 4,
+  "leadership": ["Scrum Management", "Jira Tickets", "Task Allocation", "Database Schema Design"],
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "merged_prs": 23,
+  "total_additions": 11500,
+  "total_deletions": 5700,
+  "created_at": "2025-09-19T05:50:16Z",
+  "updated_at": "2025-09-19T06:26:34Z",
+  "url": "https://github.com/vancityAyush/stance-dashboard",
+  "company": "HealthFlex",
+  "contribution_period": "Feb 2025 - May 2025",
+  "features": [
+    "Authentication system with JWT refresh tokens",
+    "GraphQL Shield permission-based access control",
+    "Calendar events with Google Calendar integration and waitlist",
+    "File upload system with document handling",
+    "User role and permission management",
+    "VALD system integration for patient imports",
+    "Invoice generation with PDF rendering (Puppeteer)",
+    "Multi-center organization support"
+  ],
+  "major_contributions": [
+    {
+      "type": "pr",
+      "pr_number": 12,
+      "feature": "Auth System",
+      "description": "Complete authentication system with JWT tokens and refresh logic",
+      "additions": 1738,
+      "deletions": 810,
+      "merged_at": "2025-02-21"
+    },
+    {
+      "type": "pr",
+      "pr_number": 101,
+      "feature": "Events System + Google Calendar",
+      "description": "Calendar events implementation with Google Calendar integration, scheduling, and attendee management",
+      "additions": 1558,
+      "deletions": 1070,
+      "merged_at": "2025-04-10"
+    },
+    {
+      "type": "commit",
+      "feature": "Goals Schema Refactor",
+      "description": "Refactored goals schema and resolvers to support subjective goals",
+      "commits": ["feat: refactor goals schema and resolvers to support subjective goals"],
+      "date_range": "May 2025"
+    },
+    {
+      "type": "commit",
+      "feature": "PDF & Report Services",
+      "description": "Refactored PDF generation and report services with enhanced file upload handling",
+      "commits": ["feat: refactor PDF and report services", "fix: update subproject commit reference"],
+      "date_range": "Apr-May 2025"
+    },
+    {
+      "type": "commit",
+      "feature": "Submodule Architecture",
+      "description": "Configured monorepo with frontend and stance-app submodules",
+      "commits": ["feat: add submodule configurations", "docs: update README with submodule setup"],
+      "date_range": "Apr 2025"
+    },
+    {
+      "type": "pr",
+      "pr_number": 45,
+      "feature": "GraphQL Shield",
+      "description": "Permission-based API access control using GraphQL Shield",
+      "additions": 662,
+      "deletions": 474,
+      "merged_at": "2025-03-06"
+    },
+    {
+      "type": "pr",
+      "pr_number": 39,
+      "feature": "User Permissions & RBAC",
+      "description": "Role-based access control with assign role and permissions mutations",
+      "additions": 789,
+      "deletions": 304,
+      "merged_at": "2025-03-04"
+    },
+    {
+      "type": "commit",
+      "feature": "GitHub Actions CI/CD",
+      "description": "Added GitHub Actions workflow to sync fork with upstream",
+      "commits": ["feat: add GitHub Actions workflow to sync fork with upstream"],
+      "date_range": "May 2025"
+    }
+  ],
+  "tech_stack": {
+    "languages": ["TypeScript", "JavaScript", "HTML"],
+    "frameworks": ["Next.js", "React", "NestJS"],
+    "libraries": ["GraphQL", "GraphQL Shield", "Puppeteer", "JWT"],
+    "architecture": ["Monorepo", "Full-stack", "RBAC"],
+    "databases": ["MongoDB"],
+    "tools": ["Codegen", "Dataloaders", "Google Calendar API"]
+  },
+  "resume_highlights": [
+    "Led team of 4 developers handling Scrums, Jira tickets, task allocation, and DB schema design",
+    "Built complete Auth system (+1738 lines) with JWT tokens, refresh logic, and secure session management",
+    "Implemented Events/Calendar (+1558 lines) with Google Calendar integration and waitlist management",
+    "Architected GraphQL Shield (+662 lines) for permission-based API access control",
+    "Created RBAC system (+789 lines) with role-based access control and permission mutations",
+    "Authored 23 merged PRs totaling 11.5K+ lines building core dashboard features"
+  ]
+}

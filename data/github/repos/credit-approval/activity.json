@@ -1,0 +1,21 @@
+{
+  "recent_commits": 2,
+  "recent_prs": 0,
+  "recent_issues": 0,
+  "last_activity_date": "2023-11-14T07:51:33Z",
+  "latest_commits": [
+    {
+      "sha": "0f39159a8ddc813320208b1e61495bc55ed389f6",
+      "message": "completed",
+      "date": "2023-11-14T07:51:33Z",
+      "author": "vancityAyush"
+    },
+    {
+      "sha": "c950d0a858eb319bffe3c3bc2222b7b15cdf7c87",
+      "message": "first",
+      "date": "2023-11-14T07:48:18Z",
+      "author": "vancityAyush"
+    }
+  ],
+  "contribution_summary": "Backend loan management system with Docker deployment"
+}

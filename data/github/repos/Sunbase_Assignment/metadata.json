@@ -1,0 +1,21 @@
+{
+  "name": "Sunbase_Assignment",
+  "full_name": "vancityAyush/Sunbase_Assignment",
+  "description": "Java backend assignment for Sunbase",
+  "summary": "A Java web application developed for Sunbase technical assessment. Features backend API development with Java, HTML frontend integration, and database connectivity. Demonstrates proficiency in Java backend development, RESTful API design, and full-stack web development fundamentals.",
+  "language": "Java",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-11-18T10:59:49Z",
+  "updated_at": "2023-11-18T11:00:30Z",
+  "url": "https://github.com/vancityAyush/Sunbase_Assignment",
+  "features": [
+    "Java backend API",
+    "HTML frontend",
+    "Database integration",
+    "RESTful design"
+  ],
+  "tech_stack": {
+    "languages": ["Java", "HTML"]
+  }
+}

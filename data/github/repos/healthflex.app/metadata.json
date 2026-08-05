@@ -1,0 +1,111 @@
+{
+  "name": "healthflex.app",
+  "full_name": "vancityAyush/healthflex.app",
+  "original_repo": "healthflex-in/healthflex.app",
+  "description": "React Native healthcare app with BLE sensor integration, exercise engine, real-time rep counting, and ML-powered feedback for physiotherapy",
+  "summary": "Cross-platform React Native healthcare app built at HealthFlex with 57 merged PRs. Led BLE 2.0 migration (+1164/-383 lines), Component Migration (+14193/-4127 lines), Algorithm Utils (+878 lines), and Non-measurable Flow refactor (+5400/-3055 lines). Features exercise engine with rep counting, hold detection, 20Hz sensor streaming, and Expo SDK 52 with FlashList optimization.",
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "merged_prs": 57,
+  "total_additions": 45000,
+  "total_deletions": 28000,
+  "created_at": "2025-09-19T06:12:10Z",
+  "updated_at": "2025-09-19T06:16:58Z",
+  "url": "https://github.com/vancityAyush/healthflex.app",
+  "company": "HealthFlex",
+  "contribution_period": "Aug 2024 - Feb 2025",
+  "branches_analyzed": ["main", "dev", "refractor/dev"],
+  "features": [
+    "Exercise engine with rep counting, hold detection, and timeout handling",
+    "BLE 2.0 sensor integration streaming at 20Hz per device",
+    "Audio feedback system with context pattern for exercise cues",
+    "Expo SDK 52 migration with FlashList optimization",
+    "ROM calculation optimization for lower-end devices",
+    "BLE error handling with comprehensive permission states",
+    "Memory management and stream subscription cleanup",
+    "OTA updates via Expo EAS with multi-environment releases"
+  ],
+  "major_contributions": [
+    {
+      "type": "pr",
+      "pr_number": 70,
+      "feature": "Component Migration",
+      "description": "Major app refactor with full component migration architecture",
+      "additions": 14193,
+      "deletions": 4127,
+      "merged_at": "2024-08-08"
+    },
+    {
+      "type": "pr",
+      "pr_number": 252,
+      "feature": "Non-measurable Flow",
+      "description": "Complex flow refactor for non-measurable exercise types",
+      "additions": 5400,
+      "deletions": 3055,
+      "merged_at": "2024-11-11"
+    },
+    {
+      "type": "pr",
+      "pr_number": 218,
+      "feature": "BLE 2.0",
+      "description": "Complete BLE stack rewrite with improved connectivity and error handling",
+      "additions": 1164,
+      "deletions": 383,
+      "merged_at": "2024-10-28"
+    },
+    {
+      "type": "commit",
+      "feature": "Exercise Strategy Pattern",
+      "description": "Implemented modular exercise strategy pattern for different exercise types",
+      "commits": ["Implemented exercise stratedgy", "start-pos module"],
+      "date_range": "Nov 2024"
+    },
+    {
+      "type": "commit",
+      "feature": "Event Emitter Migration",
+      "description": "Migrated exercise state management to event emitter architecture",
+      "commits": ["event emitter migration"],
+      "date_range": "Dec 2024"
+    },
+    {
+      "type": "commit",
+      "feature": "Hold Stuck Fix (HF-236)",
+      "description": "Fixed exercise hold detection getting stuck on certain states",
+      "commits": ["fix:HF-236: Hold Stuck"],
+      "date_range": "Nov 2024"
+    },
+    {
+      "type": "commit",
+      "feature": "Android Memory Optimization",
+      "description": "Enabled large heap for Android to handle sensor data streaming",
+      "commits": ["android large heap"],
+      "date_range": "Dec 2024"
+    },
+    {
+      "type": "pr",
+      "pr_number": 341,
+      "feature": "Algorithm Utils",
+      "description": "Exercise algorithm utilities for rep counting and ROM calculation",
+      "additions": 878,
+      "deletions": 0,
+      "merged_at": "2024-12-19"
+    }
+  ],
+  "tech_stack": {
+    "languages": ["TypeScript", "JavaScript"],
+    "frameworks": ["React Native", "Expo SDK 52"],
+    "libraries": ["BLE", "RxJS", "FlashList", "Expo Video", "Expo Audio"],
+    "architecture": ["Modular", "Context Pattern", "Strategy Pattern", "Event Emitter"],
+    "platforms": ["iOS", "Android"],
+    "ci_cd": ["GitHub Actions", "EAS Build"]
+  },
+  "resume_highlights": [
+    "Led BLE 2.0 migration (+1164 lines) with complete sensor stack rewrite improving connectivity and 20Hz streaming reliability",
+    "Architected Component Migration (+14193 lines) refactoring entire app structure for maintainability",
+    "Implemented Non-measurable Flow (+5400/-3055 lines) enabling complex exercise types without sensor requirements",
+    "Built Algorithm Utils (+878 lines) for real-time rep counting, ROM calculation, and exercise feedback",
+    "Developed Event Emitter architecture for decoupled exercise state management across app components",
+    "Authored 57 merged PRs totaling 45K+ lines of code over 6-month contribution period"
+  ]
+}

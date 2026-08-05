@@ -1,0 +1,23 @@
+{
+  "name": "FireBasePushNotification",
+  "full_name": "vancityAyush/FireBasePushNotification",
+  "description": "Firebase Cloud Messaging implementation for Android",
+  "summary": "An Android application demonstrating Firebase Cloud Messaging (FCM) integration for push notifications. Features background/foreground notification handling, topic subscriptions, and custom notification channels. Demonstrates proficiency in Firebase services and Android notification architecture.",
+  "language": "Java",
+  "stars": 1,
+  "forks": 0,
+  "created_at": "2021-02-01T23:12:02Z",
+  "updated_at": "2021-02-08T23:04:57Z",
+  "url": "https://github.com/vancityAyush/FireBasePushNotification",
+  "features": [
+    "FCM integration",
+    "Background notifications",
+    "Topic subscriptions",
+    "Custom notification channels"
+  ],
+  "tech_stack": {
+    "languages": ["Java"],
+    "platforms": ["Android"],
+    "services": ["Firebase Cloud Messaging"]
+  }
+}

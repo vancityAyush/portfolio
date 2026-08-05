@@ -1,0 +1,25 @@
+{
+  "name": "UberClone",
+  "full_name": "vancityAyush/UberClone",
+  "description": "Full-featured Uber clone Android app with real-time location tracking",
+  "summary": "A comprehensive ride-sharing Android application replicating Uber's core functionality. Features real-time GPS location tracking, driver-rider matching, Parse Server backend integration, and Google Maps navigation. Built with Java and demonstrates complex Android development patterns including location services, background processing, and real-time updates.",
+  "language": "Java",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2021-01-07T23:45:06Z",
+  "updated_at": "2021-10-04T06:16:05Z",
+  "url": "https://github.com/vancityAyush/UberClone",
+  "features": [
+    "Real-time GPS tracking",
+    "Driver-rider matching",
+    "Google Maps integration",
+    "Parse Server backend",
+    "Live location updates"
+  ],
+  "tech_stack": {
+    "languages": ["Java"],
+    "platforms": ["Android"],
+    "backend": ["Parse Server"],
+    "services": ["Google Maps API"]
+  }
+}

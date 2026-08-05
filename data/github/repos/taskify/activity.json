@@ -1,0 +1,13 @@
+{
+  "recent_commits": 10,
+  "recent_prs": 0,
+  "recent_issues": 0,
+  "last_activity_date": "2025-09-05T18:19:53Z",
+  "latest_commits": [
+    {"message": "docs: enhance README with detailed project scope, architecture, and API documentation", "date": "2025-09-05T18:19:53Z"},
+    {"message": "fix: align create-task.dto.ts with backup-current-state specification", "date": "2025-09-05T20:07:00Z"},
+    {"message": "Merge branch 'backup-current-state' into hh-coding-exercise", "date": "2025-09-05T18:06:08Z"},
+    {"message": "feat: enhance authentication system with comprehensive testing and validation", "date": "2025-09-05T20:05:00Z"},
+    {"message": "feat: complete application modules and services", "date": "2025-09-05T18:05:00Z"}
+  ]
+}

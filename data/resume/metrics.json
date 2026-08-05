@@ -1,0 +1,756 @@
+{
+    "last_updated": "2026-07-10",
+    "purpose": "Single source of truth for every quantified claim used on a resume. experience.json and projects.json carry the prose; they cite entries here by evidence key instead of restating numbers. If a number appears in two places, this file wins.",
+    "verification_levels": {
+        "external": "Confirmed against an external system (GitHub API/CLI, npm registry, app store listing). Safe to print.",
+        "self_asserted": "Recorded by Ayush in his own notes. Plausible and usable, but he is the only source. Do not present as measured.",
+        "rejected": "Appeared in a source document but is provably wrong or misattributed. Never print. Retained here so it does not get reintroduced.",
+        "specified": "Defined in a client product specification. Describes intended scope and domain complexity, NOT delivered work. Usable to say what Ayush is building and what problems it involves. Never phrase as a completed outcome and never attach an impact metric."
+    },
+    "evidence": {
+        "gh.profile": {
+            "level": "external",
+            "public_repos": 104,
+            "followers": 18,
+            "stars_received": 10,
+            "account_created": "2018-07-09",
+            "source": "data/github/profile.json, data/github/index.json",
+            "note": "data/github/summary.md says 19 followers. It is the sole outlier against three agreeing sources; treat as stale."
+        },
+        "_hf_verification_2026_07_10": {
+            "method": "The original healthflex-in org repos are no longer accessible to Ayush (all 404 via gh api; he left May 2025), so PR data cannot be re-pulled from the GitHub API. However, private archive mirrors exist under vancityAyush/{healthflex.app,healthflex.api,doctors.app,stance-dashboard}, pushed 2025-09-19. These carry the FULL git history but ZERO pull requests (a mirror push does not transfer PRs). All figures below were recomputed from that git history on 2026-07-10.",
+            "identities": [
+                "eliasakeleven@gmail.com",
+                "ayush.kumar@healthflex.in",
+                "40995741+vancityAyush@users.noreply.github.com"
+            ],
+            "identity_proof": "Each email resolves to github_login 'vancityAyush' via GET /repos/vancityAyush/healthflex.app/commits/{sha}.author.login.",
+            "pr_reconstruction": "PRs were reconstructed from merge commits on the default branch. Two message formats occur: 'Merge pull request #N from <branch>' and, where the repo enabled 'default to PR title for merge commits', '<PR Title> (#N)'. Attribution does NOT use the merge-commit author (that is whoever clicked Merge). Instead, for each merge commit the commits unique to the merged branch (parent1..parent2) are examined. 'strict' = 100% of those commits are Ayush's. 'majority' = >=50%.",
+            "line_counting": "git log --no-merges --numstat on the default branch, filtered to Ayush's identities. 'hand_written' excludes lockfiles, /assets/, /dist/, /build/, Pods, .pbxproj, minified and binary assets. 'raw' includes everything. Prefer hand_written on a resume; raw is dominated by package-lock.json churn."
+        },
+        "hf.authored_commits": {
+            "level": "external",
+            "value": 731,
+            "value_excluding_merge_commits": 548,
+            "window": "2024-04-12 to 2025-05-09",
+            "breakdown": {
+                "healthflex-app": 370,
+                "stance-dashboard": 258,
+                "doctors-app": 79,
+                "healthflex-api": 24
+            },
+            "breakdown_excluding_merges": {
+                "healthflex-app": 291,
+                "stance-dashboard": 179,
+                "doctors-app": 58,
+                "healthflex-api": 20
+            },
+            "source": "git rev-list --count on default branches of the vancityAyush archive mirrors, 2026-07-10. Each per-repo figure matches the GitHub contributors API exactly.",
+            "note": "Supersedes the previous value of 473, which summed only app+doctors+api and silently dropped stance-dashboard's 258 commits. 731 counts merge commits Ayush authored (he merged his own PRs); 548 is commits he actually wrote. Both are defensible - state which one you mean.",
+            "supersedes": "473 (2026-07-09)"
+        },
+        "hf.app.merged_prs": {
+            "level": "external",
+            "value": 54,
+            "value_majority_authored": 71,
+            "default_branch": "dev",
+            "lines_hand_written": {
+                "added": 50446,
+                "deleted": 34521,
+                "net": 15925,
+                "source_files_touched": 655
+            },
+            "lines_raw": {
+                "added": 200105,
+                "deleted": 163337
+            },
+            "window": "2024-05-28 to 2025-02-07",
+            "notable_prs": {
+                "#70 Component Migration": "+14193 / -4127 across 154 files, merged 2024-08-08 - VERIFIED EXACT",
+                "#218 BLE 2.0": "+1164 / -383 across 18 files, merged 2024-10-28 - VERIFIED EXACT; adds src/contexts/new-ble/index.tsx (+711), permission-checker (+184), rewrites ble-scanning screen and ble_parser",
+                "#160 Algorithm build": "+4687 / -2080 across 149 files, merged 2024-09-06",
+                "#250 Non-measurable flow": "+91 / -13 across 2 files, merged 2024-11-14"
+            },
+            "source": "Reconstructed from git merge history, 2026-07-10. See _hf_verification_2026_07_10.",
+            "supersedes": "57 PRs, +45000/-28000 (2026-07-09)"
+        },
+        "hf.stance.merged_prs": {
+            "level": "external",
+            "value": 18,
+            "value_majority_authored": 24,
+            "default_branch": "dev",
+            "lines_hand_written": {
+                "added": 22495,
+                "deleted": 40036,
+                "net": -17541,
+                "source_files_touched": 472
+            },
+            "lines_raw": {
+                "added": 45686,
+                "deleted": 44582
+            },
+            "window": "2025-02-14 to 2025-05-09",
+            "role": "Tech Lead",
+            "team_size_claimed": 4,
+            "team_size_observed": 6,
+            "notable_prs": {
+                "#12 Auth System": "+1738 / -810 across 48 files, merged 2025-02-21 - VERIFIED EXACT",
+                "#101 Events + Google Calendar": "+1558 / -1070 across 66 files, merged 2025-04-10 - VERIFIED EXACT",
+                "#39 User Permissions & RBAC": "+789 / -304 across 12 files, merged 2025-03-04 - VERIFIED EXACT",
+                "#45 GraphQL Shield": "+662 / -474 across 22 files, merged 2025-03-06 - VERIFIED EXACT"
+            },
+            "ci_ownership": "Ayush is the #2 author of .github/workflows (9 commits): deploy workflow, bun + pm2 install, codegen step, fork-sync workflow.",
+            "note": "Ayush's hand-written line count here is NET NEGATIVE (-17,541): he deleted far more than he added. This is refactor and consolidation work, and it is a genuinely good story - but never headline it as 'lines added'. Team size: 6 distinct human committers touched the repo Feb-May 2025 (Nandini, Ayush, Niraj, Shruti, Shiraz, Prateek), not 4. Ayush was the #2 committer by volume behind Nandini.",
+            "supersedes": "23 PRs, +11500/-5700, team_size 4 (2026-07-09)"
+        },
+        "hf.doctors.merged_prs": {
+            "level": "external",
+            "value": 24,
+            "value_majority_authored": 30,
+            "default_branch": "main",
+            "lines_hand_written": {
+                "added": 7595,
+                "deleted": 4695,
+                "net": 2900,
+                "source_files_touched": 174
+            },
+            "lines_raw": {
+                "added": 8694,
+                "deleted": 5561
+            },
+            "window": "2024-04-12 to 2025-01-29",
+            "notable_prs": {
+                "#482 Sensor Tagging Migration": "+357 / -321 across 5 files, merged 2025-01-27 - VERIFIED EXACT",
+                "#365 Chat WebSocket": "+322 / -134 across 14 files, merged 2024-09-03 - VERIFIED EXACT",
+                "#477 Home/Profile Migration": "+157 / -143 across 7 files, merged 2025-01-23 - VERIFIED EXACT"
+            },
+            "source": "Reconstructed from git merge history, 2026-07-10.",
+            "note": "The old figures (11 PRs, +1406/-1013) undercounted by more than 2x. Real hand-written contribution is +7,595/-4,695 across 174 files.",
+            "supersedes": "11 PRs, +1406/-1013 (2026-07-09)"
+        },
+        "hf.api.merged_prs": {
+            "level": "external",
+            "value": 5,
+            "value_majority_authored": 6,
+            "default_branch": "main",
+            "lines_hand_written": {
+                "added": 932,
+                "deleted": 432,
+                "net": 500,
+                "source_files_touched": 32
+            },
+            "window": "2024-05-22 to 2024-09-24",
+            "notable_prs": {
+                "#122 ROM overview": "11 commits, all Ayush",
+                "#195 /me API caching": "2 commits",
+                "#200 Mongo finalization": "1 commit",
+                "#135 Dashboard": "2 commits"
+            },
+            "note": "New entry. The API was Ayush's smallest surface by far: 24 commits, 6 PRs, ~900 hand-written lines added, and he stopped contributing in Sep 2024. Keep any API bullet modest and contribution-flavored - do not write 'architected'.",
+            "source": "Reconstructed from git merge history, 2026-07-10."
+        },
+        "hf.merged_prs_total": {
+            "level": "external",
+            "value": 101,
+            "value_majority_authored": 131,
+            "lines_hand_written_added": 81468,
+            "lines_hand_written_deleted": 79684,
+            "lines_raw_added": 255417,
+            "lines_raw_deleted": 213912,
+            "derivation": "strict (100% of branch commits authored by Ayush): app 54 + doctors 24 + stance 18 + api 5 = 101. majority (>=50%): 71 + 30 + 24 + 6 = 131.",
+            "note": "Strongest aggregate in the dataset. 101 is the conservative floor and is what should appear on a resume; 131 is the upper bound. The old value of 91 was BELOW the true floor - it excluded the API repo entirely and undercounted doctors.app by more than half. Because Ayush no longer has access to the healthflex-in org, a third party cannot re-verify these via the GitHub API; they are reproducible from the archive mirrors' git history.",
+            "supersedes": "91 PRs, +57906/-34713 (2026-07-09)"
+        },
+        "hf.ci_ownership": {
+            "level": "external",
+            "healthflex_app": "Ayush authored 5 of 31 workflow commits (created main.yml, renamed to build.yml, Oct 2024). Niraj authored 26.",
+            "doctors_app": "Zero workflow commits by Ayush.",
+            "stance_dashboard": "Ayush authored 9 workflow commits - second-most in the repo. Deploy pipeline, bun/pm2 provisioning, GraphQL codegen step, fork-sync.",
+            "toolchain_correction": "The mobile repos use EAS Build (eas-build-dev/preview/prod.yml, eas-update.yml) plus GitHub Actions. FASTLANE WAS NEVER PRESENT - zero files matching 'fastlane' exist anywhere in the tree or in the entire history of healthflex.app or doctors.app.",
+            "source": "git log on .github/workflows, 2026-07-10."
+        },
+        "csg.contributions": {
+            "level": "external",
+            "merged_prs": 5,
+            "closed_prs": 1,
+            "issues": 62,
+            "window": "2025-02-21 to 2026-02-21",
+            "repos": [
+                "CreativeDT/ps-predict",
+                "CreativeDT/fsm-backend-2",
+                "CreativeDT/fsm-app"
+            ],
+            "source": "Notion 'CSG Contributions Snapshot', generated with GitHub CLI on 2026-02-21",
+            "note": "Private repos. Numbers are real but unverifiable by a third party without access."
+        },
+        "kabuni.mobile_scope": {
+            "level": "specified",
+            "product": "Kabuni Cricket App - native iOS and Android",
+            "mvp_target": "Section 03a is titled 'KABUNI CRICKET APP MVP (JUNE 2026)'. The Notion project page says MVP target Mar 2027. These disagree; treat the launch date as unsettled.",
+            "source": "Product Bible.txt (Kabuni product specification, sections 03a/03c/05, Feature Rules 01-16)",
+            "authorship": "Written by Kabuni and Draw & Code, not by Ayush. It states requirements, not accomplishments.",
+            "ayush_role_claim": {
+                "claim": "Lead architect across three surfaces - web (Next.js), the K10 cricket mobile app, and the Kabuni hardware camera",
+                "level": "self_asserted",
+                "source": "Notion Prep Notes"
+            },
+            "mobile_only_scope": [
+                "Native iOS/Android apps carry Device Management; the website explicitly does not - firmware version and update, serial number, battery life, MAC address",
+                "All MVP session management runs through the app on a 1-to-1 relationship; explicitly NOT a web feature",
+                "Camera pairing and control: scan for camera, ownership model of one camera to one account (non-transferable once set up), transient-user connection, one active camera at a time",
+                "Batting-session capture: camera clips media and routes it to the user's account"
+            ],
+            "mobile_domain_complexity": [
+                "Biometric facial-recognition login through the camera, triggered by a 'KABUNI LOGIN' voice command, matching against a cloud-held face matrix and auto-logging-out the previous batter",
+                "Three-tier offline degradation: cloud login over 5G/WiFi, else mobile-app override with manual batter selection from the parent/child roster, else local storage on the camera for later manual transfer",
+                "India legally prohibits tracking users via biometric data, forcing possible geo-locking of the first device release",
+                "Parent/child account hierarchy (Institution owns and assigns seats to Individuals) with onboarding and off-boarding workflows; an Individual may belong to many Institutions",
+                "Media library with session-level grouping of stitched clips, a one-time-use analyze action, and recall/download/delete",
+                "Video upload with a quality gate that scores footage and rejects it below threshold",
+                "AI coaching feedback rendered as the user's selected Super Coach via HeyGen/ElevenLabs",
+                "GDPR audit trail with aged-data removal, right-to-be-forgotten, and data-request handling",
+                "Reward mechanics: 1 point per recorded shot, 2 per completed session, 0.5 per video upload",
+                "Navigation constraint of no more than 3 hops to complete a task and always one hop back to home, for a 12-16 year-old demographic"
+            ],
+            "web_first_not_mobile": [
+                "Net booking is built for web first and for iOS/Android afterwards - do not claim it as mobile work"
+            ],
+            "corroborates": "Feature Rules 14 names 'Duncan' as the dashboards and reporting destination for Kabuni data. That is the same duncan.help system Ayush security-assessed - see duncan.security.",
+            "note": "Nothing here is shipped. Use it to describe the problem space Ayush is working in and the architecture decisions it forces, never as delivered features."
+        },
+        "duncan.security": {
+            "level": "external",
+            "engagement": "Authorized black-box security assessment and penetration test",
+            "target": "https://duncan.help/",
+            "dates": "2026-04-29 (assessment), 2026-04-30 (pentest)",
+            "architecture": "Two-tier: Lovable frontend SPA + Supabase (PostgREST, Auth, Edge Functions, Storage)",
+            "relationship_to_kabuni": "Product Bible Feature Rules 14 identifies Duncan as the reporting and dashboard tool that Kabuni app data feeds into. The security review therefore covers Kabuni's own BI surface.",
+            "assessment_findings": {
+                "critical": 3,
+                "medium_low": 5
+            },
+            "pentest_findings": {
+                "high": 3,
+                "medium": 3,
+                "low": 2,
+                "info": 2,
+                "total": 10
+            },
+            "headline_findings": [
+                "Live HubSpot/Notion/GitHub production API credentials readable by any anonymous client via the company_integrations table; column named encrypted_api_key held plain base64",
+                "norman-chat GPT-5 Edge Function fully unauthenticated - drainable OpenAI billing and prompt-injection data extraction",
+                "PostgREST schema enumeration exposing 25+ table names including gmail_tokens, xero_tokens, nda_submissions, ceo_briefings"
+            ],
+            "deliverables": [
+                "Security Assessment Report",
+                "Penetration Test Report with CVSSv3-style severity ratings",
+                "Remediation Runbook",
+                "Prioritized remediation plan"
+            ],
+            "source": "Notion Notes & Resources DB, three duncan.help reports; linked to Projects/Duncan under the CSG area",
+            "note": "Explicitly scoped as an AUTHORIZED review. Client engagement under CSG. The reports quote the client's leaked live credentials as evidence - never reproduce those values."
+        },
+        "xpssh.release": {
+            "level": "external",
+            "version": "0.1.0",
+            "npm_package": "xpssh-cli",
+            "tests": "90+",
+            "license": "MIT",
+            "source": "https://www.npmjs.com/package/xpssh-cli"
+        },
+        "secondbrain.repo": {
+            "level": "external",
+            "authored_commits": 258,
+            "total_commits": 267,
+            "merged_prs": 25,
+            "closed_prs": 2,
+            "stars": 1,
+            "forks": 0,
+            "created": "2026-06-23",
+            "last_pushed": "2026-07-09",
+            "visibility": "private",
+            "contributors": {
+                "vancityAyush": 261,
+                "Copilot": 3,
+                "Claude": 1
+            },
+            "language_bytes": {
+                "JavaScript": 37740,
+                "HCL": 20817,
+                "TypeScript": 11764,
+                "Shell": 109
+            },
+            "source": "GitHub API via gh CLI, queried 2026-07-09",
+            "note": "HCL is 29% of the codebase - this is real Terraform, not a toy. 258 of 267 commits authored by Ayush; the rest are Copilot/Claude agent commits. Private repo, so a recruiter cannot open it: cite the work, not a link."
+        },
+        "taskify.coverage": {
+            "level": "external",
+            "value": "100% test coverage",
+            "source": "data/github/repos/taskify/metadata.json"
+        },
+        "tomorrow_weather.stars": {
+            "level": "external",
+            "value": 5,
+            "note": "Most-starred repo; 5 of 13 total stars across all mirrored repos.",
+            "source": "data/github/repos/tomorrow_weather/metadata.json"
+        },
+        "hf.self_reported": {
+            "level": "self_asserted",
+            "claims": [
+                "95% crash-free across 1,000+ users",
+                "~40% latency reduction",
+                "2,000+ ML datapoints/sec via native module"
+            ],
+            "source": "Notion Areas/HealthFlex.md",
+            "note": "These three survive the 2026-07-10 code audit only in the sense that the repo neither confirms nor refutes them - crash-free rate and user counts live in Firebase/Sentry, not git. Four other claims from this list were moved to rejected.hf.code_contradicted because the repository actively contradicts them. Ayush's own prep notes warn: 'Confirm before quoting: verify any exact latency/Hz number.'"
+        },
+        "hf.ble_work": {
+            "level": "external",
+            "what_is_real": "PR #218 'BLE 2.0' (+1164 / -383, 18 files, merged 2024-10-28) is authored by Ayush and is substantial: it adds src/contexts/new-ble/index.tsx (+711 lines), a permission-checker component (+184), and rewrites the ble-scanning screen (466 lines changed), the BLE parser, and the sensor store. He also authored a Dec 2024 'event emitter migration' replacing an observer/strategy start-position module.",
+            "rxjs": "RxJS IS genuinely used for BLE stream processing - src/components/exercise-hold-card/stability.tsx imports Subscription, distinctUntilChanged and bufferTime. But it is not a direct dependency (it resolves transitively), and Ayush authored only 1 of that file's 11 commits; nirajgeorgian authored 5. Do not claim RxJS as your design.",
+            "hz": "src/services/ble/SensorCalibrationService.ts contains a rate map where 20 maps to 0x07. But 20Hz is one of ten selectable rates (0.2/0.5/1/2/5/10/20/50/100/200) and the code comments 10Hz as the default. That file was created 2025-08-21 by niraj.kishore, three months AFTER Ayush left. He cannot claim it.",
+            "source": "git log / git grep on the healthflex.app archive mirror, 2026-07-10.",
+            "note": "Safe framing: 'Led the BLE 2.0 migration (+1.2K lines, 18 files), rewriting the sensor connection stack, scanning UX, and BLE parser.' That is fully defensible. Drop the Hz, the RxJS attribution, and the test count."
+        },
+        "csg.self_reported": {
+            "level": "self_asserted",
+            "claims": [
+                "95%+ crash-free FSM sessions",
+                "~30% API latency reduction",
+                "~50% release-time cut via GitHub Actions + Gradle",
+                "80%+ test coverage across auth/work orders/documents/inventory",
+                "100+ field engineers served"
+            ],
+            "source": "Notion Areas/CSG.md"
+        },
+        "emotorad.self_reported": {
+            "level": "self_asserted",
+            "claims": [
+                "90% BLE connection-stability improvement",
+                "40% latency reduction",
+                "~70% map cost cut via Mapbox routing + caching",
+                "80%+ unit test coverage",
+                "~25% Gradle build-time reduction"
+            ],
+            "team_size": 5,
+            "source": "Notion Areas/EMotorad.md"
+        },
+        "pysphere.self_reported": {
+            "level": "self_asserted",
+            "claims": [
+                "Led team of 8 on RCFD product from ideation",
+                "~80% manual vendor ops cut",
+                "+35% engagement via deep links / push / Google Calendar",
+                "~45% web traffic increase",
+                "~25% payment success improvement (SonoFlux)",
+                "1M+ notification requests across SMS/Email/In-App"
+            ],
+            "source": "Notion Areas/PySphere.md, Prep Notes"
+        },
+        "scannergo.installs": {
+            "level": "self_asserted",
+            "value": "10M+ Play Store installs",
+            "source": "Play Store listing (app-level, not personal)",
+            "phrasing_rule": "Write 'contributed to Scanner Go (10M+ Play Store installs)' as a Flutter developer over ~4 months. NEVER write 'built an app with 10M downloads'. Ayush's own notes flag this figure: 'Confirm before quoting: verify the exact download/scale figure' and 'Don't say: inflated user numbers you can't defend.'"
+        },
+        "hf.exercise_algo_shipped": {
+            "level": "external",
+            "summary": "Ayush created and is the primary author of the exercise/rep-counting algorithm layer that shipped in the production patient app.",
+            "created": "2024-07-21 (commit d937d1de 'feat: added algo-utils', src/store/algo-utils.ts, +117 lines), by ayush.kumar@healthflex.in",
+            "ownership": "32 of 51 commits (63%) on algo-utils.ts across its full life, following renames: 20 from eliasakeleven@gmail.com + 12 from ayush.kumar@healthflex.in. Next-highest is nirajgeorgian at 9.",
+            "size_at_his_last_touch": "846 lines (commit b1ca9562, 2024-10-07). The file later peaked at 924 lines under Niraj's maintenance.",
+            "lifespan": "Lived in production from 2024-07-21 until niraj.kishore deleted it on 2025-08-28 (commit 90e3baa7), three months AFTER Ayush left.",
+            "surface_totals": "+6,233 / -3,631 authored by Ayush across src/store/algo*, src/store/old-algo/*, src/store/exercise*, src/module/*, src/contexts/exercise* on origin/dev.",
+            "also_created": "src/store/... sensor scanning (2024-06-06, ayush.kumar@healthflex.in) - the earliest sensor entry point in the repo.",
+            "source": "git log --follow on the healthflex.app archive mirror, origin/dev, 2026-07-10.",
+            "note": "This is the strongest single ownership claim Ayush has at HealthFlex: he created the exercise algorithm layer, wrote most of it, and it shipped. Safe to say 'built and owned'. Distinct from hf.exercise_module_refactor, which never merged."
+        },
+        "hf.exercise_module_refactor": {
+            "level": "external",
+            "status": "PROTOTYPE - NEVER MERGED. Do not describe as shipped or as delivered to users.",
+            "branch": "origin/refractor/dev on vancityAyush/healthflex.app",
+            "branch_state": "Diverged from dev at merge-base e2fa4be3 (2024-12-06). Carries only 4 unique commits, all dated 2024-12-06; dev has since moved 383 commits ahead. src/module/exercise/ has never existed on origin/dev - confirmed by `git log origin/dev -- 'src/module/exercise/*'` returning nothing.",
+            "ayush_commits": [
+                "b0063014 'stability'",
+                "700a5164 'new ble'"
+            ],
+            "other_commits": "2 merge commits by nand-ini-0 (Nandini Tandon).",
+            "ayush_lines": "+3,803 / -456 hand-written (excluding +715/-1,165 of package-lock churn).",
+            "exercise_module": {
+                "scope": "+2,155 lines across 29 files under src/module/**, pure additions, single commit b0063014",
+                "architecture": "Strategy + Builder + State + Observer, composed behind an exercise Context and a module facade",
+                "strategy_pattern": "strategy.ts declares 5 interfaces (GlobalRomStrategy, AxisRomStrategy, CorrectnessStrategy, StabilityScoreStrategy, FeedbackStrategy) with 5 concrete implementations: global-rom (94), axis-rom (62), correctness (86), stability-score (64), direction-feedback (179 lines)",
+                "builder_pattern": "MeasurableRepBuilder - a fluent builder for ExerciseRepData with uuidv7 rep IDs, correctness percentage, timeout flags, star scoring (builder.ts, 96 lines)",
+                "state_pattern": "rep-state.ts (112 lines) driving rep lifecycle transitions",
+                "event_driven": "event-emitter/index.ts (80 lines) plus a sensor-observer, decoupling sensor ingest from rep evaluation",
+                "context": "context/index.ts (160 lines) wiring strategies into a single exercise session",
+                "algo_utils": "src/module/utils/algo-utils.ts, 841 lines - the ROM/correctness/stability math, plus stability-tracker.ts (96 lines)"
+            },
+            "also_in_branch": "700a5164 'new ble' - a BLE rework: src/contexts/ble/index.tsx (+1,032 net change), ble-scanning screen (+596), a new sensor-checker component (179 + 103 lines of styles), sensor-data-parser changes. This is an alternate take on the same problem that PR #218 solved on dev.",
+            "resolves_rejected_claim": "This branch is almost certainly the origin of the discredited '#341 Algorithm Utils (+878 / -0)' entry. The real artifact is algo-utils.ts at 841 lines, added as a pure addition (+2,155/-0 for the whole module) - but on an UNMERGED branch, and never as PR #341. The old note was directionally aware of real work and attached it to a PR number that does not exist.",
+            "source": "git log/show/ls-tree on origin/refractor/dev, 2026-07-10.",
+            "note": "Usable on a resume ONLY as design/architecture work, phrased as a refactor or prototype. It is real, substantial, and entirely Ayush's - 2,155 lines of clean pattern-driven TypeScript in one commit. But it never reached users, and dev abandoned the direction. Pair it with hf.exercise_algo_shipped, which DID ship, so the exercise story leads with delivered work."
+        },
+        "_kabuni_verification_2026_07_10": {
+            "method": "Computed from the kabuni-services git repository (Azure DevOps) on 2026-07-10. All figures are measured against origin/dev, NOT origin/main. main holds only 2 commits ('Added README.md' and a single merged PR) and is a stub; dev is the real integration branch at 890 commits. Any tool that defaults to the repo's default branch (origin/HEAD -> main) will report zero contributions for everyone and must not be used here.",
+            "identities": [
+                "Ayush <ayush@kabuni.com>",
+                "vancityAyush <ayush@kabuni.com>",
+                "Ayush Kumar <ayush@kabuni.com>",
+                "ayush <ayush@kabuni.com>"
+            ],
+            "identity_proof": "All four author-name variants share the single email ayush@kabuni.com and were matched on that email, not on name. One commit authored as 'Ayush <damini@kabuni.com>' exists and is deliberately EXCLUDED from every figure below: the email is Damini Prakash's, so ownership is ambiguous.",
+            "line_counting": "git log origin/dev --no-merges --numstat, filtered to the identities above. 'hand_written' excludes lockfiles (bun.lock, uv.lock, package-lock.json, pnpm-lock.yaml), generated protobuf stubs (*_pb2.py, *_pb2.pyi, *_pb2_grpc.py), committed tool output (DevSecOpsAutomation/reports/**, junit.xml, coverage.xml, full_test_output.txt, *normal-mode.txt), binaries (pdf/png/svg/ico/woff2), and data/**. 'raw' includes everything. Prefer hand_written; prefer code_only for anything phrased as 'wrote'.",
+            "all_refs_contamination": "CRITICAL: never compute Kabuni figures with 'git log --all'. An abandoned branch vendors the entire polarsource/polar open-source repo under opensrc/repos/github.com/polarsource/polar/ and a fork of it under apps/kapuni-api/, and also commits a 101,391-line SonarQube HTML/JSON report under DevSecOpsAutomation/reports/. Naive 'git log --all --numstat' credits Ayush with 1,398,591 added lines. Neither vendored path is reachable from origin/dev (0 commits touch them there). The honest figure is 210,454 added, a 6.6x correction.",
+            "file_creation_attribution": "'Who created file X' was computed with --full-history --diff-filter=A --reverse. WITHOUT --full-history git's path simplification silently misattributes creation to commit dfbd61d8 ('KPL_API_INTEGRATION_V0.1' by Gowthama K S), a single non-merge commit touching 868 files with 93,031 insertions - a squashed import of a long-lived feature branch. Under simplified history that commit appears to 'create' razorpay_client.py, stripe_client.py, entra_extension_auth.py and notification.proto. Under --full-history all four resolve to Ayush, 4-7 days earlier. This trap inverts the authorship of the payment gateway and the Entra auth extension. Always pass --full-history in this repo.",
+            "ai_assistance": "154 of 890 commits on origin/dev (17.3%) carry a 'Co-authored-by: Claude', 'Generated with Claude' or '[codex]' trailer. It is a team-wide norm, not specific to Ayush: Gowthama 84, Bhanuprakash 23, Mahesh 20, Sakshi 8, Ayush 6, Sagar 5, Srivani 4, Damini 4. Trailer absence does NOT prove a commit was hand-typed - most contributors never added the trailer. Do not read the line counts as 'lines typed by hand', and do not use this repo to claim or disclaim AI assistance either way."
+        },
+        "kabuni.services": {
+            "level": "external",
+            "repo": "kabuni-services (Azure DevOps, private)",
+            "branch_measured": "origin/dev",
+            "window": "2026-03-17 to 2026-06-11",
+            "relationship": "This is the DELIVERED backend/platform work for the Kabuni client engagement under CSG. It is the counterpart to kabuni.mobile_scope, which is specification only. Cite this key for anything shipped; cite kabuni.mobile_scope for anything about the cricket app or camera, which is not built.",
+            "commits": {
+                "ayush_non_merge_on_dev": 384,
+                "all_non_merge_on_dev": 770,
+                "share_of_non_merge_commits": "49.9%",
+                "ayush_merge_commits_on_dev": 68,
+                "all_merge_commits_on_dev": 120,
+                "ayush_non_merge_all_refs": 439,
+                "note": "439 counts 55 commits that live only on unmerged side branches. 384 is the defensible figure - it is work that reached the integration branch. Ayush is the single largest contributor; the next is Gowthama K S at 108 non-merge commits."
+            },
+            "contributor_ranking_non_merge_on_dev": {
+                "ayush": 384,
+                "gowthama": 108,
+                "mahesh": 77,
+                "damini": 65,
+                "bhanuprakash": 44,
+                "sagar": 37,
+                "sakshi": 31,
+                "srivani": 19,
+                "amala": 5
+            },
+            "files_created": {
+                "surviving_files_first_added_by_ayush": 950,
+                "surviving_files_matched": 1578,
+                "share_of_surviving_files": "60.2%",
+                "paths_ever_added_by_ayush": 1427,
+                "paths_ever_added_total": 2272,
+                "method": "--full-history --diff-filter=A --reverse; see _kabuni_verification_2026_07_10.file_creation_attribution",
+                "note": "1,578 of 1,693 tracked files matched a non-merge add commit; the remaining 115 entered via merge commits or renames and are unattributed rather than assigned to anyone."
+            },
+            "lines": {
+                "hand_written_added": 210454,
+                "hand_written_removed": 104686,
+                "hand_written_net": 105768,
+                "code_only_added": 166574,
+                "code_only_removed": 84141,
+                "code_only_net": 82433,
+                "code_only_extensions": [
+                    ".py",
+                    ".ts",
+                    ".tsx",
+                    ".sh",
+                    ".yaml",
+                    ".yml",
+                    ".proto",
+                    ".sql"
+                ],
+                "raw_added": 395243,
+                "raw_removed": 168605,
+                "team_hand_written_added": 492045,
+                "note": "Use code_only (+166,574) for any bullet phrased as 'wrote' or 'built'. hand_written still includes markdown design docs, JSON fixtures and env templates. raw is dominated by lockfiles and committed SonarQube reports - never print it."
+            },
+            "codebase_scale_at_head": {
+                "tracked_files": 1693,
+                "source_loc": 175186,
+                "python_loc": 113813,
+                "typescript_tsx_loc": 49992,
+                "yaml_loc": 7494,
+                "apps": 8,
+                "composition": "6 Python/FastAPI microservices (identity, payment, order, kpl, notification, master-data), 1 nginx api-gateway, 1 Next.js 16 / React 19 web app. Shared workspace packages: kabuni-auth-py, kabuni-observability-py, kabuni-service-core, proto, ui, logger. Bun workspace + Turborepo.",
+                "source_loc_definition": "wc -l over tracked .py/.ts/.tsx/.js/.mjs/.sh/.sql/.proto/.yaml/.yml, excluding data/**"
+            },
+            "architecture_verified_in_tree": [
+                "Hexagonal / clean layering enforced per service: domain, application, infrastructure, presentation",
+                "178 FastAPI route handlers (identity 65, master-data 49, payment 27, kpl 22, order 8, notification 7)",
+                "3 gRPC service contracts (NotificationService, OrderService, PaymentService) with 4 servicer implementations",
+                "13 Alembic migrations",
+                "Transactional Outbox in kpl-service, order-service and payment-service (see ownership_correction)",
+                "Azure Service Bus messaging, Redis caching, PostgreSQL via async SQLAlchemy",
+                "Microsoft Entra External ID (CIAM) with a custom OnAttributeCollectionSubmit auth extension",
+                "Razorpay and Stripe payment gateways behind a gateway_factory abstraction",
+                "MSG91 and Azure Communication Services notification providers",
+                "OpenTelemetry via the shared kabuni-observability package; Grafana / App Insights dashboards"
+            ],
+            "components_created_by_ayush": {
+                "verified_with": "--full-history --diff-filter=A",
+                "services_scaffolded": [
+                    "apps/identity-service",
+                    "apps/notification-service",
+                    "apps/payment-service",
+                    "apps/api-gateway",
+                    "apps/web",
+                    "packages/kabuni-service-core",
+                    "scripts/"
+                ],
+                "notable_files": [
+                    "payment-service razorpay_client.py + stripe_client.py (2026-05-21)",
+                    "identity-service entra_extension_auth.py, Entra extension JWT validator (2026-05-18)",
+                    "packages/proto notification.v1 gRPC contract (2026-05-19)",
+                    "identity-service rbac_service.py (2026-04-06)",
+                    "identity-service circuit_breaker.py (2026-04-03)",
+                    "notification-service RedisOtpStore with atomic Lua verify (2026-05-20)"
+                ],
+                "not_created_by_ayush": "The Transactional Outbox implementation (kpl 2026-05-21, order 2026-05-22, payment) and notification-service queue/service_bus.py were created by Gowthama K S. Ayush authored 11 of 20 commits touching outbox files - a real contribution, but not origination. See rejected.kabuni.code_contradicted."
+            },
+            "ownership_share_of_non_merge_commits_on_dev": {
+                "scripts": "36/41 (88%)",
+                "apps/api-gateway": "18/23 (78%)",
+                "apps/notification-service": "64/87 (74%)",
+                "apps/payment-service": "64/88 (73%)",
+                "packages": "57/81 (70%)",
+                "charts": "35/54 (65%)",
+                "apps/identity-service": "104/187 (56%)",
+                ".azure (CI/CD)": "88/157 (56%)",
+                "apps/kpl-service": "60/121 (50%)",
+                "apps/web": "138/286 (48%)",
+                "apps/order-service": "41/89 (46%)",
+                "apps/master-data-service": "38/86 (44%)"
+            },
+            "ci_cd_ownership": {
+                "platform": "Azure DevOps Pipelines. There are ZERO .github/workflows files in this repo.",
+                "ayush_share": "88 of 157 non-merge commits under .azure/ (56%) - the largest single share. The directory was first created by Bhanuprakash NR on 2026-04-06.",
+                "pipeline_stages": "Analyze (Turborepo affected-package detection) -> CI (lint, type-check, test) -> Security -> Detect (deployment gate) -> Build -> CD",
+                "security_gates": [
+                    "TruffleHog - verified secret scanning",
+                    "Checkov - IaC and Dockerfile, fails on HIGH/CRITICAL",
+                    "Bandit - Python SAST",
+                    "Snyk - SCA across all 6 Python services and the Next.js web app",
+                    "SonarCloud - static analysis"
+                ],
+                "cd": "Helm deploys to AKS across three namespaces (apps-dev, apps-test, apps-uat) from one shared 'service' chart plus per-environment values, with HPA templates and manual approval gates before Testing and UAT.",
+                "releases": "116 git tags, per-app semver with environment suffixes (e.g. web/1.0.180-test)."
+            },
+            "testing": {
+                "test_files_at_head": 297,
+                "test_loc_at_head": 57840,
+                "per_service_test_files": {
+                    "identity-service": 73,
+                    "kpl-service": 56,
+                    "payment-service": 34,
+                    "notification-service": 31,
+                    "master-data-service": 29,
+                    "order-service": 24
+                },
+                "enforced_coverage_gates": {
+                    "identity-service": "75%",
+                    "order-service": "75%",
+                    "kpl-service": "75%",
+                    "master-data-service": "75%",
+                    "notification-service": "60%",
+                    "payment-service": "0% (gate disabled)",
+                    "packages/ui": "80% line",
+                    "packages/logger": "80% line"
+                },
+                "tdd_evidence": "Ayush authored 9 'red:' and 12 'green:' commits on dev - genuine red/green TDD cycles, concentrated in notification-service and the identity hexagonal scaffold. This is repo-verifiable and is the opposite of the HealthFlex TDD claim in rejected.hf.code_contradicted, which had zero test commits behind it.",
+                "caution": "297 test files is a whole-team figure. Do not attribute the test suite to Ayush; attribute the red/green commits, which are his."
+            },
+            "cadence": {
+                "active_days_on_dev": 40,
+                "active_weeks_on_dev": 11,
+                "calendar_span": "~12 weeks (2026-03-17 to 2026-06-11)",
+                "caution": "384 commits over 40 active days is ~9.6 commits/active-day. That is high and reflects small conventional commits plus TDD red/green pairs, not 9.6 features per day. Do not present commit rate as a productivity metric."
+            },
+            "unverified_in_this_repo": {
+                "note": "These appear in experience.json's Kabuni Platform entry but have ZERO occurrences in kabuni-services. Absence here is not proof they are false - Kabuni may have separate repos Ayush cannot be measured on from this tree. Confirm against the owning repo before printing any of them.",
+                "items": [
+                    "Azure IoT Hub with X.509 device identity - 0 matches for iothub/iot_hub/x509 anywhere in the tree",
+                    "Flutter mobile flows - 0 pubspec.yaml and 0 .dart files",
+                    "Azure App Configuration - 0 matches (Azure Key Vault IS present and heavily used)",
+                    "JWT with 15-minute access and 30-day refresh tokens - no such constant exists; the only 15 is SESSION_LOCKOUT_MINUTES in identity-service config.py. Tokens are Entra-issued, so lifetimes are likely portal-configured rather than in code."
+                ]
+            },
+            "missing_from_tech_stack": "experience.json's Kabuni tech_stack omits Stripe (stripe_client.py exists and Ayush created it), Azure Kubernetes Service, Helm, Turborepo, Bun, OpenTelemetry, MSG91 and Azure Communication Services.",
+            "service_ownership": {
+                "method": "Per-service figures on origin/dev. 'commits' = non-merge commits touching apps/<service>/. 'files_created' = surviving tracked files under the service whose first add commit (--full-history --diff-filter=A) is Ayush's. Every one of these services had multiple contributors; co-owners are named. Ayush is the top committer in all four, but commit count and file authorship diverge sharply in order-service - read both numbers before writing a bullet.",
+                "identity-service": {
+                    "role": "Creator and lead; co-owned",
+                    "commits": "104 of 187 (56%) - top contributor",
+                    "files_created": "98 of 164 surviving files (60%); 46 of 77 under src/ (60%)",
+                    "co_owners": "Sagar 23 commits, Damini 20, Gowthama 13, Mahesh 12",
+                    "ayush_lines_code_only": "+26,308 / -9,874",
+                    "owned_subsystems": [
+                        "Microsoft Entra External ID (CIAM) integration end to end",
+                        "Custom Entra OnAttributeCollectionSubmit auth extension: entra_extension_auth.py, the extension JWT validator + FastAPI dependency, Pydantic request/response schemas, and the POST /api/v1/entra/extensions/attribute-collection-submit route (2026-05-18 to 05-19)",
+                        "EntraAttributeCollectionService decision logic",
+                        "Guardian-led signup flow for Indian minors, including guardian-email and date-of-birth validation",
+                        "Guardian approval service and the approve/reject email link flow",
+                        "rbac_service.py - hierarchical RBAC with role inheritance, cycle detection (_assert_no_cycle), and transitive permission resolution across the role graph",
+                        "circuit_breaker.py",
+                        "Security hardening: required PYTEST_CURRENT_TEST or explicit opt-in before the Entra extension JWT bypass could engage"
+                    ],
+                    "caution": "Do NOT say RBAC+ABAC. The model is hierarchical RBAC. See rejected.kabuni.code_contradicted."
+                },
+                "payment-service": {
+                    "role": "Creator and near-sole author",
+                    "commits": "64 of 88 (73%) - top contributor",
+                    "files_created": "157 of 160 surviving files (98%); 102 of 104 under src/ (98%)",
+                    "co_owners": "Mahesh 9 commits, Gowthama 8, Srivani 3, Damini 3 - all after Ayush scaffolded it",
+                    "ayush_lines_code_only": "+18,870 / -2,483",
+                    "owned_subsystems": [
+                        "Scaffolded the whole service on 2026-05-21 (hexagonal: domain / application / infrastructure / presentation)",
+                        "razorpay_client.py and stripe_client.py, both created by Ayush, behind a gateway_factory abstraction and a gateway.py port",
+                        "razorpay_signature.py webhook signature verification",
+                        "webhook_processor.py (created 2026-05-21) and webhook_service.py; later refactored to reduce cyclomatic complexity",
+                        "reconciliation.py (created 2026-05-27); duplicate-event handling and robust reconciliation",
+                        "Dead-lettering of webhook events after WEBHOOK_MAX_RETRIES attempts",
+                        "idempotency.py service",
+                        "Invoice creation and download; Razorpay Invoices for KPL registration; receipt invoices with prefill and multi-registration",
+                        "gateway_config + gateway_config_audit_log models",
+                        "Test suite, telemetry, and a local Azure Service Bus emulator for integration testing"
+                    ],
+                    "note": "The strongest single-service ownership claim Ayush has in this repo. 98% of surviving files. Coverage gate is set to fail_under=0 here, so do not claim a coverage number for payment-service."
+                },
+                "notification-service": {
+                    "role": "Creator and principal author",
+                    "commits": "64 of 87 (74%) - top contributor",
+                    "files_created": "117 of 134 surviving files (87%); 66 of 74 under src/ (89%)",
+                    "co_owners": "Mahesh 10 commits, Gowthama 6, Sakshi 3, Amala 2",
+                    "ayush_lines_code_only": "+9,551 / -1,774",
+                    "built_with_tdd": "This service carries Ayush's 9 'red:' and 12 'green:' commits - the scaffold, entities, repositories and services were built in genuine red/green cycles across 2026-05-19 and 05-20.",
+                    "owned_subsystems": [
+                        "Scaffolded the service and the notification.v1 gRPC contract in packages/proto (2026-05-19)",
+                        "Domain entities: NotificationTemplate, OtpRecord; templates + deliveries tables",
+                        "RedisOtpStore with atomic Lua verify - single round-trip compare-and-delete to make OTP verification race-free",
+                        "OtpService, TemplateService, DeliveryService for templated sends",
+                        "TemplateRepository, DeliveryRepository, ORM models",
+                        "MockMsg91Client + provider factory; MSG91 and Azure Communication Services provider interface",
+                        "Azure Service Bus integration for delivery tasks",
+                        "gRPC servicer with status mapping, wired into the FastAPI lifespan",
+                        "HTTP admin, health and dev-otp routes",
+                        "Guardian-consent templates seeded",
+                        "provider_template_id and email_domains table; dynamic provider routing",
+                        "Integrated the notification-service gRPC client into the identity parental-consent flow (2026-06-04)"
+                    ],
+                    "note": "Enforced coverage gate is 60% (pyproject fail_under). Gowthama created infrastructure/queue/service_bus.py; Ayush created the rest of the queue-adjacent stack."
+                },
+                "order-service": {
+                    "role": "Contributor, NOT creator - be precise here",
+                    "commits": "41 of 89 (46%) - top committer by count",
+                    "files_created": "23 of 134 surviving files (17%); 19 of 74 under src/ (26%)",
+                    "created_by": "Gowthama K S (2026-05-22), who also authored the Transactional Outbox and the KPL order-tracking APIs",
+                    "co_owners": "Gowthama 32 commits, Mahesh 10, Damini 4, Sakshi 1",
+                    "ayush_lines_code_only": "+2,776 / -1,405",
+                    "what_ayush_actually_did": [
+                        "Robust payment reconciliation between order-service and payment-service (2026-06-11)",
+                        "Fixed an admin role-name mismatch that locked admins out of the payment admin APIs",
+                        "Corrected initiated_by_service to emit 'orders' rather than 'order-service' in outbound events",
+                        "Added customer contact columns to orders",
+                        "Registration-number handling in kpl_order_service, with mapping tests",
+                        "Cross-cutting config work: Key Vault prioritised over env, per-service schema naming (servicename_env), UAT env, Key Vault guard fixes",
+                        "Alembic enum/tooling fixes, pyright via uv, S1192/S8409/S8410 SonarCloud sweeps",
+                        "Contributed 11 of 20 commits touching outbox files across kpl/order/payment"
+                    ],
+                    "caution": "The 46% commit share overstates ownership. Ayush created only 17% of the surviving files; much of his commit count here is repo-wide config, lint and release work that happened to touch order-service. Write this as 'contributed to' or name the specific things above. Never write 'built the order service'."
+                },
+                "how_to_phrase": "Payment and notification are safe to claim as 'built' or 'owned' (98% and 87% of files). Identity is 'created and led, co-owned with three engineers' (60%). Order-service is 'contributed reconciliation, auth fixes and cross-cutting config to' - Gowthama built it. Claiming all four equally is the one thing that would make this section falsifiable by anyone with repo access."
+            },
+            "source": "git analysis of kabuni-services @ origin/dev, 2026-07-10. Private repo; figures are reproducible by anyone with clone access using the commands in _kabuni_verification_2026_07_10."
+        }
+    },
+    "rejected": {
+        "hf.code_contradicted": {
+            "bad_claims": [
+                "Engineered a BLE module with TDD (55+ unit tests)",
+                "streaming 20Hz per device via RxJS",
+                "Led Expo SDK 52 migration with FlashList optimization, cutting list render time from 800ms to ~40ms",
+                "Managed mobile releases with Gradle + Fastlane CI/CD, reducing release cycle time ~40%",
+                "Built the clinician-facing Doctors App with a Storybook v8 component library",
+                "built the Non-measurable Flow (+5,400 lines)",
+                "#252 Non-measurable Flow (+5400 / -3055)",
+                "#341 Algorithm Utils (+878 / -0)"
+            ],
+            "reason": "Each of these is contradicted by the git history of the archive mirrors, audited 2026-07-10. (1) TDD/55+ tests: Ayush authored ZERO commits touching any test or spec file in ALL FOUR HealthFlex repos. Only 5 commits in healthflex.app's entire history touch test files, all by nirajgeorgian/niraj.kishore. The 234 test cases on dev were written by Niraj. No BLE test file has ever existed. (2) FlashList: introduced 2024-11-27 by iam001abhi@gmail.com (Abhishek Jaiswal). Expo SDK bumps were by nirajgeorgian (2024-11-21) and niraj.kishore (2025-06-30, after Ayush left). (3) Fastlane: zero files matching 'fastlane' exist in the tree or full history of healthflex.app or doctors.app. The pipeline is EAS Build + GitHub Actions. (4) Storybook in doctors.app was configured by nirajgeorgian (Jul 2024); @storybook/react is not even in the current package.json. (5) PR #252 does not exist; the non-measurable work is PR #250, which is +91/-13, not +5400/-3055. Across every commit mentioning 'non-measurable' the total is +2138/-462. (6) PR #341 does not exist. The algorithm work on dev landed in #160 (+4687/-2080), #163, #164, #175, #176, #178. The '+878 / -0' shape was traced on 2026-07-10 to src/module/utils/algo-utils.ts (841 lines), added as a pure addition in commit b0063014 on the UNMERGED refractor/dev branch - real work, real code, but never a PR and never merged. See evidence.hf.exercise_module_refactor.",
+            "correct": "Use hf.ble_work for the BLE story (PR #218 is real and strong). Use hf.ci_ownership for CI (EAS Build, not Fastlane; and Ayush's real CI ownership is on stance-dashboard, not the mobile apps). Drop the test-coverage and TDD claims for HealthFlex entirely - they are the single most falsifiable statements on the resume, and anyone with repo access disproves them in one grep.",
+            "found_in": "data/resume/experience.json (HealthFlex highlights), metrics.json hf.self_reported, Notion Areas/HealthFlex.md",
+            "severity": "high - these are affirmative claims of work done by named colleagues",
+            "partially_rehabilitated": "The '#341 Algorithm Utils' entry pointed at genuine work that the auditor initially could not locate. It is now accounted for: the algorithm utilities are real and are Ayush's, they just live on an abandoned branch and were misfiled as a merged PR. Cite them via hf.exercise_module_refactor (as prototype work) or, better, via hf.exercise_algo_shipped (the version that actually shipped on dev)."
+        },
+        "hf.commit_misattribution": {
+            "bad_claims": [
+                "Built Stance Dashboard (347 commits)",
+                "Developed Doctors App (582 commits)",
+                "Architected HealthFlex API (483 commits)",
+                "Led Expo SDK 52 migration (423 commits)",
+                "1,800+ total commits"
+            ],
+            "reason": "582 is the contributor-table total for GitHub user 'nirajgeorgian'; 483 is 'nirajgeorgianflex'. These are other people's commit counts, lifted from a repo contributor table and written up as Ayush's own work. The 1,800+ aggregate compounds the error.",
+            "independently_confirmed": "The 2026-07-10 git audit reproduced every one of these numbers against the named colleagues, on the archive mirrors' default branches: doctors.app nirajgeorgian = 582; healthflex.api nirajgeorgianflex = 483; stance-dashboard nirajgeorgianflex = 347; healthflex.app nirajgeorgianflex = 423. This rejection was correct and must stand.",
+            "correct": "Use hf.authored_commits (731 total: 370 app / 258 stance / 79 doctors / 24 api; or 548 excluding merge commits) or, better, hf.merged_prs_total (101 merged PRs, strict attribution).",
+            "found_in": "data/resume/experience.json (HealthFlex highlights), data/resume/projects.json (HealthFlex API), Notion Areas/HealthFlex.md",
+            "still_present_in": "data/github/repos/healthflex.api/metadata.json line 'commits: 483' STILL CARRIES THE BAD NUMBER as of 2026-07-10. Fix or delete that field; it is the original vector for this error."
+        },
+        "gh.recent_commits_as_totals": {
+            "bad_claims": [
+                "tomorrow_weather: 10+ commits",
+                "string-calculator: 10+ clean commits",
+                "80 commits this year",
+                "12 PRs this year"
+            ],
+            "reason": "activity.json 'recent_commits' is a capped API window, not a total. It takes only the values {0,1,2,3,4,5,10} across 23 repos and eight repos sit at exactly 10. Reading the ceiling as a floor ('10+') inverts its meaning. Summing it produces a meaningless number.",
+            "correct": "No year-level commit or PR total is supported by the data on disk. Omit, or use hf.merged_prs_total."
+        },
+        "gh.summary_md": {
+            "bad_claims": [
+                "19 followers",
+                "Dart 40% / JavaScript 12% / TypeScript 25% / Java 15%",
+                "Total Repositories Processed: 15"
+            ],
+            "reason": "data/github/summary.md disagrees with index.json, github/profile.json and resume/skills.json, which all agree with each other. It is a stale generated artifact.",
+            "correct": "18 followers; language split 35/26/13/13/9/4 (Dart/JS/TS/Java/HTML-CSS/Shell)."
+        },
+        "cross_wired_people": {
+            "bad_claims": [
+                "60% to 92% crash-free at Koshex",
+                "Rungta College",
+                "1 million requests system design",
+                "Increase MRR by 15% this quarter"
+            ],
+            "reason": "None of these are Ayush's. The first two belong to Anshuman Patel (a Snabbit interviewer whose notes are in the Notion export). The third is an interviewer's system-design prompt. The fourth is Notion's stock OKR template sample data.",
+            "correct": "Discard entirely."
+        },
+        "education.cgpa_template_contamination": {
+            "bad_claims": [],
+            "reason": "education.json says CGPA 7.96/10, which is byte-identical to the value in data/.old/main.tex - Ashish Pratap Singh's resume, used as the LaTeX template. Both FlowCV resumes say 7.98/10.",
+            "status": "Ayush reviewed this on 2026-07-09 and kept 7.96. Retained as a note, not a correction.",
+            "correct": "7.96/10 per Ayush's confirmation."
+        },
+        "fastlane_unsubstantiated": {
+            "bad_claims": [
+                "Managed mobile releases with Gradle + Fastlane CI/CD, reducing release cycle time ~40% (HealthFlex)",
+                "Doctors App tech_stack: Fastlane",
+                "pingo_learn_r1: Flutter learning app with Fastlane CI/CD",
+                "Fastlane listed under skills.tools"
+            ],
+            "reason": "Audited 2026-07-10. No Fastlane artifact exists anywhere Ayush's code can be inspected. Zero files matching fastlane/Fastfile/Appfile in the full git history of healthflex.app or doctors.app; zero on pingo_learn_r1's main branch tree. A `gh search code --owner vancityAyush fastlane` returns matches ONLY inside the portfolio repo itself - i.e. inside resume .tex files, skills.json, projects.json and metadata.json that assert Fastlane. The claim is self-referential: every citation traces back to another resume document, never to code. The HealthFlex mobile pipeline is demonstrably EAS Build + GitHub Actions.",
+            "correct": "Say 'EAS Build' and 'GitHub Actions' for HealthFlex. Fastlane has been left in skills.json because code search does not index private repos and Ayush may have used it at EMotorad or CSG (both inaccessible) - but he should confirm he can speak to it in an interview before keeping it, since nothing on record backs it.",
+            "found_in": "experience.json, projects.json (Doctors App, pingo_learn_r1), skills.json, src/resume/resume.tex, data/.old/*.tex",
+            "severity": "medium - a plausible tool, but currently backed by nothing except other copies of the resume"
+        },
+        "kabuni.code_contradicted": {
+            "bad_claims": [
+                "Migrated the authorization model from pure RBAC to hybrid RBAC+ABAC within six weeks after contextual child-data policies outgrew role-only checks",
+                "JWT with 15-minute access and 30-day refresh tokens",
+                "Implemented event-driven inter-service communication via the Transactional Outbox pattern over Azure Service Bus",
+                "tech_stack: GitHub Actions"
+            ],
+            "reason": "Audited against the kabuni-services tree on 2026-07-10. (1) ABAC: there are ZERO occurrences of 'abac', 'attribute-based', 'policy_engine', 'casbin' or any policy engine across apps/, packages/, charts/ and docs/. The authorization model is identifiable and it is hierarchical RBAC, not hybrid RBAC+ABAC: RbacService exposes set_role_parent / remove_role_parent / get_role_parent_ids / _assert_no_cycle, and auth_deps._collect_role_permissions walks role ancestors recursively to union permissions. That is NIST RBAC1 (role inheritance). No predicate anywhere evaluates a resource or subject attribute at decision time. The 'within six weeks' migration narrative has no commit trail either. (2) JWT lifetimes: no ACCESS_TOKEN_EXPIRE / REFRESH_TOKEN_EXPIRE constant exists in any service. The only '15' is SESSION_LOCKOUT_MINUTES in identity-service/src/core/config.py, which is a lockout window, not a token lifetime - this looks like the origin of the number. (3) Outbox: the pattern is real (kpl-service, order-service, payment-service) but was created by Gowthama K S (kpl 2026-05-21, order 2026-05-22). Ayush authored 11 of 20 commits touching outbox files, so he contributed substantially but did not implement it. 'Implemented' claims origination he does not have. (4) GitHub Actions: zero files under .github/workflows. The entire pipeline is Azure DevOps Pipelines under .azure/pipelines/, which Ayush is in fact the largest single contributor to (88/157 commits) - the claim is both wrong and weaker than the truth.",
+            "correct": "(1) Say 'designed hierarchical RBAC with role inheritance and cycle detection, resolving permissions transitively across the role graph' - that is what the code does and it is still a strong claim. Drop ABAC unless it exists in another repo, in which case cite that repo. (2) Drop the token lifetimes, or verify them in the Entra tenant configuration and cite that, not the code. (3) Reword to 'contributed to the Transactional Outbox implementation across kpl, order and payment services (11 of 20 commits)', or move the bullet to something Ayush did originate - the Razorpay/Stripe gateway layer, the Entra auth extension, or the notification.v1 gRPC contract, all verified as his. (4) Replace GitHub Actions with Azure DevOps Pipelines and claim the CI/CD ownership: 88 of 157 commits, a 6-stage pipeline with TruffleHog/Checkov/Bandit/Snyk/SonarCloud gates and Helm-to-AKS delivery across three environments.",
+            "found_in": "data/resume/experience.json (Creative Synergies Group -> Kabuni Platform highlights and tech_stack)",
+            "severity": "Medium-high. Unlike the HealthFlex claims these sit in a PRIVATE repo, so a reader cannot disprove them from outside. But they are wrong, an interviewer with repo access disproves the ABAC claim in one grep, and the true story (hierarchical RBAC, gateway layer, Entra extension, Azure DevOps CI/CD ownership) is already strong enough that the embellishment buys nothing.",
+            "partially_rehabilitated": "The Outbox bullet survives as a contribution rather than an implementation. The Azure Service Bus, Redis and event-driven halves of that bullet are all verified present."
+        }
+    }
+}

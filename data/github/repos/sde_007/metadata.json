@@ -1,0 +1,20 @@
+{
+  "name": "sde_007",
+  "full_name": "vancityAyush/sde_007",
+  "description": "Software Development Engineering practice and learning repository",
+  "summary": "A repository containing software development engineering practice projects, coding exercises, and learning implementations. Features various programming concepts, design patterns, and development best practices. Demonstrates continuous learning and software engineering fundamentals.",
+  "language": "Java",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2023-01-01T00:00:00Z",
+  "updated_at": "2023-01-01T00:00:00Z",
+  "url": "https://github.com/vancityAyush/sde_007",
+  "features": [
+    "Coding exercises",
+    "Design pattern implementations",
+    "Development best practices"
+  ],
+  "tech_stack": {
+    "languages": ["Java", "JavaScript", "Python"]
+  }
+}

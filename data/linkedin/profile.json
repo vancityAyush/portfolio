@@ -1,0 +1,22 @@
+{
+  "_note": "LinkedIn data placeholder - Manual entry required due to API restrictions",
+  "last_updated": "2025-10-29T00:00:00Z",
+  "status": "pending_manual_entry",
+  "profile": {
+    "name": "",
+    "headline": "",
+    "location": "",
+    "summary": "",
+    "profile_url": "https://www.linkedin.com/in/eliasak11/",
+    "profile_picture_url": "",
+    "followers": 0,
+    "connections": 0
+  },
+  "contact": {
+    "email": "eliasakeleven@gmail.com",
+    "phone": "",
+    "website": "https://vancityayush.vercel.app/",
+    "github": "https://github.com/vancityAyush",
+    "twitter": "vancityAyush"
+  }
+}

@@ -1,0 +1,53 @@
+{
+    "last_updated": "2026-07-09",
+    "education": [
+        {
+            "institution": "A.M.C. Engineering College (VTU)",
+            "location": "Bengaluru",
+            "degree": "B.E.",
+            "field_of_study": "Computer Science and Engineering",
+            "start_date": "2020",
+            "end_date": "2024",
+            "grade": "7.96/10",
+            "grade_type": "CGPA",
+            "grade_note": "Both FlowCV resumes in data/.old/ say 7.98/10, and 7.96 is byte-identical to the value in data/.old/main.tex - a third-party resume used as the LaTeX template. Ayush reviewed this on 2026-07-09 and confirmed 7.96.",
+            "relevant_coursework": [
+                "Data Structures & Algorithms",
+                "Operating Systems",
+                "Database Management Systems",
+                "Computer Networks",
+                "Web Technologies",
+                "Mobile Application Development",
+                "AI/ML",
+                "Object Oriented Programming",
+                "Software Engineering",
+                "Distributed Systems",
+                "Mobile Computing"
+            ]
+        },
+        {
+            "institution": "St. Xavier's School, Doranda",
+            "location": null,
+            "degree": "Senior Secondary (XII)",
+            "field_of_study": "Science",
+            "board": "ISC",
+            "start_date": null,
+            "end_date": "2020",
+            "grade": "84.00%",
+            "grade_type": "Percentage",
+            "source": "data/.old/AyushKumar_InternshalaResume.pdf"
+        },
+        {
+            "institution": "Lievens Academy",
+            "location": null,
+            "degree": "Secondary (X)",
+            "field_of_study": null,
+            "board": "ICSE",
+            "start_date": null,
+            "end_date": "2018",
+            "grade": "86.00%",
+            "grade_type": "Percentage",
+            "source": "data/.old/AyushKumar_InternshalaResume.pdf"
+        }
+    ]
+}

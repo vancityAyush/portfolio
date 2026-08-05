@@ -1,0 +1,23 @@
+{
+  "name": "bitcoin-ticker-flutter",
+  "full_name": "vancityAyush/bitcoin-ticker-flutter",
+  "description": "Bitcoin price tracker from Flutter Development Bootcamp",
+  "summary": "A cryptocurrency price tracking application built with Flutter. Features real-time Bitcoin price fetching from multiple exchanges, currency conversion support, and clean UI design. Demonstrates proficiency in API integration, async data handling, and Flutter development.",
+  "language": "Dart",
+  "stars": 1,
+  "forks": 0,
+  "created_at": "2022-01-19T15:29:35Z",
+  "updated_at": "2022-03-17T23:28:13Z",
+  "url": "https://github.com/vancityAyush/bitcoin-ticker-flutter",
+  "features": [
+    "Real-time crypto prices",
+    "Multiple exchange support",
+    "Currency conversion",
+    "API integration"
+  ],
+  "tech_stack": {
+    "languages": ["Dart"],
+    "frameworks": ["Flutter"],
+    "platforms": ["iOS", "Android"]
+  }
+}

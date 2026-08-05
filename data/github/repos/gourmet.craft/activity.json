@@ -1,0 +1,13 @@
+{
+  "recent_commits": 10,
+  "recent_prs": 0,
+  "recent_issues": 0,
+  "last_activity_date": "2025-10-22T03:46:01Z",
+  "latest_commits": [
+    {"message": "refactor(ui,sections): unify sections with SectionContainer, standardize spacing", "date": "2025-10-22T03:46:01Z"},
+    {"message": "Drafwer Fix", "date": "2025-10-17T14:42:43Z"},
+    {"message": "style(Header): use cream background for mobile drawer", "date": "2025-10-17T14:33:17Z"},
+    {"message": "feat(Header): add accessible mobile drawer nav with animated hamburger", "date": "2025-10-17T14:20:56Z"},
+    {"message": "refactor(careers,brands): make TeamImagesSection dynamic", "date": "2025-10-17T14:20:56Z"}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "prettier-plugin-sort-imports-v3",
+  "full_name": "vancityAyush/prettier-plugin-sort-imports-v3",
+  "description": "Enhanced Prettier plugin for intelligent import sorting",
+  "summary": "A forked and enhanced Prettier plugin for automatic import statement sorting in TypeScript/JavaScript projects. Provides customizable sorting algorithms, group-based import organization, and seamless integration with existing development workflows. Demonstrates open-source contribution and developer tooling expertise.",
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2024-06-10T16:43:30Z",
+  "updated_at": "2024-06-10T17:04:25Z",
+  "url": "https://github.com/vancityAyush/prettier-plugin-sort-imports-v3",
+  "features": [
+    "Custom sorting algorithms",
+    "Group-based import organization",
+    "Prettier integration",
+    "TypeScript support"
+  ],
+  "tech_stack": {
+    "languages": ["TypeScript"],
+    "tools": ["Prettier", "Node.js"]
+  }
+}

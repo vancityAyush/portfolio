@@ -1,0 +1,56 @@
+{
+  "name": "healthflex.api",
+  "full_name": "vancityAyush/healthflex.api",
+  "description": "Backend API for healthcare platform with exercise landmark uploads, patient management, and session handling",
+  "summary": "NestJS-style backend API built at HealthFlex with 483 commits. Powers the healthcare platform with exercise landmark uploads, patient notes management, session DTOs, and regimen updates. Features comprehensive API migration, use case architecture, pain alerts system, and group-based access control. Implements TypeScript with clean architecture patterns and Git LFS for large file handling.",
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "created_at": "2025-09-19T06:18:36Z",
+  "updated_at": "2025-09-19T06:19:50Z",
+  "url": "https://github.com/vancityAyush/healthflex.api",
+  "company": "HealthFlex",
+  "features": [
+    "Exercise landmark upload with parser integration",
+    "Patient notes management with date handling",
+    "Session DTOs and finish workflows",
+    "Regimen updates and metadata APIs",
+    "Patient pain alerts system",
+    "Group-based access control",
+    "API migration and optimization"
+  ],
+  "tech_stack": {
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Shell"
+    ],
+    "frameworks": [
+      "Node.js",
+      "NestJS"
+    ],
+    "databases": [
+      "PostgreSQL"
+    ],
+    "architecture": [
+      "Clean Architecture",
+      "Use Cases",
+      "DTOs"
+    ],
+    "tools": [
+      "Git LFS",
+      "Core/DTO packages"
+    ]
+  },
+  "resume_highlights": [
+    "Architected HealthFlex API (483 commits) with exercise landmark upload and parser integration",
+    "Implemented patient notes management with date handling and comprehensive session DTOs",
+    "Built regimen management APIs with metadata updates and delete functionality",
+    "Developed patient pain alerts system and group-based access control",
+    "Executed API migration with backward-compatible changes and performance optimization"
+  ],
+  "commits_by_ayush": 24,
+  "commits_note": "Previously 'commits: 483'. That is the contributor total for GitHub user 'nirajgeorgianflex', not Ayush. Verified 2026-07-10 against git history: vancityAyush authored 24 commits (20 excluding merges) on origin/main, May-Sep 2024. See metrics.json rejected.hf.commit_misattribution."
+}

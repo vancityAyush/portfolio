@@ -1,0 +1,18 @@
+{
+  "_note": "Work experience data - Manual entry required",
+  "last_updated": "2025-10-29T00:00:00Z",
+  "status": "pending_manual_entry",
+  "experiences": [
+    {
+      "company": "",
+      "title": "",
+      "employment_type": "",
+      "location": "",
+      "start_date": "",
+      "end_date": "",
+      "current": false,
+      "description": "",
+      "skills_used": []
+    }
+  ]
+}
